@@ -13,7 +13,7 @@
 
 <body>
     <!-- 헤더(네비게이션)부분 메뉴버튼 옆 border를 가상선택자로 할 예정 -->
-    <header id="header">]
+    <header id="header">
         <div class="inner">
             <h1 class="hidden">Real Estate</h1>
             <!-- 메뉴버튼들 -->
@@ -28,32 +28,25 @@
             </nav>
 
             <!-- 언어선택 dropdowns css로 구현해야함 -->
-            <nav class="lang">
-                <ul>
-                    <li>
-                        <a href="#">EN</a>
-                        <ul class="lang-list">
-                            <li><a href="#">EN</a></li>
-                            <li><a href="#">KO</a></li>
-                            <li><a href="#">CN</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <div class="lang">
+                <span>EN</span>
+                <div>
+                    <a class="on" href="#">EN</a>
+                    <a href="#">KO</a>
+                    <a href="#">CN</a>
+                </div>
+            </div>
 
             <!-- 통화선택 dropdowns css로 구현해야함 -->
-            <nav class="currency">
-                <ul>
-                    <li>
-                        <a href="#">$</a>
-                        <ul class="currency-list">
-                            <li><a href="#">dollor</a></li>
-                            <li><a href="#">won</a></li>
-                            <li><a href="#">YMB</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <div class="currency">
+                <span>$</span>
+                <div>
+                    <a class="on" href="#">dollor</a>
+                    <a href="#">won</a>
+                    <a href="#">YMB</a>
+                </div>
+            </div>
+
             <!-- 장바구니 추가 아이콘 div로 묶음 원본에서는 바탕색이 있으나 저는 그냥 아이콘만 넣겠습니다 -->
             <div>
                 <a href="#"><i class="fas fa-cart-plus"></i></a>
@@ -71,38 +64,34 @@
                 <!-- 원본은 이미지로 만들었던데...저는 포토샵을 못해서..어떻게할지 고민 중 입니다? -->
                 <h1>REAL SUITE</h1>
             </div>
-            <div class="middle_menu">
+        </div>
+    </figure>
+
+    <!-- 중간 메뉴박스 -->
+    <section id="middle-menu">
+        <div class="inner">
+            <div class="menuBtn">
                 <a href="#">LOCATIONS</a>
                 <a href="#">OFFICE & SERVICES</a>
                 <a href="#">ENQUIRE NOW</a>
                 <input type="text">
             </div>
-        </div>
-
-
-        <!-- 중간 메뉴박스 -->
-
-
-    </figure>
-
-    <section id="middle">
-        <div class="intro">
-            <h2>WHO WE ARE</h2>
-            <h3>Asia’s premium one-stop Serviced Office Provider, run by multi-cultural industry experts
-                For more than 25 years, our predominantly female team have provided premium workplace solutions at
-                reasonable rates, helping businesses of all sizes to expand throughout Asia with a minimum of culture
-                shock.
-            </h3>
-            <p class="left">Located in some of the most prestigious buildings in the Asia-Pacific region, we offer an
-                unparalleled
-                range of services, from sourcing the right local business partners to legal accounting, payroll and IT.
-            </p>
-            <p class="right">Our solutions are customized to our clients’ needs because every business is unique. CEO
-                SUITE is more
-                than just a service provider, but a reliable partner in your company’s transformative journey to
-                success.</p>
+            <div class="wrap">
+                <div class="intro">
+                    <h2>WHO WE ARE</h2>
+                    <h3> ASIA’S PREMIUM ONE-STOP SERVICED OFFICE PROVIDER, <br>RUN BY MULTI-CULTURAL INDUSTRY EXPERTS
+                    </h3>
+                    <p class="left">Located in some of the most prestigious buildings in the Asia-Pacific region, we
+                        offer an unparalleled range of services, from sourcing the right local business partners to
+                        legal accounting, payroll and IT.</p>
+                    <p class="right">Our solutions are customized to our clients’ needs because every business is
+                        unique. REAL SUITE is more than just a service provider, but a reliable partner in your
+                        company’s transformative journey to success.</p>
+                </div>
+            </div>
         </div>
     </section>
+
 </body>
 
 </html>
