@@ -47,8 +47,8 @@ fieldset {
 #header .inner .web-menu ul li {
   float: left;
   border-right: 1px solid #282828;
-  margin-right: 10px;
-  padding-right: 20px;
+  margin-right: 15px;
+  padding-right: 15px;
 }
 #header .inner .web-menu ul li:last-child {
   border-right: none;
@@ -58,29 +58,27 @@ fieldset {
   display: block;
   color: #282828;
 }
-#header .inner .lang,
-#header .inner .currency {
+#header .inner > div {
   width: 5vw;
+  height: 100%;
   float: left;
+  position: absolute;
+  right: 200px;
 }
-#header .inner .lang span,
-#header .inner .currency span {
+#header .inner > div span {
   display: inline-block;
   font: bold 14px/72px "Roboto", sans-serif;
   color: #282828;
 }
-#header .inner .lang div,
-#header .inner .currency div {
+#header .inner > div div {
   display: none;
 }
-#header .inner .lang div.on,
-#header .inner .currency div.on {
+#header .inner > div div.on {
   display: block;
   height: 20px;
   color: #bebebe;
 }
-#header .inner .lang div.on a,
-#header .inner .currency div.on a {
+#header .inner > div div.on a {
   float: left;
   font: bold 16px/1 "Roboto", sans-serif;
   margin-right: 10px;
@@ -98,19 +96,65 @@ fieldset {
 
 #visual {
   width: 100%;
-  height: 670px;
+  height: 750px;
+  position: relative;
+  overflow: hidden;
   background: #000;
 }
-#visual .main_bg {
-  width: 100%;
+#visual article .main-bg {
+  width: 300%;
   height: 100%;
 }
-#visual .main_bg img {
+#visual article .main-bg li {
+  width: 33.3333333333%;
+  height: 100%;
+  float: left;
+  transition: 0.5s;
+}
+#visual article .main-bg li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+#visual article .main-bg li[data-index="1"] {
   filter: grayscale(95%);
   opacity: 0.8;
+}
+#visual article .main-bg li[data-index="2"] {
+  filter: grayscale(95%);
+  opacity: 0.8;
+}
+#visual article .main-bg li[data-index="3"] {
+  filter: grayscale(1);
+  opacity: 0.8;
+}
+#visual article .bg-btn {
+  width: 20%;
+  height: 20px;
+  position: absolute;
+  left: 40%;
+  bottom: 35%;
+  z-index: 20;
+}
+#visual article .bg-btn li {
+  width: 90px;
+  height: 9px;
+  float: left;
+  margin-right: 4px;
+  cursor: pointer;
+}
+#visual article .bg-btn li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  background-color: #bebebe;
+}
+#visual article .bg-btn li.on a {
+  background-color: #fff;
+}
+#visual article .bg-btn li:last-child {
+  margin-right: 0;
 }
 #visual .inner {
   width: 1180px;
@@ -122,7 +166,7 @@ fieldset {
   height: 320px;
   position: absolute;
   left: 50%;
-  top: 15%;
+  top: 5%;
   margin-left: -110px;
   z-index: 3;
 }
@@ -141,15 +185,20 @@ fieldset {
   width: 1180px;
   margin: 0 auto;
 }
-#middle-menu .inner .wrap .intro h2 {
+#middle-menu .inner .intro {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+#middle-menu .inner .intro h2 {
   width: 100%;
   font: bold 72px/1 "Roboto", sans-serif;
   color: #2a2a2a;
   text-align: center;
+  padding-top: 20px;
 }
-#middle-menu .inner .wrap .intro h3 {
+#middle-menu .inner .intro h3 {
   width: 570px;
-  height: 60px;
   font: bold 14px/1 "Roboto", sans-serif;
   color: #2a2a2a;
   letter-spacing: 3px;
@@ -158,19 +207,21 @@ fieldset {
   padding: 20px 0 10px;
   text-align: center;
 }
-#middle-menu .inner .wrap .intro p {
-  display: inline-block;
-  width: 560px;
-  font: bold 14px/1 "Roboto", sans-serif;
+#middle-menu .inner .intro .pWrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#middle-menu .inner .intro .pWrap p {
+  width: 520px;
+  margin-top: 20px;
+  font: bold 14px/1.5 "Roboto", sans-serif;
   color: #bebebe;
 }
-#middle-menu .inner .wrap .intro p .left {
-  float: left;
+#middle-menu .inner .intro .pWrap .left {
   margin-right: 20px;
   text-align: right;
-}
-#middle-menu .inner .wrap .intro p .right {
-  float: right;
 }
 
 #banner {

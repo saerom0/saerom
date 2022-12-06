@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="main.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/anime.js"></script>
+    <script defer src="js/anime2.js"></script>
     <script src="https://kit.fontawesome.com/c0a08800fd.js" crossorigin="anonymous"></script>
 </head>
 
@@ -27,23 +29,25 @@
                 </ul>
             </nav>
 
-            <!-- 언어선택 dropdowns css로 구현해야함 -->
-            <div class="lang">
-                <span>EN</span>
-                <div>
-                    <a class="on" href="#">EN</a>
-                    <a href="#">KO</a>
-                    <a href="#">CN</a>
+            <div>
+                <!-- 언어선택 dropdowns css로 구현해야함 -->
+                <div class="lang">
+                    <span>EN</span>
+                    <div>
+                        <a class="on" href="#">EN</a>
+                        <a href="#">KO</a>
+                        <a href="#">CN</a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- 통화선택 dropdowns css로 구현해야함 -->
-            <div class="currency">
-                <span>$</span>
-                <div>
-                    <a class="on" href="#">dollor</a>
-                    <a href="#">won</a>
-                    <a href="#">YMB</a>
+                <!-- 통화선택 dropdowns css로 구현해야함 -->
+                <div class="currency">
+                    <span>$</span>
+                    <div>
+                        <a class="on" href="#">dollor</a>
+                        <a href="#">won</a>
+                        <a href="#">YMB</a>
+                    </div>
                 </div>
             </div>
 
@@ -56,9 +60,18 @@
 
     <!-- 대문사진 -->
     <figure id="visual">
-        <div class="main_bg">
-            <img src="../img/24522654685_18dd1b319c_h.jpg" alt="">
-        </div>
+        <article>
+            <ul class="main-bg">
+                <li data-index="1"><img src="img/mainbg1.jpg" alt=""></li>
+                <li data-index="2"><img src="img/mainbg2.jpg" alt=""></li>
+                <li data-index="3"><img src="img/mainbg3.png" alt=""></li>
+            </ul>
+            <ul class="bg-btn">
+                <li class="on"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </article>
         <div class="inner">
             <div class="cp_name">
                 <!-- 원본은 이미지로 만들었던데...저는 포토샵을 못해서..어떻게할지 고민 중 입니다? -->
@@ -71,16 +84,22 @@
     <section id="middle-menu">
         <div class="inner">
             <div class="menuBtn">
-                <a href="#">LOCATIONS</a>
-                <a href="#">OFFICE & SERVICES</a>
-                <a href="#">ENQUIRE NOW</a>
-                <input type="text">
+                <ul>
+                    <li class="on"><a href="#">LOCATIONS</a></li>
+                    <li><a class="on" href="#">LOCATIONS</a></li>
+                    <li><a href="#">ENQUIRE NOW</a></li>
+                </ul>
+                <section>
+                    <article class="on">TAB1</article>
+                    <article>TAB2</article>
+                    <article>TAB3</article>
+                </section>
             </div>
-            <div class="wrap">
-                <div class="intro">
-                    <h2>WHO WE ARE</h2>
-                    <h3> WORLD'S PREMIUM ONE-STOP SERVICED OFFICE PROVIDER, <br>RUN BY MULTI-CULTURAL INDUSTRY EXPERTS
-                    </h3>
+            <div class="intro">
+                <h2>WHO WE ARE</h2>
+                <h3> WORLD'S PREMIUM ONE-STOP SERVICED OFFICE PROVIDER, <br>RUN BY MULTI-CULTURAL INDUSTRY EXPERTS
+                </h3>
+                <div class="pWrap">
                     <p class="left">Located in some of the most prestigious buildings in the Asia-Pacific region, we
                         offer an unparalleled range of services, from sourcing the right local business partners to
                         legal accounting, payroll and IT.</p>
@@ -91,9 +110,19 @@
             </div>
         </div>
     </section>
+
     <section id="banner">
         <img src="../img/14382289326_dcfb91b8d4_k.jpg" alt="">
     </section>
+
+    <section id="compare"></section>
+    <section id="news">
+
+    </section>
+
+    <footer>
+
+    </footer>
 
 </body>
 

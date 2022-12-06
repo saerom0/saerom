@@ -19,8 +19,8 @@
 				li {
 					float: left;
 					border-right: 1px solid #282828;
-					margin-right: 10px;
-					padding-right: 20px;
+					margin-right: 15px;
+					padding-right: 15px;
 					&:last-child {
 						border-right: none;
 					}
@@ -32,11 +32,12 @@
 				}
 			}
 		}
-		.lang,
-		.currency {
+		> div {
 			width: 5vw;
+			height: 100%;
 			float: left;
-
+			position: absolute;
+			right: 200px;
 			span {
 				display: inline-block;
 				font: bold 14px/72px "Roboto", sans-serif;
@@ -74,17 +75,65 @@
 
 #visual {
 	width: 100%;
-	height: 670px;
+	height: 750px;
+	position: relative;
+	overflow: hidden;
 	background: #000;
-	.main_bg {
-		width: 100%;
-		height: 100%;
-		img {
-			width: 100%;
+	article {
+		.main-bg {
+			width: calc(100% * 3);
 			height: 100%;
-			object-fit: cover;
-			filter: grayscale(95%);
-			opacity: 0.8;
+			li {
+				width: calc(100% / 3);
+				height: 100%;
+				float: left;
+				transition: 0.5s;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				&[data-index="1"] {
+					filter: grayscale(95%);
+					opacity: 0.8;
+				}
+				&[data-index="2"] {
+					filter: grayscale(95%);
+					opacity: 0.8;
+				}
+				&[data-index="3"] {
+					filter: grayscale(1);
+					opacity: 0.8;
+				}
+			}
+		}
+		.bg-btn {
+			width: 20%;
+			height: 20px;
+			position: absolute;
+			left: 40%;
+			bottom: 35%;
+			z-index: 20;
+			li {
+				width: 90px;
+				height: 9px;
+				float: left;
+				margin-right: 4px;
+				cursor: pointer;
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					transition: 0.5s;
+					background-color: #bebebe;
+				}
+				&.on a {
+					background-color: #fff;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
 		}
 	}
 
@@ -97,7 +146,7 @@
 			height: 320px;
 			position: absolute;
 			left: 50%;
-			top: 15%;
+			top: 5%;
 			margin-left: -110px;
 			z-index: 3;
 			h1 {
@@ -116,39 +165,45 @@
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
-		.wrap {
-			.intro {
-				h2 {
-					width: 100%;
-					font: bold 72px/1 "Roboto", sans-serif;
-					color: #2a2a2a;
-					text-align: center;
-				}
-				h3 {
-					width: 570px;
-					height: 60px;
-					font: bold 14px/1 "Roboto", sans-serif;
-					color: #2a2a2a;
-					letter-spacing: 3px;
-					line-height: 20px;
-					margin: 0 auto;
-					padding: 20px 0 10px;
-					text-align: center;
-				}
+		.intro {
+			width: 100%;
+			height: 350px;
+			position: relative;
+			h2 {
+				width: 100%;
+				font: bold 72px/1 "Roboto", sans-serif;
+				color: #2a2a2a;
+				text-align: center;
+				padding-top: 20px;
+			}
+			h3 {
+				width: 570px;
+				font: bold 14px/1 "Roboto", sans-serif;
+				color: #2a2a2a;
+				letter-spacing: 3px;
+				line-height: 20px;
+				margin: 0 auto;
+				padding: 20px 0 10px;
+				text-align: center;
+			}
+			.pWrap {
+				display: flex;
+				flex-wrap: nowrap;
+				justify-content: center;
+				align-items: center;
+
 				p {
-					display: inline-block;
-					width: 560px;
-					font: bold 14px/1 "Roboto", sans-serif;
+					width: 520px;
+					margin-top: 20px;
+					font: bold 14px/1.5 "Roboto", sans-serif;
 					color: #bebebe;
-					.left {
-						float: left;
-						margin-right: 20px;
-						text-align: right; //적용안됨
-					}
-					.right {
-						float: right;
-					}
 				}
+				.left {
+					margin-right: 20px;
+					text-align: right; //적용안됨
+				}
+				// .right {
+				// }
 			}
 		}
 	}
