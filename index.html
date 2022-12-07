@@ -9,17 +9,23 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
     <script defer src="js/anime.js"></script>
-    <script defer src="js/anime2.js"></script>
+    <!-- <script defer src="js/anime2.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/c0a08800fd.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+
 </head>
 
 <body>
-    <!-- 헤더(네비게이션)부분 메뉴버튼 옆 border를 가상선택자로 할 예정 -->
     <header id="header">
         <div class="inner">
             <h1 class="hidden">Real Estate</h1>
             <!-- 메뉴버튼들 -->
-            <nav class="web-menu">
+            <nav class="web_menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">My Account</a></li>
@@ -38,30 +44,30 @@
 
     <!-- 대문사진 -->
     <figure id="visual">
-        <article>
-            <ul class="main-bg">
-                <li data-index="1"><img src="img/mainbg1.jpg" alt=""></li>
-                <li data-index="2"><img src="img/mainbg2.jpg" alt=""></li>
-                <li data-index="3"><img src="img/mainbg3.png" alt=""></li>
-            </ul>
-            <ul class="bg-btn">
-                <li class="on"><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </article>
-        <div class="inner">
-            <div class="cp_name">
-                <!-- 원본은 h1을 이미지로 만들었던데...저는 포토샵을 못해서..어떻게할지 고민 중 입니다? -->
-                <h1>REAL SUITE</h1>
+        <div class="visual">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/mainbg1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/mainbg2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/mainbg3.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="inner">
+                <div class="cp_name">
+                    <h1 class="hidden">REAL SUITE</h1>
+                    <img src="img/logo.jpg" alt="">
+                </div>
             </div>
         </div>
     </figure>
 
-    <!-- 중간 메뉴박스 -->
-    <section id="middle-menu">
+
+
+    <!-- 중간 탭메뉴 박스 -->
+    <section id="middle_menu">
         <div class="inner">
-            <ul id="tabBtn">
+            <ul id="tab_btn">
                 <li><a href="#">LOCATIONS</a></li>
                 <div>TAB1</div>
 
@@ -75,7 +81,7 @@
                 <h2>WHO WE ARE</h2>
                 <h3> WORLD'S PREMIUM ONE-STOP SERVICED OFFICE PROVIDER, <br>RUN BY MULTI-CULTURAL INDUSTRY EXPERTS
                 </h3>
-                <div class="pWrap">
+                <div class="p_wrap">
                     <p class="left">Located in some of the most prestigious buildings in the Asia-Pacific region, we
                         offer an unparalleled range of services, from sourcing the right local business partners to
                         legal accounting, payroll and IT.</p>
@@ -89,31 +95,90 @@
 
 
     <section id="banner">
-
+        <div class="inner">
+            <section>
+                <div class="on"><img src="img/company1.jpg" alt=""></div>
+                <div><img src="img/company2.jpg" alt=""></div>
+                <div><img src="img/company3.jpg" alt=""></div>
+            </section>
+            <ul class="bn_btn">
+                <li class="on"><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
     </section>
 
     <section id="compare">
         <div class="inner">
+            <h1>COMPARE PLANS</h1>
+            <div class="wrap">
+                <article>
+                    <div class="pic">
+                        <img src="img/offer1.jpg" alt="">
+                    </div>
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis?</p>
+                </article>
+                <article>
+                    <div class="pic">
+                        <img src="img/offer2.jpg" alt="">
+                    </div>
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis?</p>
+                </article>
+                <article>
+                    <div class="pic">
+                        <img src="img/offer3.jpg" alt="">
+                    </div>
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis?</p>
+                </article>
+                <article>
+                    <div class="pic">
+                        <img src="img/offer4.jpg" alt="">
+                    </div>
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis?</p>
+                </article>
+            </div>
 
         </div>
     </section>
     <section id="promo">
-        <img src="img/14382289326_dcfb91b8d4_k.jpg" alt="">
         <div class="inner">
-
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sapiente dolore labore, dolorem ullam
+                doloribus?</p>
         </div>
     </section>
 
     <section id="news">
         <div class="inner">
-
+            <input type="email" name="" id="">
         </div>
     </section>
 
     <footer>
+        <div class="inner">
 
+        </div>
     </footer>
 
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 
 </html>
