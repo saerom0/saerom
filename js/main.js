@@ -37,7 +37,7 @@ const bn_div = banner.querySelectorAll("#banner div");
 
 // }
 
-// #middle-menu영역
+// #middle-menu영역 - 탭메뉴
 tab_btn.forEach((el, idx) => {
     el.addEventListener("click", (e) => {
         e.preventDefault();
