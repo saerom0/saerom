@@ -12,7 +12,7 @@ const tab_btn = middle.querySelectorAll("#tab_btn li");
 const tab_div = middle.querySelectorAll("#tab_btn div");
 
 const bn_btn = banner.querySelectorAll("#banner li");
-const bn_div = banner.querySelectorAll("#banner div");
+const bn_div = banner.querySelector("#banner section");
 
 // #visual 영역
 // bg_btn.forEach((el, idx) => {
@@ -38,9 +38,12 @@ const bn_div = banner.querySelectorAll("#banner div");
 // }
 
 // #middle-menu영역 - 탭메뉴
+
 tab_btn.forEach((el, idx) => {
     el.addEventListener("click", (e) => {
         e.preventDefault();
+
+        el.classList.toggle("on");//토글이 왜 적용이 안될까요?
 
         init(tab_btn, idx);
         init(tab_div, idx);
@@ -51,6 +54,8 @@ tab_btn.forEach((el, idx) => {
 function init(arr, idx) {
     for (let el of arr) el.classList.remove("on");
     arr[idx].classList.add("on");
+
+
 }
 
 // #banner 영역
