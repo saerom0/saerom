@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL SUITE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/anime.js"></script>
+    <!-- <script defer src="js/anime2.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/c0a08800fd.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="inner">
+            <h1 class="hidden">Real Estate</h1>
+            <!-- 메뉴버튼들 -->
+            <nav class="web_menu">
+                <ul id="gnb">
+                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wish List</a></li>
+                    <li><a href="#">Member sevices</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+
+                <ul class="log">
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="sign_up.html">Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content sign_up">
+        <div class="sub_visual"></div>
+        <div class="inner">
+            <h1>SIGN UP</h1>
+            <form action="index.html">
+
+                <fieldset>
+                    <legend class="hidden">회원가입양식 폼</legend>
+                    <h2><label for="terms">[필수]개인정보 수집 및 이용 동의</label></h2>
+                    <textarea name="terms" id="terms" cols="30" rows="10">
+                        제1조(목적)
+
+                        이 약관은 회사(전자상거래 사업자)가 운영하는 사이버 몰(이하 "몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.                      
+                        「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
+                        
+                        제2조(정의
+                        
+                        ①"몰" 이란 회사가 재화 또는 용역(이하 "재화등"이라 함)을 이용자에게 제공하기 위하여 컴퓨터등 정보통신설비를 이용하여 재화등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도 사용합니다.                       
+                        ②"이용자"란 "몰"에 접속하여 이 약관에 따라 "몰"이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.                        
+                        ③ '회원'이라 함은 "몰"에 개인정보를 제공하여 회원등록을 한 자로서, "몰"의 정보를 지속적으로 제공받으며, "몰"이 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.                     
+                        ④ '비회원'이라 함은 회원에 가입하지 않고 "몰"이 제공하는 서비스를 이용하는 자를 말합니다.
+                    </textarea>
+                    <div class="agreement">
+                        <label for="agree">개인정보 수집 및 이용에 동의하십니까?</label>
+                        <input type="checkbox" name="agree" id="agree">
+                        <p>동의합니다.</p>
+                    </div>
+
+                    <h2>MEMBER INFORMATION</h2>
+                    <table>
+                        <caption class="hidden">회원정보 입력양식 테이블</caption>
+
+                        <tr>
+                            <th scope="row">MEMBER TYPE<i class="fas fa-star-of-life"></i></th>
+                            <td>
+                                <label for="pers">
+                                    <input type="radio" name="type" id="personal" value="personal">개인회원
+                                </label>
+                                <label for="corp">
+                                    <input type="radio" name="type" id="corp" value="corp">기업회원
+                                </label>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="id">USER ID</label><i class="fas fa-star-of-life"></i></th>
+                            <td>
+                                <input type="text" id="id" name="id" required>
+                                <p>(영문소문자/숫자, 4~16자)</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="pwd1">PASSWORD</label><i class="fas fa-star-of-life"></i></th>
+                            <td>
+                                <input type="password" name="pwd1" id="pwd1" required>
+                                <p> (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~12자)</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="pwd2">RE-ENTER PASSWORD</label><i
+                                    class="fas fa-star-of-life"></i></th>
+                            <td>
+                                <input type="password" name="pwd2" id="pwd2" required placeholder="비밀번호 재입력">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="name">YOUR NAME</label></th>
+                            <td>
+                                <input type="text" id="name" name="name" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">GENDER<i class="fas fa-star-of-life"></i></th>
+                            <td>
+                                <label for="male">
+                                    <input type="radio" name="gender" id="male" value="male">MAN
+                                </label>
+                                <label for="female">
+                                    <input type="radio" name="gender" id="female" value="female">WOMAN
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><label for="phone">PHONE NUMBER</label><i class="fas fa-star-of-life"></i>
+                            </th>
+                            <td>
+                                <select name="phone" id="phone">
+                                    <option value="">선택</option>
+                                    <option value="naver">010</option>
+                                    <option value="daum">011</option>
+                                    <option value="nate">017</option>
+                                    <input type="text" name="phone" id="phone">
+                                    <input type="text" name="phone" id="phone">
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><label for="email">E-MAIL</label></th>
+                            <td>
+                                <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해 주세요">
+                                <select name="company" id="company">
+                                    <option value="">선택하세요</option>
+                                    <option value="naver">@naver.com</option>
+                                    <option value="daum">@hanmail.net</option>
+                                    <option value="nate">@nate.com</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th colspan="2">
+                                <input type="reset" value="CANCLE">
+                                <input type="submit" value="SUBMIT">
+                            </th>
+                        </tr>
+                    </table>
+                </fieldset>
+
+
+            </form>
+        </div>
+
+    </section>
+
+
+
+    <footer id="footer">
+        <div class="inner">
+
+            <section class="wrap1">
+                <a href="#">QUICK LINKS</a>
+                <ul>
+                    <li><a href="#">LOCATIONS</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">COMMUNITY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </section>
+
+            <section class="wrap2">
+                <h1>REAL SUITE</h1>
+                <p>Copyright © 2022 REAL SUITE ALL Right reserved.</p>
+            </section>
+
+            <section class="wrap3">
+                <div>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <address>
+                    Lorem ipsum dolor sit amet consectetur. <br />
+                    Tel : +82-2-2100-2114
+                </address>
+
+            </section>
+        </div>
+    </footer>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

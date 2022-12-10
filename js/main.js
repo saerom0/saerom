@@ -54,8 +54,6 @@ tab_btn.forEach((el, idx) => {
 function init(arr, idx) {
     for (let el of arr) el.classList.remove("on");
     arr[idx].classList.add("on");
-
-
 }
 
 // #banner 영역
