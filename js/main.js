@@ -79,5 +79,16 @@ function activation(index) {
 
 }
 
+
+// join 페이지 체크박스 전체 체크
+function selectAll(selectAll) {
+    const checkboxes
+        = document.getElementsByName('ck_agree');
+
+    checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked;
+    })
+}
+
 //visual swiper
 //swiper를 이쪽으로 옮기면 실행이 안됨

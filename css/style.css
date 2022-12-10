@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Hahmlet&family=Montserrat&family=Poppins&family=Sunflower&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -27,93 +26,154 @@ fieldset {
   left: -99999px;
 }
 
-.sign_up .sub_visual {
-  background: #eeffff;
+fieldset {
+  border: none;
 }
-.sign_up .inner h2 {
-  font: bold 18px/1 "arial";
+
+table {
+  border-collapse: collapse;
+}
+
+.sign_up .sub_bg {
+  height: 250px;
+  background: #000 url(../img/sign_up.jpg) no-repeat center/cover;
+  opacity: 0.7;
+}
+.sign_up .inner {
+  width: 880px;
+  padding: 80px;
+  margin: 0 auto;
+}
+.sign_up .inner h1 {
+  font: bold 18px/1 "Sunflower", sans-serif;
   color: #555;
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.sign_up .inner #terms {
+.sign_up .inner form .all_agree {
+  font: bold 15px/2 "Hahmlet", serif;
+  letter-spacing: 1.2px;
+}
+.sign_up .inner form h2 {
+  font: 14px/1 "Hahmlet", serif;
+  letter-spacing: 1px;
+  margin: 10px 0 5px 0;
+}
+.sign_up .inner form #terms {
   width: 100%;
   height: 100px;
   resize: none;
   padding: 20px;
-  font: 12px/1.3 "arial";
+  font: 12px/1.3 "Sunflower", sans-serif;
   color: #888;
   background: #eee;
-  margin-bottom: 10px;
 }
-.sign_up .inner .agreement {
+.sign_up .inner form .agree {
   margin-bottom: 70px;
+  display: flex;
+  align-items: center;
 }
-.sign_up .inner .agreement label[for=agree] {
+.sign_up .inner form .agree label[for=agree] {
   font-size: 12px;
 }
-.sign_up .inner table {
+.sign_up .inner form .agree input {
+  margin-left: 5px;
+  width: 10px;
+  height: 10px;
+}
+.sign_up .inner form table {
   width: 100%;
   border-top: 2px solid #999;
   border-bottom: 2px solid #999;
 }
-.sign_up .inner table th {
-  width: 20%;
-  padding: 20px 30px;
-  font: bold 14px/1 "arial";
+.sign_up .inner form table th {
+  width: 23%;
+  padding: 15px;
+  font: bold 14px/1 "Sunflower", sans-serif;
   color: #666;
   text-align: left;
   border-right: 1px solid #bbb;
   border-bottom: 1px solid #bbb;
   background: #eee;
 }
-.sign_up .inner table th:last-child {
+.sign_up .inner form table th i {
+  font-size: 5px;
+  margin-left: 5px;
+  color: orangered;
+}
+.sign_up .inner form table th:last-child {
   background: #fff;
   text-align: center;
   border-right: none;
 }
-.sign_up .inner table th input[type=submit],
-.sign_up .inner table th input[type=reset] {
+.sign_up .inner form table th input[type=submit],
+.sign_up .inner form table th input[type=reset] {
   width: 150px;
   height: 40px;
+  font: bold 14px/1 "Sunflower", sans-serif;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.sign_up .inner form table th input[type=submit]:hover,
+.sign_up .inner form table th input[type=reset]:hover {
+  transform: scale(1.03);
+}
+.sign_up .inner form table th input[type=reset] {
+  border: 1px solid #444;
+  background: #fff;
+  color: #444;
+}
+.sign_up .inner form table th input[type=submit] {
   border: none;
   background: #444;
-  font: bold 14px/1 "arial";
   color: #fff;
-  margin: 0 10px;
 }
-.sign_up .inner table td {
+.sign_up .inner form table td {
   border-bottom: 1px solid #bbb;
-  padding: 20px 30px;
+  padding: 15px;
+  font: 14px/1 "Hahmlet", serif;
 }
-.sign_up .inner table td input[type=text],
-.sign_up .inner table td input[type=password] {
+.sign_up .inner form table td input[type=text],
+.sign_up .inner form table td input[type=password] {
+  width: 35%;
+  height: 30px;
+  border: 1px solid #bbb;
+  padding-left: 20px;
+}
+.sign_up .inner form table td input#phone {
+  width: 100px;
+}
+.sign_up .inner form table td input[type=checkbox],
+.sign_up .inner form table td input[type=radio] {
+  margin-right: 5px;
+}
+.sign_up .inner form table td label {
+  margin-right: 30px;
+}
+.sign_up .inner form table td select#phone {
+  width: 20%;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #bbb;
+  padding-left: 20px;
+  margin-right: 5px;
+  font-family: "Sunflower", sans-serif;
+}
+.sign_up .inner form table td input#email::-webkit-input-placeholder {
+  font-family: "Hahmlet", serif;
+}
+.sign_up .inner form table td select#company {
   width: 30%;
   height: 30px;
   border: 1px solid #bbb;
-  background: #eeffff;
   padding-left: 20px;
 }
-.sign_up .inner table td input[type=checkbox],
-.sign_up .inner table td input[type=radio] {
-  margin-right: 5px;
-}
-.sign_up .inner table td label {
-  margin-right: 30px;
-}
-.sign_up .inner table td select#company {
-  width: 20%;
-  height: 30px;
-  border: 1px solid #bbb;
-  padding-left: 20px;
-  background: #eeffff;
-}
-.sign_up .inner table td textarea#comments {
-  width: 80%;
-  height: 100px;
-  border: 1px solid #bbb;
-  resize: none;
-  background: #eeffff;
-  padding: 20px;
+.sign_up .inner form table td p {
+  font-size: 11px;
 }
 
 #header {
