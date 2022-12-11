@@ -175,39 +175,58 @@ $mobile: 540px;
 					> a {
 						color: #fff;
 					}
-				}
-				.sub_menu {
-					width: 100%;
-					display: none;
-					background: #fff;
-					text-align: center;
-					transition: 0.5s;
-					ul {
-						width: 250px;
-						margin: auto;
-						border: 1px solid #333;
-						li {
-							height: 40px;
-							background: #fff;
-
-							a {
-								font: 15px/ 40px "Roboto", sans-serif;
-								display: inline-block;
-								color: #333;
-								letter-spacing: 2px;
+					.sub_menu {
+						width: 100%;
+						display: block;
+						background: #fff;
+						text-align: center;
+						transition: 0.5s;
+						ul {
+							width: 250px;
+							margin: auto;
+							border: 1px solid #333;
+							position: absolute;
+							top: 80px;
+							left: 72px;
+							z-index: 3;
+							li {
+								height: 40px;
+								background: #fff;
+								&:hover {
+									background: #353535;
+									a {
+										color: #fff;
+									}
+								}
+								a {
+									font: 15px/ 40px "Roboto", sans-serif;
+									display: inline-block;
+									color: #333;
+									letter-spacing: 2px;
+								}
+								&.isSub:hover .sub_menu-2 {
+									position: absolute;
+									display: block;
+									background: #333;
+									margin-top: -120px;
+									margin-left: 176px;
+									&:hover a {
+										color: #fff;
+									}
+								}
+								.sub_menu-2 ul li a {
+									color: #333;
+								}
 							}
 						}
 					}
 				}
-				&:hover .sub_menu {
-					display: block;
-					ul {
-						li:hover {
-							background: #353535;
-							a {
-								color: #fff;
-							}
-						}
+
+				.sub_menu {
+					display: none;
+
+					.sub_menu-2 {
+						display: none;
 					}
 				}
 			}
@@ -559,6 +578,7 @@ $mobile: 540px;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
+			width: 250px;
 			div {
 				display: flex;
 				justify-content: space-evenly;
