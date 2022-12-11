@@ -27,9 +27,6 @@
 				letter-spacing: 1px;
 				margin: 10px 0 5px 0;
 			}
-			.must + h2 {
-				font: 100px/1 "Sunflower", sans-serif;
-			}
 			#terms {
 				width: 100%;
 				height: 100px;
@@ -38,6 +35,15 @@
 				font: 12px/1.3 "Sunflower", sans-serif;
 				color: #888;
 				background: #eee;
+			}
+			.all_agree {
+				display: flex;
+				align-items: center;
+				input[id="agree"] {
+					margin-right: 5px;
+					width: 16px;
+					height: 16px;
+				}
 			}
 			.agree {
 				margin-bottom: 30px;
@@ -48,8 +54,8 @@
 				}
 				input {
 					margin-left: 5px;
-					width: 10px;
-					height: 10px;
+					width: 13px;
+					height: 13px;
 				}
 			}
 
@@ -61,7 +67,8 @@
 				th {
 					width: 23%;
 					padding: 15px;
-					font: bold 14px/1 "Sunflower", sans-serif;
+					font: bold 14px/1 "Roboto", sans-serif;
+					letter-spacing: 1px;
 					color: #666;
 					text-align: left;
 					border-right: 1px solid #bbb;
@@ -120,7 +127,10 @@
 					input[type="radio"] {
 						margin-right: 5px;
 					}
-
+					#male,
+					#female {
+						font: 14px/1 "Sunflower", sans-serif;
+					}
 					label {
 						margin-right: 30px;
 					}
