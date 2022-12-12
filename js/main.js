@@ -7,9 +7,9 @@ const banner = document.querySelector("#banner");
 // const slider_ul = visual.querySelector(".main_bg");
 // const bg_btn = visual.querySelectorAll(".bg_btn li");
 
-const tab_ul = middle.querySelector("#tab_btn ul");
-const tab_btn = middle.querySelectorAll("#tab_btn li");
-const tab_div = middle.querySelectorAll("#tab_btn div");
+// const tab_ul = middle.querySelector("#tab_btn ul");
+// const tab_btn = middle.querySelectorAll("#tab_btn li");
+// const tab_div = middle.querySelectorAll("#tab_btn div");
 
 const bn_btn = banner.querySelectorAll("#banner li");
 const bn_div = banner.querySelector("#banner section");
@@ -39,22 +39,25 @@ const bn_div = banner.querySelector("#banner section");
 
 // #middle-menu영역 - 탭메뉴
 
-tab_btn.forEach((el, idx) => {
-    el.addEventListener("click", (e) => {
-        e.preventDefault();
+// tab_btn.forEach((el, idx) => {
+//     el.addEventListener("click", (e) => {
+//         e.preventDefault();
 
-        el.classList.toggle("on");//토글이 왜 적용이 안될까요?
+//         el.classList.toggle("on");//토글이 왜 적용이 안될까요?
 
-        init(tab_btn, idx);
-        init(tab_div, idx);
-    })
-})
+//         init(tab_btn, idx);
+//         init(tab_div, idx);
+//     })
+// })
+
+// function init(arr, idx) {
+//     for (let el of arr) el.classList.remove("on");
+//     arr[idx].classList.add("on");
+// }
+
+// map 추가
 
 
-function init(arr, idx) {
-    for (let el of arr) el.classList.remove("on");
-    arr[idx].classList.add("on");
-}
 
 // #banner 영역
 bn_btn.forEach((el, idx) => {

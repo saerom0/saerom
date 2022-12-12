@@ -2,6 +2,7 @@
 @import "reset.scss";
 @import "fonts.scss";
 @import "sign_up.scss";
+@import "sub_menu.scss";
 
 $tablet_plus: 1180px;
 $mobile: 540px;
@@ -143,7 +144,7 @@ $mobile: 540px;
 #middle_menu {
 	width: 100%;
 	position: relative;
-	margin-top: -28vh;
+	margin-top: -22vh;
 	z-index: 10;
 	.inner {
 		width: 1180px;
