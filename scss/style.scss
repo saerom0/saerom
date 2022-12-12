@@ -142,7 +142,9 @@ $mobile: 540px;
 //메인 슬라이드 밑 3단메뉴 영역
 #middle_menu {
 	width: 100%;
-	// margin-top: -28vh;
+	position: relative;
+	margin-top: -28vh;
+	z-index: 10;
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -207,11 +209,13 @@ $mobile: 540px;
 								&.isSub:hover .sub_menu-2 {
 									position: absolute;
 									display: block;
-									background: #333;
 									margin-top: -120px;
 									margin-left: 176px;
-									&:hover a {
-										color: #fff;
+									li:hover {
+										background: #333;
+										a {
+											color: #fff;
+										}
 									}
 								}
 								.sub_menu-2 ul li a {
@@ -400,18 +404,18 @@ $mobile: 540px;
 							transition: 0.5s;
 							margin-bottom: 20px;
 						}
-						&::after {
-							content: "";
+						.here {
 							display: none;
-							width: 10px;
-							height: 10px;
+							width: 100px;
+							height: 100px;
 							border-radius: 50%;
 							position: absolute;
 							right: 0;
 							bottom: 0;
-							color: #fff;
+							color: red;
 							opacity: 0;
 							transition: 0.5s;
+							z-index: 10;
 						}
 						a {
 							display: none;
@@ -431,6 +435,12 @@ $mobile: 540px;
 								color: #282828;
 							}
 						}
+						&.on .here {
+							display: block;
+							transform: scale(20);
+
+							//클릭하면 on클래스가 toggle되지만 화면상에 안보임
+						}
 					}
 					.review {
 						display: none;
@@ -441,6 +451,30 @@ $mobile: 540px;
 							color: gold;
 							font-size: 10px;
 							margin-left: 3px;
+						}
+					}
+					a {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 130px;
+						height: 35px;
+						border: 1px solid #fff;
+						border-radius: 5px;
+						font: 11px/35px "Sunflower", sans-serif;
+						color: #fff;
+						letter-spacing: 1px;
+						background: #000;
+						margin: 8px auto;
+
+						cursor: pointer;
+						transition: 0.3s;
+						&:hover {
+							opacity: 0.7;
+						}
+						i {
+							font-size: 14px;
+							padding-left: 5px;
 						}
 					}
 					&:hover {
@@ -457,33 +491,21 @@ $mobile: 540px;
 					}
 				}
 				h2 {
-					margin-bottom: 20px;
+					margin-bottom: 10px;
+					text-align: center;
+					a {
+						font: bold 16px/1 "Sunflower", sans-serif;
+						color: #282828;
+					}
+					&:hover {
+						transform: scale(1.02);
+					}
 				}
 				p {
+					text-align: center;
 					font: 14px/1.3 "Roboto", sans-serif;
 					color: #777;
 					margin-bottom: 20px;
-				}
-				a {
-					display: block;
-					width: 180px;
-					height: 50px;
-					margin: 0 auto;
-					border: 1px solid #fff;
-					font: bold 14px/50px "Roboto", sans-serif;
-					color: #fff;
-					text-align: center;
-					letter-spacing: 3px;
-					background: #000;
-					cursor: pointer;
-					transition: 0.3s;
-					&:hover {
-						opacity: 0.7;
-					}
-					i {
-						font-size: 20px;
-						padding-left: 7px;
-					}
 				}
 			}
 		}
@@ -730,18 +752,19 @@ $mobile: 540px;
 
 	//offer 영역
 	#offer {
-		padding: 100px 0;
+		padding: 100px auto;
 		.inner {
 			width: 100%;
-			// display: flex;
-			// flex-wrap: wrap;
-			// justify-content: space-around;
-			// align-content: space-around;
-			.wrap article {
-				width: 400px;
-				margin-bottom: 30px;
-				&:nth-of-type(2n) {
-					margin-right: 0px;
+			margin: 0 auto; //중앙정렬이 안됨
+			.wrap {
+				width: 100%;
+				margin: 0 auto;
+				article {
+					width: 400px;
+					margin-bottom: 30px;
+					&:nth-of-type(2n) {
+						margin-right: 0px;
+					}
 				}
 			}
 		}
@@ -757,6 +780,16 @@ $mobile: 540px;
 			}
 			p {
 				font: 14px/1.3 "Roboto", sans-serif;
+			}
+		}
+	}
+	#gallery {
+		.inner {
+			width: 100%;
+			padding: 30px;
+			figure {
+				width: 500px;
+				height: 350px;
 			}
 		}
 	}
