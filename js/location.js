@@ -32,7 +32,6 @@ var markerOptions = [
     }
 ];
 
-
 // 마커가 표시될 위치입니다 
 // var markerPosition = new kakao.maps.LatLng(37.4960607, 127.0279746);
 

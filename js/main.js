@@ -14,6 +14,7 @@ const banner = document.querySelector("#banner");
 const bn_btn = banner.querySelectorAll("#banner li");
 const bn_div = banner.querySelector("#banner section");
 
+
 // #visual 영역
 // bg_btn.forEach((el, idx) => {
 //     el.addEventListener("click", e => {
@@ -96,6 +97,32 @@ view_btn.forEach((el) => {
 
     })
 })
+
+
+//gallery
+
+
+function counter(el, num, time) {
+
+    const item = document.querySelector(el);
+
+    let current_num = parseInt(item.innerText);
+    let count_num = num - current_num;
+    let interval = parseInt(time / count_num);
+
+    let timer = setInterval(() => {
+        current_num++;
+        if (current_num == num) {
+            clearInterval(timer);
+        }
+        item.innerText = current_num;
+    }, interval);
+
+}
+counter(".record_1", 20, 2000);
+counter(".record_2", 25, 2000);
+counter(".record_3", 100, 2000);
+counter(".record_4", 8000, 1000);
 
 
 
