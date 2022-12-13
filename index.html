@@ -10,27 +10,31 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
     <script defer src="js/anime.js"></script>
+    <script defer src="js/scroll.js"></script>
+    <script defer src="js/sign_up.js"></script>
 
     <!-- <script defer src="js/anime2.js"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/c0a08800fd.js" crossorigin="anonymous"></script>
-
-
 </head>
 
 <body>
 
-    <header id="header">
+    <a href="#" class="on_top">on Top</a>
+
+    <!-- header -->
+    <header id="header" class="page">
         <div class="inner">
             <h1 class="hidden">Real Estate</h1>
             <!-- 메뉴버튼들 -->
             <nav class="web_menu">
+
                 <ul id="gnb">
                     <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
                     <li><a href="#">My Account</a></li>
                     <li><a href="#">Wish List</a></li>
-                    <li><a href="#">Member sevices</a></li>
+                    <li><a href="#">Member services</a></li>
                     <li><a href="#">Community</a></li>
                 </ul>
 
@@ -41,6 +45,7 @@
             </nav>
         </div>
     </header>
+
 
     <!-- 대문사진 -->
     <figure id="visual">
@@ -63,10 +68,8 @@
     </figure>
 
 
-
-    <!-- 중간 탭메뉴 박스 -->
-    <section id="middle_menu">
-
+    <!-- 중간 3단메뉴 박스 -->
+    <section id="middle_menu" class="page">
         <div class="inner">
             <ul class="sub_gnb">
                 <li>
@@ -103,13 +106,13 @@
                         </ul>
                     </div>
                 </li>
+
                 <li><a href="#">ENQUIRE NOW</a></li>
             </ul>
 
             <div class="intro">
                 <h2>WHO WE ARE</h2>
-                <h3>WORLD'S PREMIUM ONE-STOP SERVICED OFFICE PROVIDER, <br>RUN BY MULTI-CULTURAL INDUSTRY EXPERTS
-                </h3>
+                <h3>WORLD'S PREMIUM ONE-STOP SERVICED OFFICE PROVIDER, <br>RUN BY MULTI-CULTURAL INDUSTRY EXPERTS</h3>
                 <div class="p_wrap">
                     <p class="left">Located in some of the most prestigious buildings in the Asia-Pacific region, we
                         offer an unparalleled range of services, from sourcing the right local business partners to
@@ -124,25 +127,29 @@
 
 
     <!-- 홍보용 배너 -->
-    <section id="banner">
+    <section id="banner" class="page">
         <div class="inner">
+
             <section>
                 <div class="on">
                     <img src="img/office1.jpg" alt="서울 강남1호점 사무실 사진">
                     <p>MODERN OFFICE<br>OVER 150 OFFER</p>
                     <a href="#">CLICK HERE</a>
                 </div>
+
                 <div>
                     <img src="img/office2.jpg" alt="일본 오사카지점 사무실 사진">
                     <p>FIRST CHOICE FOR GLOBAL WORKPLACE</p>
                     <a href="#">CLICK HERE</a>
                 </div>
+
                 <div>
                     <img src="img/office3.jpg" alt="홍콩 몽콕지점 사무실 사진">
                     <p>OFFICES WITH THE LATEST FACILITIES</p>
                     <a href="#">CLICK HERE</a>
                 </div>
             </section>
+
             <ul class="bn_btn">
                 <li class="on"><a href="#"></a></li>
                 <li><a href="#"></a></li>
@@ -152,10 +159,12 @@
     </section>
 
     <!-- 특가 -->
-    <section id="offer">
+
+    <section id="offer" class="page">
         <div class="inner">
             <h1>SPECIAL OFFER</h1>
             <div class="wrap">
+
                 <article>
                     <div class="frame">
                         <div class="pic">
@@ -172,11 +181,10 @@
                         </div>
                         <a href="#">Add WishList<i class="fas fa-heart"></i></a>
                     </div>
-
                     <h2><a href="#">VESTIBULUM AENEAN</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis?</p>
-
                 </article>
+
                 <article>
                     <div class="frame">
                         <div class="pic">
@@ -192,11 +200,10 @@
                         </div>
                         <a href="#">Add WishList<i class="fas fa-heart"></i></a>
                     </div>
-
                     <h2><a href="#">NONUMMY ENDRERIT</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis?</p>
-
                 </article>
+
                 <article>
                     <div class="frame">
                         <div class="pic">
@@ -212,11 +219,10 @@
                         </div>
                         <a href="#">Add WishList<i class="fas fa-heart"></i></a>
                     </div>
-
                     <h2><a href="#">MONTES MAURIS</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis?</p>
-
                 </article>
+
                 <article>
                     <div class="frame">
                         <div class="pic">
@@ -232,23 +238,25 @@
                         </div>
                         <a href="#">Add WishList<i class="fas fa-heart"></i></a>
                     </div>
-
                     <h2><a href="#">CUM NATOQUE</a></h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, reiciendis?</p>
+                </article>
 
             </div>
         </div>
     </section>
 
 
-
+    <!-- 프로모션 홍보(배경사진 attachment : fix 부분) -->
     <section id="promo">
         <div class="inner">
+
             <div class="wrap">
                 <h1>GETTING 25% OFF</h1>
                 <p>for annual membership</p>
                 <a href="#">LEARN MORE</a>
             </div>
+
             <div class="wrap2">
                 <p>BUSINESS MULTINATIONALS</p>
                 <p>REPRESENTATIVE OFFICE</p>
@@ -263,31 +271,40 @@
         </div>
     </section>
 
+
+    <!-- 홍보동영상  -->
     <section id="gallery">
         <div class="inner">
             <h1>OUR TRACK RECORD</h1>
             <figure>
-                <video src="img/wework.mp4" autoplay loop muted><span class="hidden">회사홍보동영상</span></video>
+                <video class="cp_vid page" src="img/wework.mp4" autoplay loop muted>
+                    <span class="hidden">회사홍보동영상</span>
+                </video>
             </figure>
-            <!-- 스크롤기능 추가 예정...어떤 자료를 넣어야할지....생각중 -->
+
+            <!-- 카운터 함수 -->
             <div class="record">
                 <div>
-                    <p class="record_1">0</p> prime locations in Asia’s CBDs
+                    <img src="img/1.png" alt="">
+                    <p class="record_1">5</p> prime locations in World's CBDs
                 </div>
                 <div>
-                    <p class="record_2">0</p>years in business
+                    <img src="img/2.png" alt="">
+                    <p class="record_2">0</p> years in business
                 </div>
                 <div>
-                    <p class="record_3">25</p>% grade A+ Buildings
+                    <img src="img/3.png" alt="">
+                    <p class="record_3">30</p>% grade A+ Buildings
                 </div>
                 <div>
-                    <p class="record_4">7750</p>+ businesses served
+                    <img src="img/5.png" alt="">
+                    <p class="record_4">9550</p>+ businesses served
                 </div>
             </div>
     </section>
 
 
-
+    <!-- footer -->
     <footer id="footer">
         <div class="inner">
 
@@ -323,6 +340,7 @@
         </div>
     </footer>
 
+    <!-- 메인배경화면 슬라이드 효과 -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,

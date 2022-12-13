@@ -99,43 +99,11 @@ view_btn.forEach((el) => {
 })
 
 
-//gallery
-
-
-function counter(el, num, time) {
-
-    const item = document.querySelector(el);
-
-    let current_num = parseInt(item.innerText);
-    let count_num = num - current_num;
-    let interval = parseInt(time / count_num);
-
-    let timer = setInterval(() => {
-        current_num++;
-        if (current_num == num) {
-            clearInterval(timer);
-        }
-        item.innerText = current_num;
-    }, interval);
-
-}
-counter(".record_1", 20, 2000);
-counter(".record_2", 25, 2000);
-counter(".record_3", 100, 2000);
-counter(".record_4", 8000, 1000);
 
 
 
 
-// join 페이지 체크박스 전체 체크
-function selectAll(selectAll) {
-    const checkboxes
-        = document.getElementsByName('ck_agree');
 
-    checkboxes.forEach((checkbox) => {
-        checkbox.checked = selectAll.checked;
-    })
-}
 
 //visual swiper
 //swiper를 이쪽으로 옮기면 실행이 안됨
