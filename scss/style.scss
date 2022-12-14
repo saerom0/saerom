@@ -5,47 +5,48 @@
 @import "sub_menu.scss";
 
 $tablet_plus: 1180px;
+$tablet_origin: 1180px;
 $mobile: 540px;
 
-.on_top {
-	// display: block;
-	// &.on {
-	width: 50px;
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	right: 30px;
-	bottom: 30px;
-	color: #fff;
-	font: 12px/1 "arial";
-	z-index: 10;
-	background: #777;
-	border: 1px solid #777;
-	// }
-}
+// .on_top {
+// 	// display: block;
+// 	// &.on {
+// 	width: 50px;
+// 	height: 50px;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	position: fixed;
+// 	right: 30px;
+// 	bottom: 30px;
+// 	color: #fff;
+// 	font: 12px/1 "arial";
+// 	z-index: 15;
+// 	background: #777;
+// 	border: 1px solid #777;
+// 	// }
+// }
 
-.quick {
-	position: fixed;
-	right: 50px;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 15;
-	li {
-		width: 20px;
-		height: 20px;
-		border-radius: 10px;
-		background: #555;
-		margin-bottom: 20px;
-		cursor: pointer;
-		transition: 0.5s;
-		&.on {
-			height: 80px;
-			background: #111;
-		}
-	}
-}
+// .quick {
+// 	position: fixed;
+// 	right: 50px;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	z-index: 15;
+// 	li {
+// 		width: 20px;
+// 		height: 20px;
+// 		border-radius: 10px;
+// 		background: #555;
+// 		margin-bottom: 20px;
+// 		cursor: pointer;
+// 		transition: 0.5s;
+// 		&.on {
+// 			height: 80px;
+// 			background: #111;
+// 		}
+// 	}
+// }
 
 #header {
 	width: 100%;
@@ -66,7 +67,7 @@ $mobile: 540px;
 				li {
 					float: left;
 					border-right: 1px solid #282828;
-					margin-right: 15px;
+					margin-left: 15px;
 					padding-right: 15px;
 					&:last-child {
 						border-right: none;
@@ -105,6 +106,64 @@ $mobile: 540px;
 							background: #6d6d6d;
 							color: #fff;
 						}
+					}
+				}
+			}
+		}
+		.mob_menu {
+			width: 250px;
+			height: 100vh;
+			background: #1c1c1c;
+			position: fixed;
+			top: 0;
+			left: -250px;
+			padding: 35px 30px;
+			z-index: 10;
+			transition: 0.5s;
+			&.on {
+				left: 0;
+			}
+			a {
+				padding-bottom: 30px;
+				background: url(../img/로고2.png) no-repeat center/cover;
+			}
+			.mob_log {
+				height: 100%;
+				float: right;
+				li {
+					float: left;
+					height: 20px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin-right: 10px;
+					&:last-child {
+						margin-right: 0;
+					}
+					a {
+						display: block;
+						font: bold 14px/1 "Roboto", sans-serif;
+						padding: 5px 10px;
+						color: #282828;
+						border: 1px solid #6d6d6d;
+						border-radius: 3px;
+						&:hover {
+							background: #6d6d6d;
+							color: #fff;
+						}
+					}
+				}
+			}
+			#mob_gnb {
+				li {
+					a {
+						display: block;
+						width: 100%;
+						padding: 20px 0;
+						border-bottom: 1px solid #444;
+						font: bold 14px/1 "arial";
+						color: #888;
+						text-align: center;
 					}
 				}
 			}
@@ -160,21 +219,21 @@ $mobile: 540px;
 				}
 			}
 		}
-	}
-	.inner {
-		width: 1180px;
-		height: 100%;
-		margin: 0 auto;
-		.cp_name {
-			width: 220px;
-			height: 320px;
-			position: absolute;
-			left: 50%;
-			top: 15vh;
-			transform: translateX(-50%);
-			z-index: 3;
-			img {
-				width: 100%;
+		.inner {
+			width: 1180px;
+			height: 100%;
+			margin: 0 auto;
+			.cp_name {
+				width: 220px;
+				height: 320px;
+				position: absolute;
+				left: 50%;
+				top: 15vh;
+				transform: translateX(-50%);
+				z-index: 3;
+				img {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -192,6 +251,8 @@ $mobile: 540px;
 		top: 0;
 		z-index: 10;
 	}
+	//적용이 안됨
+
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -213,7 +274,7 @@ $mobile: 540px;
 				> a {
 					display: block;
 					padding: auto;
-					font: bold 20px/80px "Roboto", sans-serif;
+					font: bold 20px/70px "Roboto", sans-serif;
 					color: #353535;
 					text-align: center;
 					position: relative;
@@ -357,8 +418,9 @@ $mobile: 540px;
 					top: 15%;
 					left: 50%;
 					transform: translateX(-50%);
-					font: 700 72px/1.3 "Roboto", sans-serif;
+					font: 700 72px/1.5 "Roboto", sans-serif;
 					text-align: center;
+					padding: 0 10px;
 					color: #fff;
 					letter-spacing: 20px;
 				}
@@ -381,7 +443,7 @@ $mobile: 540px;
 			width: 278px;
 			height: 20px;
 			margin: 0 auto;
-			//.bn_btn은 이미지 바로 밑에 있는데 li는 왜 얼마 떨어져서 위치해있지?
+			//.bn_btn은 이미지 바로 밑에 있는데 li는 왜 밑에 떨어져서 위치해있지?
 			li {
 				width: 90px;
 				height: 9px;
@@ -482,7 +544,7 @@ $mobile: 540px;
 							}
 						}
 						&.on .here {
-							display: block;
+							display: none;
 							transform: scale(20);
 
 							//클릭하면 on클래스가 toggle되지만 화면상에 안보임
@@ -612,14 +674,13 @@ $mobile: 540px;
 			display: flex;
 			flex-direction: column;
 			width: 30%;
-			padding-top: 10px;
+			padding-top: 15px;
 			color: #fff;
 			font: 14px/35px "Poppins", sans-serif;
 			letter-spacing: 1px;
 			opacity: 0.9;
-			p::before {
-				content: "-";
-				position: absolute;
+			p {
+				line-height: 2.3;
 			}
 		}
 	}
@@ -629,17 +690,16 @@ $mobile: 540px;
 #gallery {
 	width: 100%;
 	padding: 80px 0;
-	// background: hsl(358.8785046729, 10%, 80%);
 	background: #000;
 	position: relative;
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-	}
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
 		h1 {
 			width: 100%;
 			margin-bottom: 60px;
@@ -665,12 +725,12 @@ $mobile: 540px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-around;
-			img {
-				margin-right: 20px;
-			}
 			div {
 				width: 100%;
 				color: #fff;
+				img {
+					margin-right: 20px;
+				}
 				p {
 					display: inline-block;
 					font: bold 20px/1 "Hahmlet", serif;
@@ -684,7 +744,7 @@ $mobile: 540px;
 #footer {
 	width: 100%;
 	padding: 80px 0;
-	background: #2a2a2a;
+	background: #1c1c1c;
 	position: relative;
 	.inner {
 		width: 1180px;
@@ -720,20 +780,25 @@ $mobile: 540px;
 			justify-content: flex-end;
 			align-items: center;
 			text-align: center;
+
+			p {
+				font: 12px/1 "Arimo", sans-serif;
+				color: #2a2a2a;
+			}
+		}
+		.mob_wrap2 {
 			h1 {
 				font: bold 24px "Arimo", sans-serif;
+				color: #2a2a2a;
 				letter-spacing: 3px;
 				&::after {
 					content: "";
 					display: block;
 					width: 300px;
 					height: 1px;
-					background: #000;
+					background: #999;
 					margin: 20px 0;
 				}
-			}
-			p {
-				font: 12px/1 "Arimo", sans-serif;
 			}
 		}
 
@@ -760,42 +825,56 @@ $mobile: 540px;
 	}
 }
 
-//tablet 2가지 사이즈가 있습니다 tablet_plus와 tablet_origin 으로 구분하였습니다
-@media screen and (min-width: 860px) and (max-width: $tablet_plus) {
+//미디어쿼리 3영역으로 구분
+//$tablet_plus (861px~1180px)
+//$tablet_origin (541px~860px)
+//$mobile (~540px)
+@media screen and (min-width: 861px) and (max-width: $tablet_plus) {
 	//header 영역
 	#header {
 		height: 50px;
 		.inner {
 			width: 100%;
-			margin-left: 20px;
+			padding: 0px 30px;
 			.web_menu {
 				padding-top: 18px;
 				#gnb {
-					width: 80%;
+					width: 60%;
 					li a {
-						font: bold 12px/1 "Roboto", sans-serif;
+						font: bold 12px/1 "Arimo", sans-serif;
 					}
 				}
-				.log {
-					margin-right: 30px;
-					li a {
-						font: bold 13px/1 "Roboto", sans-serif;
-					}
+				.log li a {
+					font: bold 13px/1 "Roboto", sans-serif;
 				}
+			}
+			.mob_menu {
+				display: none;
 			}
 		}
 	}
 	//visual 영역
+	#visual .visual {
+		.swiper .swiper-pagination {
+			top: 70vh;
+			span {
+				width: 75px;
+			}
+		}
+		.inner {
+			width: 100%;
+		}
+	}
 
 	//middle_menu영역
 	#middle_menu {
 		.inner {
 			width: 100%;
-			margin: 0 auto;
+			padding: 0px 30px;
 			background: #fff;
 			.sub_gnb {
 				width: 100%;
-				height: 60px;
+				height: 65px;
 				&.on {
 					position: fixed;
 					top: 0;
@@ -803,7 +882,7 @@ $mobile: 540px;
 				}
 				> li {
 					> a {
-						font: bold 18px/60px "Roboto", sans-serif;
+						font: bold 18px/55px "Roboto", sans-serif;
 					}
 				}
 			}
@@ -835,23 +914,16 @@ $mobile: 540px;
 
 	//banner영역
 	#banner {
+		padding: 0 30px;
 		.inner {
 			width: 100%;
 			section {
-				width: calc(100% * 3);
 				height: 430px;
 				div {
 					margin-bottom: 80px;
 					p {
-						width: 100%;
-						position: absolute;
-						top: 15%;
-						left: 50%;
-						transform: translateX(-50%);
-						font: 900 72px/1.3 "Roboto", sans-serif;
-						text-align: center;
-						color: #fff;
-						letter-spacing: 25px;
+						top: 10%;
+						font: 900 65px/1.4 "Roboto", sans-serif;
 					}
 				}
 			}
@@ -860,18 +932,29 @@ $mobile: 540px;
 
 	//offer 영역
 	#offer {
-		padding: 100px auto;
+		padding: 100px 30px;
 		.inner {
 			width: 100%;
-			margin: 0 auto; //중앙정렬이 안됨
 			.wrap {
-				width: 100%;
-				margin: 0 auto;
+				padding: 0 5%;
 				article {
-					width: 400px;
+					width: 47%;
+					margin-right: 6%;
 					margin-bottom: 30px;
 					&:nth-of-type(2n) {
-						margin-right: 0px;
+						margin-right: 0;
+					}
+					.frame {
+						height: 360px;
+						.review {
+							bottom: 40px;
+							i {
+								font-size: 15px;
+							}
+						}
+						a {
+							margin: 20px auto;
+						}
 					}
 				}
 			}
@@ -880,30 +963,60 @@ $mobile: 540px;
 
 	//promo 영역
 	#promo {
-		padding: 100px 0;
+		padding: 100px 30px;
 		.inner {
 			width: 100%;
-			h1 {
-				font: bold 40px/1 "Roboto", sans-serif;
+			.wrap {
+				width: 100%;
+				margin-right: 0;
+				h1 {
+					font: 700 60px/1.2 "Sunflower", sans-serif;
+					text-align: center;
+				}
+				p {
+					font: 50px/1.3 "Roboto", sans-serif;
+					text-align: center;
+				}
+				a {
+					left: 50%;
+					transform: translateX(-50%);
+				}
 			}
-			p {
-				font: 14px/1.3 "Roboto", sans-serif;
+			.wrap2 {
+				display: none;
 			}
 		}
 	}
+
+	//gallery 영역
 	#gallery {
+		padding: 70px 30px;
 		.inner {
 			width: 100%;
-			padding: 30px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			figure {
 				width: 500px;
 				height: 350px;
+			}
+			.record {
+				display: block;
+				width: 350px;
+				height: 100%;
+				div {
+					display: flex;
+					align-items: center;
+					height: 80px;
+				}
 			}
 		}
 	}
 
 	//footer영역
 	#footer {
+		padding: 60px 0;
 		.inner {
 			width: 100%;
 			.wrap3 {
@@ -917,4 +1030,12 @@ $mobile: 540px;
 			}
 		}
 	}
+}
+
+//$tablet_origin (541px~860px)
+@media screen and (min-width: 541px) and (max-width: $tablet_origin) {
+}
+
+//$mobile (~540px)
+@media screen and (max-width: $mobile) {
 }
