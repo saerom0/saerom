@@ -271,6 +271,9 @@ table {
   height: 100%;
   margin: 0 auto;
 }
+#header .inner .div {
+  display: none;
+}
 #header .inner .web_menu {
   width: 100%;
   padding-top: 25px;
@@ -325,13 +328,70 @@ table {
   background: #6d6d6d;
   color: #fff;
 }
+#header .inner .btn_call {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+#header .inner .btn_call::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .inner .btn_call::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+#header .inner .btn_call span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  transition: 1s;
+  text-indent: -9999px;
+}
+#header .inner .btn_call.on::before {
+  top: 50%;
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+#header .inner .btn_call.on::after {
+  bottom: 50%;
+  margin-bottom: -1px;
+  transform: rotate(-45deg);
+}
+#header .inner .btn_call.on span {
+  transform: translateX(100%);
+  opacity: 0;
+}
 #header .inner .mob_menu {
   width: 250px;
   height: 100vh;
   background: #1c1c1c;
   position: fixed;
   top: 0;
-  left: -250px;
+  left: 0px;
   padding: 35px 30px;
   z-index: 10;
   transition: 0.5s;
@@ -911,7 +971,7 @@ table {
 }
 #gallery .inner .record {
   float: right;
-  width: 40%;
+  min-width: 40%;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -1174,7 +1234,7 @@ table {
   }
   #gallery .inner .record {
     display: block;
-    width: 350px;
+    min-width: 350px;
     height: 100%;
   }
   #gallery .inner .record div {
@@ -1201,7 +1261,7 @@ table {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 860px) {
   #header {
     height: 80px;
   }
@@ -1255,6 +1315,111 @@ table {
   }
   #footer .inner .wrap1 ul li a {
     font: bold 14px/1 "Poppins", sans-serif;
+  }
+}
+@media screen and (max-width: 610px) {
+  #header {
+    height: 50px;
+    background: #e3e3e3;
+  }
+  #header .inner div {
+    display: block;
+    width: 150px;
+    height: 48px;
+  }
+  #header .inner div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: url(../img/logo1.png) no-repeat center/cover;
+  }
+  #header .inner .web_menu {
+    display: none;
+  }
+  #header .inner .btn_call {
+    display: block;
+  }
+  #visual .visual .inner .cp_name {
+    display: none;
+  }
+  #visual .visual .swiper .swiper-pagination span {
+    width: 10px;
+    border-radius: 50%;
+  }
+  #middle_menu .inner .sub_gnb {
+    display: none;
+  }
+  #middle_menu .inner .intro {
+    width: 100%;
+    height: 400px;
+  }
+  #middle_menu .inner .intro h2 {
+    font: bold 40px/1 "Roboto", sans-serif;
+  }
+  #middle_menu .inner .intro h3 {
+    width: 100%;
+    margin: 20px auto;
+  }
+  #middle_menu .inner .intro .p_wrap {
+    flex-wrap: wrap;
+  }
+  #middle_menu .inner .intro .p_wrap p {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  #middle_menu .inner .intro .p_wrap .left {
+    margin-right: 0;
+    text-align: center;
+  }
+  #banner .inner section div p {
+    top: 10%;
+    font: 900 45px/1.3 "Roboto", sans-serif;
+    letter-spacing: 5px;
+  }
+  #offer .inner .wrap article {
+    width: 100%;
+    margin-right: 0;
+  }
+  #promo {
+    padding: 50px 20px;
+  }
+  #promo .inner .wrap {
+    margin: auto;
+  }
+  #gallery {
+    padding: 30px 20px;
+  }
+  #gallery .inner figure {
+    width: 100%;
+  }
+  #footer .inner .mob_wrap2 {
+    display: block;
+  }
+  #footer .inner .mob_wrap2 h1 {
+    font: bold 15px "Arimo", sans-serif;
+    letter-spacing: 2px;
+  }
+  #footer .inner .mob_wrap2 h1::after {
+    width: 120px;
+    margin: 10px 0;
+  }
+  #footer .inner .mob_wrap2 p {
+    font: 10px/1 "Arimo", sans-serif;
+    color: #999;
+  }
+  #footer .inner .web_wrap2 {
+    display: none;
+  }
+  #footer .inner .wrap3 {
+    width: 200px;
+  }
+  #footer .inner .wrap3 div i {
+    font-size: 15px;
+  }
+  #footer .inner .wrap3 address {
+    font: 10px/1.2 "Poppins", sans-serif;
   }
 }
 

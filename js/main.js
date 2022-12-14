@@ -3,6 +3,18 @@ const visual = document.querySelector("#visual");
 const middle = document.querySelector("#middle_menu");
 const banner = document.querySelector("#banner");
 
+
+//햄버거 버튼
+const btn_call = document.querySelector(".btn_call");
+const mob_menu = document.querySelector(".mob_menu");
+
+btn_call.onclick = function (e) {
+    e.preventDefault();
+    btn_call.classList.toggle("on");
+    menuMo.classList.toggle('on');
+}
+
+
 // swiper 사용
 // const slider_ul = visual.querySelector(".main_bg");
 // const bg_btn = visual.querySelectorAll(".bg_btn li");
