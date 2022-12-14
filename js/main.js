@@ -100,28 +100,7 @@ view_btn.forEach((el) => {
 
 
 
-//gallery 카운터 함수
-function counter(el, num, time) {
 
-    const item = document.querySelector(el);
-
-    let current_num = parseInt(item.innerText);
-    let count_num = num - current_num;
-    let interval = parseInt(time / count_num);
-
-    let timer = setInterval(() => {
-        current_num++;
-        if (current_num == num) {
-            clearInterval(timer);
-        }
-        item.innerText = current_num;
-    }, interval);
-
-}
-counter(".record_1", 28, 2000);
-counter(".record_2", 25, 2000);
-counter(".record_3", 100, 2000);
-counter(".record_4", 9700, 1000);
 
 
 

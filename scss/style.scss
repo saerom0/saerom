@@ -186,6 +186,12 @@ $mobile: 540px;
 	position: relative;
 	margin-top: -22vh;
 	z-index: 10;
+	&.on .sub_gnb {
+		position: fixed;
+		width: 1180px;
+		top: 0;
+		z-index: 10;
+	}
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -196,12 +202,6 @@ $mobile: 540px;
 			top: 0;
 			position: relative;
 			display: inline-flex;
-			&.on {
-				position: fixed;
-				width: 1180px;
-				top: 0;
-				z-index: 10;
-			}
 			> li {
 				width: calc(100% / 3);
 				background: #eeeeee;
@@ -558,60 +558,6 @@ $mobile: 540px;
 	}
 }
 
-//gallery영역
-#gallery {
-	width: 100%;
-	padding: 80px 0;
-	background: hsl(358.8785046729, 10%, 80%);
-	position: relative;
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-	.inner {
-		width: 1180px;
-		margin: 0 auto;
-		h1 {
-			width: 100%;
-			margin-bottom: 60px;
-			font: bold 24px/1 "Roboto", sans-serif;
-			color: #555;
-			text-align: center;
-		}
-		figure {
-			float: left;
-			width: 50%;
-			height: 380px;
-			margin-bottom: 40px;
-			video {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-		}
-		.record {
-			float: right;
-			width: 40%;
-			height: 400px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-			img {
-				margin-right: 20px;
-			}
-			div {
-				width: 100%;
-				color: #fff;
-				p {
-					display: inline-block;
-					font: bold 20px/1 "Hahmlet", serif;
-				}
-			}
-		}
-	}
-}
-
 //배경 fixed 영역
 #promo {
 	width: 100%;
@@ -674,6 +620,61 @@ $mobile: 540px;
 			p::before {
 				content: "-";
 				position: absolute;
+			}
+		}
+	}
+}
+
+//gallery영역
+#gallery {
+	width: 100%;
+	padding: 80px 0;
+	// background: hsl(358.8785046729, 10%, 80%);
+	background: #000;
+	position: relative;
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.inner {
+		width: 1180px;
+		margin: 0 auto;
+		h1 {
+			width: 100%;
+			margin-bottom: 60px;
+			font: bold 24px/1 "Roboto", sans-serif;
+			color: #fff;
+			text-align: center;
+		}
+		figure {
+			float: left;
+			width: 50%;
+			height: 380px;
+			margin-bottom: 40px;
+			video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.record {
+			float: right;
+			width: 40%;
+			height: 400px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			img {
+				margin-right: 20px;
+			}
+			div {
+				width: 100%;
+				color: #fff;
+				p {
+					display: inline-block;
+					font: bold 20px/1 "Hahmlet", serif;
+				}
 			}
 		}
 	}
