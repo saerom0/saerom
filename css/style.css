@@ -277,6 +277,27 @@ table {
   border: 1px solid #777;
 }
 
+.quick {
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 15;
+}
+.quick li {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: #555;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.quick li.on {
+  height: 80px;
+  background: #111;
+}
+
 #header {
   width: 100%;
   height: 72px;
@@ -773,6 +794,59 @@ table {
   margin-bottom: 20px;
 }
 
+#gallery {
+  width: 100%;
+  padding: 80px 0;
+  background: hsl(358.8785046729deg, 10%, 80%);
+  position: relative;
+}
+#gallery::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#gallery .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#gallery .inner h1 {
+  width: 100%;
+  margin-bottom: 60px;
+  font: bold 24px/1 "Roboto", sans-serif;
+  color: #555;
+  text-align: center;
+}
+#gallery .inner figure {
+  float: left;
+  width: 50%;
+  height: 380px;
+  margin-bottom: 40px;
+}
+#gallery .inner figure video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#gallery .inner .record {
+  float: right;
+  width: 40%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#gallery .inner .record img {
+  margin-right: 20px;
+}
+#gallery .inner .record div {
+  width: 100%;
+  color: #fff;
+}
+#gallery .inner .record div p {
+  display: inline-block;
+  font: bold 20px/1 "Hahmlet", serif;
+}
+
 #promo {
   width: 100%;
   padding: 70px 0;
@@ -836,58 +910,6 @@ table {
 #promo .inner .wrap2 p::before {
   content: "-";
   position: absolute;
-}
-
-#gallery {
-  width: 100%;
-  padding: 100px 0;
-  background: hsl(358.8785046729deg, 10%, 80%);
-  position: relative;
-}
-#gallery::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#gallery .inner {
-  width: 1180px;
-  margin: 0 auto;
-}
-#gallery .inner h1 {
-  width: 100%;
-  margin-bottom: 40px;
-  font: bold 24px/1 "Roboto", sans-serif;
-  color: #555;
-  text-align: center;
-}
-#gallery .inner figure {
-  float: left;
-  width: 50%;
-  height: 400px;
-}
-#gallery .inner figure video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#gallery .inner .record {
-  float: right;
-  width: 40%;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-#gallery .inner .record img {
-  margin-right: 20px;
-}
-#gallery .inner .record div {
-  width: 100%;
-  color: #fff;
-}
-#gallery .inner .record div p {
-  display: inline-block;
-  font: bold 20px/1 "Hahmlet", serif;
 }
 
 #footer {
