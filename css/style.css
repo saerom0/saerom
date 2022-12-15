@@ -391,7 +391,7 @@ table {
   background: #1c1c1c;
   position: fixed;
   top: 0;
-  left: 0px;
+  left: -250px;
   padding: 35px 30px;
   z-index: 10;
   transition: 0.5s;
@@ -492,7 +492,7 @@ table {
   margin: 0 auto;
 }
 #visual .visual .inner .cp_name {
-  max-width: 220px;
+  width: 220px;
   position: absolute;
   left: 50%;
   top: 17vh;
@@ -1292,6 +1292,10 @@ table {
     padding: 0;
     border: none;
   }
+  #visual .visual .inner .cp_name {
+    width: 170px;
+    top: 25vh;
+  }
   #banner .inner section div p {
     font: 900 55px/1.3 "Roboto", sans-serif;
     letter-spacing: 15px;
@@ -1319,7 +1323,7 @@ table {
 }
 @media screen and (max-width: 610px) {
   #header {
-    height: 50px;
+    height: 60px;
     background: #e3e3e3;
   }
   #header .inner div {
