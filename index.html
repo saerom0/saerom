@@ -20,20 +20,22 @@
 </head>
 
 <body>
-    <!-- 클릭하면 최상단으로 오게 하는 버튼-->
-    <!-- <a href="#" class="on_top">on Top</a> -->
 
-    <ul class="quick">
+    <!-- <ul class="quick">
         <li class="on"></li>
         <li></li>
         <li></li>
         <li></li>
-    </ul>
+    </ul> -->
 
     <!-- header -->
     <header id="header" class="page">
         <div class="inner">
-            <div>
+            <!-- 클릭하면 최상단으로 오게 하는 버튼-->
+            <a href="#" class="on_top"><i class="fas fa-arrow-up"></i></a>
+
+            <!-- 웹 vs 모바일버전의 h1이 다름 웹버전은 h1이 없음-->
+            <div class="web_h1">
                 <h1 class="hidden">Real Estate</h1>
                 <a href="index.html"></a>
             </div>
@@ -63,7 +65,7 @@
             <!-- 헤더메뉴 모바일 버전 -->
             <nav class="mob_menu">
 
-                <a href="index.html"><span class="hidden">로고이미지 홈버튼</span></a>
+                <a class="mob_h1" href="index.html"><img src="img/logo_black.png" alt=""></a>
 
                 <ul class="mob_log">
                     <li><a href="#">Log in</a></li>

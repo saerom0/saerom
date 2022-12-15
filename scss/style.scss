@@ -8,25 +8,6 @@ $tablet_plus: 1180px;
 $tablet_origin: 860px;
 $mobile: 610px;
 
-// .on_top {
-// 	// display: block;
-// 	// &.on {
-// 	width: 50px;
-// 	height: 50px;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	position: fixed;
-// 	right: 30px;
-// 	bottom: 30px;
-// 	color: #fff;
-// 	font: 12px/1 "arial";
-// 	z-index: 15;
-// 	background: #777;
-// 	border: 1px solid #777;
-// 	// }
-// }
-
 // .quick {
 // 	position: fixed;
 // 	right: 50px;
@@ -55,7 +36,12 @@ $mobile: 610px;
 		width: 1180px;
 		height: 100%;
 		margin: 0 auto;
-		.div {
+
+		//up to top button
+		.on_top {
+			display: none;
+		}
+		.web_h1 {
 			display: none;
 		}
 		.web_menu {
@@ -113,22 +99,22 @@ $mobile: 610px;
 			}
 		}
 		.btn_call {
-			position: absolute;
-			right: 30px;
-			top: 50%;
-			transform: translateY(-50%);
 			display: none;
 			width: 20px;
 			height: 20px;
+			position: absolute;
+			right: 30px;
+			top: 30px;
+			z-index: 20;
 			&::before {
 				content: "";
 				display: block;
 				width: 100%;
 				height: 2px;
-				background: #000;
 				position: absolute;
 				top: 0;
 				left: 0;
+				background: #000;
 				transition: top 0.5s 0s, transform 0.5s 0.5s;
 			}
 			&::after {
@@ -136,20 +122,20 @@ $mobile: 610px;
 				display: block;
 				width: 100%;
 				height: 2px;
-				background: #000;
 				position: absolute;
 				bottom: 0;
 				left: 0;
+				background: #000;
 				transition: bottom 0.5s 0s, transform 0.5s 0.5s;
 			}
 			span {
 				display: block;
 				width: 100%;
 				height: 2px;
-				background: #000;
 				position: absolute;
 				top: 50%;
 				left: 0;
+				background: #000;
 				margin-top: -1px;
 				transition: 1s;
 				text-indent: -9999px;
@@ -172,62 +158,83 @@ $mobile: 610px;
 			}
 		}
 		.mob_menu {
+			display: none;
+			flex-direction: column;
 			width: 250px;
 			height: 100vh;
-			background: #1c1c1c;
 			position: fixed;
 			top: 0;
 			left: -250px;
+			background: #1c1c1c;
 			padding: 35px 30px;
-			z-index: 10;
+			z-index: 30;
 			transition: 0.5s;
 			&.on {
 				left: 0;
-			}
-			a {
-				padding-bottom: 30px;
-				background: url(../img/로고2.png) no-repeat center/cover;
-			}
-			.mob_log {
-				height: 100%;
-				float: right;
-				li {
-					float: left;
-					height: 20px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					margin-right: 10px;
-					&:last-child {
-						margin-right: 0;
+				.mob_h1 {
+					width: 143px;
+					height: 45px;
+					display: block;
+					margin: 0 auto;
+					margin-bottom: 20px;
+					img {
+						width: 100%;
+						height: 100%;
 					}
-					a {
-						display: block;
-						font: bold 14px/1 "Roboto", sans-serif;
-						padding: 5px 10px;
-						color: #282828;
-						border: 1px solid #6d6d6d;
-						border-radius: 3px;
-						&:hover {
-							background: #6d6d6d;
+				}
+				.mob_log {
+					li {
+						width: 70%;
+						height: 40px;
+						margin: 0 auto;
+						text-align: center;
+						a {
+							display: block;
+							font: 14px/1 "Roboto", sans-serif;
+							padding: 5px 10px;
 							color: #fff;
+							border: 1px solid #6d6d6d;
+							border-radius: 3px;
+							text-align: center;
+							&:hover {
+								background: #6d6d6d;
+								color: #fff;
+							}
+						}
+					}
+				}
+				#mob_gnb {
+					li {
+						a {
+							display: block;
+							width: 100%;
+							padding: 20px 0;
+							border-bottom: 1px solid #444;
+							font: bold 14px/1 "arial";
+							color: #888;
+							text-align: center;
 						}
 					}
 				}
 			}
-			#mob_gnb {
-				li {
-					a {
-						display: block;
-						width: 100%;
-						padding: 20px 0;
-						border-bottom: 1px solid #444;
-						font: bold 14px/1 "arial";
-						color: #888;
-						text-align: center;
-					}
-				}
-			}
+		}
+	}
+	&.on .inner .on_top {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+		z-index: 15;
+		background: transparent;
+		border: 2px solid #777;
+		i {
+			font-size: 20px;
+			color: #777;
 		}
 	}
 }
@@ -307,11 +314,14 @@ $mobile: 610px;
 	position: relative;
 	margin-top: -22vh;
 	z-index: 10;
-	&.on .sub_gnb {
-		position: fixed;
-		width: 1180px;
-		top: 0;
-		z-index: 10;
+	&.on .inner {
+		// width: 1180px;
+		.sub_gnb {
+			position: fixed;
+			width: 1180px;
+			// top: 0;
+			z-index: 10;
+		}
 	}
 	//적용이 안됨
 
@@ -918,9 +928,6 @@ $mobile: 610px;
 					font: bold 13px/1 "Roboto", sans-serif;
 				}
 			}
-			.mob_menu {
-				display: none;
-			}
 		}
 	}
 	//visual 영역
@@ -938,6 +945,9 @@ $mobile: 610px;
 
 	//middle_menu영역
 	#middle_menu {
+		&.on .inner .sub_gnb {
+			width: 100%;
+		}
 		.inner {
 			width: 100%;
 			padding: 0px 30px;
@@ -945,11 +955,6 @@ $mobile: 610px;
 			.sub_gnb {
 				width: 100%;
 				height: 65px;
-				&.on {
-					position: fixed;
-					top: 0;
-					z-index: 10;
-				}
 				> li {
 					> a {
 						font: bold 18px/55px "Roboto", sans-serif;
@@ -1218,25 +1223,28 @@ $mobile: 610px;
 @media screen and (max-width: $mobile) {
 	//header
 	#header {
-		height: 60px;
+		height: 90px;
 		background: #e3e3e3;
 		.inner {
-			div {
+			.web_h1 {
 				display: block;
-				width: 150px;
-				height: 48px;
+				width: 132px;
+				height: 90px;
 				a {
 					display: block;
 					width: 100%;
 					height: 100%;
-					z-index: 9;
-					background: url(../img/logo1.png) no-repeat center/cover;
+					background: url(../img/logo_white.png) no-repeat
+						center/cover;
 				}
 			}
 			.web_menu {
 				display: none;
 			}
 			.btn_call {
+				display: block;
+			}
+			.mob_menu {
 				display: block;
 			}
 		}
@@ -1359,17 +1367,21 @@ $mobile: 610px;
 				}
 			}
 			.web_wrap2 {
-				display: none;
+				display: flex;
 			}
+
 			.wrap3 {
-				width: 200px;
+				width: 50px;
 				div {
+					display: flex;
+					flex-direction: column;
 					i {
-						font-size: 15px;
+						font-size: 20px;
+						margin-top: 20px;
 					}
 				}
 				address {
-					font: 10px/1.2 "Poppins", sans-serif;
+					display: none;
 				}
 			}
 		}

@@ -5,13 +5,13 @@ const banner = document.querySelector("#banner");
 
 
 //햄버거 버튼
-const btn_call = document.querySelector(".btn_call");
-const mob_menu = document.querySelector(".mob_menu");
+const btn_call = header.querySelector(".btn_call");
+const mob_menu = header.querySelector(".mob_menu");
 
-btn_call.onclick = function (e) {
+btn_call.onclick = (e) => {
     e.preventDefault();
     btn_call.classList.toggle("on");
-    menuMo.classList.toggle('on');
+    mob_menu.classList.toggle('on');
 }
 
 
