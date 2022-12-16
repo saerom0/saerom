@@ -25,10 +25,10 @@ window.addEventListener("scroll", () => {
     }
 
     if(scroll >=posArr[3]+base){
-        counter(".record_1", 28, 2000);
+        counter(".record_1", 30, 2000);
         counter(".record_2", 25, 2000);
         counter(".record_3", 100, 2000);
-        counter(".record_4", 9700, 1000);
+        counter(".record_4", 9700, 2000);
     }
     // ontop.addEventListener("click", (e) => {
     //     new Anim(window, {
@@ -54,7 +54,7 @@ window.addEventListener("scroll", () => {
             }
             item.innerText = current_num;
         }, interval);
-
+    
     }
 
 

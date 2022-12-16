@@ -1,3 +1,7 @@
+$tablet_plus: 1180px;
+$tablet_origin: 860px;
+$mobile: 610px;
+
 .sign_up {
 	.sub_bg {
 		height: 250px;
@@ -159,4 +163,19 @@
 			}
 		}
 	}
+}
+
+//미디어쿼리 3영역으로 구분
+//$tablet_plus (861px~1180px)
+//$tablet_origin (541px~860px)
+//$mobile (~540px)
+@media screen and (max-width: $tablet_plus) {
+}
+
+//$tablet_origin (541px~860px)
+@media screen and (max-width: $tablet_origin) {
+}
+
+//$mobile (~610px)
+@media screen and (max-width: $mobile) {
 }
