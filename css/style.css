@@ -494,7 +494,7 @@ table {
   display: flex;
   align-items: center;
 }
-.sign_up .inner form .all_agree input[id=agree] {
+.sign_up .inner form .all_agree input[id=all_agree] {
   margin-right: 5px;
   width: 16px;
   height: 16px;
@@ -504,7 +504,8 @@ table {
   display: flex;
   align-items: center;
 }
-.sign_up .inner form .agree label[for=agree] {
+.sign_up .inner form .agree label[for=must_agree],
+.sign_up .inner form .agree label[for=choice_agree] {
   font-size: 12px;
 }
 .sign_up .inner form .agree input {
@@ -572,9 +573,14 @@ table {
   width: 35%;
   height: 30px;
   border: 1px solid #bbb;
-  padding-left: 20px;
+  padding-left: 10px;
 }
-.sign_up .inner form table td input#phone {
+.sign_up .inner form table td p {
+  font-size: 12px;
+  color: blue;
+}
+.sign_up .inner form table td input#middle_num,
+.sign_up .inner form table td #end_num {
   width: 100px;
 }
 .sign_up .inner form table td input[type=checkbox],
@@ -588,13 +594,14 @@ table {
 .sign_up .inner form table td label {
   margin-right: 30px;
 }
-.sign_up .inner form table td select#phone {
+.sign_up .inner form table td select#phone,
+.sign_up .inner form table td #gender {
   width: 20%;
   height: 30px;
   display: inline-flex;
   align-items: center;
   border: 1px solid #bbb;
-  padding-left: 20px;
+  padding-left: 10px;
   margin-right: 5px;
   font-family: "Sunflower", sans-serif;
 }
@@ -607,7 +614,7 @@ table {
   border: 1px solid #bbb;
   padding-left: 20px;
 }
-.sign_up .inner form table td p {
+.sign_up .inner form table td span {
   font-size: 11px;
 }
 
@@ -881,7 +888,7 @@ table {
 }
 #header.on .inner .on_top i {
   font-size: 20px;
-  color: #777;
+  color: #000;
 }
 
 #visual .visual {

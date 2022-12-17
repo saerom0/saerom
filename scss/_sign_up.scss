@@ -42,7 +42,7 @@ $mobile: 610px;
 			.all_agree {
 				display: flex;
 				align-items: center;
-				input[id="agree"] {
+				input[id="all_agree"] {
 					margin-right: 5px;
 					width: 16px;
 					height: 16px;
@@ -52,7 +52,8 @@ $mobile: 610px;
 				margin-bottom: 30px;
 				display: flex;
 				align-items: center;
-				label[for="agree"] {
+				label[for="must_agree"],
+				label[for="choice_agree"] {
 					font-size: 12px;
 				}
 				input {
@@ -120,9 +121,14 @@ $mobile: 610px;
 						width: 35%;
 						height: 30px;
 						border: 1px solid #bbb;
-						padding-left: 20px;
+						padding-left: 10px;
 					}
-					input#phone {
+					p {
+						font-size: 12px;
+						color: blue;
+					}
+					input#middle_num,
+					#end_num {
 						width: 100px;
 					}
 
@@ -137,13 +143,14 @@ $mobile: 610px;
 					label {
 						margin-right: 30px;
 					}
-					select#phone {
+					select#phone,
+					#gender {
 						width: 20%;
 						height: 30px;
 						display: inline-flex;
 						align-items: center;
 						border: 1px solid #bbb;
-						padding-left: 20px;
+						padding-left: 10px;
 						margin-right: 5px;
 						font-family: "Sunflower", sans-serif;
 					}
@@ -156,7 +163,7 @@ $mobile: 610px;
 						border: 1px solid #bbb;
 						padding-left: 20px;
 					}
-					p {
+					span {
 						font-size: 11px;
 					}
 				}
