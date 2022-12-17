@@ -3,7 +3,8 @@
 @import "fonts.scss";
 @import "sub_layout.scss";
 @import "sign_up.scss";
-@import "sub_menu.scss";
+@import "location.scss";
+@import "customer.scss";
 
 $tablet_plus: 1180px;
 $tablet_origin: 860px;
@@ -735,8 +736,8 @@ $mobile: 610px;
 	}
 }
 
-//gallery영역
-#gallery {
+//track영역
+#track {
 	width: 100%;
 	padding: 80px 0;
 	background: #000;
@@ -1047,8 +1048,8 @@ $mobile: 610px;
 		}
 	}
 
-	//gallery 영역
-	#gallery {
+	//track 영역
+	#track {
 		padding: 70px 30px;
 		.inner {
 			width: 100%;
@@ -1327,8 +1328,8 @@ $mobile: 610px;
 		}
 	}
 
-	//gallery
-	#gallery {
+	//track
+	#track {
 		padding: 30px 20px;
 		.inner {
 			figure {

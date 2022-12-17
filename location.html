@@ -23,17 +23,25 @@
 
 <body>
 
-    <header id="header">
+    <!-- header -->
+    <header id="header" class="page">
         <div class="inner">
-            <h1 class="hidden">Real Estate</h1>
-            <!-- 메뉴버튼들 -->
+            <!-- 클릭하면 최상단으로 오게 하는 버튼-->
+            <a href="#" class="on_top"><i class="fas fa-arrow-up"></i></a>
+
+            <!-- 웹 vs 모바일버전의 h1이 다름 웹버전은 h1이 없음-->
+            <div class="web_h1">
+                <h1 class="hidden">Real Estate</h1>
+                <a href="index.html"></a>
+            </div>
+            <!-- 헤더메뉴 웹버전 -->
             <nav class="web_menu">
+
                 <ul id="gnb">
                     <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
                     <li><a href="#">My Account</a></li>
-                    <li><a href="#">Wish List</a></li>
-                    <li><a href="#">Member sevices</a></li>
-                    <li><a href="#">Community</a></li>
+                    <li><a href="customer.html">Customer service</a></li>
+                    <li><a href="location.html">Locations</a></li>
                 </ul>
 
                 <ul class="log">
@@ -41,14 +49,40 @@
                     <li><a href="sign_up.html">Sign up</a></li>
                 </ul>
             </nav>
+
+            <!-- 모바일버전에 생성되는 햄버거버튼 -->
+            <a href="#" class="btn_call">
+                <span>메뉴호출</span>
+            </a>
+
+
+            <!-- 헤더메뉴 모바일 버전 -->
+            <nav class="mob_menu">
+
+                <a class="mob_h1" href="index.html"><img src="img/logo_black.png" alt=""></a>
+
+                <ul class="mob_log">
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="index sign_up.html">Sign up</a></li>
+                    <li><a href="#">My Account</a></li>
+                </ul>
+
+                <ul id="mob_gnb">
+                    <li><a href="sub_menu.html">Location</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="customer.html">Customer Service</a></li>
+                    <li><a href="location.html">Locations</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
+
     <section class="content sub_menu">
-        <div class="sub_visual"></div>
+        <div class="sub_bg"></div>
 
         <div class="inner">
-            <h1>한국 회사 위치</h1>
+            <h1>Location <span>한국 본점 및 지점 위치</span></h1>
             <div id="map"></div>
             <ul class="traffic">
                 <li><a href="#">교통정보 ON</a></li>
@@ -56,7 +90,7 @@
             </ul>
 
             <ul class="branch">
-                <li class="on" data-index="0"><a href="#">강남</a></li>
+                <li class="on" data-index="0"><a href="#">강남본점</a></li>
                 <li data-index="1"><a href="#">광화문</a></li>
                 <li data-index="2"><a href="#">서울스퀘어</a></li>
             </ul>
@@ -71,12 +105,17 @@
                 <ul>
                     <li><a href="sub_menu.html">LOCATIONS</a></li>
                     <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">COMMUNITY</a></li>
+                    <li><a href="#">GALLERY</a></li>
                     <li><a href="#">CONTACT US</a></li>
                 </ul>
             </section>
 
-            <section class="wrap2">
+            <section class="web_wrap2">
+                <h1 class="hidden">REAL SUITE</h1>
+                <img src="img/company_logo.png" alt="회사로고">
+                <p>Copyright © 2022 REAL SUITE ALL Right reserved.</p>
+            </section>
+            <section class="mob_wrap2">
                 <h1>REAL SUITE</h1>
                 <p>Copyright © 2022 REAL SUITE ALL Right reserved.</p>
             </section>
@@ -89,7 +128,8 @@
                     <i class="fab fa-youtube"></i>
                 </div>
                 <address>
-                    Lorem ipsum dolor sit amet consectetur. <br />
+                    Lorem ipsum dolor sit amet B/D consectetur adipisicing elit. Sint.
+                    <br />
                     Tel : +82-2-2100-2114
                 </address>
 

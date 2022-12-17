@@ -234,6 +234,36 @@ table {
   color: #777;
 }
 
+.content {
+  width: 100%;
+  padding: 0 0 150px;
+}
+.content .sub_bg {
+  width: 100%;
+  height: 250px;
+  opacity: 0.9;
+  margin-bottom: 80px;
+}
+.content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+.content .inner h1 {
+  font: 50px/1 "Hahmlet", serif;
+  color: #000;
+  margin-bottom: 60px;
+}
+.content .inner h1 span {
+  font: 20px/1 "Hahmlet", serif;
+  color: #aaa;
+}
+.content .inner h1 span::before {
+  content: "/";
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
 #footer_sub {
   width: 100%;
   padding: 80px 0;
@@ -456,21 +486,11 @@ table {
   }
 }
 .sign_up .sub_bg {
-  height: 250px;
   background: #000 url(../img/sign_up.jpg) no-repeat center/cover;
 }
-.sign_up .inner {
-  width: 880px;
-  padding: 80px;
-  margin: 0 auto;
-}
 .sign_up .inner h1 {
-  font: bold 18px/1 "Sunflower", sans-serif;
-  color: #555;
-  text-align: center;
   border-bottom: 1px solid #bbb;
   padding-bottom: 20px;
-  margin-bottom: 20px;
 }
 .sign_up .inner form .all_agree {
   font: bold 15px/2 "Hahmlet", serif;
@@ -494,7 +514,7 @@ table {
   display: flex;
   align-items: center;
 }
-.sign_up .inner form .all_agree input[id=all_agree] {
+.sign_up .inner form .all_agree input#all_agree {
   margin-right: 5px;
   width: 16px;
   height: 16px;
@@ -570,7 +590,7 @@ table {
 }
 .sign_up .inner form table td input[type=text],
 .sign_up .inner form table td input[type=password] {
-  width: 35%;
+  width: 200px;
   height: 30px;
   border: 1px solid #bbb;
   padding-left: 10px;
@@ -596,7 +616,7 @@ table {
 }
 .sign_up .inner form table td select#phone,
 .sign_up .inner form table td #gender {
-  width: 20%;
+  width: 100px;
   height: 30px;
   display: inline-flex;
   align-items: center;
@@ -618,27 +638,40 @@ table {
   font-size: 11px;
 }
 
+@media screen and (max-width: 1180px) {
+  .sign_up {
+    width: 100%;
+  }
+  .sign_up .inner {
+    width: 100%;
+    padding: 60px 40px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .sign_up .sub_bg {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .sign_up .inner form table th input[type=submit],
+  .sign_up .inner form table th input[type=reset] {
+    width: 100px;
+  }
+}
 .sub_menu {
   width: 100%;
 }
-.sub_menu .sub_visual {
-  width: 100%;
-  height: 250px;
+.sub_menu .sub_bg {
   background: url(../img/sub_menu_bg.jpg) no-repeat bottom/cover;
-  margin-bottom: 80px;
 }
 .sub_menu .inner {
-  width: 880px;
+  width: 850px;
   margin: 0 auto;
 }
 .sub_menu .inner::after {
   content: "";
   display: block;
   clear: both;
-}
-.sub_menu .inner h1 {
-  font: 25px/1 "Hahmlet", serif;
-  margin-bottom: 20px;
 }
 .sub_menu .inner #map {
   width: 100%;
@@ -688,6 +721,94 @@ table {
 .sub_menu .inner .branch li .on a {
   color: #fff;
   background: #555;
+}
+
+.customer .sub_bg {
+  background: url(../img/customer.jpg) no-repeat center/cover;
+}
+.customer .inner table {
+  width: 100%;
+  border-bottom: 2px solid #111;
+  border-collapse: collapse;
+  margin-bottom: 50px;
+}
+.customer .inner table tr:nth-of-type(even) {
+  background: #eee;
+}
+.customer .inner table tr:hover {
+  background: #bbb;
+}
+.customer .inner table tr th {
+  padding: 15px;
+  background: #444;
+  color: #fff;
+}
+.customer .inner table tr th:nth-of-type(1) {
+  width: 8%;
+}
+.customer .inner table tr th:nth-of-type(3) {
+  width: 15%;
+}
+.customer .inner table tr th:nth-of-type(4) {
+  width: 17%;
+}
+.customer .inner table tr td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.customer .inner table tr td:nth-of-type(2) {
+  text-align: left;
+  font-family: "Hahmlet", serif;
+}
+.customer .inner table tr td a {
+  color: #333;
+  line-height: 1.4;
+}
+.customer .inner .pagination {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+.customer .inner .pagination::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.customer .inner .pagination .prev,
+.customer .inner .pagination .next {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: #555;
+  color: #eee;
+  font-size: 20px;
+  text-align: center;
+}
+.customer .inner .pagination .prev {
+  float: left;
+}
+.customer .inner .pagination .next {
+  float: right;
+}
+.customer .inner .pagination .pages {
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
+}
+.customer .inner .pagination .pages a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #888;
+  font: 11px/30px "arial";
+  color: #666;
+  margin: 0 5px;
+  transition: 0.5s;
+}
+.customer .inner .pagination .pages a:hover {
+  background: #666;
+  color: #fff;
 }
 
 #header {
@@ -1386,40 +1507,40 @@ table {
   line-height: 2.3;
 }
 
-#gallery {
+#track {
   width: 100%;
   padding: 80px 0;
   background: #000;
   position: relative;
 }
-#gallery .inner {
+#track .inner {
   width: 1180px;
   margin: 0 auto;
 }
-#gallery .inner::after {
+#track .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-#gallery .inner h1 {
+#track .inner h1 {
   width: 100%;
   margin-bottom: 60px;
   font: bold 24px/1 "Roboto", sans-serif;
   color: #fff;
   text-align: center;
 }
-#gallery .inner figure {
+#track .inner figure {
   float: left;
   width: 50%;
   height: 380px;
   margin-bottom: 40px;
 }
-#gallery .inner figure video {
+#track .inner figure video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#gallery .inner .record {
+#track .inner .record {
   float: right;
   min-width: 40%;
   height: 400px;
@@ -1427,14 +1548,14 @@ table {
   flex-direction: column;
   justify-content: space-around;
 }
-#gallery .inner .record div {
+#track .inner .record div {
   width: 100%;
   color: #fff;
 }
-#gallery .inner .record div img {
+#track .inner .record div img {
   margin-right: 20px;
 }
-#gallery .inner .record div p {
+#track .inner .record div p {
   display: inline-block;
   font: bold 20px/1 "Hahmlet", serif;
 }
@@ -1669,26 +1790,26 @@ table {
     left: 50%;
     transform: translateX(-50%);
   }
-  #gallery {
+  #track {
     padding: 70px 30px;
   }
-  #gallery .inner {
+  #track .inner {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  #gallery .inner figure {
+  #track .inner figure {
     width: 500px;
     height: 350px;
   }
-  #gallery .inner .record {
+  #track .inner .record {
     display: block;
     min-width: 350px;
     height: 100%;
   }
-  #gallery .inner .record div {
+  #track .inner .record div {
     display: flex;
     align-items: center;
     height: 80px;
@@ -1849,10 +1970,10 @@ table {
   #promo .inner .wrap {
     margin: auto;
   }
-  #gallery {
+  #track {
     padding: 30px 20px;
   }
-  #gallery .inner figure {
+  #track .inner figure {
     width: 100%;
     height: 100%;
   }
