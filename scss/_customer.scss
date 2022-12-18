@@ -97,10 +97,10 @@
 		}
 	}
 }
-//미디어쿼리 3영역으로 구분
+
 //$tablet_plus (861px~1180px)
-//$tablet_origin (541px~860px)
-//$mobile (~540px)
+//$tablet_origin (610px~860px)
+//$mobile (~610px)
 @media screen and (max-width: $tablet_plus) {
 	.customer {
 		width: 100%;
@@ -110,19 +110,31 @@
 		}
 	}
 }
-//$tablet_origin (541px~860px)
+//$tablet_origin (610px~860px)
 @media screen and (max-width: $tablet_origin) {
 	.customer {
-		.sub_bg {
-			height: 220px;
+		.inner {
+			table {
+				width: 95%;
+			}
+			.pagination {
+				p {
+					a {
+						&:nth-of-type(6),
+						&:nth-of-type(7),
+						&:nth-of-type(8),
+						&:nth-of-type(9),
+						&:nth-of-type(10) {
+							display: none;
+						}
+					}
+				}
+			}
 		}
 	}
 }
 
-// //$mobile (~610px)
+//$mobile (~610px)
 // @media screen and (max-width: $mobile) {
-// 	.customer {
-// 		.inner {
-// 		}
-// 	}
+
 // }

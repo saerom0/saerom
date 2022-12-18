@@ -69,3 +69,54 @@
 		}
 	}
 }
+
+//$tablet_plus (861px~1180px)
+//$tablet_origin (610px~860px)
+//$mobile (~610px)
+@media screen and (max-width: $tablet_plus) {
+	.youtube {
+		.inner {
+			width: 100%;
+			.videoList {
+				article {
+					width: 47%;
+					height: 420px;
+				}
+			}
+		}
+	}
+}
+//$tablet_origin (610px~860px)
+// @media screen and (max-width: $tablet_origin) {
+// 	.youtube {
+// 		.inner {
+// 			width: 100%;
+// 			.videoList {
+// 				article {
+// 					width: 47%;
+// 					height: 420px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+//$mobile (~610px)
+@media screen and (max-width: $mobile) {
+	.youtube {
+		.inner {
+			width: 100%;
+			.videoList {
+				article {
+					width: 80%;
+					height: 420px;
+					.con {
+						span {
+							font: bold 11px/1 "Hahmlet", serif;
+						}
+					}
+				}
+			}
+		}
+	}
+}

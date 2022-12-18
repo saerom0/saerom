@@ -894,8 +894,8 @@ $mobile: 610px;
 
 //미디어쿼리 3영역으로 구분
 //$tablet_plus (861px~1180px)
-//$tablet_origin (541px~860px)
-//$mobile (~540px)
+//$tablet_origin (610px~860px)
+//$mobile (~610px)
 @media screen and (max-width: $tablet_plus) {
 	//header 영역
 	#header {
@@ -1099,7 +1099,7 @@ $mobile: 610px;
 	}
 }
 
-//$tablet_origin (541px~860px)
+//$tablet_origin (610px~860px)
 @media screen and (max-width: $tablet_origin) {
 	//header
 	#header {
@@ -1138,7 +1138,6 @@ $mobile: 610px;
 	//visual
 	#visual {
 		.visual {
-			height: 80vh;
 			.inner {
 				.cp_name {
 					width: 170px;
@@ -1247,6 +1246,7 @@ $mobile: 610px;
 	//visual
 	#visual {
 		.visual {
+			height: 85vh;
 			.inner {
 				.cp_name {
 					display: none;

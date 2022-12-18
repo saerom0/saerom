@@ -136,3 +136,47 @@
 		}
 	}
 }
+
+//$tablet_plus (861px~1180px)
+//$tablet_origin (610px~860px)
+//$mobile (~610px)
+@media screen and (max-width: $tablet_plus) {
+	.gallery {
+		.inner {
+			width: 100%;
+		}
+	}
+}
+//$tablet_origin (610px~860px)
+@media screen and (max-width: $tablet_origin) {
+	.gallery {
+		.inner {
+			#gallery {
+				#wrap {
+					#list {
+						li {
+							width: (100% / 3);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//$mobile (~610px)
+@media screen and (max-width: $mobile) {
+	.gallery {
+		.inner {
+			#gallery {
+				#wrap {
+					#list {
+						li {
+							width: (100% / 2);
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -429,6 +429,13 @@ table {
     padding: 0;
     border: none;
   }
+  .content .sub_bg {
+    height: 220px;
+  }
+  .content .inner h1 {
+    font: 35px/1 "Hahmlet", serif;
+    margin-bottom: 40px;
+  }
   #footer_sub .inner .wrap1 > a {
     font: bold 16px/1 "Poppins", sans-serif;
   }
@@ -504,6 +511,13 @@ table {
 .sign_up .inner form .all_agree {
   font: bold 15px/2 "Hahmlet", serif;
   letter-spacing: 1.2px;
+  display: flex;
+  align-items: center;
+}
+.sign_up .inner form .all_agree input#all_agree {
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
 }
 .sign_up .inner form h2 {
   font: 14px/1 "Hahmlet", serif;
@@ -518,15 +532,6 @@ table {
   font: 12px/1.3 "Sunflower", sans-serif;
   color: #888;
   background: #eee;
-}
-.sign_up .inner form .all_agree {
-  display: flex;
-  align-items: center;
-}
-.sign_up .inner form .all_agree input#all_agree {
-  margin-right: 5px;
-  width: 16px;
-  height: 16px;
 }
 .sign_up .inner form .agree {
   margin-bottom: 30px;
@@ -654,50 +659,53 @@ table {
   }
   .sign_up .inner {
     width: 100%;
-    padding: 60px 40px;
-  }
-}
-@media screen and (max-width: 860px) {
-  .sign_up .sub_bg {
-    height: 220px;
   }
 }
 @media screen and (max-width: 610px) {
+  .sign_up .inner form .all_agree {
+    font: bold 13px/1.5 "Hahmlet", serif;
+  }
+  .sign_up .inner form h2 {
+    font: 13px/1 "Hahmlet", serif;
+  }
+  .sign_up .inner form table th {
+    font: bold 13px/1 "Roboto", sans-serif;
+  }
   .sign_up .inner form table th input[type=submit],
   .sign_up .inner form table th input[type=reset] {
     width: 100px;
   }
 }
-.sub_menu {
+.location {
   width: 100%;
 }
-.sub_menu .sub_bg {
+.location .sub_bg {
   background: url(../img/sub_menu_bg.jpg) no-repeat bottom/cover;
 }
-.sub_menu .inner {
+.location .inner {
   width: 850px;
   margin: 0 auto;
 }
-.sub_menu .inner::after {
+.location .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-.sub_menu .inner #map {
+.location .inner #map {
   width: 100%;
-  height: 400px;
+  height: 450px;
   border: 1px solid #000;
   margin-bottom: 20px;
 }
-.sub_menu .inner .traffic {
+.location .inner .traffic {
   float: left;
 }
-.sub_menu .inner .traffic li {
+.location .inner .traffic li {
   float: left;
   margin-right: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
-.sub_menu .inner .traffic li a {
+.location .inner .traffic li a {
   display: block;
   width: 120px;
   height: 40px;
@@ -707,18 +715,18 @@ table {
   text-align: center;
   border: 1px solid #555555;
 }
-.sub_menu .inner .traffic li .on a {
+.location .inner .traffic li .on a {
   color: #fff;
   background: #555;
 }
-.sub_menu .inner .branch {
+.location .inner .branch {
   float: right;
 }
-.sub_menu .inner .branch li {
+.location .inner .branch li {
   float: left;
   margin-left: 10px;
 }
-.sub_menu .inner .branch li a {
+.location .inner .branch li a {
   display: block;
   width: 120px;
   height: 40px;
@@ -728,7 +736,7 @@ table {
   text-align: center;
   border: 1px solid #555;
 }
-.sub_menu .inner .branch li .on a {
+.location .inner .branch li .on a {
   color: #fff;
   background: #555;
 }
@@ -745,6 +753,32 @@ table {
 @media screen and (max-width: 860px) {
   .location .sub_bg {
     height: 220px;
+  }
+  .location .inner {
+    width: 610px;
+  }
+  .location .inner .traffic li a {
+    width: 100px;
+  }
+  .location .inner .branch li a {
+    width: 93px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .location .inner {
+    width: 500px;
+  }
+  .location .inner #map {
+    height: 300px;
+  }
+  .location .inner .traffic li {
+    margin-bottom: 20px;
+  }
+  .location .inner .traffic li a {
+    width: 100px;
+  }
+  .location .inner .branch li a {
+    width: 93px;
   }
 }
 .customer .sub_bg {
@@ -853,8 +887,11 @@ table {
   }
 }
 @media screen and (max-width: 860px) {
-  .customer .sub_bg {
-    height: 220px;
+  .customer .inner table {
+    width: 95%;
+  }
+  .customer .inner .pagination p a:nth-of-type(6), .customer .inner .pagination p a:nth-of-type(7), .customer .inner .pagination p a:nth-of-type(8), .customer .inner .pagination p a:nth-of-type(9), .customer .inner .pagination p a:nth-of-type(10) {
+    display: none;
   }
 }
 .youtube h1 {
@@ -927,6 +964,27 @@ table {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1180px) {
+  .youtube .inner {
+    width: 100%;
+  }
+  .youtube .inner .videoList article {
+    width: 47%;
+    height: 420px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .youtube .inner {
+    width: 100%;
+  }
+  .youtube .inner .videoList article {
+    width: 80%;
+    height: 420px;
+  }
+  .youtube .inner .videoList article .con span {
+    font: bold 11px/1 "Hahmlet", serif;
+  }
+}
 .gallery .inner {
   position: relative;
 }
@@ -1055,6 +1113,21 @@ table {
   cursor: pointer;
 }
 
+@media screen and (max-width: 1180px) {
+  .gallery .inner {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .gallery .inner #gallery #wrap #list li {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (max-width: 610px) {
+  .gallery .inner #gallery #wrap #list li {
+    width: 50%;
+  }
+}
 #header {
   width: 100%;
   height: 72px;
@@ -2111,9 +2184,6 @@ table {
     padding: 0;
     border: none;
   }
-  #visual .visual {
-    height: 80vh;
-  }
   #visual .visual .inner .cp_name {
     width: 170px;
     top: 25vh;
@@ -2170,6 +2240,9 @@ table {
   }
   #header .inner .mob_menu {
     display: block;
+  }
+  #visual .visual {
+    height: 85vh;
   }
   #visual .visual .inner .cp_name {
     display: none;

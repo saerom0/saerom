@@ -342,10 +342,9 @@ $mobile: 610px;
 	}
 }
 
-//미디어쿼리 3영역으로 구분
 //$tablet_plus (861px~1180px)
-//$tablet_origin (541px~860px)
-//$mobile (~540px)
+//$tablet_origin (610px~860px)
+//$mobile (~610px)
 @media screen and (max-width: $tablet_plus) {
 	//header 영역
 	#header_sub {
@@ -389,7 +388,7 @@ $mobile: 610px;
 	}
 }
 
-//$tablet_origin (541px~860px)
+//$tablet_origin (610px~860px)
 @media screen and (max-width: $tablet_origin) {
 	//header
 	#header_sub {
@@ -421,6 +420,18 @@ $mobile: 610px;
 						}
 					}
 				}
+			}
+		}
+	}
+
+	.content {
+		.sub_bg {
+			height: 220px;
+		}
+		.inner {
+			h1 {
+				font: 35px/1 "Hahmlet", serif;
+				margin-bottom: 40px;
 			}
 		}
 	}

@@ -2,7 +2,7 @@ $tablet_plus: 1180px;
 $tablet_origin: 860px;
 $mobile: 610px;
 
-.sub_menu {
+.location {
 	width: 100%;
 	.sub_bg {
 		background: url(../img/sub_menu_bg.jpg) no-repeat bottom/cover;
@@ -19,7 +19,7 @@ $mobile: 610px;
 
 		#map {
 			width: 100%;
-			height: 400px;
+			height: 450px;
 			border: 1px solid #000;
 			margin-bottom: 20px;
 		}
@@ -28,7 +28,7 @@ $mobile: 610px;
 			li {
 				float: left;
 				margin-right: 10px;
-				margin-bottom: 80px;
+				margin-bottom: 60px;
 				a {
 					display: block;
 					width: 120px;
@@ -69,10 +69,9 @@ $mobile: 610px;
 	}
 }
 
-//미디어쿼리 3영역으로 구분
 //$tablet_plus (861px~1180px)
-//$tablet_origin (541px~860px)
-//$mobile (~540px)
+//$tablet_origin (610px~860px)
+//$mobile (~610px)
 @media screen and (max-width: $tablet_plus) {
 	.location {
 		width: 100%;
@@ -82,20 +81,49 @@ $mobile: 610px;
 		}
 	}
 }
-//$tablet_origin (541px~860px)
+//$tablet_origin (610px~860px)
 @media screen and (max-width: $tablet_origin) {
 	.location {
 		.sub_bg {
 			height: 220px;
 		}
+		.inner {
+			width: 610px;
+			.traffic {
+				li a {
+					width: 100px;
+				}
+			}
+			.branch {
+				li a {
+					width: 93px;
+				}
+			}
+		}
 	}
 }
 
-// //$mobile (~610px)
-// @media screen and (max-width: $mobile) {
-// 	.location {
-// 		.inner {
-
-// 		}
-// 	}
-// }
+//$mobile (~610px)
+@media screen and (max-width: $mobile) {
+	.location {
+		.inner {
+			width: 500px;
+			#map {
+				height: 300px;
+			}
+			.traffic {
+				li {
+					margin-bottom: 20px;
+					a {
+						width: 100px;
+					}
+				}
+			}
+			.branch {
+				li a {
+					width: 93px;
+				}
+			}
+		}
+	}
+}
