@@ -91,3 +91,32 @@
 		}
 	}
 }
+//미디어쿼리 3영역으로 구분
+//$tablet_plus (861px~1180px)
+//$tablet_origin (541px~860px)
+//$mobile (~540px)
+@media screen and (max-width: $tablet_plus) {
+	.customer {
+		width: 100%;
+		.inner {
+			width: 100%;
+			padding: 60px 40px;
+		}
+	}
+}
+//$tablet_origin (541px~860px)
+@media screen and (max-width: $tablet_origin) {
+	.customer {
+		.sub_bg {
+			height: 220px;
+		}
+	}
+}
+
+// //$mobile (~610px)
+// @media screen and (max-width: $mobile) {
+// 	.customer {
+// 		.inner {
+// 		}
+// 	}
+// }

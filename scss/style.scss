@@ -5,6 +5,7 @@
 @import "sign_up.scss";
 @import "location.scss";
 @import "customer.scss";
+@import "youtube.scss";
 
 $tablet_plus: 1180px;
 $tablet_origin: 860px;
@@ -21,10 +22,26 @@ $mobile: 610px;
 		//onclick - up to top button
 		.on_top {
 			display: none;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			justify-content: center;
+			align-items: center;
+			position: fixed;
+			right: 30px;
+			bottom: 30px;
+			z-index: 15;
+			background: transparent;
+			border: 2px solid #555;
+			background-color: rgba(255, 255, 255, 0.6);
+			i {
+				font-size: 20px;
+				color: #000;
+			}
 		}
 		.web_h1 {
 			display: none;
-			//nav에서 <li>중 하나인 home이 h1역할을 하고 있어서 h1이 없습니다
+			//웹버전에서 첫번째<li> home이 h1역할을 하고 있어서 h1이 없습니다
 		}
 		.web_menu {
 			width: 100%;
@@ -48,6 +65,9 @@ $mobile: 610px;
 						color: #282828;
 						i {
 							margin-right: 5px;
+						}
+						&:hover {
+							color: #555;
 						}
 					}
 				}
@@ -202,23 +222,7 @@ $mobile: 610px;
 		}
 	}
 	&.on .inner .on_top {
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: fixed;
-		right: 30px;
-		bottom: 30px;
-		z-index: 15;
-		background: transparent;
-		border: 2px solid #555;
-		background-color: rgba(255, 255, 255, 0.6);
-		i {
-			font-size: 20px;
-			color: #000;
-		}
 	}
 }
 
@@ -262,11 +266,8 @@ $mobile: 610px;
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
-					&:nth-of-type(1),
-					&:nth-of-type(2) {
-						filter: grayscale(1);
-						opacity: 0.8;
-					}
+					filter: grayscale(1);
+					opacity: 0.8;
 				}
 			}
 		}
@@ -845,6 +846,7 @@ $mobile: 610px;
 			display: none;
 			flex-direction: column;
 			justify-content: flex-end;
+			width: 150px;
 			h1 {
 				font: bold 15px "Arimo", sans-serif;
 				letter-spacing: 2px;
@@ -853,7 +855,7 @@ $mobile: 610px;
 				&::after {
 					content: "";
 					display: block;
-					width: 230px;
+					width: 150px;
 					height: 1px;
 					background: #999;
 					margin: 10px 0;
@@ -861,6 +863,7 @@ $mobile: 610px;
 			}
 			p {
 				font: 10px/1 "Arimo", sans-serif;
+				text-align: center;
 				color: #999;
 			}
 		}
@@ -1134,6 +1137,7 @@ $mobile: 610px;
 	//visual
 	#visual {
 		.visual {
+			height: 80vh;
 			.inner {
 				.cp_name {
 					width: 170px;

@@ -168,8 +168,6 @@ $mobile: 610px;
 //$tablet_plus (861px~1180px)
 //$tablet_origin (541px~860px)
 //$mobile (~540px)
-
-//$tablet_plus 변동사항 없음
 @media screen and (max-width: $tablet_plus) {
 	.sign_up {
 		width: 100%;
