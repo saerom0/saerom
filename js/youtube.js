@@ -30,7 +30,7 @@ fetch(url)
             result += `
             <article>
                 <a href="${el.snippet.resourceId.videoId}" class="pic">
-                    <img src="${el.snippet.thumbnails.medium.url}">
+                    <img src="${el.snippet.thumbnails.standard.url}">
                 </a>
                 <div class="con">
                     <h2>${title}</h2>

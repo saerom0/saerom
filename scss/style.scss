@@ -6,6 +6,7 @@
 @import "location.scss";
 @import "customer.scss";
 @import "youtube.scss";
+@import "gallery.scss";
 
 $tablet_plus: 1180px;
 $tablet_origin: 860px;
@@ -1354,7 +1355,7 @@ $mobile: 610px;
 			}
 
 			.wrap3 {
-				width: 50px;
+				width: 30px;
 				div {
 					display: flex;
 					flex-direction: column;
