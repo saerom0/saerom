@@ -4,9 +4,10 @@
 @import "sub_layout.scss";
 @import "sign_up.scss";
 @import "location.scss";
-@import "customer.scss";
+@import "review.scss";
 @import "youtube.scss";
 @import "gallery.scss";
+@import "office.scss";
 
 $tablet_plus: 1180px;
 $tablet_origin: 860px;
@@ -15,6 +16,7 @@ $mobile: 610px;
 #header {
 	width: 100%;
 	height: 72px;
+
 	.inner {
 		width: 1180px;
 		height: 100%;
@@ -42,7 +44,7 @@ $mobile: 610px;
 		}
 		.web_h1 {
 			display: none;
-			//웹버전에서 첫번째<li> home이 h1역할을 하고 있어서 h1이 없습니다
+			//웹버전에서는 첫번째<li> home이 h1역할
 		}
 		.web_menu {
 			width: 100%;
@@ -52,7 +54,7 @@ $mobile: 610px;
 				width: 50%;
 				height: 20px;
 				float: left;
-				li {
+				> li {
 					float: left;
 					border-right: 1px solid #282828;
 					margin-left: 15px;
@@ -60,16 +62,51 @@ $mobile: 610px;
 					&:last-child {
 						border-right: none;
 					}
-					a {
+					> a {
 						font: bold 14px/1 "Roboto", sans-serif;
 						display: block;
 						color: #282828;
 						i {
 							margin-right: 5px;
 						}
-						&:hover {
-							color: #555;
+					}
+					&:hover {
+						color: #555;
+						.sub_menu {
+							position: relative;
+							width: 100%;
+							display: block;
+							background: #fff;
+							text-align: center;
+							transition: 0.3s;
+							ul {
+								width: 80px;
+								margin: auto;
+								border: 1px solid #eee;
+								position: absolute;
+								top: 0;
+								left: -10px;
+								z-index: 30;
+								li {
+									height: 30px;
+									background: #fff;
+									&:hover {
+										background: #353535;
+										a {
+											color: #fff;
+										}
+									}
+									a {
+										font: 13px/30px "Roboto", sans-serif;
+										color: #333;
+										letter-spacing: 1.5;
+									}
+								}
+							}
 						}
+					}
+					.sub_menu {
+						display: none;
 					}
 				}
 			}
@@ -306,7 +343,6 @@ $mobile: 610px;
 			z-index: 10;
 		}
 	}
-
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -325,7 +361,10 @@ $mobile: 610px;
 				position: relative;
 				margin-bottom: 3px;
 				transition: all 1s;
-				> a {
+				&:last-child {
+					border-right: 0;
+				}
+				span {
 					display: block;
 					padding: auto;
 					font: bold 20px/77px "Roboto", sans-serif;
@@ -335,7 +374,7 @@ $mobile: 610px;
 				}
 				&:hover {
 					background: #333;
-					> a {
+					span {
 						color: #fff;
 					}
 					.sub_menu {
@@ -350,7 +389,7 @@ $mobile: 610px;
 							border: 1px solid #333;
 							position: absolute;
 							top: 80px;
-							left: 72px;
+
 							z-index: 3;
 							li {
 								height: 40px;
@@ -948,8 +987,15 @@ $mobile: 610px;
 				width: 100%;
 				height: 65px;
 				> li {
-					> a {
+					span {
 						font: bold 18px/65px "Roboto", sans-serif;
+					}
+					&:hover {
+						.sub_menu {
+							ul {
+								top: 65px;
+							}
+						}
 					}
 				}
 			}
@@ -1146,7 +1192,23 @@ $mobile: 610px;
 			}
 		}
 	}
+
 	//middle_menu
+	#middle_menu {
+		.inner {
+			.sub_gnb {
+				> li {
+					&:hover {
+						.sub_menu {
+							ul {
+								width: 150px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 	//banner
 	#banner {
