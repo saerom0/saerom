@@ -8,6 +8,7 @@ function selectAll(selectAll) {
     })
 }
 
+
 //form validation
 const form = document.querySelector("#member");
 const btnSubmit = form.querySelector("input[type=submit]");
@@ -19,9 +20,10 @@ btnSubmit.addEventListener("click", (e) => {
 
     if (!isCheck("type")) e.preventDefault();
     if (!isSelect("gender")) e.preventDefault();
-    // if (!isSelect("select_num")) e.preventDefault();
     if (!isPwd("pwd1", "pwd2", 8)) e.preventDefault();
+    if (!isNumber("phone")) e.preventDefault();
 });
+
 
 //아이디 유효성 확인
 function isTxt(el, len) {
@@ -41,11 +43,12 @@ function isTxt(el, len) {
         if (errMsgs.length > 0) return false;
 
         const errMsg = document.createElement("p");
-        errMsg.append(`영문자 ${len}글자 이상 입력하세요`);
+        errMsg.append(`영문자 ${len}글자 이상 입력하세요.`);
         input.closest("td").append(errMsg);
         return false;
     }
 }
+
 
 //비밀번호 유효성 확인
 function isPwd(el1, el2, len) {
@@ -62,25 +65,48 @@ function isPwd(el1, el2, len) {
 
     if (pwd1_val === pwd2_val && pwd1_val.length >= len && num.test(pwd1_val) && eng.test(pwd1_val) && spc.test(pwd1_val)) {
 
-        if (errMsgs.length > 0) pwd1.closest("td").querySelector("p").remove();
+        if (errMsgs.length > 0) {
+            pwd1.closest("td").querySelector("p").remove();
+        }
         return true;
 
     } else {
         if (errMsgs.length > 0) return false;
         const errMsg = document.createElement("p");
-        errMsg.append(`${len}글자 이상, 영문, 숫자, 특수문자를 포함하여 동일하게 입력하세요`);
+        errMsg.append(`${len}글자 이상, 영문, 숫자, 특수문자를 포함하여 동일하게 입력하세요.`);
         pwd1.closest("td").append(errMsg);
         return false;
     }
 }
 
+
+//연락처 유효성 검사
+function isNumber(el) {
+    let num = form.querySelector(`[name=${el}]`);
+    let num_val = num.value;
+    const errMsgs = num.closest("td").querySelectorAll("p");
+
+    if (/^([0-9]{7,8})$/.test(num_val)) {
+        if (errMsgs.length > 0) num.closest("td").querySelector("p").remove();
+        return true;
+    } else {
+        if (errMsgs.length > 0) return false;
+        const errMsg = document.createElement("p");
+        errMsg.append("연락처를 확인 해 주세요.");
+        num.closest("td").append(errMsg);
+        return false;
+    }
+}
+
+
 //이메일 유효성 확인
 function isEmail(el) {
     let input = form.querySelector(`[name=${el}]`);
     let email = input.value;
+    let email_pattern = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z]+/;
 
     const errMsgs = input.closest("td").querySelectorAll("p");
-    if (/@/.test(email)) {
+    if (email_pattern.test(email)) {
         if (errMsgs.length > 0) form.closest("td").querySelector("p").remove();
         return true;
     } else {
@@ -118,8 +144,6 @@ function isCheck(el) {
 }
 
 
-
-
 //항목선택 유효성 검사
 function isSelect(el) {
     let sel = form.querySelector(`[name=${el}]`);
@@ -140,3 +164,4 @@ function isSelect(el) {
         return false;
     }
 }
+

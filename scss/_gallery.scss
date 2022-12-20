@@ -137,9 +137,6 @@
 	}
 }
 
-//$tablet_plus (861px~1180px)
-//$tablet_origin (610px~860px)
-//$mobile (~610px)
 @media screen and (max-width: $tablet_plus) {
 	.gallery {
 		.inner {
@@ -147,7 +144,7 @@
 		}
 	}
 }
-//$tablet_origin (610px~860px)
+
 @media screen and (max-width: $tablet_origin) {
 	.gallery {
 		.inner {
@@ -164,7 +161,6 @@
 	}
 }
 
-//$mobile (~610px)
 @media screen and (max-width: $mobile) {
 	.gallery {
 		.inner {

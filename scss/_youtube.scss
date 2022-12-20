@@ -70,9 +70,6 @@
 	}
 }
 
-//$tablet_plus (861px~1180px)
-//$tablet_origin (610px~860px)
-//$mobile (~610px)
 @media screen and (max-width: $tablet_plus) {
 	.youtube {
 		.inner {
@@ -86,7 +83,7 @@
 		}
 	}
 }
-//$tablet_origin (610px~860px)
+
 // @media screen and (max-width: $tablet_origin) {
 // 	.youtube {
 // 		.inner {
@@ -101,7 +98,6 @@
 // 	}
 // }
 
-//$mobile (~610px)
 @media screen and (max-width: $mobile) {
 	.youtube {
 		.inner {
