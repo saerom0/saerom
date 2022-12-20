@@ -1,4 +1,4 @@
-.customer {
+.review {
 	.sub_bg {
 		background: url(../img/customer.jpg) no-repeat center/cover;
 	}
@@ -102,7 +102,7 @@
 //$tablet_origin (610px~860px)
 //$mobile (~610px)
 @media screen and (max-width: $tablet_plus) {
-	.customer {
+	.review {
 		width: 100%;
 		.inner {
 			width: 100%;
@@ -112,7 +112,7 @@
 }
 //$tablet_origin (610px~860px)
 @media screen and (max-width: $tablet_origin) {
-	.customer {
+	.review {
 		.inner {
 			table {
 				width: 95%;

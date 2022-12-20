@@ -13,6 +13,7 @@ $tablet_plus: 1180px;
 $tablet_origin: 860px;
 $mobile: 610px;
 
+//헤더 영역
 #header {
 	width: 100%;
 	height: 72px;
@@ -891,20 +892,21 @@ $mobile: 610px;
 				font: bold 15px "Arimo", sans-serif;
 				letter-spacing: 2px;
 				text-align: center;
-				color: #000;
+				color: #333;
+				text-shadow: 0 1px 1px #999;
 				&::after {
 					content: "";
 					display: block;
 					width: 150px;
 					height: 1px;
-					background: #999;
+					background: #6d6d6d;
 					margin: 10px 0;
 				}
 			}
 			p {
 				font: 10px/1 "Arimo", sans-serif;
 				text-align: center;
-				color: #999;
+				color: #6d6d6d;
 			}
 		}
 
@@ -1201,7 +1203,20 @@ $mobile: 610px;
 					&:hover {
 						.sub_menu {
 							ul {
-								width: 150px;
+								width: 200px;
+								li {
+									.sub_menu-2 {
+										margin-top: 0px;
+										ul {
+											width: 200px;
+											li {
+												a {
+													letter-spacing: 1px;
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 					}
@@ -1408,7 +1423,15 @@ $mobile: 610px;
 
 	//footer
 	#footer {
+		padding: 30px 0;
 		.inner {
+			.wrap1 {
+				ul {
+					li {
+						margin-top: 0px;
+					}
+				}
+			}
 			.mob_wrap2 {
 				display: flex;
 			}
