@@ -733,7 +733,7 @@ table {
 .location .inner #map {
   width: 100%;
   height: 450px;
-  border: 1px solid #000;
+  border: 1px solid #eee;
   margin-bottom: 20px;
 }
 .location .inner .traffic {
@@ -952,8 +952,9 @@ table {
 .youtube .videoList article {
   width: 27%;
   height: 380px;
-  border: 1px solid #555;
+  border: 1px solid #eee;
   margin-bottom: 40px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .youtube .videoList article .pic {
   display: block;
@@ -1093,12 +1094,12 @@ table {
 .gallery .inner #gallery #wrap #list li {
   float: left;
   width: 25%;
-  padding: 10px;
+  padding: 2px;
 }
 .gallery .inner #gallery #wrap #list li div {
   width: 100%;
-  padding: 15px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 .gallery .inner #gallery #wrap #list li div:hover a > img {
@@ -1936,12 +1937,10 @@ table {
   padding: 15px 25px;
 }
 #banner .inner .bn_btn {
-  padding: 0 auto;
-}
-#banner .inner .bn_btn::after {
-  content: "";
-  display: block;
-  clear: both;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
 }
 #banner .inner .bn_btn li {
   width: 90px;
@@ -2660,6 +2659,9 @@ table {
     top: 10%;
     font: 900 45px/1.3 "Roboto", sans-serif;
     letter-spacing: 5px;
+  }
+  #banner .inner .bn_btn li {
+    width: 50px;
   }
   #offer .inner .wrap article {
     width: 100%;
