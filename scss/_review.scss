@@ -41,7 +41,7 @@
 					text-align: center;
 					&:nth-of-type(2) {
 						text-align: left;
-						font-family: "Hahmlet", serif;
+						font-family: 'Hahmlet', serif;
 					}
 					a {
 						color: #333;
@@ -55,7 +55,7 @@
 			text-align: center;
 			margin: 0 auto;
 			&::after {
-				content: "";
+				content: '';
 				display: block;
 				clear: both;
 			}
@@ -84,7 +84,7 @@
 					width: 30px;
 					height: 30px;
 					border: 1px solid #888;
-					font: 11px/30px "arial";
+					font: 11px/30px 'arial';
 					color: #666;
 					margin: 0 5px;
 					transition: 0.5s;
@@ -131,4 +131,19 @@
 	}
 }
 
-// @media screen and (max-width: $mobile)
+@media screen and (max-width: $mobile) {
+	.review {
+		.inner {
+			.pagination {
+				p {
+					a {
+						&:nth-of-type(4),
+						&:nth-of-type(5) {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

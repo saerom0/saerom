@@ -130,11 +130,11 @@ function createList(items) {
               <a href=${imgSrcBig}>
                 <img src=${imgSrc} class="thumb">
               </a>
-              <p>${el.title}</p>
-              <span>
+              <p>
+								<span>${el.title}</span>
                 <img class="profile" src="http://farm${el.farm}.staticflickr.com/${el.server}/buddyicons/${el.owner}.jpg">
                 
-              </span>
+              </p>
             </div>
           </li>
         `;

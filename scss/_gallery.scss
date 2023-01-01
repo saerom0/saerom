@@ -60,7 +60,7 @@
 					}
 					li {
 						float: left;
-						width: 25%;
+						width: (100% / 3);
 						padding: 15px;
 						div {
 							width: 100%;
@@ -81,17 +81,18 @@
 									filter: grayscale(80%);
 								}
 							}
+
 							p {
-								font: 12px/1.2 'Hahmlet', serif;
-								color: #777;
-								margin-top: 10px;
-								margin-bottom: 20px;
-							}
-							span {
 								display: flex;
 								align-items: center;
 								justify-content: space-between;
 								margin: auto 5px;
+								span {
+									font: 12px/1.2 'Hahmlet', serif;
+									color: #777;
+									margin-top: 15px;
+									margin-bottom: 15px;
+								}
 								> img {
 									width: 30px;
 									height: 30px;
@@ -149,7 +150,7 @@
 				#wrap {
 					#list {
 						li {
-							width: (100% / 3);
+							width: 50%;
 						}
 					}
 				}
@@ -165,7 +166,7 @@
 				#wrap {
 					#list {
 						li {
-							width: (100% / 2);
+							width: 100%;
 						}
 					}
 				}

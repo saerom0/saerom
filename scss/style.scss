@@ -534,7 +534,7 @@ $main-font: 'Jost', sans-serif;
 		position: relative;
 		margin: 0 auto;
 		h1 {
-			font: bold 24px/1 'Roboto', sans-serif;
+			font: bold 24px/1 $main-font;
 			color: #555;
 			text-align: center;
 			margin-bottom: 50px;
@@ -543,7 +543,7 @@ $main-font: 'Jost', sans-serif;
 			margin-bottom: 10px;
 			text-align: center;
 			a {
-				font: bold 16px/1 'Sunflower', sans-serif;
+				font: bold 16px/1 'Roboto', sans-serif;
 				color: #282828;
 			}
 			&:hover {
@@ -645,7 +645,7 @@ $main-font: 'Jost', sans-serif;
 						height: 35px;
 						border: 1px solid #fff;
 						border-radius: 5px;
-						font: 11px/35px 'Sunflower', sans-serif;
+						font: 11px/35px 'Montserrat', sans-serif;
 						color: #fff;
 						letter-spacing: 1px;
 						background: #000;
@@ -684,9 +684,7 @@ $main-font: 'Jost', sans-serif;
 	background: url(../img/promo2.jpg) no-repeat center/cover fixed;
 	filter: grayscale(1);
 	background-attachment: fixed;
-	&:hover .inner .wrap h1 span {
-		animation: ani 1s linear;
-	}
+
 	.inner {
 		width: 1180px;
 		margin: 0 auto;
@@ -700,16 +698,16 @@ $main-font: 'Jost', sans-serif;
 			margin: auto 50px;
 			h1 {
 				float: left;
-				font: 700 70px/1.3 'Roboto', sans-serif;
-				letter-spacing: 10px;
+				font: 700 70px/1.3 'Roboto';
+				letter-spacing: 8px;
 				color: #fff;
-				// text-align: center;
 				margin-bottom: 20px;
 			}
 			p {
 				display: block;
 				float: left;
-				font: bold 24px/1.5 'Roboto', sans-serif;
+				font: bold 24px/1.5 $main-font;
+				letter-spacing: 2px;
 				color: #fff;
 				margin-bottom: 80px;
 			}
@@ -736,7 +734,7 @@ $main-font: 'Jost', sans-serif;
 			width: 30%;
 			padding-top: 15px;
 			color: #fff;
-			font: 14px/35px 'Poppins', sans-serif;
+			font: 14px/35px $main-font;
 			letter-spacing: 1px;
 			opacity: 0.9;
 			p {
@@ -746,17 +744,6 @@ $main-font: 'Jost', sans-serif;
 	}
 }
 
-@keyframes ani {
-	0% {
-		transform: translateY(0%);
-	}
-	50% {
-		transform: translateY(-10%);
-	}
-	100% {
-		transform: translateY(0%);
-	}
-}
 //track영역
 #track {
 	width: 100%;
@@ -774,7 +761,7 @@ $main-font: 'Jost', sans-serif;
 		h1 {
 			width: 100%;
 			margin-bottom: 60px;
-			font: bold 24px/1 'Roboto', sans-serif;
+			font: bold 24px/1 $main-font;
 			color: #fff;
 			text-align: center;
 		}
@@ -801,13 +788,15 @@ $main-font: 'Jost', sans-serif;
 				align-items: center;
 				width: 100%;
 				color: #fff;
+				font: 20px/1 $main-font;
 				img {
 					width: 72px;
 					margin-right: 15px;
 				}
 				p {
 					display: inline-block;
-					font: bold 20px/1 'Hahmlet', serif;
+					font: bold 20px/1 $main-font;
+					margin-right: 3px;
 				}
 			}
 		}
@@ -832,7 +821,7 @@ $main-font: 'Jost', sans-serif;
 			justify-content: flex-end;
 			> a {
 				display: block;
-				font: bold 18px/1 'Poppins', sans-serif;
+				font: bold 18px/1 $main-font;
 				color: #fff;
 				margin-bottom: 10px;
 				cursor: pointer;
@@ -844,7 +833,7 @@ $main-font: 'Jost', sans-serif;
 					margin-top: 10px;
 					color: #999;
 					a {
-						font: bold 16px/1 'Poppins', sans-serif;
+						font: bold 16px/1 $main-font;
 						color: #999;
 					}
 				}
@@ -907,7 +896,7 @@ $main-font: 'Jost', sans-serif;
 				}
 			}
 			address {
-				font: 14px/1.3 'Poppins', sans-serif;
+				font: 14px/1.3 $main-font;
 				color: #999;
 				margin-top: 10px;
 			}
@@ -1077,7 +1066,7 @@ $main-font: 'Jost', sans-serif;
 				width: 100%;
 				margin-right: 0;
 				h1 {
-					font: 700 60px/1.2 'Sunflower', sans-serif;
+					font: 700 60px/1.2 'Roboto', sans-serif;
 					text-align: center;
 				}
 				p {
@@ -1130,7 +1119,7 @@ $main-font: 'Jost', sans-serif;
 				width: 200px;
 				margin-right: 30px;
 				address {
-					font: 14px/1.3 'Poppins', sans-serif;
+					font: 14px/1.3 $main-font;
 					color: #999;
 					margin-top: 20px;
 				}
@@ -1268,13 +1257,13 @@ $main-font: 'Jost', sans-serif;
 		.inner {
 			.wrap1 {
 				> a {
-					font: bold 16px/1 'Poppins', sans-serif;
+					font: bold 16px/1 $main-font;
 				}
 				ul {
 					li {
 						margin-top: 5px;
 						a {
-							font: bold 14px/1 'Poppins', sans-serif;
+							font: bold 14px/1 $main-font;
 						}
 					}
 				}
