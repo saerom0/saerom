@@ -61,12 +61,13 @@
 					li {
 						float: left;
 						width: 25%;
-						padding: 2px;
+						padding: 15px;
 						div {
 							width: 100%;
-							padding: 5px;
+							padding: 10px;
 							box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 							border-radius: 5px;
+							background: #fff;
 							&:hover {
 								a {
 									> img {
@@ -95,10 +96,6 @@
 									width: 30px;
 									height: 30px;
 									border-radius: 50%;
-								}
-								strong {
-									font: 11px/1 'Hahmlet', serif;
-									color: violet;
 								}
 							}
 						}

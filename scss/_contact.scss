@@ -1,4 +1,4 @@
-.location {
+.contact {
 	width: 100%;
 	.sub_bg {
 		background: url(../img/sub_menu_bg.jpg) no-repeat bottom/cover;
@@ -66,7 +66,7 @@
 }
 
 @media screen and (max-width: $tablet_plus) {
-	.location {
+	.contact {
 		width: 100%;
 		.inner {
 			width: 100%;
@@ -76,7 +76,7 @@
 }
 
 @media screen and (max-width: $tablet_origin) {
-	.location {
+	.contact {
 		.sub_bg {
 			height: 220px;
 		}
@@ -97,7 +97,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.location {
+	.contact {
 		.inner {
 			width: 500px;
 			#map {

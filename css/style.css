@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo&family=Hahmlet&family=Montserrat&family=Poppins&family=Roboto:wght@400;700&family=Sunflower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +37,7 @@ table {
 #header_sub {
   width: 100%;
   height: 72px;
+  background: #e3e3e3;
 }
 #header_sub .inner {
   width: 1180px;
@@ -275,6 +277,7 @@ table {
 .content {
   width: 100%;
   padding: 0 0 150px;
+  background: #e3e3e3;
 }
 .content .sub_bg {
   width: 100%;
@@ -715,36 +718,36 @@ table {
     width: 100px;
   }
 }
-.location {
+.contact {
   width: 100%;
 }
-.location .sub_bg {
+.contact .sub_bg {
   background: url(../img/sub_menu_bg.jpg) no-repeat bottom/cover;
 }
-.location .inner {
+.contact .inner {
   width: 850px;
   margin: 0 auto;
 }
-.location .inner::after {
+.contact .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-.location .inner #map {
+.contact .inner #map {
   width: 100%;
   height: 450px;
   border: 1px solid #eee;
   margin-bottom: 20px;
 }
-.location .inner .traffic {
+.contact .inner .traffic {
   float: left;
 }
-.location .inner .traffic li {
+.contact .inner .traffic li {
   float: left;
   margin-right: 10px;
   margin-bottom: 60px;
 }
-.location .inner .traffic li a {
+.contact .inner .traffic li a {
   display: block;
   width: 120px;
   height: 40px;
@@ -754,18 +757,18 @@ table {
   text-align: center;
   border: 1px solid #555555;
 }
-.location .inner .traffic li .on a {
+.contact .inner .traffic li .on a {
   color: #fff;
   background: #555;
 }
-.location .inner .branch {
+.contact .inner .branch {
   float: right;
 }
-.location .inner .branch li {
+.contact .inner .branch li {
   float: left;
   margin-left: 10px;
 }
-.location .inner .branch li a {
+.contact .inner .branch li a {
   display: block;
   width: 120px;
   height: 40px;
@@ -775,54 +778,54 @@ table {
   text-align: center;
   border: 1px solid #555;
 }
-.location .inner .branch li .on a {
+.contact .inner .branch li .on a {
   color: #fff;
   background: #555;
 }
 
 @media screen and (max-width: 1180px) {
-  .location {
+  .contact {
     width: 100%;
   }
-  .location .inner {
+  .contact .inner {
     width: 100%;
     padding: 60px 40px;
   }
 }
 @media screen and (max-width: 860px) {
-  .location .sub_bg {
+  .contact .sub_bg {
     height: 220px;
   }
-  .location .inner {
+  .contact .inner {
     width: 610px;
   }
-  .location .inner .traffic li a {
+  .contact .inner .traffic li a {
     width: 100px;
   }
-  .location .inner .branch li a {
+  .contact .inner .branch li a {
     width: 93px;
   }
 }
 @media screen and (max-width: 600px) {
-  .location .inner {
+  .contact .inner {
     width: 500px;
   }
-  .location .inner #map {
+  .contact .inner #map {
     height: 300px;
   }
-  .location .inner .traffic {
+  .contact .inner .traffic {
     width: 100%;
   }
-  .location .inner .traffic li {
+  .contact .inner .traffic li {
     margin-bottom: 20px;
   }
-  .location .inner .traffic li a {
+  .contact .inner .traffic li a {
     width: 100px;
   }
-  .location .inner .branch {
+  .contact .inner .branch {
     width: 100%;
   }
-  .location .inner .branch li:first-child {
+  .contact .inner .branch li:first-child {
     margin-left: 0;
   }
 }
@@ -950,22 +953,23 @@ table {
   align-content: flex-start;
 }
 .youtube .videoList article {
-  width: 27%;
+  width: 30.5%;
   height: 380px;
   border: 1px solid #eee;
   margin-bottom: 40px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 .youtube .videoList article .pic {
   display: block;
   width: 100%;
-  height: 62%;
+  height: 200px;
   padding: 5px;
 }
 .youtube .videoList article .pic img {
   width: 100%;
   height: 100%;
-  object-fit: center;
+  object-fit: cover;
 }
 .youtube .videoList article .con {
   position: relative;
@@ -1094,13 +1098,14 @@ table {
 .gallery .inner #gallery #wrap #list li {
   float: left;
   width: 25%;
-  padding: 2px;
+  padding: 15px;
 }
 .gallery .inner #gallery #wrap #list li div {
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  background: #fff;
 }
 .gallery .inner #gallery #wrap #list li div:hover a > img {
   filter: grayscale(0%);
@@ -1125,10 +1130,6 @@ table {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-}
-.gallery .inner #gallery #wrap #list li div span strong {
-  font: 11px/1 "Hahmlet", serif;
-  color: violet;
 }
 .gallery aside {
   width: 100%;
@@ -1442,6 +1443,11 @@ table {
 #header {
   width: 100%;
   height: 72px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 3;
 }
 #header .inner {
   width: 1180px;
@@ -1458,7 +1464,7 @@ table {
   position: fixed;
   right: 30px;
   bottom: 30px;
-  z-index: 15;
+  z-index: 5;
   background: transparent;
   border: 2px solid #555;
   background-color: rgba(255, 255, 255, 0.6);
@@ -1476,64 +1482,24 @@ table {
   float: left;
 }
 #header .inner .web_menu #gnb {
-  width: 50%;
+  width: 60%;
   height: 20px;
   float: left;
 }
 #header .inner .web_menu #gnb > li {
   float: left;
-  border-right: 1px solid #282828;
-  margin-left: 15px;
-  padding-right: 15px;
+  padding-right: 3vw;
 }
 #header .inner .web_menu #gnb > li:last-child {
   border-right: none;
 }
 #header .inner .web_menu #gnb > li > a {
   display: block;
-  font: bold 14px/1 "Roboto", sans-serif;
-  color: #282828;
+  font: bold 16px/1 "Jost", sans-serif;
+  color: #eee;
 }
 #header .inner .web_menu #gnb > li > a i {
   margin-right: 5px;
-}
-#header .inner .web_menu #gnb > li:hover {
-  color: #555;
-}
-#header .inner .web_menu #gnb > li:hover .sub_menu {
-  position: relative;
-  width: 100%;
-  display: block;
-  background: #fff;
-  text-align: center;
-  transition: 0.3s;
-}
-#header .inner .web_menu #gnb > li:hover .sub_menu ul {
-  width: 80px;
-  margin: auto;
-  border: 1px solid #eee;
-  position: absolute;
-  top: 0;
-  left: -10px;
-  z-index: 30;
-}
-#header .inner .web_menu #gnb > li:hover .sub_menu ul li {
-  height: 30px;
-  background: #fff;
-}
-#header .inner .web_menu #gnb > li:hover .sub_menu ul li:hover {
-  background: #353535;
-}
-#header .inner .web_menu #gnb > li:hover .sub_menu ul li:hover a {
-  color: #fff;
-}
-#header .inner .web_menu #gnb > li:hover .sub_menu ul li a {
-  font: 13px/30px "Roboto", sans-serif;
-  color: #333;
-  letter-spacing: 1.5;
-}
-#header .inner .web_menu #gnb > li .sub_menu {
-  display: none;
 }
 #header .inner .web_menu .log {
   height: 100%;
@@ -1550,9 +1516,9 @@ table {
 }
 #header .inner .web_menu .log li a {
   display: block;
-  font: bold 14px/1 "Roboto", sans-serif;
+  font: 16px/1 "Jost", sans-serif;
   padding: 5px 10px;
-  color: #282828;
+  color: #eee;
   border: 1px solid #6d6d6d;
   border-radius: 3px;
 }
@@ -1567,7 +1533,7 @@ table {
   position: absolute;
   right: 30px;
   top: 30px;
-  z-index: 20;
+  z-index: 5;
 }
 #header .inner .btn_call::before {
   content: "";
@@ -1620,14 +1586,14 @@ table {
 #header .inner .mob_menu {
   display: none;
   flex-direction: column;
-  width: 250px;
+  width: 50vw;
   height: 100vh;
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -50vw;
   background: #1c1c1c;
   padding: 35px 30px;
-  z-index: 30;
+  z-index: 6;
   transition: 0.5s;
 }
 #header .inner .mob_menu.on {
@@ -1652,7 +1618,7 @@ table {
 }
 #header .inner .mob_menu .mob_log li a {
   display: block;
-  font: 14px/1 "Roboto", sans-serif;
+  font: 14px/1 "Jost", sans-serif;
   padding: 5px 10px;
   color: #fff;
   border: 1px solid #6d6d6d;
@@ -1668,7 +1634,7 @@ table {
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid #444;
-  font: bold 14px/1 "arial";
+  font: bold 14px/1 "Jost", sans-serif;
   color: #888;
   text-align: center;
 }
@@ -1743,12 +1709,12 @@ table {
   width: 100%;
   position: relative;
   margin-top: -22vh;
-  z-index: 10;
+  z-index: 2;
 }
 #middle_menu.on .inner .sub_gnb {
   position: fixed;
   width: 1180px;
-  z-index: 10;
+  z-index: 3;
 }
 #middle_menu .inner {
   width: 1180px;
@@ -2040,7 +2006,7 @@ table {
   color: red;
   opacity: 0;
   transition: 0.5s;
-  z-index: 10;
+  z-index: 4;
 }
 #offer .inner .wrap article .frame .pic a {
   display: none;
@@ -2115,6 +2081,9 @@ table {
   filter: grayscale(1);
   background-attachment: fixed;
 }
+#promo:hover .inner .wrap h1 span {
+  animation: ani 1s linear;
+}
 #promo .inner {
   width: 1180px;
   margin: 0 auto;
@@ -2172,6 +2141,17 @@ table {
   line-height: 2.3;
 }
 
+@keyframes ani {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 #track {
   width: 100%;
   padding: 80px 0;
@@ -2388,7 +2368,7 @@ table {
     font: bold 55px/1 "Roboto", sans-serif;
     margin: 20px auto;
   }
-  #middle_menu .inner .intro h3 {
+  #middle_menu .inner .intro span {
     font: bold 14px/1 "Roboto", sans-serif;
     letter-spacing: 2px;
     line-height: 20px;
@@ -2628,6 +2608,9 @@ table {
     width: 10px;
     border-radius: 50%;
   }
+  #middle_menu {
+    z-index: 1;
+  }
   #middle_menu .inner .sub_gnb {
     display: none;
   }
@@ -2639,7 +2622,7 @@ table {
     padding-top: 30px;
     font: bold 40px/1 "Roboto", sans-serif;
   }
-  #middle_menu .inner .intro h3 {
+  #middle_menu .inner .intro span {
     width: 100%;
     margin: 20px auto;
   }

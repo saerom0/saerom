@@ -14,13 +14,12 @@ btn_call.onclick = (e) => {
 };
 
 //middle_menu영역
-const intro = document.querySelector('#middle_menu .intro h2');
-const intro_text = intro.innerText;
-let tags = '';
+const txt = document.querySelector('.txt');
+const txt_content = txt.innerText;
+let tags2 = '';
 
-for (const el of intro_text) tags += `<span>${el}</span>`;
-console.log(tags);
-intro.innerHTML = tags;
+for (let el of txt_content) tags2 += `<span>${el}</span>`;
+txt.innerHTML = tags2;
 
 // #banner 영역
 const bn_btn = banner.querySelectorAll('#banner li');
@@ -59,6 +58,18 @@ view_btn.forEach((el) => {
 		pic.classList.toggle('on');
 	});
 });
+
+//promo영역
+const promo = document.querySelector('.promo_text');
+const promo_text = promo.innerText;
+let tags1 = '';
+let n = 1;
+for (const el of promo_text) {
+	tags1 += `<span style='transition-delay:${0.3 * n}s'>${el}</span>`;
+	console.log(tags1);
+	n += 1;
+}
+promo.innerHTML = tags1;
 
 //visual swiper
 //swiper를 이쪽으로 옮기면 실행이 안됨
