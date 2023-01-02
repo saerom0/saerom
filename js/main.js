@@ -1,11 +1,6 @@
-const header = document.querySelector('#header');
-const visual = document.querySelector('#visual');
-const middle = document.querySelector('#middle_menu');
-const banner = document.querySelector('#banner');
-
 //햄버거 버튼
-const btn_call = header.querySelector('.btn_call');
-const mob_menu = header.querySelector('.mob_menu');
+const btn_call = document.querySelector('.btn_call');
+const mob_menu = document.querySelector('.mob_menu');
 
 btn_call.onclick = (e) => {
 	e.preventDefault();
@@ -14,12 +9,12 @@ btn_call.onclick = (e) => {
 };
 
 //visual영역
-const frame = document.querySelector('#visual');
-const panels = frame.querySelectorAll('.panel li');
-const vs_btns = frame.querySelectorAll('.vs-btns li');
+const visual = document.querySelector('#visual');
+const panels = visual.querySelectorAll('.panel li');
+const vs_btns = visual.querySelectorAll('.vs-btns li');
 const len = panels.length - 1;
 const interval = 4000;
-let num = 0;
+let bn_num = 0;
 let timer = null;
 
 //로딩시 startRolling함수 호출해서 패널 자동롤링 시작
@@ -41,16 +36,16 @@ function activation(index) {
 	panels[index].classList.add('on');
 	vs_btns[index].classList.add('on');
 	//인수로 전달받은 순번으로 전역 활성화 순번 갱신
-	num = index;
+	bn_num = index;
 	//패널 활성화시 진행바의 넓이값을 0%로 초기화
 	// bar.style.width = '0%';
 }
 
 //롤링함수
 function rolling() {
-	num < len ? num++ : (num = 0);
+	bn_num < len ? bn_num++ : (bn_num = 0);
 	//활성화 순번에 맞게 패널, 버튼 활성화
-	activation(num);
+	activation(bn_num);
 	//진행바 모션 시작
 }
 
@@ -58,7 +53,7 @@ function rolling() {
 function startRolling() {
 	//활성화 함수 호출하면서
 	//다시 롤링시작
-	activation(num);
+	activation(bn_num);
 	timer = setInterval(rolling, interval);
 }
 

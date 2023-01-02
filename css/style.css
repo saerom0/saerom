@@ -94,7 +94,7 @@ table {
   margin-right: 5px;
 }
 #header_sub .inner .web_menu .log {
-  height: 100%;
+  height: 72px;
   float: right;
   margin-right: 10px;
 }
@@ -690,16 +690,81 @@ table {
   width: 100%;
 }
 .contact .sub_bg {
-  background: url(../img/sub_menu_bg.jpg) no-repeat bottom/cover;
+  background: url(../img/sub_menu_bg.jpg) no-repeat center/cover;
 }
 .contact .inner {
-  width: 850px;
+  width: 1180px;
   margin: 0 auto;
 }
 .contact .inner::after {
   content: "";
   display: block;
   clear: both;
+}
+.contact .inner h2 {
+  font: 25px/50px "Jost", sans-serif;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.contact .inner .enquire_submit {
+  position: relative;
+  width: 55%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  float: left;
+  margin-bottom: 100px;
+  margin-right: 5%;
+}
+.contact .inner .enquire_submit input {
+  height: 50px;
+  margin: 10px 20px;
+  padding-left: 20px;
+  border: none;
+  font-family: "Jost", sans-serif;
+  font-size: 15px;
+}
+.contact .inner .enquire_submit input:nth-of-type(4) {
+  height: 100px;
+}
+.contact .inner .enquire_submit a {
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  background-color: #6d6d6d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  transition: 0.5s;
+}
+.contact .inner .enquire_submit a:hover {
+  color: #000;
+}
+.contact .inner .info {
+  float: left;
+  width: 40%;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contact .inner .info div {
+  font: 20px/1 "Jost", sans-serif;
+}
+.contact .inner .info div p {
+  font: 16px/1 "Jost", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.contact .inner .info div .sns_icons {
+  margin-top: 20px;
+}
+.contact .inner .info div .sns_icons i {
+  margin-right: 10px;
 }
 .contact .inner #map {
   width: 100%;
