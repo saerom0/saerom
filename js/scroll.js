@@ -14,6 +14,7 @@ window.addEventListener('scroll', () => {
 
 	//3단메뉴가 상단에 붙는 순간부터 항상 상위에 고정
 	//클릭하면 상위로 이동하는 버튼(Anim을 사용하면 다른 코드가 작동이 안됨)
+
 	if (scroll >= posArr[1]) {
 		pages[2].classList.add('on');
 		// pages[0].classList.add('on');

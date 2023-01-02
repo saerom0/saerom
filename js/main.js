@@ -13,13 +13,54 @@ btn_call.onclick = (e) => {
 	mob_menu.classList.toggle('on');
 };
 
-//middle_menu영역
-const txt = document.querySelector('.txt');
-const txt_content = txt.innerText;
-let tags2 = '';
+//visual영역
+const frame = document.querySelector('#visual');
+const panels = frame.querySelectorAll('.panel li');
+const vs_btns = frame.querySelectorAll('.vs-btns li');
+const len = panels.length - 1;
+const interval = 4000;
+let num = 0;
+let timer = null;
 
-for (let el of txt_content) tags2 += `<span>${el}</span>`;
-txt.innerHTML = tags2;
+//로딩시 startRolling함수 호출해서 패널 자동롤링 시작
+startRolling();
+
+//각 버튼 클릭시 활성화 함수실행 및 stopRoliing으로 롤링기능 정지
+vs_btns.forEach((btn, idx) => {
+	btn.addEventListener('click', () => {
+		activation(idx);
+		stopRolling();
+	});
+});
+
+//버튼 , 패널 활성화함수
+function activation(index) {
+	//인수로 전달받은 버튼과 패널만 활성화
+	for (const el of panels) el.classList.remove('on');
+	for (const el of vs_btns) el.classList.remove('on');
+	panels[index].classList.add('on');
+	vs_btns[index].classList.add('on');
+	//인수로 전달받은 순번으로 전역 활성화 순번 갱신
+	num = index;
+	//패널 활성화시 진행바의 넓이값을 0%로 초기화
+	// bar.style.width = '0%';
+}
+
+//롤링함수
+function rolling() {
+	num < len ? num++ : (num = 0);
+	//활성화 순번에 맞게 패널, 버튼 활성화
+	activation(num);
+	//진행바 모션 시작
+}
+
+//롤링 시작 함수
+function startRolling() {
+	//활성화 함수 호출하면서
+	//다시 롤링시작
+	activation(num);
+	timer = setInterval(rolling, interval);
+}
 
 // #banner 영역
 const bn_btn = banner.querySelectorAll('#banner li');
@@ -32,12 +73,12 @@ bn_btn.forEach((el, idx) => {
 		let isOn = el.classList.contains('on');
 		if (isOn) return;
 
-		activation(idx);
+		activate(idx);
 	});
 });
 
-function activation(index) {
-	new Anim(bn_div, {
+function activate(index) {
+	new Anime(bn_div, {
 		prop: 'margin-left',
 		value: -100 * index + '%',
 		duration: 1000,

@@ -54,7 +54,7 @@ table {
   position: fixed;
   right: 30px;
   bottom: 30px;
-  z-index: 15;
+  z-index: 5;
   background: transparent;
   border: 2px solid #555;
   background-color: rgba(255, 255, 255, 0.6);
@@ -68,72 +68,35 @@ table {
 }
 #header_sub .inner .web_menu {
   width: 100%;
-  padding-top: 25px;
+  padding-top: 28px;
   float: left;
 }
 #header_sub .inner .web_menu #gnb {
-  width: 50%;
+  width: 60%;
   height: 20px;
   float: left;
 }
 #header_sub .inner .web_menu #gnb > li {
   float: left;
   border-right: 1px solid #282828;
-  margin-left: 15px;
-  padding-right: 15px;
+  margin-left: 20px;
+  padding-right: 20px;
 }
 #header_sub .inner .web_menu #gnb > li:last-child {
   border-right: none;
 }
 #header_sub .inner .web_menu #gnb > li > a {
-  font: bold 14px/1 "Roboto", sans-serif;
+  font: bold 16px/1 "Jost", sans-serif;
   display: block;
   color: #282828;
 }
 #header_sub .inner .web_menu #gnb > li > a i {
   margin-right: 5px;
 }
-#header_sub .inner .web_menu #gnb > li:hover {
-  color: #555;
-}
-#header_sub .inner .web_menu #gnb > li:hover .sub_menu {
-  position: relative;
-  width: 100%;
-  display: block;
-  background: #fff;
-  text-align: center;
-  transition: 0.3s;
-}
-#header_sub .inner .web_menu #gnb > li:hover .sub_menu ul {
-  width: 80px;
-  margin: auto;
-  border: 1px solid #eee;
-  position: absolute;
-  top: 0;
-  left: -10px;
-  z-index: 30;
-}
-#header_sub .inner .web_menu #gnb > li:hover .sub_menu ul li {
-  height: 30px;
-  background: #fff;
-}
-#header_sub .inner .web_menu #gnb > li:hover .sub_menu ul li:hover {
-  background: #353535;
-}
-#header_sub .inner .web_menu #gnb > li:hover .sub_menu ul li:hover a {
-  color: #fff;
-}
-#header_sub .inner .web_menu #gnb > li:hover .sub_menu ul li a {
-  font: 13px/30px "Roboto", sans-serif;
-  color: #333;
-  letter-spacing: 1.5;
-}
-#header_sub .inner .web_menu #gnb > li .sub_menu {
-  display: none;
-}
 #header_sub .inner .web_menu .log {
   height: 100%;
   float: right;
+  margin-right: 10px;
 }
 #header_sub .inner .web_menu .log li {
   float: left;
@@ -148,7 +111,7 @@ table {
 }
 #header_sub .inner .web_menu .log li a {
   display: block;
-  font: bold 14px/1 "Roboto", sans-serif;
+  font: bold 16px/1 "Jost", sans-serif;
   padding: 5px 10px;
   color: #282828;
   border: 1px solid #6d6d6d;
@@ -165,7 +128,7 @@ table {
   position: absolute;
   right: 30px;
   top: 30px;
-  z-index: 20;
+  z-index: 5;
 }
 #header_sub .inner .btn_call::before {
   content: "";
@@ -218,14 +181,14 @@ table {
 #header_sub .inner .mob_menu {
   display: none;
   flex-direction: column;
-  width: 250px;
+  width: 50vw;
   height: 100vh;
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -50vw;
   background: #1c1c1c;
   padding: 35px 30px;
-  z-index: 30;
+  z-index: 6;
   transition: 0.5s;
 }
 #header_sub .inner .mob_menu.on {
@@ -277,7 +240,7 @@ table {
 .content {
   width: 100%;
   padding: 0 0 150px;
-  background: #e3e3e3;
+  background: url(../img/texture.jpg);
 }
 .content .sub_bg {
   width: 100%;
@@ -552,50 +515,55 @@ table {
 .sign_up .inner form {
   width: 85%;
 }
-.sign_up .inner form .all_agree {
-  font: bold 15px/2 "Hahmlet", serif;
+.sign_up .inner form fieldset {
+  display: flex;
+  flex-direction: column;
+}
+.sign_up .inner form fieldset .all_agree {
+  font: bold 16px/2 "Hahmlet", serif;
   letter-spacing: 1.2px;
   display: flex;
   align-items: center;
 }
-.sign_up .inner form .all_agree input#all_agree {
+.sign_up .inner form fieldset .all_agree input#all_agree {
   margin-right: 5px;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
-.sign_up .inner form h2 {
-  font: 14px/1 "Hahmlet", serif;
+.sign_up .inner form fieldset h2 {
+  font: 15px/1 "Hahmlet", serif;
   letter-spacing: 1px;
   margin: 30px 0 10px 0;
 }
-.sign_up .inner form #terms {
+.sign_up .inner form fieldset #terms {
   width: 100%;
   height: 100px;
   resize: none;
   padding: 10px;
-  font: 12px/1.3 "Sunflower", sans-serif;
+  font: 13px/1.5 "Sunflower", sans-serif;
   color: #888;
   background: #eee;
 }
-.sign_up .inner form .agree {
+.sign_up .inner form fieldset .agree {
   margin-bottom: 30px;
   display: flex;
   align-items: center;
 }
-.sign_up .inner form .agree label[for=must_agree],
-.sign_up .inner form .agree label[for=choice_agree] {
-  font-size: 12px;
+.sign_up .inner form fieldset .agree label[for=must_agree],
+.sign_up .inner form fieldset .agree label[for=choice_agree] {
+  font: 14px/1 "Hahmlet", serif;
 }
-.sign_up .inner form .agree input {
+.sign_up .inner form fieldset .agree input {
   margin-left: 5px;
-  width: 13px;
-  height: 13px;
+  margin-top: 5px;
+  width: 15px;
+  height: 15px;
 }
-.sign_up .inner form table {
+.sign_up .inner form fieldset table {
   border-top: 2px solid #999;
   border-bottom: 2px solid #999;
 }
-.sign_up .inner form table th {
+.sign_up .inner form fieldset table th {
   width: 23%;
   padding: 15px;
   font: bold 14px/1 "Roboto", sans-serif;
@@ -606,21 +574,21 @@ table {
   border-bottom: 1px solid #bbb;
   background: #eee;
 }
-.sign_up .inner form table th label {
+.sign_up .inner form fieldset table th label {
   font-family: "Roboto", sans-serif;
 }
-.sign_up .inner form table th i {
+.sign_up .inner form fieldset table th i {
   transform: scale(0.6);
   margin-left: 5px;
   color: orangered;
 }
-.sign_up .inner form table th:last-child {
-  background: #fff;
+.sign_up .inner form fieldset table th:last-child {
+  background: transparent;
   text-align: center;
   border-right: none;
 }
-.sign_up .inner form table th input[type=submit],
-.sign_up .inner form table th input[type=reset] {
+.sign_up .inner form fieldset table th input[type=submit],
+.sign_up .inner form fieldset table th input[type=reset] {
   width: 150px;
   height: 40px;
   font: bold 14px/1 "Sunflower", sans-serif;
@@ -628,50 +596,50 @@ table {
   cursor: pointer;
   transition: 0.5s;
 }
-.sign_up .inner form table th input[type=submit]:hover,
-.sign_up .inner form table th input[type=reset]:hover {
+.sign_up .inner form fieldset table th input[type=submit]:hover,
+.sign_up .inner form fieldset table th input[type=reset]:hover {
   transform: scale(1.03);
 }
-.sign_up .inner form table th input[type=reset] {
+.sign_up .inner form fieldset table th input[type=reset] {
   border: 1px solid #444;
   background: #fff;
   color: #444;
 }
-.sign_up .inner form table th input[type=submit] {
+.sign_up .inner form fieldset table th input[type=submit] {
   border: none;
   background: #444;
   color: #fff;
 }
-.sign_up .inner form table td {
+.sign_up .inner form fieldset table td {
   border-bottom: 1px solid #bbb;
   padding: 15px;
   font: 14px/1 "Hahmlet", serif;
 }
-.sign_up .inner form table td input[type=text],
-.sign_up .inner form table td input[type=password] {
+.sign_up .inner form fieldset table td input[type=text],
+.sign_up .inner form fieldset table td input[type=password] {
   width: 150px;
   height: 30px;
   border: 1px solid #bbb;
   padding-left: 10px;
   vertical-align: top;
 }
-.sign_up .inner form table td p {
+.sign_up .inner form fieldset table td p {
   font-size: 12px;
   color: blue;
 }
-.sign_up .inner form table td input[type=checkbox],
-.sign_up .inner form table td input[type=radio] {
+.sign_up .inner form fieldset table td input[type=checkbox],
+.sign_up .inner form fieldset table td input[type=radio] {
   margin-right: 5px;
 }
-.sign_up .inner form table td #male,
-.sign_up .inner form table td #female {
+.sign_up .inner form fieldset table td #male,
+.sign_up .inner form fieldset table td #female {
   font: 14px/1 "Sunflower", sans-serif;
 }
-.sign_up .inner form table td label {
+.sign_up .inner form fieldset table td label {
   margin-right: 30px;
 }
-.sign_up .inner form table td select#phone,
-.sign_up .inner form table td #gender {
+.sign_up .inner form fieldset table td select#phone,
+.sign_up .inner form fieldset table td #gender {
   width: 100px;
   height: 30px;
   display: inline-flex;
@@ -681,17 +649,17 @@ table {
   margin-right: 5px;
   font-family: "Sunflower", sans-serif;
 }
-.sign_up .inner form table td input#email::-webkit-input-placeholder {
+.sign_up .inner form fieldset table td input#email::-webkit-input-placeholder {
   font-family: "Hahmlet", serif;
 }
-.sign_up .inner form table td select#company {
+.sign_up .inner form fieldset table td select#company {
   width: 30%;
   height: 30px;
   border: 1px solid #bbb;
   padding-left: 20px;
 }
-.sign_up .inner form table td span {
-  font-size: 11px;
+.sign_up .inner form fieldset table td span {
+  font-size: 12px;
   margin-left: 5px;
 }
 
@@ -1108,7 +1076,7 @@ table {
 .gallery .inner #gallery #wrap #list li div {
   width: 100%;
   padding: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background: #fff;
 }
@@ -1181,7 +1149,8 @@ table {
   }
 }
 .office .sub_bg {
-  background: #000 url(../img/office_bg.png) no-repeat center/cover;
+  background: url(../img/office_bg.png) no-repeat center/cover;
+  filter: grayscale(0.8);
 }
 .office .inner h1 {
   width: 85%;
@@ -1388,6 +1357,9 @@ table {
   }
   .office .inner .wrap .container p {
     font-size: 15px;
+  }
+  .office .inner .wrap .container .tab label {
+    width: 92%;
   }
   #footer_sub .inner .wrap1 > a {
     font: bold 16px/1 "Poppins", sans-serif;
@@ -1647,49 +1619,63 @@ table {
   display: flex;
 }
 
-#visual .visual {
+#visual {
   width: 100%;
   height: 100vh;
-  background: #eee;
-  color: #000;
-  margin: 0;
-  padding: 0;
 }
-#visual .visual .swiper {
+#visual .visual {
   width: 100%;
   height: 100%;
-  background: #000;
-}
-#visual .visual .swiper .swiper-pagination {
-  height: 20px;
-  position: absolute;
-  left: 50%;
-  top: 60vh;
-  transform: translateX(-50%);
-}
-#visual .visual .swiper .swiper-pagination span {
-  width: 90px;
-  height: 9px;
-  border-radius: 0;
-  margin-left: 0px;
-}
-#visual .visual .swiper .swiper-pagination:last-child {
-  margin-left: 0;
-}
-#visual .visual .swiper .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffffff;
-}
-#visual .visual .swiper .swiper-slide {
+  position: relative;
   overflow: hidden;
-  align-items: center;
 }
-#visual .visual .swiper .swiper-slide img {
-  display: block;
+#visual .visual .panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(5, 5, 0);
+}
+#visual .visual .panel li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#visual .visual .panel li.on img {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+#visual .visual .panel li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: grayscale(1);
-  opacity: 0.8;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1s, transform 4s;
+}
+#visual .visual .vs-btns {
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: 65vh;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+#visual .visual .vs-btns li {
+  width: 90px;
+  height: 9px;
+  background: #000;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#visual .visual .vs-btns li.on {
+  background: #fff;
+  opacity: 1;
 }
 #visual .visual .inner {
   width: 1180px;
@@ -1713,7 +1699,7 @@ table {
 #middle_menu {
   width: 100%;
   position: relative;
-  margin-top: -22vh;
+  margin-top: -15vh;
   z-index: 2;
 }
 #middle_menu.on .inner .sub_gnb {
@@ -1821,14 +1807,13 @@ table {
   font: bold 72px/1 "Roboto", sans-serif;
   color: #2a2a2a;
   text-align: center;
-  margin: 30px auto;
+  margin: 40px auto;
 }
 #middle_menu .inner .intro h3 {
-  width: 570px;
-  font: bold 14px/1 "Roboto", sans-serif;
+  width: 900px;
+  font: bold 25px/35px "Roboto", sans-serif;
   color: #2a2a2a;
   letter-spacing: 3px;
-  line-height: 20px;
   margin: 0 auto 40px;
   text-align: center;
 }
@@ -1840,7 +1825,7 @@ table {
 }
 #middle_menu .inner .intro .p_wrap p {
   width: 520px;
-  font: 14px/1.5 "Roboto", sans-serif;
+  font: 15px/1.5 "Roboto", sans-serif;
   color: #bebebe;
   margin-bottom: 40px;
 }
@@ -1872,6 +1857,7 @@ table {
   transition: 0.5s;
   background: #000;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 #banner .inner section div img {
   width: 100%;
@@ -1881,6 +1867,10 @@ table {
   background: no-repeat center/cover;
   opacity: 0.8;
   filter: grayscale(1);
+  transition: 0.5s;
+}
+#banner .inner section div img:hover {
+  filter: grayscale(0);
 }
 #banner .inner section div p {
   width: 100%;

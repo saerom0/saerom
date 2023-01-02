@@ -231,49 +231,67 @@ $main-font: 'Jost', sans-serif;
 
 //visual 영역(메인 슬라이드)화면
 #visual {
+	width: 100%;
+	height: 100vh;
 	.visual {
 		width: 100%;
-		height: 100vh;
-		background: #eee;
-		color: #000;
-		margin: 0;
-		padding: 0;
-		.swiper {
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		.panel {
+			position: absolute;
 			width: 100%;
 			height: 100%;
-			background: #000;
-			.swiper-pagination {
-				height: 20px;
+			background: rgb(5, 5, 0);
+
+			li {
+				width: 100%;
+				height: 100%;
 				position: absolute;
-				left: 50%;
-				top: 60vh;
-				transform: translateX(-50%);
-				span {
-					width: 90px;
-					height: 9px;
-					border-radius: 0;
-					margin-left: 0px;
+				top: 0;
+				left: 0;
+
+				&.on img {
+					opacity: 0.8;
+					transform: scale(1.05);
 				}
-				&:last-child {
-					margin-left: 0;
-				}
-				.swiper-pagination-bullet-active {
-					background-color: #ffffff;
-				}
-			}
-			.swiper-slide {
-				overflow: hidden;
-				align-items: center;
 				img {
-					display: block;
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
 					filter: grayscale(1);
-					opacity: 0.8;
+					opacity: 0;
+					transform: scale(1);
+					transition: opacity 1s, transform 4s;
 				}
 			}
 		}
+
+		.vs-btns {
+			height: 20px;
+			position: absolute;
+			left: 50%;
+			top: 65vh;
+			transform: translateX(-50%);
+			display: flex;
+			gap: 10px;
+			z-index: 3;
+
+			li {
+				width: 90px;
+				height: 9px;
+				background: #000;
+				opacity: 0.3;
+				cursor: pointer;
+				transition: 0.5s;
+
+				&.on {
+					background: #fff;
+					opacity: 1;
+				}
+			}
+		}
+
 		.inner {
 			width: 1180px;
 			height: 100%;
@@ -299,7 +317,7 @@ $main-font: 'Jost', sans-serif;
 #middle_menu {
 	width: 100%;
 	position: relative;
-	margin-top: -22vh;
+	margin-top: -15vh;
 	z-index: 2;
 	&.on .inner {
 		.sub_gnb {
@@ -408,14 +426,13 @@ $main-font: 'Jost', sans-serif;
 				font: bold 72px/1 'Roboto', sans-serif;
 				color: #2a2a2a;
 				text-align: center;
-				margin: 30px auto;
+				margin: 40px auto;
 			}
 			h3 {
-				width: 570px;
-				font: bold 14px/1 'Roboto', sans-serif;
+				width: 900px;
+				font: bold 25px/35px 'Roboto', sans-serif;
 				color: #2a2a2a;
 				letter-spacing: 3px;
-				line-height: 20px;
 				margin: 0 auto 40px;
 				text-align: center;
 			}
@@ -426,7 +443,7 @@ $main-font: 'Jost', sans-serif;
 				align-items: center;
 				p {
 					width: 520px;
-					font: 14px/1.5 'Roboto', sans-serif;
+					font: 15px/1.5 'Roboto', sans-serif;
 					color: #bebebe;
 					margin-bottom: 40px;
 				}
@@ -460,6 +477,7 @@ $main-font: 'Jost', sans-serif;
 				transition: 0.5s;
 				background: #000;
 				margin-bottom: 100px;
+				overflow: hidden;
 				img {
 					width: 100%;
 					height: 100%;
@@ -468,6 +486,10 @@ $main-font: 'Jost', sans-serif;
 					background: no-repeat center/cover;
 					opacity: 0.8;
 					filter: grayscale(1);
+					transition: 0.5s;
+					&:hover {
+						filter: grayscale(0);
+					}
 				}
 				p {
 					width: 100%;

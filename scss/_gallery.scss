@@ -60,12 +60,12 @@
 					}
 					li {
 						float: left;
-						width: (100% / 3);
+						width: calc(100% / 3);
 						padding: 15px;
 						div {
 							width: 100%;
 							padding: 10px;
-							box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+							box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
 							border-radius: 5px;
 							background: #fff;
 							&:hover {
