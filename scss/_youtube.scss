@@ -33,20 +33,14 @@
 				padding: 10px;
 
 				h2 {
-					font: bold 15px/1.2 'Hahmlet', serif;
+					font: bold 15px/1.2 $kr-font;
 					color: #444;
 					margin-bottom: 10px;
 				}
 				p {
-					font: 12px/1.4 'Hahmlet', serif;
+					font: 12px/1.4 $kr-font;
 					color: #666;
 					margin-bottom: 10px;
-				}
-				span {
-					position: absolute;
-					bottom: 15px;
-					font: bold 14px/1 'Hahmlet', serif;
-					color: violet;
 				}
 			}
 		}
@@ -111,7 +105,7 @@
 					height: 420px;
 					.con {
 						span {
-							font: bold 11px/1 'Hahmlet', serif;
+							font: bold 11px/1 $kr-font;
 						}
 					}
 				}

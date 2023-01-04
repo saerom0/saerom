@@ -14,7 +14,7 @@ const panels = visual.querySelectorAll('.panel li');
 const vs_btns = visual.querySelectorAll('.vs-btns li');
 const len = panels.length - 1;
 const interval = 4000;
-let bn_num = 0;
+let vs_num = 0;
 let timer = null;
 
 //로딩시 startRolling함수 호출해서 패널 자동롤링 시작
@@ -36,16 +36,16 @@ function activation(index) {
 	panels[index].classList.add('on');
 	vs_btns[index].classList.add('on');
 	//인수로 전달받은 순번으로 전역 활성화 순번 갱신
-	bn_num = index;
+	vs_num = index;
 	//패널 활성화시 진행바의 넓이값을 0%로 초기화
 	// bar.style.width = '0%';
 }
 
 //롤링함수
 function rolling() {
-	bn_num < len ? bn_num++ : (bn_num = 0);
+	vs_num < len ? vs_num++ : (vs_num = 0);
 	//활성화 순번에 맞게 패널, 버튼 활성화
-	activation(bn_num);
+	activation(vs_num);
 	//진행바 모션 시작
 }
 
@@ -53,7 +53,7 @@ function rolling() {
 function startRolling() {
 	//활성화 함수 호출하면서
 	//다시 롤링시작
-	activation(bn_num);
+	activation(vs_num);
 	timer = setInterval(rolling, interval);
 }
 

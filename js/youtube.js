@@ -35,7 +35,6 @@ fetch(url)
                 <div class="con">
                     <h2>${title}</h2>
                     <p>${con}</p>
-                    <span>Link date : ${date}</span>
                 </div>
             </article>
             `;
