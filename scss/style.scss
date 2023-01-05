@@ -268,8 +268,8 @@ $main-font: 'Jost', sans-serif;
 		}
 
 		.vs-btns {
-			height: 20px;
 			position: absolute;
+			height: 20px;
 			left: 50%;
 			top: 65vh;
 			transform: translateX(-50%);
@@ -468,6 +468,34 @@ $main-font: 'Jost', sans-serif;
 	}
 }
 
+//서비스 소개 영역
+#service {
+	width: 100%;
+	position: relative;
+	background: #fff;
+	.inner {
+		width: 1180px;
+		position: relative;
+		margin: 0 auto;
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		article {
+			width: 45%;
+			float: left;
+			margin-right: 5%;
+			&:nth-of-type(2n),
+			:last-child {
+				margin-right: 0;
+			}
+			&:last-child {
+				width: 100%;
+			}
+		}
+	}
+}
 //두번째 슬라이드 영역
 #banner {
 	width: 100%;

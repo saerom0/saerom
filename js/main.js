@@ -24,7 +24,6 @@ startRolling();
 vs_btns.forEach((btn, idx) => {
 	btn.addEventListener('click', () => {
 		activation(idx);
-		stopRolling();
 	});
 });
 

@@ -29,7 +29,7 @@ window.addEventListener('scroll', () => {
 		pages[2].classList.remove('on');
 		// pages[0].classList.remove('on');
 	}
-	if (scroll >= posArr[4] + base) {
+	if (scroll >= posArr[5] + base) {
 		counter('.record_1', 31, 1500);
 		counter('.record_2', 24, 1500);
 		counter('.record_3', 100, 1500);
