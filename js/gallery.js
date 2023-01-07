@@ -2,7 +2,7 @@ const body = document.querySelector('body');
 const frame = document.querySelector('#list');
 const loading = document.querySelector('.loading');
 const input = document.querySelector('#search');
-const btnSearch = document.querySelector('.btn_search');
+const btnSearch = document.querySelector('.btn-search');
 const base = 'https://www.flickr.com/services/rest/?';
 const method1 = 'flickr.interestingness.getList';
 const method2 = 'flickr.photos.search';
@@ -163,7 +163,10 @@ function delayLoading() {
 
 		let profile = el.closest('.item').querySelector('.profile');
 		profile.onerror = (e) => {
-			e.currentTarget.setAttribute('src', 'https://www.flickr.com/images/buddyicon.gif');
+			e.currentTarget.setAttribute(
+				'src',
+				'https://www.flickr.com/images/buddyicon.gif'
+			);
 		};
 	}
 }

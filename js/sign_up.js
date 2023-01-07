@@ -70,7 +70,9 @@ function isPwd(el1, el2, len) {
 	} else {
 		if (errMsgs.length > 0) return false;
 		const errMsg = document.createElement('p');
-		errMsg.append(`${len}글자 이상, 영문, 숫자, 특수문자를 포함하여 동일하게 입력하세요.`);
+		errMsg.append(
+			`${len}글자 이상, 영문, 숫자, 특수문자를 포함하여 동일하게 입력하세요.`
+		);
 		pwd1.closest('td').append(errMsg);
 		return false;
 	}

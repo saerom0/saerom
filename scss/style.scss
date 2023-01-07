@@ -35,7 +35,7 @@ $main-font: 'Jost', sans-serif;
 		margin: 0 auto;
 
 		//onclick - up to top button
-		.on_top {
+		.on-top {
 			display: none;
 			width: 50px;
 			height: 50px;
@@ -55,11 +55,12 @@ $main-font: 'Jost', sans-serif;
 			}
 		}
 
-		.web_menu {
+		.web-menu {
 			width: 100%;
 			padding-top: 28px;
+			margin-left: 10px;
 			float: left;
-			.web_h1 {
+			.web-h1 {
 				float: left;
 				padding-right: 3vw;
 				a {
@@ -84,9 +85,6 @@ $main-font: 'Jost', sans-serif;
 					> li {
 						float: left;
 						padding-right: 3vw;
-						&:last-child {
-							border-right: none;
-						}
 						&:hover a {
 							color: #000;
 						}
@@ -124,12 +122,12 @@ $main-font: 'Jost', sans-serif;
 					}
 				}
 			}
-			.tablet_log {
+			.tablet-log {
 				display: none;
 			}
 		}
-		.btn_call {
-			display: block;
+		.btn-call {
+			display: none;
 			width: 20px;
 			height: 20px;
 			position: absolute;
@@ -187,11 +185,11 @@ $main-font: 'Jost', sans-serif;
 				}
 			}
 		}
-		.mob_menu {
+		.mob-menu {
 			display: none;
 			width: 100%;
 			height: 90px;
-			.mob_logo {
+			.mob-logo {
 				width: 132px;
 				height: 90px;
 				a {
@@ -201,7 +199,7 @@ $main-font: 'Jost', sans-serif;
 					background: url(../img/logo_white.png) no-repeat center/cover;
 				}
 			}
-			.side_menu {
+			.side-menu {
 				display: flex;
 				flex-direction: column;
 				width: 270px;
@@ -216,7 +214,7 @@ $main-font: 'Jost', sans-serif;
 				&.on {
 					left: 0;
 				}
-				.mob_h1 {
+				.mob-h1 {
 					width: 143px;
 					height: 45px;
 					display: block;
@@ -227,7 +225,7 @@ $main-font: 'Jost', sans-serif;
 						height: 100%;
 					}
 				}
-				.mob_log {
+				.mob-log {
 					li {
 						width: 70%;
 						height: 40px;
@@ -264,7 +262,7 @@ $main-font: 'Jost', sans-serif;
 			}
 		}
 	}
-	&.on .container .on_top {
+	&.on .container .on-top {
 		display: flex;
 	}
 }
@@ -278,6 +276,26 @@ $main-font: 'Jost', sans-serif;
 		height: 100%;
 		position: relative;
 		overflow: hidden;
+
+		.container {
+			width: 1180px;
+			height: 100%;
+			margin: 0 auto;
+			.cp-name {
+				width: 220px;
+				position: absolute;
+				left: 50%;
+				top: 17vh;
+				transform: translateX(-50%);
+				z-index: 3;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
 		.panel {
 			position: absolute;
 			width: 100%;
@@ -314,7 +332,7 @@ $main-font: 'Jost', sans-serif;
 			top: 65vh;
 			transform: translateX(-50%);
 			display: flex;
-			gap: 10px;
+			gap: 5px;
 
 			li {
 				width: 90px;
@@ -330,25 +348,6 @@ $main-font: 'Jost', sans-serif;
 				}
 			}
 		}
-
-		.container {
-			width: 1180px;
-			height: 100%;
-			margin: 0 auto;
-			.cp_name {
-				width: 220px;
-				position: absolute;
-				left: 50%;
-				top: 17vh;
-				transform: translateX(-50%);
-				z-index: 3;
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-		}
 	}
 }
 
@@ -359,7 +358,7 @@ $main-font: 'Jost', sans-serif;
 	margin-top: -15vh;
 	z-index: 2;
 	&.on .container {
-		.sub_gnb {
+		.sub-gnb {
 			position: fixed;
 			width: 1180px;
 			z-index: 3;
@@ -381,7 +380,7 @@ $main-font: 'Jost', sans-serif;
 		width: 1180px;
 		margin: 0 auto;
 		background: #fff;
-		.sub_gnb {
+		.sub-gnb {
 			width: 100%;
 			height: 80px;
 			top: 0;
@@ -411,7 +410,7 @@ $main-font: 'Jost', sans-serif;
 					span {
 						color: #fff;
 					}
-					.sub_menu {
+					.sub-menu {
 						width: 100%;
 						display: block;
 						background: #fff;
@@ -439,7 +438,7 @@ $main-font: 'Jost', sans-serif;
 									color: #333;
 									letter-spacing: 2px;
 								}
-								&.isSub:hover .sub_menu-2 {
+								&.isSub:hover .sub-menu-2 {
 									position: absolute;
 									display: block;
 									margin-top: -120px;
@@ -451,7 +450,7 @@ $main-font: 'Jost', sans-serif;
 										}
 									}
 								}
-								.sub_menu-2 ul li a {
+								.sub-menu-2 ul li a {
 									color: #333;
 								}
 							}
@@ -459,10 +458,10 @@ $main-font: 'Jost', sans-serif;
 					}
 				}
 
-				.sub_menu {
+				.sub-menu {
 					display: none;
 
-					.sub_menu-2 {
+					.sub-menu-2 {
 						display: none;
 					}
 				}
@@ -470,14 +469,13 @@ $main-font: 'Jost', sans-serif;
 		}
 		.intro {
 			width: 100%;
-			height: 350px;
 			position: relative;
 			h2 {
 				width: 100%;
 				font: bold 72px/1 'Roboto', sans-serif;
 				color: #2a2a2a;
 				text-align: center;
-				margin: 40px auto;
+				margin: 60px auto;
 			}
 			h3 {
 				width: 900px;
@@ -487,7 +485,7 @@ $main-font: 'Jost', sans-serif;
 				margin: 0 auto 40px;
 				text-align: center;
 			}
-			.p_wrap {
+			.p-wrap {
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: center;
@@ -496,7 +494,7 @@ $main-font: 'Jost', sans-serif;
 					width: 520px;
 					font: 15px/1.5 'Roboto', sans-serif;
 					color: #bebebe;
-					margin-bottom: 40px;
+					margin-bottom: 60px;
 				}
 				.left {
 					margin-right: 20px;
@@ -510,6 +508,7 @@ $main-font: 'Jost', sans-serif;
 //서비스 소개 영역
 #service {
 	width: 100%;
+	height: 500px;
 	position: relative;
 	background: #fff;
 	.container {
@@ -522,15 +521,10 @@ $main-font: 'Jost', sans-serif;
 			clear: both;
 		}
 		article {
-			width: 45%;
+			width: 100%;
 			float: left;
-			margin-right: 5%;
-			&:nth-of-type(2n),
-			:last-child {
-				margin-right: 0;
-			}
-			&:last-child {
-				width: 100%;
+			h2 {
+				font: bold 25px/1.5 'Montserrat';
 			}
 		}
 	}
@@ -587,7 +581,7 @@ $main-font: 'Jost', sans-serif;
 					border: 1px solid #fff;
 					font: bold 14px/1.2 'Roboto', sans-serif;
 					color: #000;
-					letter-spacing: 4px;
+					letter-spacing: 5px;
 					background: #fff;
 					position: absolute;
 					left: 50%;
@@ -597,7 +591,7 @@ $main-font: 'Jost', sans-serif;
 				}
 			}
 		}
-		.bn_btn {
+		.bn-btn {
 			position: absolute;
 			left: 50%;
 			bottom: 5%;
@@ -626,20 +620,21 @@ $main-font: 'Jost', sans-serif;
 	}
 }
 
-//사진 4장 나와있는 영역
+//offer 영역
 #offer {
-	width: 100%;
 	padding: 150px 0;
+	overflow: hidden;
+	h1 {
+		width: 100%;
+		font: bold 24px/1 $main-font;
+		color: #555;
+		text-align: center;
+		margin-bottom: 50px;
+	}
 	.container {
-		width: 1180px;
+		width: 200%;
 		position: relative;
-		margin: 0 auto;
-		h1 {
-			font: bold 24px/1 $main-font;
-			color: #555;
-			text-align: center;
-			margin-bottom: 50px;
-		}
+		margin-left: 17vw;
 		h2 {
 			margin-bottom: 10px;
 			text-align: center;
@@ -738,7 +733,7 @@ $main-font: 'Jost', sans-serif;
 							}
 						}
 					}
-					.btn_offer {
+					.btn-offer {
 						display: flex;
 						justify-content: center;
 						align-items: center;
@@ -746,7 +741,7 @@ $main-font: 'Jost', sans-serif;
 						height: 35px;
 						border: 1px solid #fff;
 						border-radius: 5px;
-						font: 11px/35px 'Montserrat', sans-serif;
+						font: 11px/35px 'Roboto';
 						color: #fff;
 						letter-spacing: 1px;
 						background: #000;
@@ -818,7 +813,7 @@ $main-font: 'Jost', sans-serif;
 				width: 180px;
 				height: 50px;
 				border: 1px solid #fff;
-				font: bold 14px/50px 'Roboto', sans-serif;
+				font: bold 14px/50px 'Roboto';
 				color: #000;
 				background: #fff;
 				text-align: center;
@@ -941,7 +936,7 @@ $main-font: 'Jost', sans-serif;
 			}
 		}
 
-		.web_wrap2 {
+		.web-wrap2 {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
@@ -951,17 +946,17 @@ $main-font: 'Jost', sans-serif;
 				margin-bottom: 10px;
 			}
 			p {
-				font: 12px/1 'Arimo', sans-serif;
+				font: 12px/1 'Montserrat';
 				color: #999;
 			}
 		}
-		.mob_wrap2 {
+		.mob-wrap2 {
 			display: none;
 			flex-direction: column;
 			justify-content: flex-end;
 			width: 150px;
 			h1 {
-				font: bold 15px 'Arimo', sans-serif;
+				font: bold 15px 'Montserrat';
 				letter-spacing: 2px;
 				text-align: center;
 				color: #333;
@@ -976,7 +971,7 @@ $main-font: 'Jost', sans-serif;
 				}
 			}
 			p {
-				font: 10px/1 'Arimo', sans-serif;
+				font: 10px/1 'Montserrat';
 				text-align: center;
 				color: #6d6d6d;
 			}
@@ -1006,27 +1001,27 @@ $main-font: 'Jost', sans-serif;
 }
 
 //미디어쿼리 3영역으로 구분
-//$tablet_plus (901px~1180px)
-//$tablet_origin (600px~899px)
+//$tablet-plus (901px~1180px)
+//$tablet-origin (600px~899px)
 //$mobile (~599px)
-@media screen and (max-width: $tablet_plus) {
+@media screen and (max-width: $tablet-plus) {
 	//header 영역
 	#header {
 		.container {
 			width: 100%;
 			padding: 0px 30px;
-			.web_menu {
+			.web-menu {
 				padding-top: 22px;
 				#gnb {
 					width: 65%;
 					li a {
-						font: bold 13px/1 'Arimo', sans-serif;
+						font: bold 13px/1 $main-font;
 					}
 				}
 				.log {
 					margin-right: 0;
 					li a {
-						font: bold 13px/1 'Roboto', sans-serif;
+						font: bold 13px/1 $main-font;
 					}
 				}
 			}
@@ -1049,7 +1044,7 @@ $main-font: 'Jost', sans-serif;
 	#middle_menu {
 		&.on .container {
 			width: 100%;
-			.sub_gnb {
+			.sub-gnb {
 				width: 100%;
 				padding: 0px 30px;
 				left: 0;
@@ -1059,7 +1054,7 @@ $main-font: 'Jost', sans-serif;
 			width: 100%;
 			padding: 0px 30px;
 			background: #fff;
-			.sub_gnb {
+			.sub-gnb {
 				width: 100%;
 				height: 65px;
 				> li {
@@ -1067,7 +1062,7 @@ $main-font: 'Jost', sans-serif;
 						font: bold 18px/65px 'Roboto', sans-serif;
 					}
 					&:hover {
-						.sub_menu {
+						.sub-menu {
 							ul {
 								top: 65px;
 							}
@@ -1081,6 +1076,10 @@ $main-font: 'Jost', sans-serif;
 					font: bold 55px/1 'Roboto', sans-serif;
 					margin: 20px auto;
 				}
+				h3 {
+					width: 100%;
+					font: bold 20px/35px 'Roboto', sans-serif;
+				}
 				span {
 					font: bold 14px/1 'Roboto', sans-serif;
 					letter-spacing: 2px;
@@ -1088,7 +1087,7 @@ $main-font: 'Jost', sans-serif;
 					margin: 0 auto 40px;
 					text-align: center;
 				}
-				.p_wrap {
+				.p-wrap {
 					p {
 						font: 13px/1.5 'Roboto', sans-serif;
 					}
@@ -1116,7 +1115,7 @@ $main-font: 'Jost', sans-serif;
 					}
 				}
 			}
-			.bn_btn {
+			.bn-btn {
 				li {
 					width: 75px;
 				}
@@ -1148,7 +1147,7 @@ $main-font: 'Jost', sans-serif;
 								}
 							}
 						}
-						.btn_offer {
+						.btn-offer {
 							margin: 20px auto;
 						}
 					}
@@ -1212,7 +1211,7 @@ $main-font: 'Jost', sans-serif;
 		padding: 60px 0;
 		.container {
 			width: 100%;
-			.mob_wrap2 {
+			.mob-wrap2 {
 				display: none;
 			}
 			.wrap3 {
@@ -1228,17 +1227,16 @@ $main-font: 'Jost', sans-serif;
 	}
 }
 
-//$tablet_origin (600px~899px)
-@media screen and (max-width: $tablet_origin) {
+//$tablet-origin (600px~899px)
+@media screen and (max-width: $tablet-origin) {
 	//header
 	#header {
 		.container {
-			.web_menu {
+			.web-menu {
 				position: relative;
 				width: 100%;
 				height: 100%;
-				padding-top: 30px;
-				.web_h1 {
+				.web-h1 {
 					a {
 						font: bold 13px/1 $main-font;
 					}
@@ -1257,7 +1255,7 @@ $main-font: 'Jost', sans-serif;
 				.log {
 					display: none;
 				}
-				.tablet_log {
+				.tablet-log {
 					display: block;
 					width: 60px;
 					height: 100%;
@@ -1286,7 +1284,7 @@ $main-font: 'Jost', sans-serif;
 	#visual {
 		.visual {
 			.container {
-				.cp_name {
+				.cp-name {
 					width: 170px;
 					top: 25vh;
 				}
@@ -1297,17 +1295,17 @@ $main-font: 'Jost', sans-serif;
 	//middle_menu
 	#middle_menu {
 		.container {
-			.sub_gnb {
+			.sub-gnb {
 				> li {
 					&:hover {
-						.sub_menu {
+						.sub-menu {
 							ul {
 								width: 200px;
 								li {
-									&isSub:hover .sub_menu-2 {
+									&isSub:hover .sub-menu-2 {
 										margin-left: 399px;
 									}
-									.sub_menu-2 {
+									.sub-menu-2 {
 										margin-top: 0px;
 										ul {
 											width: 200px;
@@ -1401,11 +1399,13 @@ $main-font: 'Jost', sans-serif;
 		}
 		.container {
 			position: relative;
-			.web_menu {
+			.web-menu {
 				display: none;
 			}
-
-			.mob_menu {
+			.btn-call {
+				display: block;
+			}
+			.mob-menu {
 				display: block;
 			}
 		}
@@ -1416,16 +1416,13 @@ $main-font: 'Jost', sans-serif;
 		.visual {
 			height: 85vh;
 			.container {
-				.cp_name {
+				.cp-name {
 					display: none;
 				}
 			}
-			.swiper {
-				.swiper-pagination {
-					span {
-						width: 10px;
-						border-radius: 50%;
-					}
+			.vs-btns {
+				li {
+					width: 50px;
 				}
 			}
 		}
@@ -1435,7 +1432,7 @@ $main-font: 'Jost', sans-serif;
 	#middle_menu {
 		z-index: 1;
 		.container {
-			.sub_gnb {
+			.sub-gnb {
 				display: none;
 			}
 			.intro {
@@ -1449,7 +1446,7 @@ $main-font: 'Jost', sans-serif;
 					width: 100%;
 					margin: 20px auto;
 				}
-				.p_wrap {
+				.p-wrap {
 					flex-wrap: wrap;
 					p {
 						width: 100%;
@@ -1477,7 +1474,7 @@ $main-font: 'Jost', sans-serif;
 					}
 				}
 			}
-			.bn_btn {
+			.bn-btn {
 				li {
 					width: 50px;
 				}
@@ -1529,10 +1526,10 @@ $main-font: 'Jost', sans-serif;
 					}
 				}
 			}
-			.mob_wrap2 {
+			.mob-wrap2 {
 				display: flex;
 			}
-			.web_wrap2 {
+			.web-wrap2 {
 				display: none;
 			}
 

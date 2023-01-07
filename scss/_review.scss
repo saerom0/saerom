@@ -1,5 +1,5 @@
 .review {
-	.sub_bg {
+	.sub-bg {
 		background: url(../img/customer.jpg) no-repeat center/cover;
 	}
 	.container {
@@ -98,7 +98,7 @@
 	}
 }
 
-@media screen and (max-width: $tablet_plus) {
+@media screen and (max-width: $tablet-plus) {
 	.review {
 		width: 100%;
 		.container {
@@ -108,7 +108,7 @@
 	}
 }
 
-@media screen and (max-width: $tablet_origin) {
+@media screen and (max-width: $tablet-origin) {
 	.review {
 		.container {
 			table {

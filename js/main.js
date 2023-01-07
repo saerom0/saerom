@@ -1,6 +1,6 @@
 //햄버거 버튼
-const btn_call = document.querySelector('.btn_call');
-const mob_menu = document.querySelector('.side_menu');
+const btn_call = document.querySelector('.btn-call');
+const mob_menu = document.querySelector('.side-menu');
 
 btn_call.onclick = (e) => {
 	e.preventDefault();
@@ -95,7 +95,7 @@ view_btn.forEach((el) => {
 });
 
 //promo영역
-const promo = document.querySelector('.promo_text');
+const promo = document.querySelector('.promo-text');
 const promo_text = promo.innerText;
 let tags1 = '';
 let n = 1;

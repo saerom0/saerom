@@ -2,7 +2,7 @@ const pages = document.querySelectorAll('.page');
 const lis = document.querySelectorAll('.quick li');
 let posArr = [];
 let base = -500;
-const ontop = document.querySelector('.on_top');
+const ontop = document.querySelector('.on-top');
 
 for (let el of pages) {
 	posArr.push(el.offsetTop);
@@ -30,10 +30,10 @@ window.addEventListener('scroll', () => {
 		// pages[0].classList.remove('on');
 	}
 	if (scroll >= posArr[5] + base) {
-		counter('.record_1', 31, 1500);
-		counter('.record_2', 24, 1500);
-		counter('.record_3', 100, 1500);
-		counter('.record_4', 9700, 1500);
+		counter('.record-1', 31, 1500);
+		counter('.record-2', 24, 1500);
+		counter('.record-3', 100, 1500);
+		counter('.record-4', 9700, 1500);
 	}
 	// ontop.addEventListener("click", (e) => {
 	//     new Anim(window, {

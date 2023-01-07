@@ -19,13 +19,20 @@
     <header id="header_sub" class="page">
         <div class="container">
 
-            <div class="web_menu">
-                <h1 class="web_h1">
+            <!-- 스크롤값 최상단-->
+            <a href="#" class="on-top"><i class="fas fa-arrow-up"></i></a>
+
+            <!-- 헤더메뉴 웹버전 -->
+            <div class="web-menu">
+                <h1 class="web-h1">
                     <a href="index.html">
-                        <i class="fas fa-home"></i>Home
+                        <i class="fas fa-home"></i>HOME
                     </a>
                 </h1>
 
+                <h1 class="mob-h1">
+                    <a href="index.html"></a>
+                </h1>
 
                 <nav>
                     <ul id="gnb">
@@ -41,43 +48,53 @@
                     <li><a href="#">Log in</a></li>
                     <li><a href="sign_up.html">Sign up</a></li>
                 </ul>
+
+                <ul class="tablet-log">
+                    <li><a href="#"><i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="sign_up.html"><i class="fas fa-user-plus"></i></a></li>
+                </ul>
+
             </div>
 
             <!-- 모바일버전에 생성되는 햄버거버튼 -->
-            <a href="#" class="btn_call">
+            <a href="#" class="btn-call">
                 <span>메뉴호출</span>
             </a>
 
-
             <!-- 헤더메뉴 모바일 버전 -->
-            <nav class="mob_menu">
+            <div class="mob-menu">
+                <div class="mob-logo">
+                    <a href="index.html"></a>
+                </div>
+                <nav class="side-menu">
 
-                <a class="mob_h1" href="index.html"><img src="img/logo_black.png" alt=""></a>
+                    <a class="mob-h1" href="index.html"><img src="img/logo_black.png" alt=""></a>
 
-                <ul class="mob_log">
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="sign_up.html">Sign up</a></li>
-                    <li><a href="#">My Account</a></li>
-                </ul>
+                    <ul class="mob-log">
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="sign_up.html">Sign up</a></li>
+                        <li><a href="#">My Account</a></li>
+                    </ul>
 
-                <ul id="mob_gnb">
-                    <li><a href="office.html">Shared Office</a></li>
-                    <li><a href="gallery.html">Gallery</a>
-                    <li><a href="youtube.html">Youtube</a></li>
-                    <li><a href="customer.html">Review</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+                    <ul id="mob_gnb">
+                        <li><a href="office.html">Shared Office</a></li>
+                        <li><a href="gallery.html">Gallery</a>
+                        <li><a href="youtube.html">Youtube</a></li>
+                        <li><a href="customer.html">Review</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
 
     <section class="content office">
-        <div class="sub_bg"></div>
+        <div class="sub-bg"></div>
         <div class="container">
             <h1>Shared Office <span>공유오피스란?</span></h1>
             <div class="wrap">
-                <div class="container">
+                <div class="inner">
                     <p>REAL SUITE는 단순히 오피스를 제공하는 것에 안주하지 않고, 고객의 비즈니스 특성에 맞추어 고객의 사업성장을 함께 지원하는 믿음직한 파트너 입니다.</p>
                     <div class="tab">
                         <input type="checkbox" name="info" id="info1">
@@ -277,12 +294,12 @@
                 </ul>
             </section>
 
-            <section class="web_wrap2">
+            <section class="web-wrap2">
                 <h1 class="hidden">REAL SUITE</h1>
                 <img src="img/company_logo.png" alt="회사로고">
                 <p>Copyright © 2023 REAL SUITE ALL Right reserved.</p>
             </section>
-            <section class="mob_wrap2">
+            <section class="mob-wrap2">
                 <h1>REAL SUITE</h1>
                 <p>Copyright © 2023 REAL SUITE ALL Right reserved.</p>
             </section>
