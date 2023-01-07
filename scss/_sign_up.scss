@@ -2,7 +2,7 @@
 	.sub_bg {
 		background: #000 url(../img/sign_up.jpg) no-repeat center/cover;
 	}
-	.inner {
+	.container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -170,7 +170,7 @@
 @media screen and (max-width: $tablet_plus) {
 	.sign_up {
 		width: 100%;
-		.inner {
+		.container {
 			width: 100%;
 		}
 	}
@@ -180,7 +180,7 @@
 
 @media screen and (max-width: $mobile) {
 	.sign_up {
-		.inner {
+		.container {
 			form {
 				.all_agree {
 					font: bold 13px/1.5 $kr-font;

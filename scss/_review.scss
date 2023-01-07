@@ -2,7 +2,7 @@
 	.sub_bg {
 		background: url(../img/customer.jpg) no-repeat center/cover;
 	}
-	.inner {
+	.container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -101,7 +101,7 @@
 @media screen and (max-width: $tablet_plus) {
 	.review {
 		width: 100%;
-		.inner {
+		.container {
 			width: 100%;
 			padding: 60px 40px;
 		}
@@ -110,7 +110,7 @@
 
 @media screen and (max-width: $tablet_origin) {
 	.review {
-		.inner {
+		.container {
 			table {
 				width: 95%;
 			}
@@ -133,7 +133,7 @@
 
 @media screen and (max-width: $mobile) {
 	.review {
-		.inner {
+		.container {
 			.pagination {
 				p {
 					a {

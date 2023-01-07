@@ -1,5 +1,5 @@
 .gallery {
-	.inner {
+	.container {
 		position: relative;
 		h1 {
 			padding: 50px;
@@ -138,7 +138,7 @@
 
 @media screen and (max-width: $tablet_plus) {
 	.gallery {
-		.inner {
+		.container {
 			width: 100%;
 		}
 	}
@@ -146,7 +146,7 @@
 
 @media screen and (max-width: $tablet_origin) {
 	.gallery {
-		.inner {
+		.container {
 			#gallery {
 				#wrap {
 					#list {
@@ -162,7 +162,7 @@
 
 @media screen and (max-width: $mobile) {
 	.gallery {
-		.inner {
+		.container {
 			#gallery {
 				#wrap {
 					#list {

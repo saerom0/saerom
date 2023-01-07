@@ -21,58 +21,74 @@
 
     <!-- header -->
     <header id="header" class="page">
-        <div class="inner">
-            <!-- 클릭하면 최상단으로 오게 하는 버튼-->
+        <div class="container">
+
+            <!-- 스크롤값 최상단-->
             <a href="#" class="on_top"><i class="fas fa-arrow-up"></i></a>
 
-            <!-- 웹 vs 모바일버전 h1 상이함 웹버전은 h1이 없음-->
-            <div class="web_h1">
-                <h1 class="hidden">Real Estate</h1>
-                <a href="index.html"></a>
-            </div>
             <!-- 헤더메뉴 웹버전 -->
-            <nav class="web_menu">
+            <div class="web_menu">
+                <h1 class="web_h1">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>Home
+                    </a>
+                </h1>
 
-                <ul id="gnb">
-                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="office.html">Shared Office</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="youtube.html">Youtube</a></li>
-                    <li><a href="review.html">Review</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <h1 class="mob_h1">
+                    <a href="index.html"></a>
+                </h1>
 
+                <nav>
+                    <ul id="gnb">
+                        <li><a href="office.html">Shared Office</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="youtube.html">Youtube</a></li>
+                        <li><a href="review.html">Review</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </nav>
                 <ul class="log">
                     <li><a href="#">Log in</a></li>
                     <li><a href="sign_up.html">Sign up</a></li>
                 </ul>
-            </nav>
+
+                <ul class="tablet_log">
+                    <li><a href="#"><i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="sign_up.html"><i class="fas fa-user-plus"></i></a></li>
+                </ul>
+
+            </div>
 
             <!-- 모바일버전에 생성되는 햄버거버튼 -->
             <a href="#" class="btn_call">
                 <span>메뉴호출</span>
             </a>
 
-
             <!-- 헤더메뉴 모바일 버전 -->
-            <nav class="mob_menu">
+            <div class="mob_menu">
+                <div class="mob_logo">
+                    <a href="index.html"></a>
+                </div>
+                <nav class="side_menu">
 
-                <a class="mob_h1" href="index.html"><img src="img/logo_black.png" alt=""></a>
+                    <a class="mob_h1" href="index.html"><img src="img/logo_black.png" alt=""></a>
 
-                <ul class="mob_log">
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="sign_up.html">Sign up</a></li>
-                    <li><a href="#">My Account</a></li>
-                </ul>
+                    <ul class="mob_log">
+                        <li><a href="#">Log in</a></li>
+                        <li><a href="sign_up.html">Sign up</a></li>
+                        <li><a href="#">My Account</a></li>
+                    </ul>
 
-                <ul id="mob_gnb">
-                    <li><a href="office.html">Shared Office</a></li>
-                    <li><a href="gallery.html">Gallery</a>
-                    <li><a href="youtube.html">Youtube</a></li>
-                    <li><a href="customer.html">Review</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+                    <ul id="mob_gnb">
+                        <li><a href="office.html">Shared Office</a></li>
+                        <li><a href="gallery.html">Gallery</a>
+                        <li><a href="youtube.html">Youtube</a></li>
+                        <li><a href="customer.html">Review</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -91,7 +107,7 @@
                 <li></li>
                 <li></li>
             </ul>
-            <div class="inner">
+            <div class="container">
                 <div class="cp_name">
                     <h1 class="hidden">REAL SUITE</h1>
                     <img src="img/cp_name.png" alt="회사명이 세로로 세겨진 이미지">
@@ -103,7 +119,7 @@
 
     <!-- 중간 3단메뉴 박스 -->
     <section id="middle_menu" class="page">
-        <div class="inner">
+        <div class="container">
             <ul class="sub_gnb">
                 <li>
                     <span>OFFICES</span>
@@ -167,10 +183,11 @@
         </div>
     </section>
 
+
     <!-- 서비스 소개 -->
     <section id="service" class="page">
         <div class="sub_bg"></div>
-        <div class="inner">
+        <div class="container">
             <article>
                 <h2>SERVICED OFFICE</h2>
                 <h3>IDEAL FOR</h3>
@@ -269,9 +286,11 @@
         </div>
 
     </section>
+
+
     <!-- 홍보용 배너 -->
     <section id="banner">
-        <div class="inner">
+        <div class="container">
 
             <section>
                 <div class="on">
@@ -304,10 +323,9 @@
 
     <!--offer (특가) -->
     <section id="offer" class="page">
-        <div class="inner">
-            <h1>SPECIAL OFFER</h1>
+        <h1>SPECIAL OFFER</h1>
+        <div class="container">
             <div class="wrap">
-
                 <article>
                     <div class="frame">
                         <div class="pic">
@@ -401,7 +419,7 @@
 
     <!-- 프로모션 홍보(배경사진 attachment : fix 부분) -->
     <section id="promo">
-        <div class="inner">
+        <div class="container">
 
             <div class="wrap">
                 <h1 class="promo_text"><span>GETTING 25% OFF</span></h1>
@@ -426,7 +444,7 @@
 
     <!-- 홍보동영상  -->
     <section id="track" class="page">
-        <div class="inner">
+        <div class="container">
             <h1>OUR TRACK RECORD</h1>
             <figure>
                 <video class="cp_vid" src="img/wework.mp4" autoplay loop muted>
@@ -449,7 +467,7 @@
                     <p class="record_3">30</p>% grade A+ Buildings
                 </div>
                 <div>
-                    <img src="img/5.png" alt="">
+                    <img src="img/4.png" alt="">
                     <p class="record_4">9550</p>+ businesses served
                 </div>
             </div>
@@ -458,7 +476,7 @@
 
     <!-- footer -->
     <footer id="footer">
-        <div class="inner">
+        <div class="container">
 
             <section class="wrap1">
                 <a href="#">QUICK LINKS</a>

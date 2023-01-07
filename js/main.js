@@ -1,6 +1,6 @@
 //햄버거 버튼
 const btn_call = document.querySelector('.btn_call');
-const mob_menu = document.querySelector('.mob_menu');
+const mob_menu = document.querySelector('.side_menu');
 
 btn_call.onclick = (e) => {
 	e.preventDefault();

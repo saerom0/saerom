@@ -12,63 +12,47 @@ $kr-font: 'Hahmlet', serif;
 	width: 100%;
 	height: 72px;
 	background: $bg-color;
-	.inner {
+	.container {
 		width: 1180px;
 		height: 100%;
 		margin: 0 auto;
-
-		//onclick - up to top button
-		.on_top {
-			display: none;
-			width: 50px;
-			height: 50px;
-			border-radius: 50%;
-			justify-content: center;
-			align-items: center;
-			position: fixed;
-			right: 30px;
-			bottom: 30px;
-			z-index: 5;
-			background: transparent;
-			border: 2px solid #555;
-			background-color: rgba(255, 255, 255, 0.6);
-			i {
-				font-size: 20px;
-				color: #000;
-			}
-		}
-		.web_h1 {
-			display: none;
-			//웹버전에서는 첫번째<li> home이 h1역할
-		}
 		.web_menu {
 			width: 100%;
 			padding-top: 28px;
 			float: left;
-			#gnb {
-				width: 60%;
-				height: 20px;
+			.web_h1 {
 				float: left;
-				> li {
-					float: left;
-					border-right: 1px solid #282828;
-					margin-left: 20px;
-					padding-right: 20px;
-					&:last-child {
-						border-right: none;
+				padding-right: 3vw;
+				font: bold 16px/1 $main-font;
+				a {
+					display: block;
+					font: bold 16px/1 $main-font;
+					color: #282828;
+					transition: 0.5s;
+					i {
+						margin-right: 5px;
 					}
-					> a {
-						font: bold 16px/1 $main-font;
-						display: block;
-						color: #282828;
-						i {
-							margin-right: 5px;
+				}
+			}
+			nav {
+				#gnb {
+					width: 50vw;
+					height: 20px;
+					float: left;
+					li {
+						float: left;
+						padding-right: 3vw;
+						a {
+							display: block;
+							font: bold 16px/1 $main-font;
+							color: #282828;
+							transition: 0.5s;
 						}
 					}
 				}
 			}
 			.log {
-				height: 72px;
+				height: 100%;
 				float: right;
 				margin-right: 10px;
 				li {
@@ -78,19 +62,15 @@ $kr-font: 'Hahmlet', serif;
 					justify-content: center;
 					align-items: center;
 					margin-right: 10px;
-					&:last-child {
-						margin-right: 0;
-					}
 					a {
 						display: block;
-						font: bold 16px/1 $main-font;
+						font: 16px/1 $main-font;
 						padding: 5px 10px;
 						color: #282828;
 						border: 1px solid #6d6d6d;
 						border-radius: 3px;
 						&:hover {
 							background: #6d6d6d;
-							color: #fff;
 						}
 					}
 				}
@@ -189,7 +169,7 @@ $kr-font: 'Hahmlet', serif;
 					text-align: center;
 					a {
 						display: block;
-						font: 14px/1 'Roboto', sans-serif;
+						font: 14px/1 $main-font;
 						padding: 5px 10px;
 						color: #fff;
 						border: 1px solid #6d6d6d;
@@ -209,7 +189,7 @@ $kr-font: 'Hahmlet', serif;
 						width: 100%;
 						padding: 20px 0;
 						border-bottom: 1px solid #444;
-						font: bold 14px/1 'arial';
+						font: bold 14px/1 $main-font;
 						color: #888;
 						text-align: center;
 					}
@@ -217,7 +197,7 @@ $kr-font: 'Hahmlet', serif;
 			}
 		}
 	}
-	&.on .inner .on_top {
+	&.on .container .on_top {
 		display: flex;
 	}
 }
@@ -231,7 +211,7 @@ $kr-font: 'Hahmlet', serif;
 		opacity: 0.9;
 		margin-bottom: 80px;
 	}
-	.inner {
+	.container {
 		width: 1180px;
 		margin: 0 auto;
 		min-height: 500px;
@@ -258,7 +238,7 @@ $kr-font: 'Hahmlet', serif;
 	padding: 80px 0;
 	background: #1c1c1c;
 	position: relative;
-	.inner {
+	.container {
 		width: 1180px;
 		margin: 0 auto;
 		display: flex;
@@ -357,7 +337,7 @@ $kr-font: 'Hahmlet', serif;
 	//header 영역
 	#header_sub {
 		height: 50px;
-		.inner {
+		.container {
 			width: 100%;
 			padding: 0px 30px;
 			.web_menu {
@@ -378,7 +358,7 @@ $kr-font: 'Hahmlet', serif;
 	//footer영역
 	#footer_sub {
 		padding: 60px 0;
-		.inner {
+		.container {
 			width: 100%;
 			.mob_wrap2 {
 				display: none;
@@ -400,7 +380,7 @@ $kr-font: 'Hahmlet', serif;
 	//header
 	#header_sub {
 		height: 80px;
-		.inner {
+		.container {
 			.web_menu {
 				padding-top: 0;
 				#gnb {
@@ -435,7 +415,7 @@ $kr-font: 'Hahmlet', serif;
 		.sub_bg {
 			height: 220px;
 		}
-		.inner {
+		.container {
 			h1 {
 				font: 35px/1 'Hahmlet', serif;
 				margin-bottom: 40px;
@@ -445,7 +425,7 @@ $kr-font: 'Hahmlet', serif;
 
 	//footer{
 	#footer_sub {
-		.inner {
+		.container {
 			.wrap1 {
 				> a {
 					font: bold 16px/1 'Poppins', sans-serif;
@@ -468,7 +448,7 @@ $kr-font: 'Hahmlet', serif;
 	#header_sub {
 		height: 90px;
 		background: #e3e3e3;
-		.inner {
+		.container {
 			.web_h1 {
 				display: block;
 				width: 132px;
@@ -494,7 +474,7 @@ $kr-font: 'Hahmlet', serif;
 
 	//footer
 	#footer_sub {
-		.inner {
+		.container {
 			.mob_wrap2 {
 				display: flex;
 			}

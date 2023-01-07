@@ -39,66 +39,51 @@ table {
   height: 72px;
   background: #e3e3e3;
 }
-#header_sub .inner {
+#header_sub .container {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
 }
-#header_sub .inner .on_top {
-  display: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  z-index: 5;
-  background: transparent;
-  border: 2px solid #555;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-#header_sub .inner .on_top i {
-  font-size: 20px;
-  color: #000;
-}
-#header_sub .inner .web_h1 {
-  display: none;
-}
-#header_sub .inner .web_menu {
+#header_sub .container .web_menu {
   width: 100%;
   padding-top: 28px;
   float: left;
 }
-#header_sub .inner .web_menu #gnb {
-  width: 60%;
+#header_sub .container .web_menu .web_h1 {
+  float: left;
+  padding-right: 3vw;
+  font: bold 16px/1 "Jost", sans-serif;
+}
+#header_sub .container .web_menu .web_h1 a {
+  display: block;
+  font: bold 16px/1 "Jost", sans-serif;
+  color: #282828;
+  transition: 0.5s;
+}
+#header_sub .container .web_menu .web_h1 a i {
+  margin-right: 5px;
+}
+#header_sub .container .web_menu nav #gnb {
+  width: 50vw;
   height: 20px;
   float: left;
 }
-#header_sub .inner .web_menu #gnb > li {
+#header_sub .container .web_menu nav #gnb li {
   float: left;
-  border-right: 1px solid #282828;
-  margin-left: 20px;
-  padding-right: 20px;
+  padding-right: 3vw;
 }
-#header_sub .inner .web_menu #gnb > li:last-child {
-  border-right: none;
-}
-#header_sub .inner .web_menu #gnb > li > a {
-  font: bold 16px/1 "Jost", sans-serif;
+#header_sub .container .web_menu nav #gnb li a {
   display: block;
+  font: bold 16px/1 "Jost", sans-serif;
   color: #282828;
+  transition: 0.5s;
 }
-#header_sub .inner .web_menu #gnb > li > a i {
-  margin-right: 5px;
-}
-#header_sub .inner .web_menu .log {
-  height: 72px;
+#header_sub .container .web_menu .log {
+  height: 100%;
   float: right;
   margin-right: 10px;
 }
-#header_sub .inner .web_menu .log li {
+#header_sub .container .web_menu .log li {
   float: left;
   height: 20px;
   display: flex;
@@ -106,22 +91,18 @@ table {
   align-items: center;
   margin-right: 10px;
 }
-#header_sub .inner .web_menu .log li:last-child {
-  margin-right: 0;
-}
-#header_sub .inner .web_menu .log li a {
+#header_sub .container .web_menu .log li a {
   display: block;
-  font: bold 16px/1 "Jost", sans-serif;
+  font: 16px/1 "Jost", sans-serif;
   padding: 5px 10px;
   color: #282828;
   border: 1px solid #6d6d6d;
   border-radius: 3px;
 }
-#header_sub .inner .web_menu .log li a:hover {
+#header_sub .container .web_menu .log li a:hover {
   background: #6d6d6d;
-  color: #fff;
 }
-#header_sub .inner .btn_call {
+#header_sub .container .btn_call {
   display: none;
   width: 20px;
   height: 20px;
@@ -130,7 +111,7 @@ table {
   top: 30px;
   z-index: 5;
 }
-#header_sub .inner .btn_call::before {
+#header_sub .container .btn_call::before {
   content: "";
   display: block;
   width: 100%;
@@ -141,7 +122,7 @@ table {
   background: #000;
   transition: top 0.5s 0s, transform 0.5s 0.5s;
 }
-#header_sub .inner .btn_call::after {
+#header_sub .container .btn_call::after {
   content: "";
   display: block;
   width: 100%;
@@ -152,7 +133,7 @@ table {
   background: #000;
   transition: bottom 0.5s 0s, transform 0.5s 0.5s;
 }
-#header_sub .inner .btn_call span {
+#header_sub .container .btn_call span {
   display: block;
   width: 100%;
   height: 2px;
@@ -164,21 +145,21 @@ table {
   transition: 1s;
   text-indent: -9999px;
 }
-#header_sub .inner .btn_call.on::before {
+#header_sub .container .btn_call.on::before {
   top: 50%;
   margin-top: -1px;
   transform: rotate(45deg);
 }
-#header_sub .inner .btn_call.on::after {
+#header_sub .container .btn_call.on::after {
   bottom: 50%;
   margin-bottom: -1px;
   transform: rotate(-45deg);
 }
-#header_sub .inner .btn_call.on span {
+#header_sub .container .btn_call.on span {
   transform: translateX(100%);
   opacity: 0;
 }
-#header_sub .inner .mob_menu {
+#header_sub .container .mob_menu {
   display: none;
   flex-direction: column;
   width: 50vw;
@@ -191,49 +172,49 @@ table {
   z-index: 6;
   transition: 0.5s;
 }
-#header_sub .inner .mob_menu.on {
+#header_sub .container .mob_menu.on {
   left: 0;
 }
-#header_sub .inner .mob_menu .mob_h1 {
+#header_sub .container .mob_menu .mob_h1 {
   width: 143px;
   height: 45px;
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
 }
-#header_sub .inner .mob_menu .mob_h1 img {
+#header_sub .container .mob_menu .mob_h1 img {
   width: 100%;
   height: 100%;
 }
-#header_sub .inner .mob_menu .mob_log li {
+#header_sub .container .mob_menu .mob_log li {
   width: 70%;
   height: 40px;
   margin: 0 auto;
   text-align: center;
 }
-#header_sub .inner .mob_menu .mob_log li a {
+#header_sub .container .mob_menu .mob_log li a {
   display: block;
-  font: 14px/1 "Roboto", sans-serif;
+  font: 14px/1 "Jost", sans-serif;
   padding: 5px 10px;
   color: #fff;
   border: 1px solid #6d6d6d;
   border-radius: 3px;
   text-align: center;
 }
-#header_sub .inner .mob_menu .mob_log li a:hover {
+#header_sub .container .mob_menu .mob_log li a:hover {
   background: #6d6d6d;
   color: #fff;
 }
-#header_sub .inner .mob_menu #mob_gnb li a {
+#header_sub .container .mob_menu #mob_gnb li a {
   display: block;
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid #444;
-  font: bold 14px/1 "arial";
+  font: bold 14px/1 "Jost", sans-serif;
   color: #888;
   text-align: center;
 }
-#header_sub.on .inner .on_top {
+#header_sub.on .container .on_top {
   display: flex;
 }
 
@@ -247,21 +228,21 @@ table {
   opacity: 0.9;
   margin-bottom: 80px;
 }
-.content .inner {
+.content .container {
   width: 1180px;
   margin: 0 auto;
   min-height: 500px;
 }
-.content .inner h1 {
+.content .container h1 {
   font: 50px/1 "Hahmlet", serif;
   color: #000;
   margin-bottom: 60px;
 }
-.content .inner h1 span {
+.content .container h1 span {
   font: 20px/1 "Hahmlet", serif;
   color: #aaa;
 }
-.content .inner h1 span::before {
+.content .container h1 span::before {
   content: "/";
   margin-right: 20px;
   margin-left: 10px;
@@ -273,65 +254,65 @@ table {
   background: #1c1c1c;
   position: relative;
 }
-#footer_sub .inner {
+#footer_sub .container {
   width: 1180px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-#footer_sub .inner .wrap1 {
+#footer_sub .container .wrap1 {
   padding-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-#footer_sub .inner .wrap1 > a {
+#footer_sub .container .wrap1 > a {
   display: block;
   font: bold 18px/1 "Poppins", sans-serif;
   color: #fff;
   margin-bottom: 10px;
   cursor: pointer;
 }
-#footer_sub .inner .wrap1 ul {
+#footer_sub .container .wrap1 ul {
   display: flex;
   flex-direction: column;
 }
-#footer_sub .inner .wrap1 ul li {
+#footer_sub .container .wrap1 ul li {
   margin-top: 10px;
   color: #999;
 }
-#footer_sub .inner .wrap1 ul li a {
+#footer_sub .container .wrap1 ul li a {
   font: bold 16px/1 "Poppins", sans-serif;
   color: #999;
 }
-#footer_sub .inner .web_wrap2 {
+#footer_sub .container .web_wrap2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   text-align: center;
 }
-#footer_sub .inner .web_wrap2 img {
+#footer_sub .container .web_wrap2 img {
   margin-bottom: 10px;
 }
-#footer_sub .inner .web_wrap2 p {
+#footer_sub .container .web_wrap2 p {
   font: 12px/1 "Arimo", sans-serif;
   color: #999;
 }
-#footer_sub .inner .mob_wrap2 {
+#footer_sub .container .mob_wrap2 {
   display: none;
   flex-direction: column;
   justify-content: flex-end;
   width: 150px;
 }
-#footer_sub .inner .mob_wrap2 h1 {
+#footer_sub .container .mob_wrap2 h1 {
   font: bold 15px "Arimo", sans-serif;
   letter-spacing: 2px;
   text-align: center;
   color: #333;
   text-shadow: 0 1px 1px #999;
 }
-#footer_sub .inner .mob_wrap2 h1::after {
+#footer_sub .container .mob_wrap2 h1::after {
   content: "";
   display: block;
   width: 150px;
@@ -339,27 +320,27 @@ table {
   background: #6d6d6d;
   margin: 10px 0;
 }
-#footer_sub .inner .mob_wrap2 p {
+#footer_sub .container .mob_wrap2 p {
   font: 10px/1 "Arimo", sans-serif;
   text-align: center;
   color: #6d6d6d;
 }
-#footer_sub .inner .wrap3 {
+#footer_sub .container .wrap3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   width: 250px;
 }
-#footer_sub .inner .wrap3 div {
+#footer_sub .container .wrap3 div {
   display: flex;
   justify-content: space-evenly;
 }
-#footer_sub .inner .wrap3 div i {
+#footer_sub .container .wrap3 div i {
   font-size: 25px;
   color: #999;
   cursor: pointer;
 }
-#footer_sub .inner .wrap3 address {
+#footer_sub .container .wrap3 address {
   font: 14px/1.3 "Poppins", sans-serif;
   color: #999;
   margin-top: 10px;
@@ -369,36 +350,36 @@ table {
   #header_sub {
     height: 50px;
   }
-  #header_sub .inner {
+  #header_sub .container {
     width: 100%;
     padding: 0px 30px;
   }
-  #header_sub .inner .web_menu {
+  #header_sub .container .web_menu {
     padding-top: 18px;
   }
-  #header_sub .inner .web_menu #gnb {
+  #header_sub .container .web_menu #gnb {
     width: 65%;
   }
-  #header_sub .inner .web_menu #gnb li a {
+  #header_sub .container .web_menu #gnb li a {
     font: bold 13px/1 "Arimo", sans-serif;
   }
-  #header_sub .inner .web_menu .log li a {
+  #header_sub .container .web_menu .log li a {
     font: bold 13px/1 "Roboto", sans-serif;
   }
   #footer_sub {
     padding: 60px 0;
   }
-  #footer_sub .inner {
+  #footer_sub .container {
     width: 100%;
   }
-  #footer_sub .inner .mob_wrap2 {
+  #footer_sub .container .mob_wrap2 {
     display: none;
   }
-  #footer_sub .inner .wrap3 {
+  #footer_sub .container .wrap3 {
     width: 200px;
     margin-right: 30px;
   }
-  #footer_sub .inner .wrap3 address {
+  #footer_sub .container .wrap3 address {
     font: 14px/1.3 "Poppins", sans-serif;
     color: #999;
     margin-top: 20px;
@@ -408,22 +389,22 @@ table {
   #header_sub {
     height: 80px;
   }
-  #header_sub .inner .web_menu {
+  #header_sub .container .web_menu {
     padding-top: 0;
   }
-  #header_sub .inner .web_menu #gnb {
+  #header_sub .container .web_menu #gnb {
     width: 85%;
     padding-top: 35px;
   }
-  #header_sub .inner .web_menu #gnb li {
+  #header_sub .container .web_menu #gnb li {
     margin-left: 10px;
     padding-right: 10px;
   }
-  #header_sub .inner .web_menu .log {
+  #header_sub .container .web_menu .log {
     width: 15%;
     height: 15px;
   }
-  #header_sub .inner .web_menu .log li {
+  #header_sub .container .web_menu .log li {
     width: 100%;
     height: 30px;
     margin-right: 0;
@@ -431,24 +412,24 @@ table {
     border: 1px solid #6d6d6d;
     border-radius: 3px;
   }
-  #header_sub .inner .web_menu .log li a {
+  #header_sub .container .web_menu .log li a {
     padding: 0;
     border: none;
   }
   .content .sub_bg {
     height: 220px;
   }
-  .content .inner h1 {
+  .content .container h1 {
     font: 35px/1 "Hahmlet", serif;
     margin-bottom: 40px;
   }
-  #footer_sub .inner .wrap1 > a {
+  #footer_sub .container .wrap1 > a {
     font: bold 16px/1 "Poppins", sans-serif;
   }
-  #footer_sub .inner .wrap1 ul li {
+  #footer_sub .container .wrap1 ul li {
     margin-top: 5px;
   }
-  #footer_sub .inner .wrap1 ul li a {
+  #footer_sub .container .wrap1 ul li a {
     font: bold 14px/1 "Poppins", sans-serif;
   }
 }
@@ -457,84 +438,84 @@ table {
     height: 90px;
     background: #e3e3e3;
   }
-  #header_sub .inner .web_h1 {
+  #header_sub .container .web_h1 {
     display: block;
     width: 132px;
     height: 90px;
   }
-  #header_sub .inner .web_h1 a {
+  #header_sub .container .web_h1 a {
     display: block;
     width: 100%;
     height: 100%;
     background: url(../img/logo_white.png) no-repeat center/cover;
   }
-  #header_sub .inner .web_menu {
+  #header_sub .container .web_menu {
     display: none;
   }
-  #header_sub .inner .btn_call {
+  #header_sub .container .btn_call {
     display: block;
   }
-  #header_sub .inner .mob_menu {
+  #header_sub .container .mob_menu {
     display: block;
   }
-  #footer_sub .inner .mob_wrap2 {
+  #footer_sub .container .mob_wrap2 {
     display: flex;
   }
-  #footer_sub .inner .web_wrap2 {
+  #footer_sub .container .web_wrap2 {
     display: none;
   }
-  #footer_sub .inner .wrap3 {
+  #footer_sub .container .wrap3 {
     width: 50px;
   }
-  #footer_sub .inner .wrap3 div {
+  #footer_sub .container .wrap3 div {
     display: flex;
     flex-direction: column;
   }
-  #footer_sub .inner .wrap3 div i {
+  #footer_sub .container .wrap3 div i {
     font-size: 20px;
     margin-top: 20px;
   }
-  #footer_sub .inner .wrap3 address {
+  #footer_sub .container .wrap3 address {
     display: none;
   }
 }
 .sign_up .sub_bg {
   background: #000 url(../img/sign_up.jpg) no-repeat center/cover;
 }
-.sign_up .inner {
+.sign_up .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sign_up .inner h1 {
+.sign_up .container h1 {
   width: 85%;
   border-bottom: 1px solid #bbb;
   padding-bottom: 20px;
 }
-.sign_up .inner form {
+.sign_up .container form {
   width: 85%;
 }
-.sign_up .inner form fieldset {
+.sign_up .container form fieldset {
   display: flex;
   flex-direction: column;
 }
-.sign_up .inner form fieldset .all_agree {
+.sign_up .container form fieldset .all_agree {
   font: bold 16px/2 "Hahmlet", serif;
   letter-spacing: 1.2px;
   display: flex;
   align-items: center;
 }
-.sign_up .inner form fieldset .all_agree input#all_agree {
+.sign_up .container form fieldset .all_agree input#all_agree {
   margin-right: 5px;
   width: 20px;
   height: 20px;
 }
-.sign_up .inner form fieldset h2 {
+.sign_up .container form fieldset h2 {
   font: 15px/1 "Hahmlet", serif;
   letter-spacing: 1px;
   margin: 30px 0 10px 0;
 }
-.sign_up .inner form fieldset #terms {
+.sign_up .container form fieldset #terms {
   width: 100%;
   height: 100px;
   resize: none;
@@ -543,26 +524,26 @@ table {
   color: #888;
   background: #eee;
 }
-.sign_up .inner form fieldset .agree {
+.sign_up .container form fieldset .agree {
   margin-bottom: 30px;
   display: flex;
   align-items: center;
 }
-.sign_up .inner form fieldset .agree label[for=must_agree],
-.sign_up .inner form fieldset .agree label[for=choice_agree] {
+.sign_up .container form fieldset .agree label[for=must_agree],
+.sign_up .container form fieldset .agree label[for=choice_agree] {
   font: 14px/1 "Hahmlet", serif;
 }
-.sign_up .inner form fieldset .agree input {
+.sign_up .container form fieldset .agree input {
   margin-left: 5px;
   margin-top: 5px;
   width: 15px;
   height: 15px;
 }
-.sign_up .inner form fieldset table {
+.sign_up .container form fieldset table {
   border-top: 2px solid #999;
   border-bottom: 2px solid #999;
 }
-.sign_up .inner form fieldset table th {
+.sign_up .container form fieldset table th {
   width: 23%;
   padding: 15px;
   font: bold 14px/1 "Roboto", sans-serif;
@@ -573,21 +554,21 @@ table {
   border-bottom: 1px solid #bbb;
   background: #eee;
 }
-.sign_up .inner form fieldset table th label {
+.sign_up .container form fieldset table th label {
   font-family: "Roboto", sans-serif;
 }
-.sign_up .inner form fieldset table th i {
+.sign_up .container form fieldset table th i {
   transform: scale(0.6);
   margin-left: 5px;
   color: orangered;
 }
-.sign_up .inner form fieldset table th:last-child {
+.sign_up .container form fieldset table th:last-child {
   background: transparent;
   text-align: center;
   border-right: none;
 }
-.sign_up .inner form fieldset table th input[type=submit],
-.sign_up .inner form fieldset table th input[type=reset] {
+.sign_up .container form fieldset table th input[type=submit],
+.sign_up .container form fieldset table th input[type=reset] {
   width: 150px;
   height: 40px;
   font: bold 14px/1 "Sunflower", sans-serif;
@@ -595,50 +576,50 @@ table {
   cursor: pointer;
   transition: 0.5s;
 }
-.sign_up .inner form fieldset table th input[type=submit]:hover,
-.sign_up .inner form fieldset table th input[type=reset]:hover {
+.sign_up .container form fieldset table th input[type=submit]:hover,
+.sign_up .container form fieldset table th input[type=reset]:hover {
   transform: scale(1.03);
 }
-.sign_up .inner form fieldset table th input[type=reset] {
+.sign_up .container form fieldset table th input[type=reset] {
   border: 1px solid #444;
   background: #fff;
   color: #444;
 }
-.sign_up .inner form fieldset table th input[type=submit] {
+.sign_up .container form fieldset table th input[type=submit] {
   border: none;
   background: #444;
   color: #fff;
 }
-.sign_up .inner form fieldset table td {
+.sign_up .container form fieldset table td {
   border-bottom: 1px solid #bbb;
   padding: 15px;
   font: 14px/1 "Hahmlet", serif;
 }
-.sign_up .inner form fieldset table td input[type=text],
-.sign_up .inner form fieldset table td input[type=password] {
+.sign_up .container form fieldset table td input[type=text],
+.sign_up .container form fieldset table td input[type=password] {
   width: 150px;
   height: 30px;
   border: 1px solid #bbb;
   padding-left: 10px;
   vertical-align: top;
 }
-.sign_up .inner form fieldset table td p {
+.sign_up .container form fieldset table td p {
   font-size: 12px;
   color: blue;
 }
-.sign_up .inner form fieldset table td input[type=checkbox],
-.sign_up .inner form fieldset table td input[type=radio] {
+.sign_up .container form fieldset table td input[type=checkbox],
+.sign_up .container form fieldset table td input[type=radio] {
   margin-right: 5px;
 }
-.sign_up .inner form fieldset table td #male,
-.sign_up .inner form fieldset table td #female {
+.sign_up .container form fieldset table td #male,
+.sign_up .container form fieldset table td #female {
   font: 14px/1 "Sunflower", sans-serif;
 }
-.sign_up .inner form fieldset table td label {
+.sign_up .container form fieldset table td label {
   margin-right: 30px;
 }
-.sign_up .inner form fieldset table td select#phone,
-.sign_up .inner form fieldset table td #gender {
+.sign_up .container form fieldset table td select#phone,
+.sign_up .container form fieldset table td #gender {
   width: 100px;
   height: 30px;
   display: inline-flex;
@@ -648,16 +629,16 @@ table {
   margin-right: 5px;
   font-family: "Sunflower", sans-serif;
 }
-.sign_up .inner form fieldset table td input#email::-webkit-input-placeholder {
+.sign_up .container form fieldset table td input#email::-webkit-input-placeholder {
   font-family: "Hahmlet", serif;
 }
-.sign_up .inner form fieldset table td select#company {
+.sign_up .container form fieldset table td select#company {
   width: 30%;
   height: 30px;
   border: 1px solid #bbb;
   padding-left: 20px;
 }
-.sign_up .inner form fieldset table td span {
+.sign_up .container form fieldset table td span {
   font-size: 12px;
   margin-left: 5px;
 }
@@ -666,22 +647,22 @@ table {
   .sign_up {
     width: 100%;
   }
-  .sign_up .inner {
+  .sign_up .container {
     width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
-  .sign_up .inner form .all_agree {
+  .sign_up .container form .all_agree {
     font: bold 13px/1.5 "Hahmlet", serif;
   }
-  .sign_up .inner form h2 {
+  .sign_up .container form h2 {
     font: 13px/1 "Hahmlet", serif;
   }
-  .sign_up .inner form table th {
+  .sign_up .container form table th {
     font: bold 13px/1 "Roboto", sans-serif;
   }
-  .sign_up .inner form table th input[type=submit],
-  .sign_up .inner form table th input[type=reset] {
+  .sign_up .container form table th input[type=submit],
+  .sign_up .container form table th input[type=reset] {
     width: 100px;
   }
 }
@@ -691,21 +672,21 @@ table {
 .contact .sub_bg {
   background: url(../img/sub_menu_bg.jpg) no-repeat center/cover;
 }
-.contact .inner {
+.contact .container {
   width: 1180px;
   margin: 0 auto;
 }
-.contact .inner::after {
+.contact .container::after {
   content: "";
   display: block;
   clear: both;
 }
-.contact .inner h2 {
+.contact .container h2 {
   font: 25px/50px "Jost", sans-serif;
   margin-bottom: 10px;
   margin-left: 20px;
 }
-.contact .inner .enquire_submit {
+.contact .container .enquire_submit {
   position: relative;
   width: 55%;
   height: 420px;
@@ -716,7 +697,7 @@ table {
   margin-bottom: 100px;
   margin-right: 5%;
 }
-.contact .inner .enquire_submit input {
+.contact .container .enquire_submit input {
   height: 50px;
   margin: 10px 20px;
   padding-left: 20px;
@@ -724,10 +705,10 @@ table {
   font-family: "Jost", sans-serif;
   font-size: 15px;
 }
-.contact .inner .enquire_submit input:nth-of-type(4) {
+.contact .container .enquire_submit input:nth-of-type(4) {
   height: 100px;
 }
-.contact .inner .enquire_submit a {
+.contact .container .enquire_submit a {
   width: 150px;
   height: 50px;
   color: #fff;
@@ -740,10 +721,10 @@ table {
   bottom: 20px;
   transition: 0.5s;
 }
-.contact .inner .enquire_submit a:hover {
+.contact .container .enquire_submit a:hover {
   color: #000;
 }
-.contact .inner .info {
+.contact .container .info {
   float: left;
   width: 40%;
   height: 420px;
@@ -751,35 +732,35 @@ table {
   flex-direction: column;
   justify-content: space-around;
 }
-.contact .inner .info div {
+.contact .container .info div {
   font: 20px/1 "Jost", sans-serif;
 }
-.contact .inner .info div p {
+.contact .container .info div p {
   font: 16px/1 "Jost", sans-serif;
   margin-top: 20px;
   margin-bottom: 40px;
 }
-.contact .inner .info div .sns_icons {
+.contact .container .info div .sns_icons {
   margin-top: 20px;
 }
-.contact .inner .info div .sns_icons i {
+.contact .container .info div .sns_icons i {
   margin-right: 10px;
 }
-.contact .inner #map {
+.contact .container #map {
   width: 100%;
   height: 450px;
   border: 1px solid #eee;
   margin-bottom: 20px;
 }
-.contact .inner .traffic {
+.contact .container .traffic {
   float: left;
 }
-.contact .inner .traffic li {
+.contact .container .traffic li {
   float: left;
   margin-right: 10px;
   margin-bottom: 60px;
 }
-.contact .inner .traffic li a {
+.contact .container .traffic li a {
   display: block;
   width: 120px;
   height: 40px;
@@ -789,18 +770,18 @@ table {
   text-align: center;
   border: 1px solid #555;
 }
-.contact .inner .traffic li .on a {
+.contact .container .traffic li .on a {
   color: #fff;
   background: #555;
 }
-.contact .inner .branch {
+.contact .container .branch {
   float: right;
 }
-.contact .inner .branch li {
+.contact .container .branch li {
   float: left;
   margin-left: 10px;
 }
-.contact .inner .branch li a {
+.contact .container .branch li a {
   display: block;
   width: 120px;
   height: 40px;
@@ -810,7 +791,7 @@ table {
   text-align: center;
   border: 1px solid #555;
 }
-.contact .inner .branch li .on a {
+.contact .container .branch li .on a {
   color: #fff;
   background: #555;
 }
@@ -819,7 +800,7 @@ table {
   .contact {
     width: 100%;
   }
-  .contact .inner {
+  .contact .container {
     width: 100%;
     padding: 60px 40px;
   }
@@ -828,101 +809,101 @@ table {
   .contact .sub_bg {
     height: 220px;
   }
-  .contact .inner {
+  .contact .container {
     width: 610px;
   }
-  .contact .inner .traffic li a {
+  .contact .container .traffic li a {
     width: 100px;
   }
-  .contact .inner .branch li a {
+  .contact .container .branch li a {
     width: 93px;
   }
 }
 @media screen and (max-width: 600px) {
-  .contact .inner {
+  .contact .container {
     width: 500px;
   }
-  .contact .inner #map {
+  .contact .container #map {
     height: 300px;
   }
-  .contact .inner .traffic {
+  .contact .container .traffic {
     width: 100%;
   }
-  .contact .inner .traffic li {
+  .contact .container .traffic li {
     margin-bottom: 20px;
   }
-  .contact .inner .traffic li a {
+  .contact .container .traffic li a {
     width: 100px;
   }
-  .contact .inner .branch {
+  .contact .container .branch {
     width: 100%;
   }
-  .contact .inner .branch li:first-child {
+  .contact .container .branch li:first-child {
     margin-left: 0;
   }
 }
 .review .sub_bg {
   background: url(../img/customer.jpg) no-repeat center/cover;
 }
-.review .inner {
+.review .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.review .inner h1 {
+.review .container h1 {
   width: 85%;
 }
-.review .inner table {
+.review .container table {
   width: 85%;
   border-bottom: 2px solid #111;
   border-collapse: collapse;
   margin-bottom: 50px;
 }
-.review .inner table tr:nth-of-type(even) {
+.review .container table tr:nth-of-type(even) {
   background: #eee;
 }
-.review .inner table tr:hover {
+.review .container table tr:hover {
   background: #bbb;
 }
-.review .inner table tr th {
+.review .container table tr th {
   padding: 15px;
   background: #444;
   color: #fff;
 }
-.review .inner table tr th:nth-of-type(1) {
+.review .container table tr th:nth-of-type(1) {
   width: 8%;
 }
-.review .inner table tr th:nth-of-type(3) {
+.review .container table tr th:nth-of-type(3) {
   width: 15%;
 }
-.review .inner table tr th:nth-of-type(4) {
+.review .container table tr th:nth-of-type(4) {
   width: 17%;
 }
-.review .inner table tr td {
+.review .container table tr td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   text-align: center;
 }
-.review .inner table tr td:nth-of-type(2) {
+.review .container table tr td:nth-of-type(2) {
   text-align: left;
   font-family: "Hahmlet", serif;
 }
-.review .inner table tr td a {
+.review .container table tr td a {
   color: #333;
   line-height: 1.4;
 }
-.review .inner .pagination {
+.review .container .pagination {
   width: 70%;
   text-align: center;
   margin: 0 auto;
 }
-.review .inner .pagination::after {
+.review .container .pagination::after {
   content: "";
   display: block;
   clear: both;
 }
-.review .inner .pagination .prev,
-.review .inner .pagination .next {
+.review .container .pagination .prev,
+.review .container .pagination .next {
   display: block;
   width: 30px;
   height: 30px;
@@ -931,18 +912,18 @@ table {
   font-size: 20px;
   text-align: center;
 }
-.review .inner .pagination .prev {
+.review .container .pagination .prev {
   float: left;
 }
-.review .inner .pagination .next {
+.review .container .pagination .next {
   float: right;
 }
-.review .inner .pagination .pages {
+.review .container .pagination .pages {
   display: inline-block;
   text-align: center;
   font-size: 0;
 }
-.review .inner .pagination .pages a {
+.review .container .pagination .pages a {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -952,7 +933,7 @@ table {
   margin: 0 5px;
   transition: 0.5s;
 }
-.review .inner .pagination .pages a:hover {
+.review .container .pagination .pages a:hover {
   background: #666;
   color: #fff;
 }
@@ -961,21 +942,21 @@ table {
   .review {
     width: 100%;
   }
-  .review .inner {
+  .review .container {
     width: 100%;
     padding: 60px 40px;
   }
 }
 @media screen and (max-width: 860px) {
-  .review .inner table {
+  .review .container table {
     width: 95%;
   }
-  .review .inner .pagination p a:nth-of-type(6), .review .inner .pagination p a:nth-of-type(7), .review .inner .pagination p a:nth-of-type(8), .review .inner .pagination p a:nth-of-type(9), .review .inner .pagination p a:nth-of-type(10) {
+  .review .container .pagination p a:nth-of-type(6), .review .container .pagination p a:nth-of-type(7), .review .container .pagination p a:nth-of-type(8), .review .container .pagination p a:nth-of-type(9), .review .container .pagination p a:nth-of-type(10) {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  .review .inner .pagination p a:nth-of-type(4), .review .inner .pagination p a:nth-of-type(5) {
+  .review .container .pagination p a:nth-of-type(4), .review .container .pagination p a:nth-of-type(5) {
     display: none;
   }
 }
@@ -1046,45 +1027,45 @@ table {
 }
 
 @media screen and (max-width: 1180px) {
-  .youtube .inner {
+  .youtube .container {
     width: 100%;
   }
-  .youtube .inner .videoList article {
+  .youtube .container .videoList article {
     width: 47%;
     height: 420px;
   }
 }
 @media screen and (max-width: 600px) {
-  .youtube .inner {
+  .youtube .container {
     width: 100%;
   }
-  .youtube .inner .videoList article {
+  .youtube .container .videoList article {
     width: 80%;
     height: 420px;
   }
-  .youtube .inner .videoList article .con span {
+  .youtube .container .videoList article .con span {
     font: bold 11px/1 "Hahmlet", serif;
   }
 }
-.gallery .inner {
+.gallery .container {
   position: relative;
 }
-.gallery .inner h1 {
+.gallery .container h1 {
   padding: 50px;
   margin-bottom: 0;
 }
-.gallery .inner #gallery #searchBox {
+.gallery .container #gallery #searchBox {
   width: 85%;
   padding: 50px;
 }
-.gallery .inner #gallery #searchBox #search {
+.gallery .container #gallery #searchBox #search {
   width: 180px;
   height: 30px;
   border: 1px solid #333;
   padding-left: 10px;
   font: 14px/30px "Hahmlet", serif;
 }
-.gallery .inner #gallery #searchBox .btn_search {
+.gallery .container #gallery #searchBox .btn_search {
   width: 70px;
   height: 30px;
   background: #333;
@@ -1096,11 +1077,11 @@ table {
   margin-left: 10px;
   vertical-align: top;
 }
-.gallery .inner #gallery #wrap {
+.gallery .container #gallery #wrap {
   width: 100%;
   padding: 30px;
 }
-.gallery .inner #gallery #wrap .loading {
+.gallery .container #gallery #wrap .loading {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1109,56 +1090,56 @@ table {
   height: 100px;
   transition: 1s;
 }
-.gallery .inner #gallery #wrap .loading.off {
+.gallery .container #gallery #wrap .loading.off {
   opacity: 0;
 }
-.gallery .inner #gallery #wrap #list {
+.gallery .container #gallery #wrap #list {
   width: 100%;
   opacity: 0;
   transform: translateY(100px);
   transition: 1s;
 }
-.gallery .inner #gallery #wrap #list.on {
+.gallery .container #gallery #wrap #list.on {
   opacity: 1;
   transform: translateY(0px);
 }
-.gallery .inner #gallery #wrap #list::after {
+.gallery .container #gallery #wrap #list::after {
   content: "";
   display: block;
   clear: both;
 }
-.gallery .inner #gallery #wrap #list li {
+.gallery .container #gallery #wrap #list li {
   float: left;
   width: 33.3333333333%;
   padding: 15px;
 }
-.gallery .inner #gallery #wrap #list li div {
+.gallery .container #gallery #wrap #list li div {
   width: 100%;
   padding: 10px;
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background: #fff;
 }
-.gallery .inner #gallery #wrap #list li div:hover a > img {
+.gallery .container #gallery #wrap #list li div:hover a > img {
   filter: grayscale(0%);
 }
-.gallery .inner #gallery #wrap #list li div a > img {
+.gallery .container #gallery #wrap #list li div a > img {
   width: 100%;
   filter: grayscale(80%);
 }
-.gallery .inner #gallery #wrap #list li div p {
+.gallery .container #gallery #wrap #list li div p {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto 5px;
 }
-.gallery .inner #gallery #wrap #list li div p span {
+.gallery .container #gallery #wrap #list li div p span {
   font: 12px/1.2 "Hahmlet", serif;
   color: #777;
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.gallery .inner #gallery #wrap #list li div p > img {
+.gallery .container #gallery #wrap #list li div p > img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1193,17 +1174,17 @@ table {
 }
 
 @media screen and (max-width: 1180px) {
-  .gallery .inner {
+  .gallery .container {
     width: 100%;
   }
 }
 @media screen and (max-width: 860px) {
-  .gallery .inner #gallery #wrap #list li {
+  .gallery .container #gallery #wrap #list li {
     width: 50%;
   }
 }
 @media screen and (max-width: 600px) {
-  .gallery .inner #gallery #wrap #list li {
+  .gallery .container #gallery #wrap #list li {
     width: 100%;
   }
 }
@@ -1211,19 +1192,19 @@ table {
   background: url(../img/office_bg.png) no-repeat center/cover;
   filter: grayscale(0.8);
 }
-.office .inner h1 {
+.office .container h1 {
   width: 85%;
   margin: 0 auto;
   border-bottom: 1px solid #bbb;
   padding-bottom: 20px;
 }
-.office .inner .wrap {
+.office .container .wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
-.office .inner .wrap .container {
+.office .container .wrap .inner {
   margin: 0 50px;
   max-width: 800px;
   display: flex;
@@ -1231,12 +1212,12 @@ table {
   margin-bottom: 20px;
   font-family: "Hahmlet", serif;
 }
-.office .inner .wrap .container p {
+.office .container .wrap .inner p {
   text-indent: 15px;
   color: #333;
   margin: 30px 0;
 }
-.office .inner .wrap .container .tab {
+.office .container .wrap .inner .tab {
   position: relative;
   background: #f5f8ff;
   padding: 0 20px 20px;
@@ -1245,23 +1226,23 @@ table {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-.office .inner .wrap .container .tab:hover label::after {
+.office .container .wrap .inner .tab:hover label::after {
   color: #333;
 }
-.office .inner .wrap .container .tab input[type=checkbox] {
+.office .container .wrap .inner .tab input[type=checkbox] {
   appearance: none;
 }
-.office .inner .wrap .container .tab input[type=checkbox]:checked + label::after {
+.office .container .wrap .inner .tab input[type=checkbox]:checked + label::after {
   transform: rotate(135deg);
   color: #fff;
 }
-.office .inner .wrap .container .tab input[type=checkbox]:checked ~ .information {
+.office .container .wrap .inner .tab input[type=checkbox]:checked ~ .information {
   max-height: 100vh;
 }
-.office .inner .wrap .container .tab input[type=checkbox]:checked ~ .information p {
+.office .container .wrap .inner .tab input[type=checkbox]:checked ~ .information p {
   color: #fff;
 }
-.office .inner .wrap .container .tab input[type=checkbox]:checked ~ label h2 {
+.office .container .wrap .inner .tab input[type=checkbox]:checked ~ label h2 {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1273,19 +1254,19 @@ table {
   padding: 20px;
   transition: 0.2s;
 }
-.office .inner .wrap .container .tab input[type=checkbox]:checked ~ label h3 {
+.office .container .wrap .inner .tab input[type=checkbox]:checked ~ label h3 {
   background: #fff;
   padding: 2px 10px;
   color: #333;
   border-radius: 2px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
-.office .inner .wrap .container .tab label {
+.office .container .wrap .inner .tab label {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.office .inner .wrap .container .tab label::after {
+.office .container .wrap .inner .tab label::after {
   content: "+";
   position: absolute;
   right: 20px;
@@ -1293,7 +1274,7 @@ table {
   transition: 0.2s;
   color: rgba(0, 0, 0, 0.1);
 }
-.office .inner .wrap .container .tab label h2 {
+.office .container .wrap .inner .tab label h2 {
   width: 40px;
   height: 40px;
   background: #333;
@@ -1305,36 +1286,36 @@ table {
   border-radius: 5px;
   margin-right: 10px;
 }
-.office .inner .wrap .container .tab label h3 {
+.office .container .wrap .inner .tab label h3 {
   position: relative;
   font-weight: 500;
   color: #333;
   z-index: 10;
 }
-.office .inner .wrap .container .tab .information {
+.office .container .wrap .inner .tab .information {
   max-height: 0;
   transition: 0.5s;
   overflow: hidden;
 }
-.office .inner .wrap .container .tab .information p {
+.office .container .wrap .inner .tab .information p {
   position: relative;
   padding: 10px 0;
   color: #333;
   z-index: 10;
 }
-.office .inner .wrap .container .tab:nth-of-type(1) label h2 {
+.office .container .wrap .inner .tab:nth-of-type(1) label h2 {
   background: linear-gradient(135deg, #c94949, #93a857);
 }
-.office .inner .wrap .container .tab:nth-of-type(2) label h2 {
+.office .container .wrap .inner .tab:nth-of-type(2) label h2 {
   background: linear-gradient(135deg, #dfa21f, #b8d46a);
 }
-.office .inner .wrap .container .tab:nth-of-type(3) label h2 {
+.office .container .wrap .inner .tab:nth-of-type(3) label h2 {
   background: linear-gradient(135deg, #7770d5, #1b29e9);
 }
-.office .inner .wrap .container .tab:nth-of-type(4) label h2 {
+.office .container .wrap .inner .tab:nth-of-type(4) label h2 {
   background: linear-gradient(135deg, violet, #6b64d1);
 }
-.office .inner .wrap .container .tab:nth-of-type(5) label h2 {
+.office .container .wrap .inner .tab:nth-of-type(5) label h2 {
   background: linear-gradient(135deg, #a63167, #7c547d);
 }
 
@@ -1483,14 +1464,19 @@ table {
   top: 0;
   left: 0;
   background: transparent;
+  transition: 0.5s;
   z-index: 3;
 }
-#header .inner {
+#header:hover {
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+#header .container {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
 }
-#header .inner .on_top {
+#header .container .on_top {
   display: none;
   width: 50px;
   height: 50px;
@@ -1505,44 +1491,58 @@ table {
   border: 2px solid #555;
   background-color: rgba(255, 255, 255, 0.6);
 }
-#header .inner .on_top i {
+#header .container .on_top i {
   font-size: 20px;
   color: #000;
 }
-#header .inner .web_h1 {
-  display: none;
-}
-#header .inner .web_menu {
+#header .container .web_menu {
   width: 100%;
   padding-top: 28px;
   float: left;
 }
-#header .inner .web_menu #gnb {
-  width: 60%;
-  height: 20px;
-  float: left;
-}
-#header .inner .web_menu #gnb > li {
+#header .container .web_menu .web_h1 {
   float: left;
   padding-right: 3vw;
 }
-#header .inner .web_menu #gnb > li:last-child {
-  border-right: none;
-}
-#header .inner .web_menu #gnb > li > a {
+#header .container .web_menu .web_h1 a {
   display: block;
   font: bold 16px/1 "Jost", sans-serif;
   color: #eee;
+  transition: 0.5s;
 }
-#header .inner .web_menu #gnb > li > a i {
+#header .container .web_menu .web_h1 a:hover {
+  color: #000;
+}
+#header .container .web_menu .web_h1 a i {
   margin-right: 5px;
 }
-#header .inner .web_menu .log {
+#header .container .web_menu nav #gnb {
+  width: 50vw;
+  height: 20px;
+  float: left;
+}
+#header .container .web_menu nav #gnb > li {
+  float: left;
+  padding-right: 3vw;
+}
+#header .container .web_menu nav #gnb > li:last-child {
+  border-right: none;
+}
+#header .container .web_menu nav #gnb > li:hover a {
+  color: #000;
+}
+#header .container .web_menu nav #gnb > li a {
+  display: block;
+  font: bold 16px/1 "Jost", sans-serif;
+  color: #eee;
+  transition: 0.5s;
+}
+#header .container .web_menu .log {
   height: 100%;
   float: right;
   margin-right: 10px;
 }
-#header .inner .web_menu .log li {
+#header .container .web_menu .log li {
   float: left;
   height: 20px;
   display: flex;
@@ -1550,7 +1550,7 @@ table {
   align-items: center;
   margin-right: 10px;
 }
-#header .inner .web_menu .log li a {
+#header .container .web_menu .log li a {
   display: block;
   font: 16px/1 "Jost", sans-serif;
   padding: 5px 10px;
@@ -1558,12 +1558,15 @@ table {
   border: 1px solid #6d6d6d;
   border-radius: 3px;
 }
-#header .inner .web_menu .log li a:hover {
+#header .container .web_menu .log li a:hover {
   background: #6d6d6d;
-  color: #fff;
+  color: #000;
 }
-#header .inner .btn_call {
+#header .container .web_menu .tablet_log {
   display: none;
+}
+#header .container .btn_call {
+  display: block;
   width: 20px;
   height: 20px;
   position: absolute;
@@ -1571,7 +1574,7 @@ table {
   top: 30px;
   z-index: 5;
 }
-#header .inner .btn_call::before {
+#header .container .btn_call::before {
   content: "";
   display: block;
   width: 100%;
@@ -1582,7 +1585,7 @@ table {
   background: #000;
   transition: top 0.5s 0s, transform 0.5s 0.5s;
 }
-#header .inner .btn_call::after {
+#header .container .btn_call::after {
   content: "";
   display: block;
   width: 100%;
@@ -1593,7 +1596,7 @@ table {
   background: #000;
   transition: bottom 0.5s 0s, transform 0.5s 0.5s;
 }
-#header .inner .btn_call span {
+#header .container .btn_call span {
   display: block;
   width: 100%;
   height: 2px;
@@ -1605,54 +1608,69 @@ table {
   transition: 1s;
   text-indent: -9999px;
 }
-#header .inner .btn_call.on::before {
+#header .container .btn_call.on::before {
   top: 50%;
   margin-top: -1px;
   transform: rotate(45deg);
 }
-#header .inner .btn_call.on::after {
+#header .container .btn_call.on::after {
   bottom: 50%;
   margin-bottom: -1px;
   transform: rotate(-45deg);
 }
-#header .inner .btn_call.on span {
+#header .container .btn_call.on span {
   transform: translateX(100%);
   opacity: 0;
 }
-#header .inner .mob_menu {
+#header .container .mob_menu {
   display: none;
+  width: 100%;
+  height: 90px;
+}
+#header .container .mob_menu .mob_logo {
+  width: 132px;
+  height: 90px;
+}
+#header .container .mob_menu .mob_logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/logo_white.png) no-repeat center/cover;
+}
+#header .container .mob_menu .side_menu {
+  display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 270px;
   height: 100vh;
   position: fixed;
   top: 0;
-  left: -50vw;
+  left: -270px;
   background: #1c1c1c;
   padding: 35px 30px;
   z-index: 6;
   transition: 0.5s;
 }
-#header .inner .mob_menu.on {
+#header .container .mob_menu .side_menu.on {
   left: 0;
 }
-#header .inner .mob_menu .mob_h1 {
+#header .container .mob_menu .side_menu .mob_h1 {
   width: 143px;
   height: 45px;
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
 }
-#header .inner .mob_menu .mob_h1 img {
+#header .container .mob_menu .side_menu .mob_h1 img {
   width: 100%;
   height: 100%;
 }
-#header .inner .mob_menu .mob_log li {
+#header .container .mob_menu .side_menu .mob_log li {
   width: 70%;
   height: 40px;
   margin: 0 auto;
   text-align: center;
 }
-#header .inner .mob_menu .mob_log li a {
+#header .container .mob_menu .side_menu .mob_log li a {
   display: block;
   font: 14px/1 "Jost", sans-serif;
   padding: 5px 10px;
@@ -1661,11 +1679,11 @@ table {
   border-radius: 3px;
   text-align: center;
 }
-#header .inner .mob_menu .mob_log li a:hover {
+#header .container .mob_menu .side_menu .mob_log li a:hover {
   background: #6d6d6d;
   color: #fff;
 }
-#header .inner .mob_menu #mob_gnb li a {
+#header .container .mob_menu .side_menu #mob_gnb li a {
   display: block;
   width: 100%;
   padding: 20px 0;
@@ -1674,7 +1692,7 @@ table {
   color: #888;
   text-align: center;
 }
-#header.on .inner .on_top {
+#header.on .container .on_top {
   display: flex;
 }
 
@@ -1722,7 +1740,6 @@ table {
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
-  z-index: 3;
 }
 #visual .visual .vs-btns li {
   width: 90px;
@@ -1736,12 +1753,12 @@ table {
   background: #fff;
   opacity: 1;
 }
-#visual .visual .inner {
+#visual .visual .container {
   width: 1180px;
   height: 100%;
   margin: 0 auto;
 }
-#visual .visual .inner .cp_name {
+#visual .visual .container .cp_name {
   width: 220px;
   position: absolute;
   left: 50%;
@@ -1749,7 +1766,7 @@ table {
   transform: translateX(-50%);
   z-index: 3;
 }
-#visual .visual .inner .cp_name img {
+#visual .visual .container .cp_name img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1761,36 +1778,36 @@ table {
   margin-top: -15vh;
   z-index: 2;
 }
-#middle_menu.on .inner .sub_gnb {
+#middle_menu.on .container .sub_gnb {
   position: fixed;
   width: 1180px;
   z-index: 3;
 }
-#middle_menu.on .inner .sub_gnb > li {
+#middle_menu.on .container .sub_gnb > li {
   background: #353535;
 }
-#middle_menu.on .inner .sub_gnb > li span {
+#middle_menu.on .container .sub_gnb > li span {
   color: #ffffff;
 }
-#middle_menu.on .inner .sub_gnb > li:hover {
+#middle_menu.on .container .sub_gnb > li:hover {
   background: #bbb;
 }
-#middle_menu.on .inner .sub_gnb > li:hover span {
+#middle_menu.on .container .sub_gnb > li:hover span {
   color: #333;
 }
-#middle_menu .inner {
+#middle_menu .container {
   width: 1180px;
   margin: 0 auto;
   background: #fff;
 }
-#middle_menu .inner .sub_gnb {
+#middle_menu .container .sub_gnb {
   width: 100%;
   height: 80px;
   top: 0;
   position: relative;
   display: inline-flex;
 }
-#middle_menu .inner .sub_gnb > li {
+#middle_menu .container .sub_gnb > li {
   width: 33.3333333333%;
   background: #eeeeee;
   cursor: pointer;
@@ -1799,10 +1816,10 @@ table {
   margin-bottom: 2px;
   transition: 0.5s;
 }
-#middle_menu .inner .sub_gnb > li:last-child {
+#middle_menu .container .sub_gnb > li:last-child {
   border-right: 0;
 }
-#middle_menu .inner .sub_gnb > li span {
+#middle_menu .container .sub_gnb > li span {
   display: block;
   padding: auto;
   font: bold 20px/78px "Roboto", sans-serif;
@@ -1810,20 +1827,20 @@ table {
   text-align: center;
   position: relative;
 }
-#middle_menu .inner .sub_gnb > li:hover {
+#middle_menu .container .sub_gnb > li:hover {
   background: #333;
 }
-#middle_menu .inner .sub_gnb > li:hover span {
+#middle_menu .container .sub_gnb > li:hover span {
   color: #fff;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu {
+#middle_menu .container .sub_gnb > li:hover .sub_menu {
   width: 100%;
   display: block;
   background: #fff;
   text-align: center;
   transition: 0.5s;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul {
   width: 250px;
   margin: auto;
   border: 1px solid #333;
@@ -1831,56 +1848,56 @@ table {
   top: 80px;
   z-index: 3;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul li {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul li {
   height: 40px;
   background: #fff;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul li:hover {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul li:hover {
   background: #353535;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul li:hover a {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul li:hover a {
   color: #fff;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul li a {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul li a {
   font: 15px/40px "Roboto", sans-serif;
   display: inline-block;
   color: #333;
   letter-spacing: 2px;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul li.isSub:hover .sub_menu-2 {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul li.isSub:hover .sub_menu-2 {
   position: absolute;
   display: block;
   margin-top: -120px;
   margin-left: 249px;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul li.isSub:hover .sub_menu-2 li:hover {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul li.isSub:hover .sub_menu-2 li:hover {
   background: #333;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul li.isSub:hover .sub_menu-2 li:hover a {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul li.isSub:hover .sub_menu-2 li:hover a {
   color: #fff;
 }
-#middle_menu .inner .sub_gnb > li:hover .sub_menu ul li .sub_menu-2 ul li a {
+#middle_menu .container .sub_gnb > li:hover .sub_menu ul li .sub_menu-2 ul li a {
   color: #333;
 }
-#middle_menu .inner .sub_gnb > li .sub_menu {
+#middle_menu .container .sub_gnb > li .sub_menu {
   display: none;
 }
-#middle_menu .inner .sub_gnb > li .sub_menu .sub_menu-2 {
+#middle_menu .container .sub_gnb > li .sub_menu .sub_menu-2 {
   display: none;
 }
-#middle_menu .inner .intro {
+#middle_menu .container .intro {
   width: 100%;
   height: 350px;
   position: relative;
 }
-#middle_menu .inner .intro h2 {
+#middle_menu .container .intro h2 {
   width: 100%;
   font: bold 72px/1 "Roboto", sans-serif;
   color: #2a2a2a;
   text-align: center;
   margin: 40px auto;
 }
-#middle_menu .inner .intro h3 {
+#middle_menu .container .intro h3 {
   width: 900px;
   font: bold 25px/35px "Roboto", sans-serif;
   color: #2a2a2a;
@@ -1888,19 +1905,19 @@ table {
   margin: 0 auto 40px;
   text-align: center;
 }
-#middle_menu .inner .intro .p_wrap {
+#middle_menu .container .intro .p_wrap {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
 }
-#middle_menu .inner .intro .p_wrap p {
+#middle_menu .container .intro .p_wrap p {
   width: 520px;
   font: 15px/1.5 "Roboto", sans-serif;
   color: #bebebe;
   margin-bottom: 40px;
 }
-#middle_menu .inner .intro .p_wrap .left {
+#middle_menu .container .intro .p_wrap .left {
   margin-right: 20px;
   text-align: right;
 }
@@ -1910,26 +1927,26 @@ table {
   position: relative;
   background: #fff;
 }
-#service .inner {
+#service .container {
   width: 1180px;
   position: relative;
   margin: 0 auto;
 }
-#service .inner::after {
+#service .container::after {
   content: "";
   display: block;
   clear: both;
 }
-#service .inner article {
+#service .container article {
   width: 45%;
   float: left;
   margin-right: 5%;
 }
-#service .inner article:nth-of-type(2n),
-#service .inner article :last-child {
+#service .container article:nth-of-type(2n),
+#service .container article :last-child {
   margin-right: 0;
 }
-#service .inner article:last-child {
+#service .container article:last-child {
   width: 100%;
 }
 
@@ -1938,17 +1955,17 @@ table {
   position: relative;
   background: #fff;
 }
-#banner .inner {
+#banner .container {
   width: 1180px;
   position: relative;
   margin: 0 auto;
   overflow: hidden;
 }
-#banner .inner section {
+#banner .container section {
   width: 300%;
   height: 480px;
 }
-#banner .inner section div {
+#banner .container section div {
   width: 33.3333333333%;
   height: 100%;
   position: relative;
@@ -1958,7 +1975,7 @@ table {
   margin-bottom: 100px;
   overflow: hidden;
 }
-#banner .inner section div img {
+#banner .container section div img {
   width: 100%;
   height: 100%;
   position: relative;
@@ -1968,10 +1985,10 @@ table {
   filter: grayscale(1);
   transition: 0.5s;
 }
-#banner .inner section div img:hover {
+#banner .container section div img:hover {
   filter: grayscale(0);
 }
-#banner .inner section div p {
+#banner .container section div p {
   width: 100%;
   position: absolute;
   top: 15%;
@@ -1983,7 +2000,7 @@ table {
   color: #fff;
   letter-spacing: 20px;
 }
-#banner .inner section div a {
+#banner .container section div a {
   display: block;
   border: 1px solid #fff;
   font: bold 14px/1.2 "Roboto", sans-serif;
@@ -1996,30 +2013,30 @@ table {
   bottom: 10%;
   padding: 15px 25px;
 }
-#banner .inner .bn_btn {
+#banner .container .bn_btn {
   position: absolute;
   left: 50%;
   bottom: 5%;
   transform: translateX(-50%);
 }
-#banner .inner .bn_btn li {
+#banner .container .bn_btn li {
   width: 90px;
   height: 9px;
   float: left;
   margin-right: 4px;
   cursor: pointer;
 }
-#banner .inner .bn_btn li a {
+#banner .container .bn_btn li a {
   display: block;
   width: 100%;
   height: 100%;
   transition: 0.5s;
   background-color: #bebebe;
 }
-#banner .inner .bn_btn li.on a {
+#banner .container .bn_btn li.on a {
   background-color: #000;
 }
-#banner .inner .bn_btn li:last-child {
+#banner .container .bn_btn li:last-child {
   margin-right: 0;
 }
 
@@ -2027,69 +2044,69 @@ table {
   width: 100%;
   padding: 150px 0;
 }
-#offer .inner {
+#offer .container {
   width: 1180px;
   position: relative;
   margin: 0 auto;
 }
-#offer .inner h1 {
+#offer .container h1 {
   font: bold 24px/1 "Jost", sans-serif;
   color: #555;
   text-align: center;
   margin-bottom: 50px;
 }
-#offer .inner h2 {
+#offer .container h2 {
   margin-bottom: 10px;
   text-align: center;
 }
-#offer .inner h2 a {
+#offer .container h2 a {
   font: bold 16px/1 "Roboto", sans-serif;
   color: #282828;
 }
-#offer .inner h2:hover {
+#offer .container h2:hover {
   transform: scale(1.02);
 }
-#offer .inner p {
+#offer .container p {
   text-align: center;
   font: 14px/1.3 "Roboto", sans-serif;
   color: #777;
   margin-bottom: 20px;
 }
-#offer .inner .wrap {
+#offer .container .wrap {
   width: 100%;
 }
-#offer .inner .wrap::after {
+#offer .container .wrap::after {
   content: "";
   display: block;
   clear: both;
 }
-#offer .inner .wrap article {
+#offer .container .wrap article {
   width: 280px;
   margin-right: 20px;
   float: left;
 }
-#offer .inner .wrap article:last-child {
+#offer .container .wrap article:last-child {
   margin-right: 0px;
 }
-#offer .inner .wrap article .frame {
+#offer .container .wrap article .frame {
   width: 100%;
   height: 320px;
   position: relative;
 }
-#offer .inner .wrap article .frame .pic {
+#offer .container .wrap article .frame .pic {
   width: 100%;
   height: 280px;
   overflow: hidden;
   position: relative;
 }
-#offer .inner .wrap article .frame .pic img {
+#offer .container .wrap article .frame .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
   margin-bottom: 20px;
 }
-#offer .inner .wrap article .frame .pic .here {
+#offer .container .wrap article .frame .pic .here {
   display: none;
   width: 100px;
   height: 100px;
@@ -2102,7 +2119,7 @@ table {
   transition: 0.5s;
   z-index: 4;
 }
-#offer .inner .wrap article .frame .pic a {
+#offer .container .wrap article .frame .pic a {
   display: none;
   position: absolute;
   right: -20%;
@@ -2116,26 +2133,26 @@ table {
   align-items: center;
   opacity: 0.6;
 }
-#offer .inner .wrap article .frame .pic a i {
+#offer .container .wrap article .frame .pic a i {
   font-size: 25px;
   color: #282828;
 }
-#offer .inner .wrap article .frame .pic.on .here {
+#offer .container .wrap article .frame .pic.on .here {
   display: none;
   transform: scale(20);
 }
-#offer .inner .wrap article .frame .review {
+#offer .container .wrap article .frame .review {
   display: none;
   position: absolute;
   bottom: 10px;
   z-index: 3;
 }
-#offer .inner .wrap article .frame .review a i {
+#offer .container .wrap article .frame .review a i {
   color: gold;
   font-size: 10px;
   margin-left: 3px;
 }
-#offer .inner .wrap article .frame .btn_offer {
+#offer .container .wrap article .frame .btn_offer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2150,21 +2167,21 @@ table {
   margin: 8px auto;
   transition: 0.3s;
 }
-#offer .inner .wrap article .frame .btn_offer:hover {
+#offer .container .wrap article .frame .btn_offer:hover {
   opacity: 0.7;
 }
-#offer .inner .wrap article .frame .btn_offer i {
+#offer .container .wrap article .frame .btn_offer i {
   font-size: 14px;
   padding-left: 5px;
 }
-#offer .inner .wrap article .frame:hover img {
+#offer .container .wrap article .frame:hover img {
   transform: scale(1.1);
   opacity: 0.9;
 }
-#offer .inner .wrap article .frame:hover a {
+#offer .container .wrap article .frame:hover a {
   display: flex;
 }
-#offer .inner .wrap article .frame:hover .review {
+#offer .container .wrap article .frame:hover .review {
   display: flex;
 }
 
@@ -2175,27 +2192,27 @@ table {
   filter: grayscale(1);
   background-attachment: fixed;
 }
-#promo .inner {
+#promo .container {
   width: 1180px;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
   flex-direction: row;
 }
-#promo .inner .wrap {
+#promo .container .wrap {
   width: 30%;
   display: flex;
   flex-direction: column;
   margin: auto 50px;
 }
-#promo .inner .wrap h1 {
+#promo .container .wrap h1 {
   float: left;
   font: 700 70px/1.3 "Roboto";
   letter-spacing: 8px;
   color: #fff;
   margin-bottom: 20px;
 }
-#promo .inner .wrap p {
+#promo .container .wrap p {
   display: block;
   float: left;
   font: bold 24px/1.5 "Jost", sans-serif;
@@ -2203,7 +2220,7 @@ table {
   color: #fff;
   margin-bottom: 80px;
 }
-#promo .inner .wrap a {
+#promo .container .wrap a {
   display: block;
   position: absolute;
   width: 180px;
@@ -2219,7 +2236,7 @@ table {
   opacity: 1;
   bottom: 50px;
 }
-#promo .inner .wrap2 {
+#promo .container .wrap2 {
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -2229,7 +2246,7 @@ table {
   letter-spacing: 1px;
   opacity: 0.9;
 }
-#promo .inner .wrap2 p {
+#promo .container .wrap2 p {
   line-height: 2.3;
 }
 
@@ -2239,34 +2256,34 @@ table {
   background: #000;
   position: relative;
 }
-#track .inner {
+#track .container {
   width: 1180px;
   margin: 0 auto;
 }
-#track .inner::after {
+#track .container::after {
   content: "";
   display: block;
   clear: both;
 }
-#track .inner h1 {
+#track .container h1 {
   width: 100%;
   margin-bottom: 60px;
   font: bold 24px/1 "Jost", sans-serif;
   color: #fff;
   text-align: center;
 }
-#track .inner figure {
+#track .container figure {
   float: left;
   width: 50%;
   height: 380px;
   margin-bottom: 40px;
 }
-#track .inner figure video {
+#track .container figure video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#track .inner .record {
+#track .container .record {
   float: right;
   min-width: 40%;
   height: 400px;
@@ -2274,18 +2291,18 @@ table {
   flex-direction: column;
   justify-content: space-around;
 }
-#track .inner .record div {
+#track .container .record div {
   display: flex;
   align-items: center;
   width: 100%;
   color: #fff;
   font: 20px/1 "Jost", sans-serif;
 }
-#track .inner .record div img {
+#track .container .record div img {
   width: 72px;
   margin-right: 15px;
 }
-#track .inner .record div p {
+#track .container .record div p {
   display: inline-block;
   font: bold 20px/1 "Jost", sans-serif;
   margin-right: 3px;
@@ -2297,65 +2314,65 @@ table {
   background: #1c1c1c;
   position: relative;
 }
-#footer .inner {
+#footer .container {
   width: 1180px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-#footer .inner .wrap1 {
+#footer .container .wrap1 {
   padding-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-#footer .inner .wrap1 > a {
+#footer .container .wrap1 > a {
   display: block;
   font: bold 18px/1 "Jost", sans-serif;
   color: #fff;
   margin-bottom: 10px;
   cursor: pointer;
 }
-#footer .inner .wrap1 ul {
+#footer .container .wrap1 ul {
   display: flex;
   flex-direction: column;
 }
-#footer .inner .wrap1 ul li {
+#footer .container .wrap1 ul li {
   margin-top: 10px;
   color: #999;
 }
-#footer .inner .wrap1 ul li a {
+#footer .container .wrap1 ul li a {
   font: bold 16px/1 "Jost", sans-serif;
   color: #999;
 }
-#footer .inner .web_wrap2 {
+#footer .container .web_wrap2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   text-align: center;
 }
-#footer .inner .web_wrap2 img {
+#footer .container .web_wrap2 img {
   margin-bottom: 10px;
 }
-#footer .inner .web_wrap2 p {
+#footer .container .web_wrap2 p {
   font: 12px/1 "Arimo", sans-serif;
   color: #999;
 }
-#footer .inner .mob_wrap2 {
+#footer .container .mob_wrap2 {
   display: none;
   flex-direction: column;
   justify-content: flex-end;
   width: 150px;
 }
-#footer .inner .mob_wrap2 h1 {
+#footer .container .mob_wrap2 h1 {
   font: bold 15px "Arimo", sans-serif;
   letter-spacing: 2px;
   text-align: center;
   color: #333;
   text-shadow: 0 1px 1px #999;
 }
-#footer .inner .mob_wrap2 h1::after {
+#footer .container .mob_wrap2 h1::after {
   content: "";
   display: block;
   width: 150px;
@@ -2363,53 +2380,50 @@ table {
   background: #6d6d6d;
   margin: 10px 0;
 }
-#footer .inner .mob_wrap2 p {
+#footer .container .mob_wrap2 p {
   font: 10px/1 "Arimo", sans-serif;
   text-align: center;
   color: #6d6d6d;
 }
-#footer .inner .wrap3 {
+#footer .container .wrap3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   width: 250px;
 }
-#footer .inner .wrap3 div {
+#footer .container .wrap3 div {
   display: flex;
   justify-content: space-evenly;
 }
-#footer .inner .wrap3 div i {
+#footer .container .wrap3 div i {
   font-size: 25px;
   color: #999;
   cursor: pointer;
 }
-#footer .inner .wrap3 address {
+#footer .container .wrap3 address {
   font: 14px/1.3 "Jost", sans-serif;
   color: #999;
   margin-top: 10px;
 }
 
 @media screen and (max-width: 1180px) {
-  #header {
-    height: 60px;
-  }
-  #header .inner {
+  #header .container {
     width: 100%;
     padding: 0px 30px;
   }
-  #header .inner .web_menu {
+  #header .container .web_menu {
     padding-top: 22px;
   }
-  #header .inner .web_menu #gnb {
+  #header .container .web_menu #gnb {
     width: 65%;
   }
-  #header .inner .web_menu #gnb li a {
+  #header .container .web_menu #gnb li a {
     font: bold 13px/1 "Arimo", sans-serif;
   }
-  #header .inner .web_menu .log {
+  #header .container .web_menu .log {
     margin-right: 0;
   }
-  #header .inner .web_menu .log li a {
+  #header .container .web_menu .log li a {
     font: bold 13px/1 "Roboto", sans-serif;
   }
   #visual .visual .swiper .swiper-pagination {
@@ -2418,143 +2432,143 @@ table {
   #visual .visual .swiper .swiper-pagination span {
     width: 75px;
   }
-  #visual .visual .inner {
+  #visual .visual .container {
     width: 100%;
   }
-  #middle_menu.on .inner {
+  #middle_menu.on .container {
     width: 100%;
   }
-  #middle_menu.on .inner .sub_gnb {
+  #middle_menu.on .container .sub_gnb {
     width: 100%;
     padding: 0px 30px;
     left: 0;
   }
-  #middle_menu .inner {
+  #middle_menu .container {
     width: 100%;
     padding: 0px 30px;
     background: #fff;
   }
-  #middle_menu .inner .sub_gnb {
+  #middle_menu .container .sub_gnb {
     width: 100%;
     height: 65px;
   }
-  #middle_menu .inner .sub_gnb > li span {
+  #middle_menu .container .sub_gnb > li span {
     font: bold 18px/65px "Roboto", sans-serif;
   }
-  #middle_menu .inner .sub_gnb > li:hover .sub_menu ul {
+  #middle_menu .container .sub_gnb > li:hover .sub_menu ul {
     top: 65px;
   }
-  #middle_menu .inner .intro {
+  #middle_menu .container .intro {
     height: 300px;
   }
-  #middle_menu .inner .intro h2 {
+  #middle_menu .container .intro h2 {
     font: bold 55px/1 "Roboto", sans-serif;
     margin: 20px auto;
   }
-  #middle_menu .inner .intro span {
+  #middle_menu .container .intro span {
     font: bold 14px/1 "Roboto", sans-serif;
     letter-spacing: 2px;
     line-height: 20px;
     margin: 0 auto 40px;
     text-align: center;
   }
-  #middle_menu .inner .intro .p_wrap p {
+  #middle_menu .container .intro .p_wrap p {
     font: 13px/1.5 "Roboto", sans-serif;
   }
-  #middle_menu .inner .intro .p_wrap .left {
+  #middle_menu .container .intro .p_wrap .left {
     margin-right: 20px;
     text-align: right;
   }
   #banner {
     padding: 0 30px;
   }
-  #banner .inner {
+  #banner .container {
     width: 100%;
   }
-  #banner .inner section {
+  #banner .container section {
     height: 430px;
   }
-  #banner .inner section div {
+  #banner .container section div {
     margin-bottom: 80px;
   }
-  #banner .inner section div p {
+  #banner .container section div p {
     top: 10%;
     font: 900 65px/1.4 "Roboto", sans-serif;
   }
-  #banner .inner .bn_btn li {
+  #banner .container .bn_btn li {
     width: 75px;
   }
   #offer {
     padding: 100px 30px;
   }
-  #offer .inner {
+  #offer .container {
     width: 100%;
   }
-  #offer .inner .wrap {
+  #offer .container .wrap {
     padding: 0 5%;
   }
-  #offer .inner .wrap article {
+  #offer .container .wrap article {
     width: 47%;
     margin-right: 6%;
     margin-bottom: 30px;
   }
-  #offer .inner .wrap article:nth-of-type(2n) {
+  #offer .container .wrap article:nth-of-type(2n) {
     margin-right: 0;
   }
-  #offer .inner .wrap article .frame {
+  #offer .container .wrap article .frame {
     height: 360px;
   }
-  #offer .inner .wrap article .frame .review {
+  #offer .container .wrap article .frame .review {
     bottom: 40px;
   }
-  #offer .inner .wrap article .frame .review a i {
+  #offer .container .wrap article .frame .review a i {
     font-size: 15px;
   }
-  #offer .inner .wrap article .frame .btn_offer {
+  #offer .container .wrap article .frame .btn_offer {
     margin: 20px auto;
   }
   #promo {
     padding: 100px 30px;
   }
-  #promo .inner {
+  #promo .container {
     width: 100%;
   }
-  #promo .inner .wrap {
+  #promo .container .wrap {
     width: 100%;
     margin-right: 0;
   }
-  #promo .inner .wrap h1 {
+  #promo .container .wrap h1 {
     font: 700 60px/1.2 "Roboto", sans-serif;
     text-align: center;
   }
-  #promo .inner .wrap p {
+  #promo .container .wrap p {
     font: 50px/1.3 "Roboto", sans-serif;
     text-align: center;
   }
-  #promo .inner .wrap a {
+  #promo .container .wrap a {
     left: 50%;
     transform: translateX(-50%);
   }
   #track {
     padding: 70px 30px;
   }
-  #track .inner {
+  #track .container {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  #track .inner figure {
+  #track .container figure {
     width: 500px;
     height: 350px;
   }
-  #track .inner .record {
+  #track .container .record {
     display: block;
     min-width: 350px;
     height: 100%;
   }
-  #track .inner .record div {
+  #track .container .record div {
     display: flex;
     align-items: center;
     height: 80px;
@@ -2562,94 +2576,106 @@ table {
   #footer {
     padding: 60px 0;
   }
-  #footer .inner {
+  #footer .container {
     width: 100%;
   }
-  #footer .inner .mob_wrap2 {
+  #footer .container .mob_wrap2 {
     display: none;
   }
-  #footer .inner .wrap3 {
+  #footer .container .wrap3 {
     width: 200px;
     margin-right: 30px;
   }
-  #footer .inner .wrap3 address {
+  #footer .container .wrap3 address {
     font: 14px/1.3 "Jost", sans-serif;
     color: #999;
     margin-top: 20px;
   }
 }
 @media screen and (max-width: 900px) {
-  #header {
-    height: 80px;
-  }
-  #header .inner .web_menu {
-    padding-top: 0;
-  }
-  #header .inner .web_menu #gnb {
-    width: 85%;
-    padding-top: 35px;
-  }
-  #header .inner .web_menu #gnb li {
-    margin-left: 10px;
-    padding-right: 10px;
-  }
-  #header .inner .web_menu .log {
-    width: 15%;
-    height: 15px;
-  }
-  #header .inner .web_menu .log li {
+  #header .container .web_menu {
+    position: relative;
     width: 100%;
-    height: 30px;
-    margin-right: 0;
-    margin-top: 5px;
-    border: 1px solid #6d6d6d;
-    border-radius: 3px;
+    height: 100%;
+    padding-top: 30px;
   }
-  #header .inner .web_menu .log li a {
-    padding: 0;
-    border: none;
+  #header .container .web_menu .web_h1 a {
+    font: bold 13px/1 "Jost", sans-serif;
   }
-  #visual .visual .inner .cp_name {
+  #header .container .web_menu nav #gnb {
+    width: 64vw;
+  }
+  #header .container .web_menu nav #gnb li {
+    margin-left: 10px;
+  }
+  #header .container .web_menu nav #gnb li a {
+    font: bold 13px/1 "Jost", sans-serif;
+  }
+  #header .container .web_menu .log {
+    display: none;
+  }
+  #header .container .web_menu .tablet_log {
+    display: block;
+    width: 60px;
+    height: 100%;
+    float: right;
+    margin-right: 0px;
+  }
+  #header .container .web_menu .tablet_log li {
+    width: 20px;
+    float: left;
+    text-align: right;
+  }
+  #header .container .web_menu .tablet_log li:first-child {
+    margin-right: 20px;
+  }
+  #header .container .web_menu .tablet_log li a {
+    color: #fff;
+  }
+  #header .container .web_menu .tablet_log li a i {
+    font-size: 16px;
+  }
+  #visual .visual .container .cp_name {
     width: 170px;
     top: 25vh;
   }
-  #middle_menu .inner .sub_gnb > li:hover .sub_menu ul {
+  #middle_menu .container .sub_gnb > li:hover .sub_menu ul {
     width: 200px;
   }
-  #middle_menu .inner .sub_gnb > li:hover .sub_menu ul liisSub:hover .sub_menu-2 {
+  #middle_menu .container .sub_gnb > li:hover .sub_menu ul liisSub:hover .sub_menu-2 {
     margin-left: 399px;
   }
-  #middle_menu .inner .sub_gnb > li:hover .sub_menu ul li .sub_menu-2 {
+  #middle_menu .container .sub_gnb > li:hover .sub_menu ul li .sub_menu-2 {
     margin-top: 0px;
   }
-  #middle_menu .inner .sub_gnb > li:hover .sub_menu ul li .sub_menu-2 ul {
+  #middle_menu .container .sub_gnb > li:hover .sub_menu ul li .sub_menu-2 ul {
     width: 200px;
   }
-  #middle_menu .inner .sub_gnb > li:hover .sub_menu ul li .sub_menu-2 ul li a {
+  #middle_menu .container .sub_gnb > li:hover .sub_menu ul li .sub_menu-2 ul li a {
     letter-spacing: 1px;
   }
-  #banner .inner section div p {
+  #banner .container section div p {
     font: 900 55px/1.3 "Roboto", sans-serif;
     letter-spacing: 15px;
   }
-  #offer .inner .wrap article .frame .review {
+  #offer .container .wrap article .frame .review {
     left: 50%;
     transform: translateX(-50%);
     bottom: 57px;
   }
-  #offer .inner .wrap article .frame a {
+  #offer .container .wrap article .frame a {
     margin: 30px auto 0 auto;
   }
-  #promo .inner .wrap2 {
+  #promo .container .wrap2 {
     display: none;
   }
-  #footer .inner .wrap1 > a {
+  #footer .container .wrap1 > a {
     font: bold 16px/1 "Jost", sans-serif;
   }
-  #footer .inner .wrap1 ul li {
+  #footer .container .wrap1 ul li {
     margin-top: 5px;
   }
-  #footer .inner .wrap1 ul li a {
+  #footer .container .wrap1 ul li a {
     font: bold 14px/1 "Jost", sans-serif;
   }
 }
@@ -2658,33 +2684,22 @@ table {
     height: 90px;
     background: #e3e3e3;
   }
-  #header .inner {
+  #header:hover {
+    background: #e3e3e3;
+  }
+  #header .container {
     position: relative;
   }
-  #header .inner .web_h1 {
-    display: block;
-    width: 132px;
-    height: 90px;
-  }
-  #header .inner .web_h1 a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: url(../img/logo_white.png) no-repeat center/cover;
-  }
-  #header .inner .web_menu {
+  #header .container .web_menu {
     display: none;
   }
-  #header .inner .btn_call {
-    display: block;
-  }
-  #header .inner .mob_menu {
+  #header .container .mob_menu {
     display: block;
   }
   #visual .visual {
     height: 85vh;
   }
-  #visual .visual .inner .cp_name {
+  #visual .visual .container .cp_name {
     display: none;
   }
   #visual .visual .swiper .swiper-pagination span {
@@ -2694,82 +2709,82 @@ table {
   #middle_menu {
     z-index: 1;
   }
-  #middle_menu .inner .sub_gnb {
+  #middle_menu .container .sub_gnb {
     display: none;
   }
-  #middle_menu .inner .intro {
+  #middle_menu .container .intro {
     width: 100%;
     height: 400px;
   }
-  #middle_menu .inner .intro h2 {
+  #middle_menu .container .intro h2 {
     padding-top: 30px;
     font: bold 40px/1 "Roboto", sans-serif;
   }
-  #middle_menu .inner .intro span {
+  #middle_menu .container .intro span {
     width: 100%;
     margin: 20px auto;
   }
-  #middle_menu .inner .intro .p_wrap {
+  #middle_menu .container .intro .p_wrap {
     flex-wrap: wrap;
   }
-  #middle_menu .inner .intro .p_wrap p {
+  #middle_menu .container .intro .p_wrap p {
     width: 100%;
     margin-bottom: 20px;
     text-align: center;
   }
-  #middle_menu .inner .intro .p_wrap .left {
+  #middle_menu .container .intro .p_wrap .left {
     margin-right: 0;
     text-align: center;
   }
-  #banner .inner section div p {
+  #banner .container section div p {
     top: 10%;
     font: 900 45px/1.3 "Roboto", sans-serif;
     letter-spacing: 5px;
   }
-  #banner .inner .bn_btn li {
+  #banner .container .bn_btn li {
     width: 50px;
   }
-  #offer .inner .wrap article {
+  #offer .container .wrap article {
     width: 100%;
     margin-right: 0;
   }
   #promo {
     padding: 50px 20px;
   }
-  #promo .inner .wrap {
+  #promo .container .wrap {
     margin: auto;
   }
   #track {
     padding: 30px 20px;
   }
-  #track .inner figure {
+  #track .container figure {
     width: 100%;
     height: 100%;
   }
   #footer {
     padding: 30px 0;
   }
-  #footer .inner .wrap1 ul li {
+  #footer .container .wrap1 ul li {
     margin-top: 0px;
   }
-  #footer .inner .mob_wrap2 {
+  #footer .container .mob_wrap2 {
     display: flex;
   }
-  #footer .inner .web_wrap2 {
+  #footer .container .web_wrap2 {
     display: none;
   }
-  #footer .inner .wrap3 {
+  #footer .container .wrap3 {
     width: 30px;
   }
-  #footer .inner .wrap3 div {
+  #footer .container .wrap3 div {
     display: flex;
     flex-direction: column;
   }
-  #footer .inner .wrap3 div i {
+  #footer .container .wrap3 div i {
     font-size: 20px;
     margin-top: 20px;
   }
-  #footer .inner .wrap3 address {
+  #footer .container .wrap3 address {
     display: none;
   }
 }

@@ -17,32 +17,31 @@
 <body>
     <!-- header -->
     <header id="header_sub" class="page">
-        <div class="inner">
-            <!-- 클릭하면 최상단으로 오게 하는 버튼-->
-            <a href="#" class="on_top"><i class="fas fa-arrow-up"></i></a>
+        <div class="container">
 
-            <!-- 웹 vs 모바일버전의 h1이 다름 웹버전은 h1이 없음-->
-            <div class="web_h1">
-                <h1 class="hidden">Real Estate</h1>
-                <a href="index.html"></a>
-            </div>
-            <!-- 헤더메뉴 웹버전 -->
-            <nav class="web_menu">
+            <div class="web_menu">
+                <h1 class="web_h1">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>Home
+                    </a>
+                </h1>
 
-                <ul id="gnb">
-                    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
-                    <li><a href="office.html">Shared Office</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="youtube.html">Youtube</a></li>
-                    <li><a href="review.html">Review</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
 
+                <nav>
+                    <ul id="gnb">
+                        <li><a href="office.html">Shared Office</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="youtube.html">Youtube</a></li>
+                        <li><a href="review.html">Review</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </nav>
                 <ul class="log">
                     <li><a href="#">Log in</a></li>
                     <li><a href="sign_up.html">Sign up</a></li>
                 </ul>
-            </nav>
+            </div>
 
             <!-- 모바일버전에 생성되는 햄버거버튼 -->
             <a href="#" class="btn_call">
@@ -75,7 +74,7 @@
 
     <section class="content office">
         <div class="sub_bg"></div>
-        <div class="inner">
+        <div class="container">
             <h1>Shared Office <span>공유오피스란?</span></h1>
             <div class="wrap">
                 <div class="container">
@@ -157,6 +156,107 @@
 
                 </div>
             </div>
+
+            <section class="service">
+                <div class="container">
+                    <article>
+                        <h2>SERVICED OFFICE</h2>
+                        <h3>IDEAL FOR</h3>
+                        <p>
+                            <i class="far fa-check-circle"></i>Business corporations and multinationals
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Representative office and SMEs
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Flexible project space
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Short-term swing space
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Risk-free new market entry
+                        </p>
+                        <p>KRW 800,000 /PER MONTH</p>
+                    </article>
+
+                    <article>
+                        <h2>CO-WORKING SPACE</h2>
+                        <h3>IDEAL FOR</h3>
+                        <p>
+                            <i class="far fa-check-circle"></i>Individuals and freelancers
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Business networking
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Innovative start-ups
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Vibrant community event space
+                        </p>
+                        <p>COWORKING DAY PASS : KRW 50,000 /PER DAY</p>
+                        <p>DEDICATED WORKSTATION : KRW 650,000 /PER MONTH</p>
+                    </article>
+
+                    <article>
+                        <h2>VIRTUAL OFFICE</h2>
+                        <h3>IDEAL FOR</h3>
+                        <p>
+                            <i class="far fa-check-circle"></i>Entrepreneurs working from home
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Start-ups with a limited budget
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>SMEs with a regional presence
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Company registration address
+                        </p>
+                        <p>KRW 95,000 /PER MONTH</p>
+                    </article>
+
+                    <article>
+                        <h2>MEETING ROOMS & CONFERENCE FACILITIES</h2>
+                        <h3>IDEAL FOR</h3>
+                        <p>
+                            <i class="far fa-check-circle"></i>Business meetings
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Corporate trainings
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Business travellers
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Home office users
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Training venue
+                        </p>
+                        <p>MEETING ROOMS : KRW 60,000 /PER HOUR</p>
+                        <p>VIDEO CONFERENCING : KRW 250,000 /PER HOUR</p>
+                    </article>
+
+                    <article>
+                        <h2>BUSINESS SUPPORT SERVICES</h2>
+                        <p>
+                            <i class="far fa-check-circle"></i>Business Concierge
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Accounting & Tax consultation
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>Web design and hosting
+                        </p>
+                        <p>
+                            <i class="far fa-check-circle"></i>New market entry support
+                        </p>
+                    </article>
+                </div>
+
+            </section>
         </div>
 
     </section>
@@ -164,7 +264,7 @@
 
     <!-- footer -->
     <footer id="footer_sub">
-        <div class="inner">
+        <div class="container">
 
             <section class="wrap1">
                 <a href="#">QUICK LINKS</a>
