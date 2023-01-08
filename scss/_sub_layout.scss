@@ -3,7 +3,6 @@ $tablet-origin: 860px;
 $mobile: 600px;
 
 $bg-color: #e3e3e3;
-
 $main-font: 'Jost', sans-serif;
 $kr-font: 'Hahmlet', serif;
 
@@ -45,9 +44,10 @@ $kr-font: 'Hahmlet', serif;
 			.web-h1 {
 				float: left;
 				padding-right: 3vw;
+				height: 20px;
 				a {
 					display: block;
-					font: bold 16px/1 $main-font;
+					font: bold 16px/20px $main-font;
 					color: #282828;
 					transition: 0.5s;
 					i {
@@ -58,14 +58,14 @@ $kr-font: 'Hahmlet', serif;
 			nav {
 				#gnb {
 					width: 50vw;
-					height: 20px;
 					float: left;
 					li {
 						float: left;
 						padding-right: 3vw;
+						height: 20px;
 						a {
 							display: block;
-							font: bold 16px/1 $main-font;
+							font: bold 16px/20px $main-font;
 							color: #282828;
 							transition: 0.5s;
 						}
@@ -85,7 +85,7 @@ $kr-font: 'Hahmlet', serif;
 					margin-right: 10px;
 					a {
 						display: block;
-						font: 16px/1 $main-font;
+						font: 16px/20px $main-font;
 						padding: 5px 10px;
 						color: #282828;
 						border: 1px solid #6d6d6d;
@@ -98,6 +98,22 @@ $kr-font: 'Hahmlet', serif;
 			}
 			.tablet-log {
 				display: none;
+				width: 60px;
+				float: right;
+				margin-right: 0px;
+				li {
+					float: left;
+					text-align: right;
+					&:first-child {
+						margin-right: 20px;
+					}
+					a {
+						color: #282828;
+						i {
+							font-size: 16px;
+						}
+					}
+				}
 			}
 		}
 		.btn-call {
@@ -289,7 +305,7 @@ $kr-font: 'Hahmlet', serif;
 			justify-content: flex-end;
 			> a {
 				display: block;
-				font: bold 18px/1 'Roboto';
+				font: bold 18px/1 $main-font;
 				color: #fff;
 				margin-bottom: 10px;
 				cursor: pointer;
@@ -301,7 +317,7 @@ $kr-font: 'Hahmlet', serif;
 					margin-top: 10px;
 					color: #999;
 					a {
-						font: bold 16px/1 'Roboto';
+						font: bold 16px/1 $main-font;
 						color: #999;
 					}
 				}
@@ -318,7 +334,7 @@ $kr-font: 'Hahmlet', serif;
 				margin-bottom: 10px;
 			}
 			p {
-				font: 12px/1 'Roboto';
+				font: 12px/1 'Montserrat';
 				color: #999;
 			}
 		}
@@ -328,7 +344,7 @@ $kr-font: 'Hahmlet', serif;
 			justify-content: flex-end;
 			width: 150px;
 			h1 {
-				font: bold 15px 'Roboto';
+				font: bold 15px 'Montserrat';
 				letter-spacing: 2px;
 				text-align: center;
 				color: #333;
@@ -343,7 +359,7 @@ $kr-font: 'Hahmlet', serif;
 				}
 			}
 			p {
-				font: 10px/1 'Roboto';
+				font: 10px/1 'Montserrat';
 				text-align: center;
 				color: #6d6d6d;
 			}
@@ -353,10 +369,11 @@ $kr-font: 'Hahmlet', serif;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-			width: 250px;
+			width: 200px;
+			text-align: right;
 			div {
 				display: flex;
-				justify-content: space-evenly;
+				justify-content: space-between;
 				i {
 					font-size: 25px;
 					color: #999;
@@ -364,7 +381,7 @@ $kr-font: 'Hahmlet', serif;
 				}
 			}
 			address {
-				font: 14px/1.3 'Roboto';
+				font: 14px/1.3 $main-font;
 				color: #999;
 				margin-top: 10px;
 			}
@@ -375,24 +392,25 @@ $kr-font: 'Hahmlet', serif;
 @media screen and (max-width: $tablet-plus) {
 	//header 영역
 	#header_sub {
-		height: 72px;
 		.container {
 			width: 100%;
+			height: 100%;
 			padding: 0px 30px;
 			.web-menu {
-				padding-top: 22px;
+				position: relative;
+				height: 100%;
 				nav {
 					#gnb {
-						width: 65%;
+						width: 64vw;
 						li a {
-							font: bold 15px/1 $main-font;
+							font: bold 15px/20px $main-font;
 						}
 					}
 				}
 				.log {
 					margin-right: 0;
 					li a {
-						font: bold 15px/1 $main-font;
+						font: bold 15px/20px $main-font;
 					}
 				}
 			}
@@ -421,26 +439,21 @@ $kr-font: 'Hahmlet', serif;
 }
 
 @media screen and (max-width: $tablet-origin) {
-	//header
+	//header영역
 	#header_sub {
 		.container {
 			.web-menu {
-				position: relative;
-				width: 100%;
-				height: 100%;
-				padding-top: 30px;
 				.web-h1 {
 					a {
-						font: bold 13px/1 $main-font;
+						font: bold 13px/20px $main-font;
 					}
 				}
 				nav {
 					#gnb {
-						width: 64vw;
 						li {
 							margin-left: 10px;
 							a {
-								font: bold 13px/1 $main-font;
+								font: bold 13px/20px $main-font;
 							}
 						}
 					}
@@ -450,24 +463,6 @@ $kr-font: 'Hahmlet', serif;
 				}
 				.tablet-log {
 					display: block;
-					width: 60px;
-					height: 100%;
-					float: right;
-					margin-right: 0px;
-					li {
-						width: 20px;
-						float: left;
-						text-align: right;
-						&:first-child {
-							margin-right: 20px;
-						}
-						a {
-							color: #282828;
-							i {
-								font-size: 16px;
-							}
-						}
-					}
 				}
 			}
 		}
@@ -485,7 +480,7 @@ $kr-font: 'Hahmlet', serif;
 		}
 	}
 
-	//footer{
+	//footer 영역
 	#footer_sub {
 		.container {
 			.wrap1 {

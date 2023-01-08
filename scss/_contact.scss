@@ -1,127 +1,145 @@
 .contact {
 	width: 100%;
 	.sub-bg {
-		background: url(../img/sub_menu_bg.jpg) no-repeat center/cover;
+		background: url(../img/sub_menu_bg.jpg) no-repeat 0% 45% / cover;
 	}
 	.container {
-		width: 1180px;
-		margin: 0 auto;
 		&::after {
 			content: '';
 			display: block;
 			clear: both;
 		}
-		h2 {
-			font: 25px/50px $main-font;
-			margin-bottom: 10px;
-			margin-left: 20px;
-		}
-		.enquire-submit {
-			position: relative;
-			width: 55%;
-			height: 420px;
-			display: flex;
-			flex-direction: column;
-			border: 1px solid #ddd;
+		.enquire {
 			float: left;
-			margin-bottom: 100px;
-			margin-right: 5%;
-			input {
-				height: 50px;
-				margin: 10px 20px;
-				padding-left: 20px;
-				border: none;
-				font-family: $main-font;
-				font-size: 15px;
-				&:nth-of-type(4) {
-					height: 100px;
-				}
+			width: 100%;
+			height: 100%;
+			h2 {
+				font: 25px/50px $main-font;
+				margin-bottom: 10px;
+				margin-left: 20px;
 			}
-			a {
-				width: 150px;
-				height: 50px;
-				color: #fff;
-				background-color: #6d6d6d;
+			form {
+				position: relative;
+				width: 55%;
+				height: 420px;
 				display: flex;
-				justify-content: center;
-				align-items: center;
-				position: absolute;
-				right: 20px;
-				bottom: 20px;
-				transition: 0.5s;
-				&:hover {
-					color: #000;
+				flex-direction: column;
+				border: 1px solid #ddd;
+				float: left;
+				margin-bottom: 100px;
+				margin-right: 5%;
+				input[type='text'] {
+					height: 50px;
+					margin: 10px 20px;
+					padding-left: 20px;
+					border: none;
+					font-family: $main-font;
+					font-size: 15px;
+					background: $bg-color;
+					&:nth-of-type(1) {
+						margin-top: 20px;
+					}
+					&:nth-of-type(4) {
+						height: 100px;
+					}
+				}
+				input[type='submit'] {
+					width: 150px;
+					height: 50px;
+					color: #fff;
+					background-color: #6d6d6d;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					border: none;
+					right: 20px;
+					bottom: 20px;
+					transition: 0.5s;
+					&:hover {
+						color: #000;
+					}
 				}
 			}
-		}
-		.info {
-			float: left;
-			width: 40%;
-			height: 420px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-around;
-			div {
-				font: 20px/1 $main-font;
-				p {
-					font: 16px/1 $main-font;
-					margin-top: 20px;
-					margin-bottom: 40px;
-				}
-				.sns-icons {
-					margin-top: 20px;
-					i {
-						margin-right: 10px;
+			.info {
+				float: left;
+				width: 40%;
+				height: 420px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				div {
+					font: 20px/1 $main-font;
+					p {
+						font: 16px/1 $main-font;
+						margin-top: 20px;
+						margin-bottom: 40px;
+					}
+					.sns-icons {
+						margin-top: 20px;
+						i {
+							margin-right: 10px;
+						}
 					}
 				}
 			}
 		}
-		#map {
-			width: 100%;
-			height: 450px;
-			border: 1px solid #eee;
-			margin-bottom: 20px;
-		}
-		.traffic {
+
+		.location {
 			float: left;
-			li {
+			width: 100%;
+			h2 {
+				font: 25px/50px $main-font;
+				margin-bottom: 10px;
+				margin-left: 20px;
+			}
+			#map {
+				width: 100%;
+				height: 450px;
+				border: 1px solid #eee;
+				margin-bottom: 20px;
+			}
+			.traffic {
 				float: left;
-				margin-right: 10px;
-				margin-bottom: 60px;
-				a {
-					display: block;
-					width: 120px;
-					height: 40px;
-					background: #fff;
-					font: bold 14px/40px 'Poppins', sans-serif;
-					color: #555;
-					text-align: center;
-					border: 1px solid #555;
-				}
-				.on a {
-					color: #fff;
-					background: #555;
+				li {
+					float: left;
+					margin-right: 10px;
+					margin-bottom: 60px;
+					a {
+						display: block;
+						width: 120px;
+						height: 40px;
+						background: #fff;
+						font: bold 14px/40px 'Poppins', sans-serif;
+						color: #555;
+						text-align: center;
+						border: 1px solid #555;
+					}
+					.on a {
+						color: #fff;
+						background: #555;
+					}
 				}
 			}
-		}
-		.branch {
-			float: right;
-			li {
-				float: left;
-				margin-left: 10px;
-				a {
-					display: block;
-					width: 120px;
-					height: 40px;
-					background: #fff;
-					font: bold 14px/40px 'Poppins', sans-serif;
-					color: #555;
-					text-align: center;
-					border: 1px solid #555;
-				}
-				.on a {
-					color: #fff;
-					background: #555;
+			.branch {
+				float: right;
+				li {
+					float: left;
+					margin-left: 10px;
+					a {
+						display: block;
+						width: 120px;
+						height: 40px;
+						background: #fff;
+						font: bold 14px/40px 'Poppins', sans-serif;
+						color: #555;
+						text-align: center;
+						border: 1px solid #555;
+					}
+					.on a {
+						color: #fff;
+						background: #555;
+					}
 				}
 			}
 		}
@@ -145,14 +163,16 @@
 		}
 		.container {
 			width: 610px;
-			.traffic {
-				li a {
-					width: 100px;
+			.location {
+				.traffic {
+					li a {
+						width: 100px;
+					}
 				}
-			}
-			.branch {
-				li a {
-					width: 93px;
+				.branch {
+					li a {
+						width: 93px;
+					}
 				}
 			}
 		}
@@ -163,22 +183,24 @@
 	.contact {
 		.container {
 			width: 500px;
-			#map {
-				height: 300px;
-			}
-			.traffic {
-				width: 100%;
-				li {
-					margin-bottom: 20px;
-					a {
-						width: 100px;
+			.location {
+				#map {
+					height: 300px;
+				}
+				.traffic {
+					width: 100%;
+					li {
+						margin-bottom: 20px;
+						a {
+							width: 100px;
+						}
 					}
 				}
-			}
-			.branch {
-				width: 100%;
-				li:first-child {
-					margin-left: 0;
+				.branch {
+					width: 100%;
+					li:first-child {
+						margin-left: 0;
+					}
 				}
 			}
 		}

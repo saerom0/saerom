@@ -63,9 +63,10 @@ $main-font: 'Jost', sans-serif;
 			.web-h1 {
 				float: left;
 				padding-right: 3vw;
+				height: 20px;
 				a {
 					display: block;
-					font: bold 16px/1 $main-font;
+					font: bold 16px/20px $main-font;
 					color: #eee;
 					transition: 0.5s;
 					&:hover {
@@ -90,7 +91,7 @@ $main-font: 'Jost', sans-serif;
 						}
 						a {
 							display: block;
-							font: bold 16px/1 $main-font;
+							font: bold 16px/20px $main-font;
 							color: #eee;
 							transition: 0.5s;
 						}
@@ -529,6 +530,7 @@ $main-font: 'Jost', sans-serif;
 		}
 	}
 }
+
 //두번째 슬라이드 영역
 #banner {
 	width: 100%;
@@ -981,10 +983,11 @@ $main-font: 'Jost', sans-serif;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-			width: 250px;
+			width: 200px;
+			text-align: right;
 			div {
 				display: flex;
-				justify-content: space-evenly;
+				justify-content: space-between;
 				i {
 					font-size: 25px;
 					color: #999;
@@ -1000,10 +1003,10 @@ $main-font: 'Jost', sans-serif;
 	}
 }
 
-//미디어쿼리 3영역으로 구분
+//미디어쿼리 3영역
 //$tablet-plus (901px~1180px)
-//$tablet-origin (600px~899px)
-//$mobile (~599px)
+//$tablet-origin (601px~900px)
+//$mobile (~600px)
 @media screen and (max-width: $tablet-plus) {
 	//header 영역
 	#header {
@@ -1011,7 +1014,7 @@ $main-font: 'Jost', sans-serif;
 			width: 100%;
 			padding: 0px 30px;
 			.web-menu {
-				padding-top: 22px;
+				padding-top: 25px;
 				#gnb {
 					width: 65%;
 					li a {
