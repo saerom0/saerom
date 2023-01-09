@@ -14,8 +14,9 @@ $mobile: 600px;
 
 $bg-color: #e3e3e3;
 $main-font: 'Jost', sans-serif;
+$kr-font: 'Hahmlet', serif;
 
-//헤더 영역
+// Header 영역
 #header {
 	width: 100%;
 	height: 72px;
@@ -43,8 +44,8 @@ $main-font: 'Jost', sans-serif;
 			justify-content: center;
 			align-items: center;
 			position: fixed;
-			right: 30px;
-			bottom: 30px;
+			right: 5vw;
+			bottom: 5vh;
 			z-index: 5;
 			background: transparent;
 			border: 2px solid #555;
@@ -125,6 +126,24 @@ $main-font: 'Jost', sans-serif;
 			}
 			.tablet-log {
 				display: none;
+				width: 60px;
+				height: 100%;
+				float: right;
+				margin-right: 0px;
+				li {
+					width: 20px;
+					float: left;
+					text-align: right;
+					&:first-child {
+						margin-right: 20px;
+					}
+					a {
+						color: #fff;
+						i {
+							font-size: 16px;
+						}
+					}
+				}
 			}
 		}
 		.btn-call {
@@ -358,6 +377,7 @@ $main-font: 'Jost', sans-serif;
 	position: relative;
 	margin-top: -15vh;
 	z-index: 2;
+	overflow: hidden;
 	&.on .container {
 		.sub-gnb {
 			position: fixed;
@@ -374,6 +394,17 @@ $main-font: 'Jost', sans-serif;
 						color: #333;
 					}
 				}
+			}
+		}
+		.intro {
+			h2 {
+				transform: scale(1);
+			}
+			h3 {
+				transform: scale(1);
+			}
+			.p-wrap {
+				transform: scale(1);
 			}
 		}
 	}
@@ -396,7 +427,7 @@ $main-font: 'Jost', sans-serif;
 				margin-bottom: 2px;
 				transition: 0.5s;
 				&:last-child {
-					border-right: 0;
+					border-right: none;
 				}
 				span {
 					display: block;
@@ -434,6 +465,8 @@ $main-font: 'Jost', sans-serif;
 									}
 								}
 								a {
+									width: 100%;
+									height: 100%;
 									font: 15px/ 40px 'Roboto', sans-serif;
 									display: inline-block;
 									color: #333;
@@ -469,28 +502,33 @@ $main-font: 'Jost', sans-serif;
 			}
 		}
 		.intro {
-			width: 100%;
 			position: relative;
+			width: 100%;
 			h2 {
 				width: 100%;
 				font: bold 72px/1 'Roboto', sans-serif;
 				color: #2a2a2a;
 				text-align: center;
 				margin: 60px auto;
+				transform: scale(1);
 			}
 			h3 {
+				position: relative;
 				width: 900px;
 				font: bold 25px/35px 'Roboto', sans-serif;
 				color: #2a2a2a;
 				letter-spacing: 3px;
 				margin: 0 auto 40px;
 				text-align: center;
+				transform: scale(1);
 			}
 			.p-wrap {
 				display: flex;
 				flex-wrap: nowrap;
 				justify-content: center;
 				align-items: center;
+				transform: scale(1);
+
 				p {
 					width: 520px;
 					font: 15px/1.5 'Roboto', sans-serif;
@@ -541,6 +579,9 @@ $main-font: 'Jost', sans-serif;
 		position: relative;
 		margin: 0 auto;
 		overflow: hidden;
+		&:hover section div img {
+			filter: grayscale(0);
+		}
 		section {
 			width: calc(100% * 3);
 			height: 480px;
@@ -562,9 +603,6 @@ $main-font: 'Jost', sans-serif;
 					opacity: 0.8;
 					filter: grayscale(1);
 					transition: 0.5s;
-					&:hover {
-						filter: grayscale(0);
-					}
 				}
 				p {
 					width: 100%;
@@ -583,7 +621,7 @@ $main-font: 'Jost', sans-serif;
 					border: 1px solid #fff;
 					font: bold 14px/1.2 'Roboto', sans-serif;
 					color: #000;
-					letter-spacing: 5px;
+					letter-spacing: 3px;
 					background: #fff;
 					position: absolute;
 					left: 50%;
@@ -742,7 +780,6 @@ $main-font: 'Jost', sans-serif;
 						width: 130px;
 						height: 35px;
 						border: 1px solid #fff;
-						border-radius: 5px;
 						font: 11px/35px 'Roboto';
 						color: #fff;
 						letter-spacing: 1px;
@@ -751,10 +788,6 @@ $main-font: 'Jost', sans-serif;
 						transition: 0.3s;
 						&:hover {
 							opacity: 0.7;
-						}
-						i {
-							font-size: 14px;
-							padding-left: 5px;
 						}
 					}
 					&:hover {
@@ -800,6 +833,9 @@ $main-font: 'Jost', sans-serif;
 				letter-spacing: 8px;
 				color: #fff;
 				margin-bottom: 20px;
+				opacity: 0;
+				transform: translateY(80px);
+				transition-duration: 0.5s;
 			}
 			p {
 				display: block;
@@ -808,6 +844,9 @@ $main-font: 'Jost', sans-serif;
 				letter-spacing: 2px;
 				color: #fff;
 				margin-bottom: 80px;
+				opacity: 0;
+				transform: translateY(80px);
+				transition-duration: 0.5s;
 			}
 			a {
 				display: block;
@@ -824,6 +863,9 @@ $main-font: 'Jost', sans-serif;
 				bottom: 0;
 				opacity: 1;
 				bottom: 50px;
+				opacity: 0;
+				transform: translateY(80px);
+				transition-duration: 0.5s;
 			}
 		}
 		.wrap2 {
@@ -837,6 +879,39 @@ $main-font: 'Jost', sans-serif;
 			opacity: 0.9;
 			p {
 				line-height: 2.3;
+				opacity: 0;
+				transform: translateY(80px);
+				transition-duration: 0.5s;
+			}
+		}
+	}
+	&.on {
+		.container {
+			.wrap {
+				h1 {
+					opacity: 1;
+					transform: translateY(0px);
+					transition-delay: 0s;
+				}
+				p {
+					opacity: 1;
+					transform: translateY(0px);
+					transition-delay: 0.1s;
+				}
+				a {
+					opacity: 1;
+					transform: translateY(0px);
+					transition-delay: 0.2s;
+				}
+			}
+			.wrap2 p {
+				@for $i from 0 to 7 {
+					&:nth-of-type(#{$i + 1}) {
+						opacity: 1;
+						transform: translateY(0px);
+						transition-delay: $i * 0.1s;
+					}
+				}
 			}
 		}
 	}
@@ -1260,24 +1335,6 @@ $main-font: 'Jost', sans-serif;
 				}
 				.tablet-log {
 					display: block;
-					width: 60px;
-					height: 100%;
-					float: right;
-					margin-right: 0px;
-					li {
-						width: 20px;
-						float: left;
-						text-align: right;
-						&:first-child {
-							margin-right: 20px;
-						}
-						a {
-							color: #fff;
-							i {
-								font-size: 16px;
-							}
-						}
-					}
 				}
 			}
 		}
