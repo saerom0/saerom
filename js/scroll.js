@@ -48,7 +48,7 @@ window.addEventListener('scroll', () => {
 		counter('.record-4', 9700, 1500);
 	}
 	//promo
-	if (scroll >= posArr[4] + 200) {
+	if (scroll >= posArr[4]) {
 		pages[5].classList.add('on');
 	} else {
 		pages[5].classList.remove('on');
