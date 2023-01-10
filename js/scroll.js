@@ -1,7 +1,7 @@
 const pages = document.querySelectorAll('.page');
 const lis = document.querySelectorAll('.quick li');
 let posArr = [];
-let base = -window.innerHeight / 2;
+let base = -window.innerHeight / 1.5;
 const ontop = document.querySelector('.on-top');
 
 getPos();
@@ -48,7 +48,7 @@ window.addEventListener('scroll', () => {
 		counter('.record-4', 9700, 1500);
 	}
 	//promo
-	if (scroll >= posArr[4]) {
+	if (scroll >= posArr[5] + base) {
 		pages[5].classList.add('on');
 	} else {
 		pages[5].classList.remove('on');

@@ -1,5 +1,5 @@
 $tablet-plus: 1180px;
-$tablet-origin: 860px;
+$tablet-origin: 900px;
 $mobile: 600px;
 
 $bg-color: #e3e3e3;
@@ -273,7 +273,7 @@ $kr-font: 'Hahmlet', serif;
 		h1 {
 			font: 50px/1 $kr-font;
 			color: #000;
-			margin-bottom: 60px;
+			padding: 50px;
 			span {
 				font: 20px/1 $kr-font;
 				color: #aaa;

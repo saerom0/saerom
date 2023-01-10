@@ -290,7 +290,7 @@ table {
 .content .container h1 {
   font: 50px/1 "Hahmlet", serif;
   color: #000;
-  margin-bottom: 60px;
+  padding: 50px;
 }
 .content .container h1 span {
   font: 20px/1 "Hahmlet", serif;
@@ -442,7 +442,7 @@ table {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 900px) {
   #header_sub .container .web-menu .web-h1 a {
     font: bold 13px/20px "Jost", sans-serif;
   }
@@ -864,7 +864,7 @@ table {
     padding: 60px 40px;
   }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 900px) {
   .contact .sub-bg {
     height: 220px;
   }
@@ -1006,7 +1006,7 @@ table {
     padding: 60px 40px;
   }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 900px) {
   .review .container table {
     width: 95%;
   }
@@ -1018,6 +1018,10 @@ table {
   .review .container .pagination p a:nth-of-type(4), .review .container .pagination p a:nth-of-type(5) {
     display: none;
   }
+}
+.youtube .sub-bg {
+  background: url(../img/youtube.jpg) no-repeat 0% 70%/cover;
+  filter: grayscale(0.2);
 }
 .youtube h1 {
   padding: 50px;
@@ -1106,6 +1110,9 @@ table {
     font: bold 11px/1 "Hahmlet", serif;
   }
 }
+.gallery .sub-bg {
+  background: url(../img/gallery.png) no-repeat 0% 55%/cover;
+}
 .gallery .container {
   position: relative;
 }
@@ -1115,7 +1122,7 @@ table {
 }
 .gallery .container #gallery #searchBox {
   width: 85%;
-  padding: 50px;
+  padding: 0 50px;
 }
 .gallery .container #gallery #searchBox #search {
   width: 180px;
@@ -1142,7 +1149,7 @@ table {
 }
 .gallery .container #gallery #wrap .loading {
   position: fixed;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100px;
@@ -1237,7 +1244,7 @@ table {
     width: 100%;
   }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 900px) {
   .gallery .container #gallery #wrap #list li {
     width: 50%;
   }
@@ -1248,15 +1255,14 @@ table {
   }
 }
 .office .sub-bg {
-  background: url(../img/office_bg.png) no-repeat center/cover;
-  filter: grayscale(0.8);
+  background: url(../img/office222.jpg) no-repeat 0% 55%/cover;
 }
-.office .container .qna {
-  margin-bottom: 50px;
+.office .container h1 {
+  padding: 50px;
 }
 .office .container .qna h2 {
   width: 80%;
-  margin-bottom: 20px;
+  padding: 50px;
   font: 25px/1 "Hahmlet", serif;
 }
 .office .container .qna .wrap {
@@ -1371,7 +1377,7 @@ table {
 }
 .office .container #service_type h2 {
   width: 80%;
-  margin-bottom: 20px;
+  padding: 50px;
   font: 25px/1 "Hahmlet", serif;
 }
 .office .container #service_type .wrap {
@@ -1427,14 +1433,24 @@ table {
 }
 
 @media screen and (max-width: 1180px) {
-  .office .inner {
+  .office .container {
     width: 100%;
   }
-  .office .inner .wrap .container p {
-    font-size: 18px;
+  .office .container h1 {
+    margin-bottom: 0;
+  }
+  .office .container .qna h2 {
+    padding: 20px;
+    font: 20px/1 "Hahmlet", serif;
+  }
+  .office .container .qna .wrap .inner .tab label h4 {
+    width: 70%;
+  }
+  .office .container #service_type {
+    width: 80%;
   }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 900px) {
   .office .inner .wrap .container p {
     font-size: 15px;
   }
@@ -1444,7 +1460,7 @@ table {
 }
 #header {
   width: 100%;
-  height: 72px;
+  height: 80px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1469,8 +1485,8 @@ table {
   justify-content: center;
   align-items: center;
   position: fixed;
-  right: 5vw;
-  bottom: 5vh;
+  right: 30px;
+  bottom: 30px;
   z-index: 5;
   background: transparent;
   border: 2px solid #555;
@@ -1489,11 +1505,10 @@ table {
 #header .container .web-menu .web-h1 {
   float: left;
   padding-right: 3vw;
-  height: 20px;
 }
 #header .container .web-menu .web-h1 a {
   display: block;
-  font: bold 16px/20px "Jost", sans-serif;
+  font: bold 16px/1 "Jost", sans-serif;
   color: #eee;
   transition: 0.5s;
 }
@@ -1517,7 +1532,7 @@ table {
 }
 #header .container .web-menu nav #gnb > li a {
   display: block;
-  font: bold 16px/20px "Jost", sans-serif;
+  font: bold 16px/1 "Jost", sans-serif;
   color: #eee;
   transition: 0.5s;
 }
@@ -1548,24 +1563,6 @@ table {
 }
 #header .container .web-menu .tablet-log {
   display: none;
-  width: 60px;
-  height: 100%;
-  float: right;
-  margin-right: 0px;
-}
-#header .container .web-menu .tablet-log li {
-  width: 20px;
-  float: left;
-  text-align: right;
-}
-#header .container .web-menu .tablet-log li:first-child {
-  margin-right: 20px;
-}
-#header .container .web-menu .tablet-log li a {
-  color: #fff;
-}
-#header .container .web-menu .tablet-log li a i {
-  font-size: 16px;
 }
 #header .container .btn-call {
   display: none;
@@ -1779,7 +1776,6 @@ table {
   position: relative;
   margin-top: -15vh;
   z-index: 2;
-  overflow: hidden;
 }
 #middle_menu.on .container .sub-gnb {
   position: fixed;
@@ -1797,15 +1793,6 @@ table {
 }
 #middle_menu.on .container .sub-gnb > li:hover span {
   color: #333;
-}
-#middle_menu.on .container .intro h2 {
-  transform: scale(1);
-}
-#middle_menu.on .container .intro h3 {
-  transform: scale(1);
-}
-#middle_menu.on .container .intro .p-wrap {
-  transform: scale(1);
 }
 #middle_menu .container {
   width: 1180px;
@@ -1829,7 +1816,7 @@ table {
   transition: 0.5s;
 }
 #middle_menu .container .sub-gnb > li:last-child {
-  border-right: none;
+  border-right: 0;
 }
 #middle_menu .container .sub-gnb > li span {
   display: block;
@@ -1871,8 +1858,6 @@ table {
   color: #fff;
 }
 #middle_menu .container .sub-gnb > li:hover .sub-menu ul li a {
-  width: 100%;
-  height: 100%;
   font: 15px/40px "Roboto", sans-serif;
   display: inline-block;
   color: #333;
@@ -1900,8 +1885,8 @@ table {
   display: none;
 }
 #middle_menu .container .intro {
-  position: relative;
   width: 100%;
+  position: relative;
 }
 #middle_menu .container .intro h2 {
   width: 100%;
@@ -1909,24 +1894,20 @@ table {
   color: #2a2a2a;
   text-align: center;
   margin: 60px auto;
-  transform: scale(1);
 }
 #middle_menu .container .intro h3 {
-  position: relative;
   width: 900px;
   font: bold 25px/35px "Roboto", sans-serif;
   color: #2a2a2a;
   letter-spacing: 3px;
   margin: 0 auto 40px;
   text-align: center;
-  transform: scale(1);
 }
 #middle_menu .container .intro .p-wrap {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  transform: scale(1);
 }
 #middle_menu .container .intro .p-wrap p {
   width: 520px;
@@ -1974,9 +1955,6 @@ table {
   margin: 0 auto;
   overflow: hidden;
 }
-#banner .container:hover section div img {
-  filter: grayscale(0);
-}
 #banner .container section {
   width: 300%;
   height: 480px;
@@ -2001,6 +1979,9 @@ table {
   filter: grayscale(1);
   transition: 0.5s;
 }
+#banner .container section div img:hover {
+  filter: grayscale(0);
+}
 #banner .container section div p {
   width: 100%;
   position: absolute;
@@ -2018,7 +1999,7 @@ table {
   border: 1px solid #fff;
   font: bold 14px/1.2 "Roboto", sans-serif;
   color: #000;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   background: #fff;
   position: absolute;
   left: 50%;
@@ -2173,6 +2154,7 @@ table {
   width: 130px;
   height: 35px;
   border: 1px solid #fff;
+  border-radius: 5px;
   font: 11px/35px "Roboto";
   color: #fff;
   letter-spacing: 1px;
@@ -2182,6 +2164,10 @@ table {
 }
 #offer .container .wrap article .frame .btn-offer:hover {
   opacity: 0.7;
+}
+#offer .container .wrap article .frame .btn-offer i {
+  font-size: 14px;
+  padding-left: 5px;
 }
 #offer .container .wrap article .frame:hover img {
   transform: scale(1.1);
@@ -2220,9 +2206,6 @@ table {
   letter-spacing: 8px;
   color: #fff;
   margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(80px);
-  transition-duration: 0.5s;
 }
 #promo .container .wrap p {
   display: block;
@@ -2231,9 +2214,6 @@ table {
   letter-spacing: 2px;
   color: #fff;
   margin-bottom: 80px;
-  opacity: 0;
-  transform: translateY(80px);
-  transition-duration: 0.5s;
 }
 #promo .container .wrap a {
   display: block;
@@ -2250,9 +2230,6 @@ table {
   bottom: 0;
   opacity: 1;
   bottom: 50px;
-  opacity: 0;
-  transform: translateY(80px);
-  transition-duration: 0.5s;
 }
 #promo .container .wrap2 {
   display: flex;
@@ -2266,59 +2243,6 @@ table {
 }
 #promo .container .wrap2 p {
   line-height: 2.3;
-  opacity: 0;
-  transform: translateY(80px);
-  transition-duration: 0.5s;
-}
-#promo.on .container .wrap h1 {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0s;
-}
-#promo.on .container .wrap p {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.1s;
-}
-#promo.on .container .wrap a {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.2s;
-}
-#promo.on .container .wrap2 p:nth-of-type(1) {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0s;
-}
-#promo.on .container .wrap2 p:nth-of-type(2) {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.1s;
-}
-#promo.on .container .wrap2 p:nth-of-type(3) {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.2s;
-}
-#promo.on .container .wrap2 p:nth-of-type(4) {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.3s;
-}
-#promo.on .container .wrap2 p:nth-of-type(5) {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.4s;
-}
-#promo.on .container .wrap2 p:nth-of-type(6) {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.5s;
-}
-#promo.on .container .wrap2 p:nth-of-type(7) {
-  opacity: 1;
-  transform: translateY(0px);
-  transition-delay: 0.6s;
 }
 
 #track {
@@ -2460,12 +2384,11 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 200px;
-  text-align: right;
+  width: 250px;
 }
 #footer .container .wrap3 div {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 #footer .container .wrap3 div i {
   font-size: 25px;
@@ -2484,7 +2407,7 @@ table {
     padding: 0px 30px;
   }
   #header .container .web-menu {
-    padding-top: 25px;
+    padding-top: 22px;
   }
   #header .container .web-menu #gnb {
     width: 65%;
@@ -2691,6 +2614,24 @@ table {
   }
   #header .container .web-menu .tablet-log {
     display: block;
+    width: 60px;
+    height: 100%;
+    float: right;
+    margin-right: 0px;
+  }
+  #header .container .web-menu .tablet-log li {
+    width: 20px;
+    float: left;
+    text-align: right;
+  }
+  #header .container .web-menu .tablet-log li:first-child {
+    margin-right: 20px;
+  }
+  #header .container .web-menu .tablet-log li a {
+    color: #fff;
+  }
+  #header .container .web-menu .tablet-log li a i {
+    font-size: 16px;
   }
   #visual .visual .container .cp-name {
     width: 170px;

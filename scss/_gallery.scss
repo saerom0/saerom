@@ -1,4 +1,7 @@
 .gallery {
+	.sub-bg {
+		background: url(../img/gallery.png) no-repeat 0% 55% / cover;
+	}
 	.container {
 		position: relative;
 		h1 {
@@ -8,7 +11,7 @@
 		#gallery {
 			#searchBox {
 				width: 85%;
-				padding: 50px;
+				padding: 0 50px;
 
 				#search {
 					width: 180px;
@@ -35,7 +38,7 @@
 				padding: 30px;
 				.loading {
 					position: fixed;
-					top: 50%;
+					top: 60%;
 					left: 50%;
 					transform: translate(-50%, -50%);
 					width: 100px;

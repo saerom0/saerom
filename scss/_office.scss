@@ -1,16 +1,17 @@
 .office {
 	.sub-bg {
-		background: url(../img/office_bg.png) no-repeat center/cover;
-		filter: grayscale(0.8);
+		background: url(../img/office222.jpg) no-repeat 0% 55% / cover;
 	}
 	.container {
+		h1 {
+			padding: 50px;
+		}
 		.qna {
 			h2 {
 				width: 80%;
-				margin-bottom: 20px;
+				padding: 50px;
 				font: 25px/1 $kr-font;
 			}
-			margin-bottom: 50px;
 			.wrap {
 				display: flex;
 				justify-content: center;
@@ -125,7 +126,7 @@
 			margin: 0 auto;
 			h2 {
 				width: 80%;
-				margin-bottom: 20px;
+				padding: 50px;
 				font: 25px/1 $kr-font;
 			}
 			.wrap {
@@ -187,14 +188,30 @@
 
 @media screen and (max-width: $tablet-plus) {
 	.office {
-		.inner {
+		.container {
 			width: 100%;
-			.wrap {
-				.container {
-					p {
-						font-size: 18px;
+			h1 {
+				margin-bottom: 0;
+			}
+			.qna {
+				h2 {
+					padding: 20px;
+					font: 20px/1 $kr-font;
+				}
+				.wrap {
+					.inner {
+						.tab {
+							label {
+								h4 {
+									width: 70%;
+								}
+							}
+						}
 					}
 				}
+			}
+			#service_type {
+				width: 80%;
 			}
 		}
 	}

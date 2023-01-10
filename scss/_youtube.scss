@@ -1,4 +1,8 @@
 .youtube {
+	.sub-bg {
+		background: url(../img/youtube.jpg) no-repeat 0% 70% / cover;
+		filter: grayscale(0.2);
+	}
 	h1 {
 		padding: 50px;
 	}
