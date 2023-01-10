@@ -1920,30 +1920,6 @@ table {
   text-align: right;
 }
 
-#service {
-  width: 100%;
-  height: 500px;
-  position: relative;
-  background: #fff;
-}
-#service .container {
-  width: 1180px;
-  position: relative;
-  margin: 0 auto;
-}
-#service .container::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#service .container article {
-  width: 100%;
-  float: left;
-}
-#service .container article h2 {
-  font: bold 25px/1.5 "Montserrat";
-}
-
 #banner {
   width: 100%;
   position: relative;
@@ -2039,16 +2015,15 @@ table {
   overflow: hidden;
 }
 #offer h1 {
-  width: 100%;
   font: bold 24px/1 "Jost", sans-serif;
   color: #555;
   text-align: center;
   margin-bottom: 50px;
 }
 #offer .container {
-  width: 200%;
   position: relative;
-  margin-left: 17vw;
+  width: 1180px;
+  margin: 0 auto;
 }
 #offer .container h2 {
   margin-bottom: 10px;
@@ -2187,6 +2162,10 @@ table {
   filter: grayscale(1);
   background-attachment: fixed;
 }
+#promo.on .container .wrap2 p {
+  transform: translateY(0);
+  opacity: 1;
+}
 #promo .container {
   width: 1180px;
   margin: 0 auto;
@@ -2227,8 +2206,6 @@ table {
   text-align: center;
   letter-spacing: 1px;
   cursor: pointer;
-  bottom: 0;
-  opacity: 1;
   bottom: 50px;
 }
 #promo .container .wrap2 {
@@ -2243,6 +2220,33 @@ table {
 }
 #promo .container .wrap2 p {
   line-height: 2.3;
+  opacity: 0;
+  transform: translateY(80px);
+  transition-duration: 0.5s;
+}
+#promo .container .wrap2 p:nth-of-type(1) {
+  transition-delay: 0s;
+}
+#promo .container .wrap2 p:nth-of-type(2) {
+  transition-delay: 0.1s;
+}
+#promo .container .wrap2 p:nth-of-type(3) {
+  transition-delay: 0.2s;
+}
+#promo .container .wrap2 p:nth-of-type(4) {
+  transition-delay: 0.3s;
+}
+#promo .container .wrap2 p:nth-of-type(5) {
+  transition-delay: 0.4s;
+}
+#promo .container .wrap2 p:nth-of-type(6) {
+  transition-delay: 0.5s;
+}
+#promo .container .wrap2 p:nth-of-type(7) {
+  transition-delay: 0.6s;
+}
+#promo .container .wrap2 p:nth-of-type(8) {
+  transition-delay: 0.7s;
 }
 
 #track {

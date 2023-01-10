@@ -1,7 +1,7 @@
 const pages = document.querySelectorAll('.page');
 const lis = document.querySelectorAll('.quick li');
 let posArr = [];
-let base = -window.innerHeight / 1.5;
+let base = -window.innerHeight / 2;
 const ontop = document.querySelector('.on-top');
 
 getPos();
@@ -20,11 +20,6 @@ window.addEventListener('scroll', () => {
 	});
 
 	//header - middle -h3 - banner - offer - promo - track
-	// if (scroll >= posArr[1]) {
-	// 	pages[2].classList.add('on');
-	// } else {
-	// 	pages[2].classList.remove('on');
-	// }
 	if (scroll >= posArr[1] + base) {
 		pages[0].classList.add('on');
 		pages[1].classList.add('on');
@@ -53,7 +48,7 @@ window.addEventListener('scroll', () => {
 	} else {
 		pages[5].classList.remove('on');
 	}
-	console.log(posArr);
+	// console.log(posArr);
 });
 
 //track 카운터 함수
