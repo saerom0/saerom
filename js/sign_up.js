@@ -1,6 +1,6 @@
 //약관동의 전체 체크
 function selectAll(selectAll) {
-	const checkboxes = document.getElementsByName('all_agree');
+	const checkboxes = document.getElementsByName('all-agree');
 
 	checkboxes.forEach((checkbox) => {
 		checkbox.checked = selectAll.checked;

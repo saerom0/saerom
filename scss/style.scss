@@ -969,10 +969,11 @@ $kr-font: 'Hahmlet', serif;
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-end;
-			width: 250px;
-			div {
+			width: 200px;
+			.sns-icons {
 				display: flex;
-				justify-content: space-evenly;
+				justify-content: space-between;
+				margin-bottom: 20px;
 				i {
 					font-size: 25px;
 					color: #999;
@@ -983,6 +984,7 @@ $kr-font: 'Hahmlet', serif;
 				font: 14px/1.3 $main-font;
 				color: #999;
 				margin-top: 10px;
+				text-align: right;
 			}
 		}
 	}

@@ -1,18 +1,29 @@
 .gallery {
-	.sub-bg {
-		background: url(../img/gallery.png) no-repeat 0% 55% / cover;
-	}
 	.container {
 		position: relative;
 		h1 {
-			padding: 50px;
-			margin-bottom: 0;
+			padding: 0 50px 30px;
+			border-bottom: 1px solid #bbbbbb;
+			font: 40px/1 'arial';
+			margin-bottom: 80px;
 		}
-		#gallery {
-			#searchBox {
-				width: 85%;
-				padding: 0 50px;
 
+		#gallery {
+			position: relative;
+			h2 {
+				font: bold 70px/1 'arial';
+				padding: 50px;
+			}
+			#searchBox {
+				position: absolute;
+				width: 265px;
+				top: 60px;
+				right: 50px;
+				a {
+					display: block;
+					color: #333;
+					margin-bottom: 10px;
+				}
 				#search {
 					width: 180px;
 					height: 30px;
@@ -29,8 +40,35 @@
 					text-align: center;
 					border: none;
 					cursor: pointer;
-					margin-left: 10px;
+					margin-left: 5px;
 					vertical-align: top;
+				}
+			}
+			.gallery-intro {
+				position: relative;
+				padding: 0 50px;
+				&::after {
+					content: '';
+					display: block;
+					clear: both;
+				}
+				font: 14px/1.5 'arial';
+				p {
+					float: left;
+					&:nth-of-type(1) {
+						width: 50%;
+						text-align: left;
+						padding-right: 20%;
+					}
+					&:nth-of-type(2) {
+						width: 25%;
+						padding-right: 5%;
+					}
+					&:nth-of-type(3) {
+						width: 25%;
+						text-align: right;
+						padding-left: 5%;
+					}
 				}
 			}
 			#wrap {
@@ -66,6 +104,7 @@
 						float: left;
 						width: calc(100% / 3);
 						padding: 15px;
+
 						div {
 							width: 100%;
 							padding: 10px;

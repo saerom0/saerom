@@ -258,13 +258,13 @@ $kr-font: 'Hahmlet', serif;
 }
 
 .content {
+	position: relative;
 	width: 100%;
-
 	.container {
 		position: relative;
 		width: 1180px;
 		min-height: 400px;
-		margin: 100px auto 150px;
+		margin: 80px auto 150px;
 	}
 }
 
