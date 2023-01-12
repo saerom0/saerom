@@ -1,217 +1,244 @@
 .office {
-	.sub-bg {
-		background: url(../img/office222.jpg) no-repeat 0% 55% / cover;
-	}
 	.container {
 		h1 {
 			padding: 50px;
+			border-bottom: 1px solid #bbbbbb;
+			font: 40px/1 'arial';
+			margin-bottom: 80px;
 		}
-		.qna {
-			h2 {
-				width: 80%;
-				padding: 50px;
-				font: 25px/1 $kr-font;
-			}
-			.wrap {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				.inner {
-					margin: 0 50px;
-					max-width: 800px;
-					display: flex;
-					flex-direction: column;
-					margin-bottom: 20px;
-					font-family: $kr-font;
-
-					p {
-						text-indent: 15px;
-						color: #333;
-						margin-bottom: 50px;
-					}
-					.tab {
-						position: relative;
-						background: #eee;
-						padding: 0 20px 20px;
-						border-radius: 5px;
-						box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-						overflow: hidden;
-						&:hover label::after {
-							color: #333;
-						}
-						input[type='checkbox'] {
-							appearance: none;
-							&:checked + label::after {
-								transform: rotate(135deg);
-								color: #fff;
-							}
-							&:checked ~ .information {
-								max-height: 100vh;
-								p {
-									color: #fff;
-								}
-							}
-							&:checked ~ label h3 {
-								width: 100%;
-								height: 100%;
-								position: absolute;
-								top: 0;
-								left: 0;
-								color: rgba(255, 255, 255, 0.2);
-								justify-content: flex-end;
-								font-size: 100px;
-								padding: 20px;
-								transition: 0.2s;
-							}
-							&:checked ~ label h4 {
-								background: #fff;
-								padding: 2px 10px;
-								color: #333;
-								border-radius: 2px;
-								box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-							}
-						}
-						label {
-							display: flex;
-							align-items: center;
-							cursor: pointer;
-							&::after {
-								content: '+';
-								position: absolute;
-								right: 20px;
-								font-size: 32px;
-								transition: 0.2s;
-								color: rgba(0, 0, 0, 0.1);
-							}
-							h3 {
-								width: 40px;
-								height: 40px;
-								background: #333;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								color: #fff;
-								font-size: 20px;
-								margin-right: 10px;
-							}
-							h4 {
-								position: relative;
-								font-weight: 500;
-								color: #333;
-								z-index: 10;
-							}
-						}
-						.information {
-							max-height: 0;
-							transition: 0.5s;
-							overflow: hidden;
-							p {
-								position: relative;
-								padding: 10px 0;
-								color: #333;
-								z-index: 10;
-							}
-						}
-
-						label h3 {
-							background: linear-gradient(135deg, violet, #6b64d1);
-						}
-					}
-				}
-			}
-		}
-		#service_type {
+		.wrap-1 {
 			position: relative;
 			width: 100%;
-			margin: 0 auto;
-			h2 {
-				width: 80%;
-				padding: 50px;
-				font: 25px/1 $kr-font;
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
 			}
-			.wrap {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				ul {
-					li {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 300px;
-						height: 80px;
-						margin-bottom: 5px;
-						border-radius: 5px;
-						background: #eee;
-						cursor: pointer;
-						box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-						transform: scale(1);
-						transition: 0.5s;
-						h3 {
-							font: bold 20px/1 $main-font;
-							color: #000;
-							text-align: center;
-						}
-						&:hover {
-							transform: scale(1.02);
-							box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
-							z-index: 2;
-						}
-						&.on {
-							background: $bg-color;
-						}
-					}
+			h2 {
+				float: left;
+				width: 60%;
+				font: 60px/70px 'arial';
+				margin-right: 5%;
+				padding: 0 50px;
+			}
+			.intro {
+				float: right;
+				width: 35%;
+				padding: 0 50px;
+				h3 {
+					margin-bottom: 20px;
 				}
-				article {
-					width: 500px;
-					padding-left: 50px;
-					display: none;
-					&.on {
-						display: block;
+				p {
+					margin-bottom: 50px;
+				}
+			}
+			.circle {
+				position: absolute;
+				bottom: 10%;
+				left: 35%;
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+				background: #000;
+				a {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 100%;
+					font: 13px/1 'arial';
+					color: #fff;
+					transform: rotate(-30deg);
+				}
+			}
+		}
+		.wrap-2 {
+			position: relative;
+			width: 100%;
+			padding: 0 50px;
+			margin: 80px 0;
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			article {
+				width: 100%;
+				height: 600px;
+				&:hover img {
+					filter: grayscale(0);
+				}
+				h2 {
+					position: absolute;
+					width: 70%;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					text-align: center;
+					font: 65px/1.3 'arial';
+					color: #fff;
+					z-index: 2;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					filter: grayscale(1);
+					transition: 0.5s;
+				}
+			}
+		}
+		.wrap-3 {
+			position: relative;
+			margin-bottom: 100px;
+			.contents {
+				margin: 0 50px;
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 80px;
+				font-family: 'arial';
+				.sub-title {
+					color: #333;
+					margin: 30px 0;
+					font: 40px/1.3 'arial';
+				}
+				.tab {
+					position: relative;
+					width: 100%;
+					background: #fff;
+					padding: 0 20px 20px;
+					border-bottom: 1px solid #ddd;
+					box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+					overflow: hidden;
+					&:last-child {
+						border-bottom: none;
 					}
-					h3 {
-						font-size: 30px;
-						margin-bottom: 40px;
+					&:hover label::after {
+						color: #333;
 					}
-					p {
-						font: 20px/1 $main-font;
-						margin-bottom: 20px;
-						i {
+					input[type='checkbox'] {
+						appearance: none;
+						&:checked + label::after {
+							transform: rotate(135deg);
+							color: #eee;
+						}
+						&:checked ~ .information {
+							max-height: 100vh;
+							p {
+								color: #fff;
+							}
+						}
+						&:checked ~ label h3 {
+							width: 100%;
+							height: 100%;
+							position: absolute;
+							top: 0;
+							left: 0;
+							color: rgba(255, 255, 255, 0.2);
+							justify-content: flex-end;
+							font-size: 100px;
+							padding: 20px;
+							transition: 0.2s;
+						}
+						&:checked ~ label h4 {
+							background: #fff;
+							padding: 2px 10px;
+							color: #333;
+							border-radius: 2px;
+							box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+						}
+					}
+					label {
+						display: flex;
+						align-items: center;
+						cursor: pointer;
+						&::after {
+							content: '+';
+							position: absolute;
+							right: 20px;
+							font-size: 32px;
+							transition: 0.2s;
+							color: rgba(0, 0, 0, 0.1);
+						}
+						h3 {
+							width: 40px;
+							height: 40px;
+							background: #333;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							color: #fff;
+							font-size: 20px;
 							margin-right: 10px;
+						}
+						h4 {
+							position: relative;
+							color: #333;
+							z-index: 10;
+							font-weight: normal;
+						}
+					}
+					.information {
+						max-height: 0;
+						transition: 0.5s;
+						overflow: hidden;
+						p {
+							position: relative;
+							padding: 10px 0;
+							font: 15px/2 'arial';
+							color: #fff;
+							z-index: 10;
 						}
 					}
 				}
 			}
 		}
-	}
-}
-
-@media screen and (max-width: $tablet-plus) {
-	.office {
-		.container {
-			width: 100%;
-			h1 {
-				margin-bottom: 0;
+		.wrap-4 {
+			position: relative;
+			padding: 0 50px;
+			&::after {
+				content: '';
+				display: block;
+				clear: both;
 			}
-			.qna {
-				h2 {
-					padding: 20px;
-					font: 20px/1 $kr-font;
+			h2 {
+				width: 75%;
+				color: #333;
+				font: 40px/1.3 'arial';
+				margin-bottom: 30px;
+			}
+			article {
+				width: calc(100% / 3);
+				height: 400px;
+				float: left;
+				padding-right: 30px;
+				filter: grayscale(1);
+				transition: 0.5s;
+				&:hover {
+					filter: grayscale(0);
 				}
-				.wrap {
-					.inner {
-						.tab {
-							label {
-								h4 {
-									width: 70%;
-								}
-							}
-						}
+				&:nth-of-type(3n) {
+					padding-right: none;
+				}
+				&:nth-of-type(1),
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					margin-bottom: 30px;
+				}
+				h3 {
+					font: 15px/1.3 'arial';
+					word-break: keep-all;
+					&:nth-of-type(3) {
+						margin-bottom: 50px;
 					}
 				}
-			}
-			#service_type {
-				width: 80%;
+				strong {
+					text-decoration: underline;
+				}
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
 			}
 		}
 	}

@@ -84,14 +84,14 @@ view_btn.forEach((el) => {
 	});
 });
 
-//promo영역
-const promo = document.querySelector('.promo-text');
-const promo_text = promo.innerText;
-let tags1 = '';
-let n = 1;
-for (const el of promo_text) {
-	tags1 += `<span style='transition-delay:${0.3 * n}s'>${el}</span>`;
-	// console.log(tags1);
-	n += 1;
-}
-promo.innerHTML = tags1;
+// //promo영역
+// const promo = document.querySelector('.promo-text');
+// const promo_text = promo.innerText;
+// let tags1 = '';
+// let n = 1;
+// for (const el of promo_text) {
+// 	tags1 += `<span style='transition-delay:${0.3 * n}s'>${el}</span>`;
+// 	// console.log(tags1);
+// 	n += 1;
+// }
+// promo.innerHTML = tags1;
