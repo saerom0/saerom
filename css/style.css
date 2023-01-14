@@ -280,7 +280,7 @@ table {
   position: relative;
   width: 1180px;
   min-height: 400px;
-  margin: 80px auto 150px;
+  margin: 50px auto 150px;
 }
 
 #footer_sub {
@@ -1007,12 +1007,68 @@ table {
     display: none;
   }
 }
-.youtube .sub-bg {
-  background: url(../img/youtube.jpg) no-repeat 0% 70%/cover;
-  filter: grayscale(0.2);
-}
 .youtube h1 {
-  padding: 50px;
+  padding: 0 50px 30px;
+  border-bottom: 1px solid #bbbbbb;
+  font: 40px/1 "arial";
+  margin-bottom: 80px;
+}
+.youtube .youtube-title-left {
+  position: relative;
+  float: left;
+  width: 60%;
+  padding: 30px 0 0 50px;
+}
+.youtube .youtube-title-left .title-sub1 {
+  width: 45%;
+  float: left;
+  text-indent: 80px;
+  font: 12px/1.2 "arial";
+}
+.youtube .youtube-title-left h2 {
+  width: 50%;
+  font: 100px/1 "arial";
+  float: left;
+  text-align: left;
+}
+.youtube .youtube-title-left h3 {
+  width: 100%;
+  font: 100px/1 "arial";
+  text-align: left;
+  letter-spacing: 5px;
+}
+.youtube .youtube-title-right {
+  position: relative;
+  float: right;
+  width: 38%;
+  margin-bottom: 80px;
+}
+.youtube .youtube-title-right span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  color: #555;
+}
+.youtube .youtube-title-right p {
+  position: absolute;
+  top: 38px;
+  left: 68px;
+  font: 13px/1.2 "arial";
+  background: #fff;
+}
+.youtube .youtube-title-right figure {
+  width: 350px;
+  height: 150px;
+  margin: 20px auto;
+}
+.youtube .youtube-title-right figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .youtube .videoList {
   width: 100%;
@@ -1112,12 +1168,12 @@ table {
 }
 .gallery .container #gallery h2 {
   font: bold 70px/1 "arial";
-  padding: 50px;
+  padding: 0px 50px 50px;
 }
 .gallery .container #gallery #searchBox {
   position: absolute;
   width: 265px;
-  top: 60px;
+  top: 0px;
   right: 50px;
 }
 .gallery .container #gallery #searchBox a {
@@ -1315,16 +1371,24 @@ table {
 .office .container .wrap-1 .intro p {
   margin-bottom: 50px;
 }
-.office .container .wrap-1 .circle {
+.office .container .wrap-1 .move {
   position: absolute;
   bottom: 10%;
-  left: 35%;
+  left: 100px;
+  width: 40%;
+  height: 150px;
+}
+.office .container .wrap-1 .move .circle {
+  position: relative;
+  top: 0;
+  left: 70%;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
   background: #000;
+  border-radius: 50%;
+  animation: move 10s linear infinite;
 }
-.office .container .wrap-1 .circle a {
+.office .container .wrap-1 .move .circle a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1522,6 +1586,20 @@ table {
   object-fit: cover;
 }
 
+@keyframes move {
+  0% {
+    left: 70%;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 0%;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: 70%;
+    transform: rotate(0deg);
+  }
+}
 @media screen and (max-width: 1180px) {
   .office .container {
     width: 100%;
