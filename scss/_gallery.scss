@@ -14,7 +14,7 @@
 				font: bold 70px/1 'arial';
 				padding: 0px 50px 50px;
 			}
-			#searchBox {
+			#search_box {
 				position: absolute;
 				width: 265px;
 				top: 0px;
@@ -44,7 +44,7 @@
 					vertical-align: top;
 				}
 			}
-			.gallery-intro {
+			.gallery-title {
 				position: relative;
 				padding: 0 50px;
 				&::after {
@@ -71,7 +71,7 @@
 					}
 				}
 			}
-			#wrap {
+			#gallery_box {
 				width: 100%;
 				padding: 30px;
 				.loading {
@@ -190,7 +190,16 @@
 	.gallery {
 		.container {
 			#gallery {
-				#wrap {
+				h2 {
+					font: 60px/1 'arial';
+				}
+				#search_box {
+					position: relative;
+					left: 50px;
+					margin-bottom: 20px;
+				}
+
+				#gallery_box {
 					#list {
 						li {
 							width: 50%;
@@ -206,7 +215,24 @@
 	.gallery {
 		.container {
 			#gallery {
-				#wrap {
+				.gallery-title p {
+					&:nth-of-type(1) {
+						width: 100%;
+						padding-right: 0;
+						margin-bottom: 20px;
+					}
+					&:nth-of-type(2) {
+						width: 100%;
+						padding-right: 0;
+						margin-bottom: 20px;
+					}
+					&:nth-of-type(3) {
+						width: 100%;
+						text-align: left;
+						padding-left: 0;
+					}
+				}
+				#gallery_box {
 					#list {
 						li {
 							width: 100%;

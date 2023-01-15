@@ -8,8 +8,9 @@
 	.youtube-title-left {
 		position: relative;
 		float: left;
-		width: 60%;
+		width: 55%;
 		padding: 30px 0 0 50px;
+
 		.title-sub1 {
 			width: 45%;
 			float: left;
@@ -18,21 +19,23 @@
 		}
 		h2 {
 			width: 50%;
-			font: 100px/1 'arial';
-			float: left;
-			text-align: left;
+			font: 90px/1 'arial';
+			margin-bottom: 15px;
+			float: right;
+			text-align: right;
 		}
 		h3 {
 			width: 100%;
-			font: 100px/1 'arial';
-			text-align: left;
-			letter-spacing: 5px;
+			font: 90px/1.1 'arial';
+			float: left;
+			text-align: right;
 		}
 	}
 	.youtube-title-right {
 		position: relative;
 		float: right;
 		width: 38%;
+		padding-right: 50px;
 		margin-bottom: 80px;
 		span {
 			display: flex;
