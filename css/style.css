@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Hahmlet&family=Montserrat&family=Roboto:wght@400;700&family=Sunflower&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital@1&family=Gowun+Dodum&family=Jost&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -443,7 +442,7 @@ table {
     height: 220px;
   }
   .content .container h1 {
-    font: 35px/1 "Hahmlet", serif;
+    font: 35px/1 "Gowun Dodum", sans-serif;
     margin-bottom: 40px;
   }
   #footer_sub .container .wrap1 > a {
@@ -522,7 +521,7 @@ table {
   flex-direction: column;
 }
 .sign-up .container form fieldset .all-agree {
-  font: bold 16px/2 "Hahmlet", serif;
+  font: bold 16px/2 "Gowun Dodum", sans-serif;
   letter-spacing: 1.2px;
   display: flex;
   align-items: center;
@@ -533,7 +532,7 @@ table {
   height: 20px;
 }
 .sign-up .container form fieldset h2 {
-  font: 15px/1 "Hahmlet", serif;
+  font: 15px/1 "Gowun Dodum", sans-serif;
   letter-spacing: 1px;
   margin: 30px 0 10px 0;
 }
@@ -553,7 +552,7 @@ table {
 }
 .sign-up .container form fieldset .agree label[for=must-agree],
 .sign-up .container form fieldset .agree label[for=choice-agree] {
-  font: 14px/1 "Hahmlet", serif;
+  font: 14px/1 "Gowun Dodum", sans-serif;
 }
 .sign-up .container form fieldset .agree input {
   margin-left: 5px;
@@ -615,7 +614,7 @@ table {
 .sign-up .container form fieldset table td {
   border-bottom: 1px solid #bbb;
   padding: 15px;
-  font: 14px/1 "Hahmlet", serif;
+  font: 14px/1 "Gowun Dodum", sans-serif;
 }
 .sign-up .container form fieldset table td input[type=text],
 .sign-up .container form fieldset table td input[type=password] {
@@ -652,10 +651,10 @@ table {
   font-family: "Sunflower", sans-serif;
 }
 .sign-up .container form fieldset table td select#gender {
-  font-family: "Hahmlet", serif;
+  font-family: "Gowun Dodum", sans-serif;
 }
 .sign-up .container form fieldset table td input#email::-webkit-input-placeholder {
-  font-family: "Hahmlet", serif;
+  font-family: "Gowun Dodum", sans-serif;
 }
 .sign-up .container form fieldset table td select#company {
   width: 30%;
@@ -678,10 +677,10 @@ table {
 }
 @media screen and (max-width: 600px) {
   .sign-up .container form .all-agree {
-    font: bold 13px/1.5 "Hahmlet", serif;
+    font: bold 13px/1.5 "Gowun Dodum", sans-serif;
   }
   .sign-up .container form h2 {
-    font: 13px/1 "Hahmlet", serif;
+    font: 13px/1 "Gowun Dodum", sans-serif;
   }
   .sign-up .container form table th {
     font: bold 13px/1 "Roboto", sans-serif;
@@ -1105,12 +1104,12 @@ table {
   padding: 10px;
 }
 .youtube .videoList article .con h2 {
-  font: bold 15px/1.2 "Hahmlet", serif;
+  font: bold 15px/1.2 "Gowun Dodum", sans-serif;
   color: #444;
   margin-bottom: 10px;
 }
 .youtube .videoList article .con p {
-  font: 12px/1.4 "Hahmlet", serif;
+  font: 12px/1.4 "Gowun Dodum", sans-serif;
   color: #666;
   margin-bottom: 10px;
 }
@@ -1153,7 +1152,7 @@ table {
     height: 420px;
   }
   .youtube .container .videoList article .con span {
-    font: bold 11px/1 "Hahmlet", serif;
+    font: bold 11px/1 "Gowun Dodum", sans-serif;
   }
 }
 .gallery .container {
@@ -1188,13 +1187,13 @@ table {
   height: 30px;
   border: 1px solid #333;
   padding-left: 10px;
-  font: 14px/30px "Hahmlet", serif;
+  font: 14px/30px "Gowun Dodum", sans-serif;
 }
 .gallery .container #gallery #search_box .btn-search {
   width: 70px;
   height: 30px;
   background: #333;
-  font: bold 13px/30px "Hahmlet", serif;
+  font: bold 13px/30px "Gowun Dodum", sans-serif;
   color: #fff;
   text-align: center;
   border: none;
@@ -2043,6 +2042,11 @@ table {
   margin-top: -15vh;
   z-index: 2;
 }
+#middle_menu::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 #middle_menu.on .container .sub-gnb {
   position: fixed;
   width: 1180px;
@@ -2084,7 +2088,7 @@ table {
 #middle_menu .container .sub-gnb > li:last-child {
   border-right: 0;
 }
-#middle_menu .container .sub-gnb > li span {
+#middle_menu .container .sub-gnb > li > a {
   display: block;
   padding: auto;
   font: bold 20px/78px "Roboto", sans-serif;
@@ -2095,7 +2099,7 @@ table {
 #middle_menu .container .sub-gnb > li:hover {
   background: #333;
 }
-#middle_menu .container .sub-gnb > li:hover span {
+#middle_menu .container .sub-gnb > li:hover > a {
   color: #fff;
 }
 #middle_menu .container .sub-gnb > li:hover .sub-menu {
@@ -2174,12 +2178,12 @@ table {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
 }
 #middle_menu .container .intro .p-wrap p {
   width: 520px;
   font: 15px/1.5 "Roboto", sans-serif;
   color: #bebebe;
-  margin-bottom: 60px;
 }
 #middle_menu .container .intro .p-wrap .left {
   margin-right: 20px;
@@ -2923,6 +2927,9 @@ table {
   }
   #middle_menu .container .sub-gnb > li:hover .sub-menu ul li .sub-menu-2 ul li a {
     letter-spacing: 1px;
+  }
+  #middle_menu .container .intro .p-wrap {
+    margin-bottom: 20px;
   }
   #banner .container section div p {
     font: 900 55px/1.3 "Roboto", sans-serif;

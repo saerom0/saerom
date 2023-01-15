@@ -14,7 +14,7 @@ $mobile: 600px;
 
 $bg-color: #e3e3e3;
 $main-font: 'Jost', sans-serif;
-$kr-font: 'Hahmlet', serif;
+$kr-font: 'Gowun Dodum', sans-serif;
 
 //헤더 영역
 #header {
@@ -358,6 +358,11 @@ $kr-font: 'Hahmlet', serif;
 	position: relative;
 	margin-top: -15vh;
 	z-index: 2;
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
 	&.on .container {
 		.sub-gnb {
 			position: fixed;
@@ -398,7 +403,7 @@ $kr-font: 'Hahmlet', serif;
 				&:last-child {
 					border-right: 0;
 				}
-				span {
+				> a {
 					display: block;
 					padding: auto;
 					font: bold 20px/78px 'Roboto', sans-serif;
@@ -408,7 +413,7 @@ $kr-font: 'Hahmlet', serif;
 				}
 				&:hover {
 					background: #333;
-					span {
+					> a {
 						color: #fff;
 					}
 					.sub-menu {
@@ -491,11 +496,11 @@ $kr-font: 'Hahmlet', serif;
 				flex-wrap: nowrap;
 				justify-content: center;
 				align-items: center;
+				margin-bottom: 60px;
 				p {
 					width: 520px;
 					font: 15px/1.5 'Roboto', sans-serif;
 					color: #bebebe;
-					margin-bottom: 60px;
 				}
 				.left {
 					margin-right: 20px;
@@ -1311,6 +1316,9 @@ $kr-font: 'Hahmlet', serif;
 						}
 					}
 				}
+			}
+			.intro .p-wrap {
+				margin-bottom: 20px;
 			}
 		}
 	}
