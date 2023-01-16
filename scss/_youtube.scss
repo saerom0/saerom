@@ -1,10 +1,4 @@
 .youtube {
-	h1 {
-		padding: 0 50px 30px;
-		border-bottom: 1px solid #bbbbbb;
-		font: 40px/1 'arial';
-		margin-bottom: 80px;
-	}
 	.youtube-title-left {
 		position: relative;
 		float: left;
@@ -34,9 +28,9 @@
 	.youtube-title-right {
 		position: relative;
 		float: right;
-		width: 38%;
+		width: 40%;
 		padding-right: 50px;
-		margin-bottom: 80px;
+		margin-bottom: 60px;
 		span {
 			display: flex;
 			justify-content: center;
@@ -55,8 +49,11 @@
 			background: #fff;
 		}
 		figure {
-			width: 350px;
-			height: 150px;
+			position: relative;
+			top: -25px;
+			left: 40px;
+			width: 340px;
+			height: 170px;
 			margin: 20px auto;
 			img {
 				width: 100%;
@@ -134,6 +131,22 @@
 	.youtube {
 		.container {
 			width: 100%;
+			.youtube-title-left {
+				h2 {
+					margin-bottom: 0;
+					font: 85px/1 'arial';
+				}
+				h3 {
+					font: 85px/1 'arial';
+				}
+			}
+			.youtube-title-right {
+				figure {
+					top: -15px;
+					width: 310px;
+					height: 160px;
+				}
+			}
 			.videoList {
 				article {
 					width: 47%;
@@ -144,19 +157,33 @@
 	}
 }
 
-// @media screen and (max-width: $tablet-origin) {
-// 	.youtube {
-// 		.inner {
-// 			width: 100%;
-// 			.videoList {
-// 				article {
-// 					width: 47%;
-// 					height: 420px;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
+@media screen and (max-width: $tablet-origin) {
+	.youtube {
+		.container {
+			.youtube-title-left {
+				h2,
+				h3 {
+					font: 70px/1 'arial';
+				}
+			}
+			.youtube-title-right {
+				span {
+					width: 70px;
+					height: 70px;
+				}
+				p {
+					top: 20px;
+					left: 45px;
+				}
+				figure {
+					top: -10px;
+					left: 20px;
+					width: 300px;
+				}
+			}
+		}
+	}
+}
 
 @media screen and (max-width: $mobile) {
 	.youtube {

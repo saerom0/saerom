@@ -1,18 +1,13 @@
 .gallery {
 	.container {
 		position: relative;
-		h1 {
-			padding: 0 50px 30px;
-			border-bottom: 1px solid #bbbbbb;
-			font: 40px/1 'arial';
-			margin-bottom: 80px;
-		}
-
 		#gallery {
 			position: relative;
-			h2 {
+			h2 a {
+				display: block;
 				font: bold 70px/1 'arial';
 				padding: 0px 50px 50px;
+				color: #000;
 			}
 			#search_box {
 				position: absolute;
@@ -114,14 +109,14 @@
 							&:hover {
 								a {
 									> img {
-										filter: grayscale(0%);
+										filter: grayscale(0);
 									}
 								}
 							}
 							a {
 								> img {
 									width: 100%;
-									filter: grayscale(80%);
+									filter: grayscale(1);
 								}
 							}
 
@@ -131,7 +126,7 @@
 								justify-content: space-between;
 								margin: auto 5px;
 								span {
-									font: 12px/1.2 'Hahmlet', serif;
+									font: 12px/1.2 $kr-font;
 									color: #777;
 									margin-top: 15px;
 									margin-bottom: 15px;
@@ -170,8 +165,8 @@
 		}
 		.close {
 			position: absolute;
-			top: 20px;
-			right: 20px;
+			top: 8vh;
+			right: 8vw;
 			color: #fff;
 			cursor: pointer;
 		}
@@ -190,7 +185,7 @@
 	.gallery {
 		.container {
 			#gallery {
-				h2 {
+				h2 a {
 					font: 60px/1 'arial';
 				}
 				#search_box {
@@ -215,6 +210,9 @@
 	.gallery {
 		.container {
 			#gallery {
+				h2 a {
+					font: bold 50px/1 'arial';
+				}
 				.gallery-title p {
 					&:nth-of-type(1) {
 						width: 100%;

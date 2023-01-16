@@ -281,6 +281,12 @@ table {
   min-height: 400px;
   margin: 50px auto 150px;
 }
+.content .container h1 {
+  padding: 0 50px 30px;
+  border-bottom: 1px solid #bbbbbb;
+  font: 40px/1 "Gowun Dodum", sans-serif;
+  margin-bottom: 80px;
+}
 
 #footer_sub {
   width: 100%;
@@ -381,7 +387,7 @@ table {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   #header_sub .container {
     width: 100%;
     height: 100%;
@@ -437,9 +443,6 @@ table {
   }
   #header_sub .container .web-menu .tablet-log {
     display: block;
-  }
-  .content .sub-bg {
-    height: 220px;
   }
   .content .container h1 {
     font: 35px/1 "Gowun Dodum", sans-serif;
@@ -500,12 +503,6 @@ table {
   #footer_sub .container .wrap3 address {
     display: none;
   }
-}
-.sign-up .container h1 {
-  padding: 0 50px 30px;
-  border-bottom: 1px solid #bbbbbb;
-  font: 40px/1 "arial";
-  margin-bottom: 80px;
 }
 .sign-up .container form {
   width: 85%;
@@ -662,7 +659,7 @@ table {
   margin-left: 5px;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   .sign-up {
     width: 100%;
   }
@@ -692,12 +689,6 @@ table {
   content: "";
   display: block;
   clear: both;
-}
-.contact .container h1 {
-  padding: 0 50px 30px;
-  border-bottom: 1px solid #bbbbbb;
-  font: 40px/1 "arial";
-  margin-bottom: 80px;
 }
 .contact .container .enquire {
   float: left;
@@ -840,7 +831,7 @@ table {
   background: #555;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   .contact {
     width: 100%;
   }
@@ -888,12 +879,6 @@ table {
 }
 .review .container {
   position: relative;
-}
-.review .container h1 {
-  padding: 0 50px 30px;
-  border-bottom: 1px solid #bbbbbb;
-  font: 40px/1 "arial";
-  margin-bottom: 80px;
 }
 .review .container table {
   width: 85%;
@@ -980,7 +965,7 @@ table {
   color: #fff;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   .review {
     width: 100%;
   }
@@ -1001,12 +986,6 @@ table {
   .review .container .pagination p a:nth-of-type(4), .review .container .pagination p a:nth-of-type(5) {
     display: none;
   }
-}
-.youtube h1 {
-  padding: 0 50px 30px;
-  border-bottom: 1px solid #bbbbbb;
-  font: 40px/1 "arial";
-  margin-bottom: 80px;
 }
 .youtube .youtube-title-left {
   position: relative;
@@ -1036,9 +1015,9 @@ table {
 .youtube .youtube-title-right {
   position: relative;
   float: right;
-  width: 38%;
+  width: 40%;
   padding-right: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .youtube .youtube-title-right span {
   display: flex;
@@ -1058,8 +1037,11 @@ table {
   background: #fff;
 }
 .youtube .youtube-title-right figure {
-  width: 350px;
-  height: 150px;
+  position: relative;
+  top: -25px;
+  left: 40px;
+  width: 340px;
+  height: 170px;
   margin: 20px auto;
 }
 .youtube .youtube-title-right figure img {
@@ -1130,13 +1112,44 @@ table {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   .youtube .container {
     width: 100%;
+  }
+  .youtube .container .youtube-title-left h2 {
+    margin-bottom: 0;
+    font: 85px/1 "arial";
+  }
+  .youtube .container .youtube-title-left h3 {
+    font: 85px/1 "arial";
+  }
+  .youtube .container .youtube-title-right figure {
+    top: -15px;
+    width: 310px;
+    height: 160px;
   }
   .youtube .container .videoList article {
     width: 47%;
     height: 420px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .youtube .container .youtube-title-left h2,
+  .youtube .container .youtube-title-left h3 {
+    font: 70px/1 "arial";
+  }
+  .youtube .container .youtube-title-right span {
+    width: 70px;
+    height: 70px;
+  }
+  .youtube .container .youtube-title-right p {
+    top: 20px;
+    left: 45px;
+  }
+  .youtube .container .youtube-title-right figure {
+    top: -10px;
+    left: 20px;
+    width: 300px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1154,18 +1167,14 @@ table {
 .gallery .container {
   position: relative;
 }
-.gallery .container h1 {
-  padding: 0 50px 30px;
-  border-bottom: 1px solid #bbbbbb;
-  font: 40px/1 "arial";
-  margin-bottom: 80px;
-}
 .gallery .container #gallery {
   position: relative;
 }
-.gallery .container #gallery h2 {
+.gallery .container #gallery h2 a {
+  display: block;
   font: bold 70px/1 "arial";
   padding: 0px 50px 50px;
+  color: #000;
 }
 .gallery .container #gallery #search_box {
   position: absolute;
@@ -1268,11 +1277,11 @@ table {
   background: #fff;
 }
 .gallery .container #gallery #gallery_box #list li div:hover a > img {
-  filter: grayscale(0%);
+  filter: grayscale(0);
 }
 .gallery .container #gallery #gallery_box #list li div a > img {
   width: 100%;
-  filter: grayscale(80%);
+  filter: grayscale(1);
 }
 .gallery .container #gallery #gallery_box #list li div p {
   display: flex;
@@ -1281,7 +1290,7 @@ table {
   margin: auto 5px;
 }
 .gallery .container #gallery #gallery_box #list li div p span {
-  font: 12px/1.2 "Hahmlet", serif;
+  font: 12px/1.2 "Gowun Dodum", sans-serif;
   color: #777;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -1314,19 +1323,19 @@ table {
 }
 .gallery aside .close {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 8vh;
+  right: 8vw;
   color: #fff;
   cursor: pointer;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   .gallery .container {
     width: 100%;
   }
 }
 @media screen and (max-width: 900px) {
-  .gallery .container #gallery h2 {
+  .gallery .container #gallery h2 a {
     font: 60px/1 "arial";
   }
   .gallery .container #gallery #search_box {
@@ -1339,6 +1348,9 @@ table {
   }
 }
 @media screen and (max-width: 600px) {
+  .gallery .container #gallery h2 a {
+    font: bold 50px/1 "arial";
+  }
   .gallery .container #gallery .gallery-title p:nth-of-type(1) {
     width: 100%;
     padding-right: 0;
@@ -1357,12 +1369,6 @@ table {
   .gallery .container #gallery #gallery_box #list li {
     width: 100%;
   }
-}
-.office .container h1 {
-  padding: 0 50px 30px;
-  border-bottom: 1px solid #bbbbbb;
-  font: 40px/1 "arial";
-  margin-bottom: 80px;
 }
 .office .container .wrap-1 {
   position: relative;
@@ -1574,21 +1580,23 @@ table {
   margin-bottom: 30px;
 }
 .office .container .wrap-4 article {
+  position: relative;
   width: 33.3333333333%;
   height: 400px;
   float: left;
   padding-right: 30px;
+  margin-bottom: 50px;
   filter: grayscale(1);
   transition: 0.5s;
 }
 .office .container .wrap-4 article:hover {
   filter: grayscale(0);
 }
+.office .container .wrap-4 article:hover .member-name {
+  display: block;
+}
 .office .container .wrap-4 article:nth-of-type(3n) {
   padding-right: none;
-}
-.office .container .wrap-4 article:nth-of-type(1), .office .container .wrap-4 article:nth-of-type(2), .office .container .wrap-4 article:nth-of-type(3) {
-  margin-bottom: 30px;
 }
 .office .container .wrap-4 article h3 {
   font: 15px/1.3 "arial";
@@ -1605,6 +1613,25 @@ table {
   height: 100%;
   object-fit: cover;
 }
+.office .container .wrap-4 article .member-name {
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+  font: 20px/60px "Gowun Dodum", sans-serif;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.office .container .wrap-4 article .member-name i {
+  margin-left: 10px;
+}
+.office .container .wrap-4 article .member-position {
+  font: 15px/1 "Gowun Dodum", sans-serif;
+  margin-left: 10px;
+}
 
 @keyframes move {
   0% {
@@ -1620,12 +1647,9 @@ table {
     transform: rotate(0deg);
   }
 }
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   .office .container {
     width: 100%;
-  }
-  .office .container h1 {
-    margin: 30px 0;
   }
   .office .container .wrap-1 h2 {
     width: 57%;
@@ -1653,12 +1677,10 @@ table {
   }
   .office .container .wrap-4 article {
     height: 300px;
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 900px) {
-  .office .container h1 {
-    font: 30px/1 "arial";
-  }
   .office .container .wrap-1 {
     padding-bottom: 150px;
   }
@@ -1699,9 +1721,6 @@ table {
   }
   .office .container .wrap-4 article {
     width: 50%;
-  }
-  .office .container .wrap-4 article:nth-of-type(4) {
-    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -2064,6 +2083,7 @@ table {
   padding-top: 80px;
 }
 #middle_menu .container {
+  position: relative;
   width: 1180px;
   margin: 0 auto;
   background: #fff;
@@ -2169,9 +2189,9 @@ table {
   color: #2a2a2a;
   text-align: center;
   margin: 60px auto;
-  transform: translateY(50px);
+  transform: translateY(100px);
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.6s;
 }
 #middle_menu .container .intro h3 {
   width: 900px;
@@ -2180,9 +2200,9 @@ table {
   letter-spacing: 3px;
   margin: 0 auto 40px;
   text-align: center;
-  transform: translateY(50px);
+  transform: translateY(100px);
   opacity: 0;
-  transition: 0.5s 0.2s;
+  transition: 0.6s 0.2s;
 }
 #middle_menu .container .intro .p-wrap {
   display: flex;
@@ -2190,9 +2210,9 @@ table {
   justify-content: center;
   align-items: center;
   margin-bottom: 60px;
-  transform: translateY(50px);
+  transform: translateY(100px);
   opacity: 0;
-  transition: 0.5s 0.4s;
+  transition: 0.6s 0.4s;
 }
 #middle_menu .container .intro .p-wrap p {
   width: 520px;
@@ -2560,11 +2580,16 @@ table {
 #track .container .record div img {
   width: 72px;
   margin-right: 15px;
+  transform: scale(0.8);
 }
 #track .container .record div p {
   display: inline-block;
   font: bold 20px/1 "Jost", sans-serif;
   margin-right: 3px;
+}
+#track .container .record div span {
+  display: block;
+  font: 20px/1 "Jost", sans-serif;
 }
 
 #footer {
@@ -2667,7 +2692,7 @@ table {
   text-align: right;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   #header .container {
     width: 100%;
     padding: 0px 30px;
@@ -2853,7 +2878,7 @@ table {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
   #header .container .web-menu {
     position: relative;
     width: 100%;
@@ -2942,7 +2967,7 @@ table {
     font: bold 14px/1 "Jost", sans-serif;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #header {
     height: 90px;
     background: #e3e3e3;
@@ -2963,13 +2988,13 @@ table {
     display: block;
   }
   #visual .visual {
-    height: 85vh;
+    height: 80vh;
   }
   #visual .visual .container .cp-name {
     display: none;
   }
   #visual .visual .vs-btns {
-    top: 81vh;
+    top: 76vh;
   }
   #visual .visual .vs-btns li {
     width: 50px;
@@ -3036,6 +3061,12 @@ table {
   #track .container figure {
     width: 100%;
     height: 100%;
+  }
+  #track .container .record div img {
+    transform: scale(0.5);
+  }
+  #track .container .record div span {
+    font: 15px/1 "Jost", sans-serif;
   }
   #footer {
     padding: 30px 0;

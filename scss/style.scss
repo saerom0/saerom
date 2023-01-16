@@ -8,9 +8,9 @@
 @import 'gallery.scss';
 @import 'office.scss';
 
-$tablet-plus: 1180px;
-$tablet-origin: 900px;
-$mobile: 600px;
+$tablet-plus: 1200px;
+$tablet-origin: 850px;
+$mobile: 500px;
 
 $bg-color: #e3e3e3;
 $main-font: 'Jost', sans-serif;
@@ -388,6 +388,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 		}
 	}
 	.container {
+		position: relative;
 		width: 1180px;
 		margin: 0 auto;
 		background: #fff;
@@ -496,9 +497,9 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				color: #2a2a2a;
 				text-align: center;
 				margin: 60px auto;
-				transform: translateY(50px);
+				transform: translateY(100px);
 				opacity: 0;
-				transition: 0.5s;
+				transition: 0.6s;
 			}
 			h3 {
 				width: 900px;
@@ -507,9 +508,9 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				letter-spacing: 3px;
 				margin: 0 auto 40px;
 				text-align: center;
-				transform: translateY(50px);
+				transform: translateY(100px);
 				opacity: 0;
-				transition: 0.5s 0.2s;
+				transition: 0.6s 0.2s;
 			}
 			.p-wrap {
 				display: flex;
@@ -517,9 +518,9 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				justify-content: center;
 				align-items: center;
 				margin-bottom: 60px;
-				transform: translateY(50px);
+				transform: translateY(100px);
 				opacity: 0;
-				transition: 0.5s 0.4s;
+				transition: 0.6s 0.4s;
 
 				p {
 					width: 520px;
@@ -879,11 +880,16 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				img {
 					width: 72px;
 					margin-right: 15px;
+					transform: scale(0.8);
 				}
 				p {
 					display: inline-block;
 					font: bold 20px/1 $main-font;
 					margin-right: 3px;
+				}
+				span {
+					display: block;
+					font: 20px/1 $main-font;
 				}
 			}
 		}
@@ -1412,14 +1418,14 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	//visual
 	#visual {
 		.visual {
-			height: 85vh;
+			height: 80vh;
 			.container {
 				.cp-name {
 					display: none;
 				}
 			}
 			.vs-btns {
-				top: 81vh;
+				top: 76vh;
 				li {
 					width: 50px;
 				}
@@ -1518,6 +1524,16 @@ $kr-font: 'Gowun Dodum', sans-serif;
 			figure {
 				width: 100%;
 				height: 100%;
+			}
+			.record {
+				div {
+					img {
+						transform: scale(0.5);
+					}
+					span {
+						font: 15px/1 $main-font;
+					}
+				}
 			}
 		}
 	}

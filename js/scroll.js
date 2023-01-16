@@ -20,16 +20,9 @@ window.addEventListener('scroll', () => {
 	});
 
 	//header - middle - intro - banner - offer - promo - track
-	if (scroll >= posArr[0]) {
+	if (scroll >= posArr[0] + 60) {
 		pages[2].classList.add('on');
 	} else {
-		pages[2].classList.remove('on');
-	}
-	if (scroll >= posArr[1] + base) {
-		pages[0].classList.add('on');
-		pages[2].classList.add('on');
-	} else {
-		pages[0].classList.remove('on');
 		pages[2].classList.remove('on');
 	}
 	//middle
@@ -40,6 +33,12 @@ window.addEventListener('scroll', () => {
 		pages[1].classList.remove('on');
 		// pages[2].classList.remove('on');
 	}
+	//promo
+	if (scroll >= posArr[5] + base) {
+		pages[5].classList.add('on');
+	} else {
+		pages[5].classList.remove('on');
+	}
 	//track
 	if (scroll >= posArr[6] + base) {
 		counter('.record-1', 31, 1500);
@@ -47,13 +46,8 @@ window.addEventListener('scroll', () => {
 		counter('.record-3', 100, 1500);
 		counter('.record-4', 9700, 1500);
 	}
-	//promo
-	if (scroll >= posArr[5] + base) {
-		pages[5].classList.add('on');
-	} else {
-		pages[5].classList.remove('on');
-	}
-	// console.log(posArr);
+
+	console.log(posArr);
 });
 
 //track 카운터 함수

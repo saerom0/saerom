@@ -1,4 +1,4 @@
-$tablet-plus: 1180px;
+$tablet-plus: 1200px;
 $tablet-origin: 900px;
 $mobile: 600px;
 
@@ -265,6 +265,12 @@ $kr-font: 'Gowun Dodum', sans-serif;
 		width: 1180px;
 		min-height: 400px;
 		margin: 50px auto 150px;
+		h1 {
+			padding: 0 50px 30px;
+			border-bottom: 1px solid #bbbbbb;
+			font: 40px/1 $kr-font;
+			margin-bottom: 80px;
+		}
 	}
 }
 
@@ -450,9 +456,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	}
 
 	.content {
-		.sub-bg {
-			height: 220px;
-		}
 		.container {
 			h1 {
 				font: 35px/1 $kr-font;

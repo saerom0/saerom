@@ -2,23 +2,31 @@ const body = document.querySelector('body');
 const frame = document.querySelector('#list');
 const loading = document.querySelector('.loading');
 const input = document.querySelector('#search');
-const btnSearch = document.querySelector('.btn-search');
+const btn_search = document.querySelector('.btn-search');
+const btn_pic = document.querySelector('#search_box a');
+console.log(btn_pic);
 const base = 'https://www.flickr.com/services/rest/?';
-const method1 = 'flickr.interestingness.getList';
-const method2 = 'flickr.photos.search';
+const method_interest = 'flickr.interestingness.getList';
+const method_search = 'flickr.photos.search';
+const method_user = 'flickr.people.getPhotos';
 const key = '1f6a8afb62dde6c9a4d9073dd46560aa';
+const my_id = '197108414@N08';
 const per_page = 30;
 
-const url = `${base}method=${method1}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1`;
-
+const url = `${base}method=${method_user}&api_key=${key}&per_page=${per_page}&user_id=${my_id}&format=json&nojsoncallback=1`;
 callData(url);
 
+btn_pic.addEventListener('click', (e) => {
+	e.preventDefault();
+	const url = `${base}method=${method_interest}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1`;
+	callData(url);
+});
 //공백을 입력하여 검색 버튼을 누르면 에러 메세지 발생
-btnSearch.addEventListener('click', (e) => {
+btn_search.addEventListener('click', (e) => {
 	let tag = input.value;
 	tag = tag.trim();
 
-	const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+	const url = `${base}method=${method_search}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
 
 	if (tag != '') {
 		callData(url);
@@ -42,7 +50,7 @@ input.addEventListener('keyup', (e) => {
 		let tag = input.value;
 		tag = tag.trim();
 
-		const url = `${base}method=${method2}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
+		const url = `${base}method=${method_search}&api_key=${key}&per_page=${per_page}&format=json&nojsoncallback=1&tags=${tag}&privacy_filter=1`;
 
 		if (tag != '') {
 			callData(url);
