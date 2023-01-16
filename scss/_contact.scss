@@ -1,13 +1,16 @@
 .contact {
 	width: 100%;
-	.sub-bg {
-		background: url(../img/sub_menu_bg.jpg) no-repeat 0% 45% / cover;
-	}
 	.container {
 		&::after {
 			content: '';
 			display: block;
 			clear: both;
+		}
+		h1 {
+			padding: 0 50px 30px;
+			border-bottom: 1px solid #bbbbbb;
+			font: 40px/1 'arial';
+			margin-bottom: 80px;
 		}
 		.enquire {
 			float: left;

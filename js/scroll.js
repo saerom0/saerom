@@ -19,19 +19,26 @@ window.addEventListener('scroll', () => {
 		});
 	});
 
-	//header - middle -h3 - banner - offer - promo - track
+	//header - middle - intro - banner - offer - promo - track
+	if (scroll >= posArr[0]) {
+		pages[2].classList.add('on');
+	} else {
+		pages[2].classList.remove('on');
+	}
 	if (scroll >= posArr[1] + base) {
 		pages[0].classList.add('on');
+		pages[2].classList.add('on');
 	} else {
 		pages[0].classList.remove('on');
+		pages[2].classList.remove('on');
 	}
 	//middle
 	if (scroll >= posArr[1]) {
 		pages[1].classList.add('on');
-		pages[2].classList.add('on');
+		// pages[2].classList.add('on');
 	} else {
 		pages[1].classList.remove('on');
-		pages[2].classList.remove('on');
+		// pages[2].classList.remove('on');
 	}
 	//track
 	if (scroll >= posArr[6] + base) {
