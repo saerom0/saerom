@@ -75,7 +75,6 @@ function activate(index) {
 const offer = document.querySelector('#offer');
 const view_btn = offer.querySelectorAll('.pic a');
 const pic = offer.querySelector('.pic');
-// const here = offer.querySelectorAll(".here");
 
 view_btn.forEach((el) => {
 	el.addEventListener('click', (e) => {
