@@ -6,7 +6,7 @@
 @import 'review.scss';
 @import 'youtube.scss';
 @import 'gallery.scss';
-@import 'office.scss';
+@import 'about.scss';
 
 $tablet-plus: 1200px;
 $tablet-origin: 850px;
@@ -125,6 +125,22 @@ $kr-font: 'Gowun Dodum', sans-serif;
 			}
 			.tablet-log {
 				display: none;
+				width: 45px;
+				float: right;
+				margin-right: 0px;
+				li {
+					width: 15px;
+					float: left;
+					&:first-child {
+						margin-right: 13px;
+					}
+					a {
+						color: #fff;
+						i {
+							font-size: 15px;
+						}
+					}
+				}
 			}
 		}
 		.btn-call {
@@ -678,7 +694,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 							background-color: #fff;
 							width: 100%;
 							height: 100%;
-							opacity: 0.4;
+							opacity: 0.3;
 							position: absolute;
 							bottom: 0;
 							i {
@@ -727,7 +743,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 					&:hover {
 						img {
 							transform: scale(1.1);
-							opacity: 0.9;
 						}
 						.search {
 							display: block;
@@ -1006,9 +1021,9 @@ $kr-font: 'Gowun Dodum', sans-serif;
 }
 
 //미디어쿼리 3영역으로 구분
-//$tablet-plus (901px~1180px)
-//$tablet-origin (600px~899px)
-//$mobile (~599px)
+//$tablet-plus (850px~1180px)
+//$tablet-origin (500px~849px)
+//$mobile (~499px)
 @media screen and (max-width: $tablet-plus) {
 	//header 영역
 	#header {
@@ -1016,7 +1031,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 			width: 100%;
 			padding: 0px 30px;
 			.web-menu {
-				padding-top: 22px;
 				#gnb {
 					width: 65%;
 					li a {
@@ -1232,7 +1246,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	}
 }
 
-//$tablet-origin (600px~899px)
+//$tablet-origin (500px~849px)
 @media screen and (max-width: $tablet-origin) {
 	//header
 	#header {
@@ -1241,16 +1255,18 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				position: relative;
 				width: 100%;
 				height: 100%;
+				margin-left: 0;
 				.web-h1 {
+					padding-right: 3vw;
 					a {
 						font: bold 13px/1 $main-font;
 					}
 				}
 				nav {
 					#gnb {
-						width: 64vw;
+						width: 62vw;
 						li {
-							margin-left: 10px;
+							margin-left: 5px;
 							a {
 								font: bold 13px/1 $main-font;
 							}
@@ -1262,24 +1278,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				}
 				.tablet-log {
 					display: block;
-					width: 60px;
-					height: 100%;
-					float: right;
-					margin-right: 0px;
-					li {
-						width: 20px;
-						float: left;
-						text-align: right;
-						&:first-child {
-							margin-right: 20px;
-						}
-						a {
-							color: #fff;
-							i {
-								font-size: 16px;
-							}
-						}
-					}
 				}
 			}
 		}
@@ -1398,7 +1396,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	}
 }
 
-//$mobile (~599px)
+//$mobile (~499px)
 @media screen and (max-width: $mobile) {
 	//header
 	#header {
@@ -1480,6 +1478,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	#banner {
 		.container {
 			section {
+				height: 380px;
 				div {
 					p {
 						top: 10%;

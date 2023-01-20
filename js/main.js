@@ -71,18 +71,6 @@ function activate(index) {
 	bn_btn[index].classList.add('on');
 }
 
-//offer 영역
-const offer = document.querySelector('#offer');
-const view_btn = offer.querySelectorAll('.pic a');
-const pic = offer.querySelector('.pic');
-
-view_btn.forEach((el) => {
-	el.addEventListener('click', (e) => {
-		e.preventDefault();
-		pic.classList.toggle('on');
-	});
-});
-
 // //promo영역
 // const promo = document.querySelector('.promo-text');
 // const promo_text = promo.innerText;

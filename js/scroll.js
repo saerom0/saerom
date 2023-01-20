@@ -36,13 +36,15 @@ window.addEventListener('scroll', () => {
 	//promo
 	if (scroll >= posArr[5] + base) {
 		pages[5].classList.add('on');
-		//track
+	} else {
+		pages[5].classList.remove('on');
+	}
+	//track
+	if (scroll >= posArr[5]) {
 		counter('.record-1', 31, 1500);
 		counter('.record-2', 24, 1500);
 		counter('.record-3', 100, 1500);
 		counter('.record-4', 9700, 1500);
-	} else {
-		pages[5].classList.remove('on');
 	}
 
 	// console.log(posArr);

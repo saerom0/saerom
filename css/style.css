@@ -1186,6 +1186,9 @@ table {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .youtube .container .videoList article {
+    width: 97%;
+  }
 }
 .gallery .container {
   position: relative;
@@ -1866,6 +1869,22 @@ table {
 }
 #header .container .web-menu .tablet-log {
   display: none;
+  width: 45px;
+  float: right;
+  margin-right: 0px;
+}
+#header .container .web-menu .tablet-log li {
+  width: 15px;
+  float: left;
+}
+#header .container .web-menu .tablet-log li:first-child {
+  margin-right: 13px;
+}
+#header .container .web-menu .tablet-log li a {
+  color: #fff;
+}
+#header .container .web-menu .tablet-log li a i {
+  font-size: 15px;
 }
 #header .container .btn-call {
   display: none;
@@ -2392,7 +2411,7 @@ table {
   background-color: #fff;
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.3;
   position: absolute;
   bottom: 0;
 }
@@ -2437,7 +2456,6 @@ table {
 }
 #offer .container .wrap article .frame:hover img {
   transform: scale(1.1);
-  opacity: 0.9;
 }
 #offer .container .wrap article .frame:hover .search {
   display: block;
@@ -2725,9 +2743,6 @@ table {
     width: 100%;
     padding: 0px 30px;
   }
-  #header .container .web-menu {
-    padding-top: 22px;
-  }
   #header .container .web-menu #gnb {
     width: 65%;
   }
@@ -2911,15 +2926,19 @@ table {
     position: relative;
     width: 100%;
     height: 100%;
+    margin-left: 0;
+  }
+  #header .container .web-menu .web-h1 {
+    padding-right: 3vw;
   }
   #header .container .web-menu .web-h1 a {
     font: bold 13px/1 "Jost", sans-serif;
   }
   #header .container .web-menu nav #gnb {
-    width: 64vw;
+    width: 62vw;
   }
   #header .container .web-menu nav #gnb li {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   #header .container .web-menu nav #gnb li a {
     font: bold 13px/1 "Jost", sans-serif;
@@ -2929,24 +2948,6 @@ table {
   }
   #header .container .web-menu .tablet-log {
     display: block;
-    width: 60px;
-    height: 100%;
-    float: right;
-    margin-right: 0px;
-  }
-  #header .container .web-menu .tablet-log li {
-    width: 20px;
-    float: left;
-    text-align: right;
-  }
-  #header .container .web-menu .tablet-log li:first-child {
-    margin-right: 20px;
-  }
-  #header .container .web-menu .tablet-log li a {
-    color: #fff;
-  }
-  #header .container .web-menu .tablet-log li a i {
-    font-size: 16px;
   }
   #visual .visual .container .cp-name {
     width: 170px;
@@ -3059,6 +3060,9 @@ table {
   #middle_menu .container .intro .p-wrap .left {
     margin-right: 0;
     text-align: center;
+  }
+  #banner .container section {
+    height: 380px;
   }
   #banner .container section div p {
     top: 10%;
