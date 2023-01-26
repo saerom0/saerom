@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
 		pages[5].classList.remove('on');
 	}
 	//track
-	if (scroll >= posArr[5]) {
+	if (scroll >= posArr[5] - 150) {
 		counter('.record-1', 31, 1500);
 		counter('.record-2', 24, 1500);
 		counter('.record-3', 100, 1500);

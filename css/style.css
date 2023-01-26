@@ -800,7 +800,7 @@ table {
   width: 120px;
   height: 40px;
   background: #fff;
-  font: bold 14px/40px "Poppins", sans-serif;
+  font: bold 14px/40px "Poppins";
   color: #555;
   text-align: center;
   border: 1px solid #555;
@@ -821,7 +821,7 @@ table {
   width: 120px;
   height: 40px;
   background: #fff;
-  font: bold 14px/40px "Poppins", sans-serif;
+  font: bold 14px/40px "Poppins";
   color: #555;
   text-align: center;
   border: 1px solid #555;
@@ -2390,7 +2390,7 @@ table {
 #offer .container .wrap article .frame {
   position: relative;
   width: 100%;
-  height: 320px;
+  height: 350px;
 }
 #offer .container .wrap article .frame .pic {
   position: relative;
@@ -2415,22 +2415,16 @@ table {
   position: absolute;
   bottom: 0;
 }
-#offer .container .wrap article .frame .pic .search i {
-  position: absolute;
-  bottom: 10%;
-  right: 10%;
-  font-size: 25px;
-  color: #000;
-}
-#offer .container .wrap article .frame .review {
+#offer .container .wrap article .frame .pic .review {
   display: none;
   position: absolute;
-  bottom: 10px;
+  left: 5%;
+  bottom: 5%;
   z-index: 3;
 }
-#offer .container .wrap article .frame .review .stars i {
+#offer .container .wrap article .frame .pic .review .stars i {
   color: gold;
-  font-size: 10px;
+  font-size: 15px;
   margin-left: 3px;
 }
 #offer .container .wrap article .frame .btn-offer {
@@ -2444,7 +2438,7 @@ table {
   color: #fff;
   letter-spacing: 1px;
   background: #000;
-  margin: 8px auto;
+  margin: 20px auto;
   transition: 0.3s;
 }
 #offer .container .wrap article .frame .btn-offer:hover {
@@ -2847,12 +2841,6 @@ table {
   #offer .container .wrap article .frame {
     height: 360px;
   }
-  #offer .container .wrap article .frame .review {
-    bottom: 40px;
-  }
-  #offer .container .wrap article .frame .review a i {
-    font-size: 15px;
-  }
   #offer .container .wrap article .frame .btn-offer {
     margin: 20px auto;
   }
@@ -2889,7 +2877,7 @@ table {
     align-items: center;
   }
   #track .container figure {
-    width: 500px;
+    width: 480px;
     height: 350px;
   }
   #track .container .record {
@@ -2974,14 +2962,6 @@ table {
   #banner .container section div p {
     font: 900 55px/1.3 "Roboto", sans-serif;
     letter-spacing: 15px;
-  }
-  #offer .container .wrap article .frame .review {
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 57px;
-  }
-  #offer .container .wrap article .frame a {
-    margin: 30px auto 0 auto;
   }
   #promo .container .wrap2 {
     display: none;
@@ -3119,7 +3099,7 @@ table {
     display: flex;
     flex-direction: column;
   }
-  #footer .container .wrap3 div flex i {
+  #footer .container .wrap3 div i {
     font-size: 20px;
     margin-top: 20px;
   }
