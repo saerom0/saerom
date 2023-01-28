@@ -211,23 +211,27 @@
 		.container {
 			#gallery {
 				h2 a {
-					font: bold 50px/1 'arial';
+					font: bold 45px/1 'arial';
+					padding: 0px 20px 50px;
 				}
-				.gallery-title p {
-					&:nth-of-type(1) {
-						width: 100%;
-						padding-right: 0;
-						margin-bottom: 20px;
-					}
-					&:nth-of-type(2) {
-						width: 100%;
-						padding-right: 0;
-						margin-bottom: 20px;
-					}
-					&:nth-of-type(3) {
-						width: 100%;
-						text-align: left;
-						padding-left: 0;
+				.gallery-title {
+					padding: 0 20px;
+					p {
+						&:nth-of-type(1) {
+							width: 100%;
+							padding-right: 0;
+							margin-bottom: 20px;
+						}
+						&:nth-of-type(2) {
+							width: 100%;
+							padding-right: 0;
+							margin-bottom: 20px;
+						}
+						&:nth-of-type(3) {
+							width: 100%;
+							text-align: left;
+							padding-left: 0;
+						}
 					}
 				}
 				#gallery_box {

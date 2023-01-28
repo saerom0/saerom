@@ -89,7 +89,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 						padding: 5px 10px;
 						color: #282828;
 						border: 1px solid #6d6d6d;
-						border-radius: 3px;
+						border-radius: 15px;
 						&:hover {
 							background: #6d6d6d;
 						}
@@ -98,19 +98,20 @@ $kr-font: 'Gowun Dodum', sans-serif;
 			}
 			.tablet-log {
 				display: none;
-				width: 60px;
+				width: 45px;
 				float: right;
 				margin-right: 0px;
 				li {
+					width: 15px;
 					float: left;
 					text-align: right;
 					&:first-child {
-						margin-right: 20px;
+						margin-right: 13px;
 					}
 					a {
 						color: #282828;
 						i {
-							font-size: 16px;
+							font-size: 15px;
 						}
 					}
 				}
@@ -388,7 +389,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				height: 100%;
 				nav {
 					#gnb {
-						width: 64vw;
+						width: 62vw;
 						li a {
 							font: bold 15px/20px $main-font;
 						}
@@ -401,6 +402,12 @@ $kr-font: 'Gowun Dodum', sans-serif;
 					}
 				}
 			}
+		}
+	}
+	.content {
+		.container {
+			width: 100%;
+			margin: 30px auto 50px;
 		}
 	}
 
@@ -430,17 +437,23 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	#header_sub {
 		.container {
 			.web-menu {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				margin-left: 0;
 				.web-h1 {
+					padding-right: 3vw;
 					a {
-						font: bold 13px/20px $main-font;
+						font: bold 13px/1 $main-font;
 					}
 				}
 				nav {
 					#gnb {
+						width: 62vw;
 						li {
-							margin-left: 10px;
+							margin-left: 5px;
 							a {
-								font: bold 13px/20px $main-font;
+								font: bold 13px/1 $main-font;
 							}
 						}
 					}
