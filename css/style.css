@@ -902,60 +902,92 @@ table {
     margin-left: 0;
   }
 }
-.review .container {
+.review .container section {
+  width: 100%;
+}
+.review .container section article {
   position: relative;
 }
-.review .container table {
-  width: 85%;
-  border-bottom: 2px solid #111;
-  border-collapse: collapse;
-  margin: 0 auto 50px;
+.review .container section article .review-write {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 50px;
 }
-.review .container table tr:nth-of-type(even) {
-  background: #eee;
+.review .container section article .review-write::after {
+  display: block;
+  content: "";
+  clear: both;
 }
-.review .container table tr:hover {
-  background: #bbb;
+.review .container section article .review-write .review-title {
+  position: relative;
+  float: left;
+  width: 33.3333333333%;
+  height: 270px;
+  padding: 20px 10px;
 }
-.review .container table tr th {
-  padding: 15px;
-  background: #444;
+.review .container section article .review-write .review-title .num {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  opacity: 0.4;
+  padding: 10px;
+  font: bold 25px/1 "arial";
+}
+.review .container section article .review-write .review-title .branch-opt {
+  position: relative;
+  display: block;
+  padding-top: 40px;
+}
+.review .container section article .review-write .review-title h2 {
+  font: 18px/1.5 "arial";
+}
+.review .container section article .review-write .review-title .contents {
+  font: 14px/1.5 "arial";
+}
+.review .container section article .review-write .review-title:nth-of-type(1) {
+  background: #fff;
+  color: #585858;
+}
+.review .container section article .review-write .review-title:nth-of-type(2) {
+  background: #f0efed;
+}
+.review .container section article .review-write .review-title:nth-of-type(3) {
+  background: #eae4da;
+}
+.review .container section article .review-write .review-title:nth-of-type(4) {
+  background: #c4c4c4;
+}
+.review .container section article .review-write .review-title:nth-of-type(5) {
+  background: #585858;
   color: #fff;
 }
-.review .container table tr th:nth-of-type(1) {
-  width: 8%;
+.review .container section article .review-write .review-title:nth-of-type(6) {
+  background: #000;
+  color: #fff;
 }
-.review .container table tr th:nth-of-type(3) {
-  width: 15%;
+.review .container section article .review-write .review-title:nth-of-type(7) {
+  background: #acac9c;
 }
-.review .container table tr th:nth-of-type(4) {
-  width: 17%;
+.review .container section article .review-write .review-title:nth-of-type(8) {
+  background: #fff;
+  color: #585858;
 }
-.review .container table tr td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
+.review .container section article .review-write .review-title:nth-of-type(9) {
+  background: #e3e0dd;
 }
-.review .container table tr td:nth-of-type(2) {
-  text-align: left;
-  font-family: "Hahmlet", serif;
-}
-.review .container table tr td a {
-  color: #333;
-  line-height: 1.4;
-}
-.review .container .pagination {
+.review .container section .pagination {
   width: 70%;
   text-align: center;
   margin: 0 auto;
 }
-.review .container .pagination::after {
+.review .container section .pagination::after {
   content: "";
   display: block;
   clear: both;
 }
-.review .container .pagination .prev,
-.review .container .pagination .next {
+.review .container section .pagination .prev,
+.review .container section .pagination .next {
   display: block;
   width: 30px;
   height: 30px;
@@ -964,18 +996,18 @@ table {
   font-size: 20px;
   text-align: center;
 }
-.review .container .pagination .prev {
+.review .container section .pagination .prev {
   float: left;
 }
-.review .container .pagination .next {
+.review .container section .pagination .next {
   float: right;
 }
-.review .container .pagination .pages {
+.review .container section .pagination .pages {
   display: inline-block;
   text-align: center;
   font-size: 0;
 }
-.review .container .pagination .pages a {
+.review .container section .pagination .pages a {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -985,7 +1017,7 @@ table {
   margin: 0 5px;
   transition: 0.5s;
 }
-.review .container .pagination .pages a:hover {
+.review .container section .pagination .pages a:hover {
   background: #666;
   color: #fff;
 }
