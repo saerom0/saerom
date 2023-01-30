@@ -768,18 +768,26 @@ table {
   flex-direction: column;
   justify-content: space-around;
 }
-.contact .container .enquire .info div {
-  font: 20px/1 "Jost", sans-serif;
+.contact .container .enquire .info div .contact-subtitle {
+  font: 18px/1 "Jost", sans-serif;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.contact .container .enquire .info div span {
+  display: block;
+  font: 16px/1 "Jost", sans-serif;
+  margin-top: 10px;
 }
 .contact .container .enquire .info div p {
   font: 16px/1 "Jost", sans-serif;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 .contact .container .enquire .info div .sns-icons {
   margin-top: 20px;
 }
 .contact .container .enquire .info div .sns-icons i {
+  font-size: 18px;
   margin-right: 10px;
 }
 .contact .container .location {
@@ -1074,13 +1082,10 @@ table {
   align-content: flex-start;
 }
 .youtube .container .videoList article {
+  position: relative;
   width: 30.5%;
   height: 380px;
-  border: 1px solid #eee;
   margin-bottom: 40px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  position: relative;
 }
 .youtube .container .videoList article .pic {
   display: block;
@@ -1247,6 +1252,13 @@ table {
   display: block;
   color: #333;
   margin-bottom: 10px;
+  font-style: italic;
+  transition: 0.5s;
+}
+.gallery .container #gallery #search_box a:hover {
+  transform: translateX(10px);
+  text-decoration: underline;
+  text-underline-position: under;
 }
 .gallery .container #gallery #search_box #search {
   width: 180px;

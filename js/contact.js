@@ -10,7 +10,7 @@ let drag = true;
 let zoom = true;
 
 mapOption = {
-	center: new kakao.maps.LatLng(37.5258975, 126.9284261),
+	center: new kakao.maps.LatLng(37.4960607, 127.0279746),
 	level: 3,
 };
 

@@ -66,15 +66,25 @@
 				flex-direction: column;
 				justify-content: space-around;
 				div {
-					font: 20px/1 $main-font;
+					.contact-subtitle {
+						font: 18px/1 $main-font;
+						text-decoration: underline;
+						text-underline-position: under;
+					}
+					span {
+						display: block;
+						font: 16px/1 $main-font;
+						margin-top: 10px;
+					}
 					p {
 						font: 16px/1 $main-font;
-						margin-top: 20px;
-						margin-bottom: 40px;
+						margin-top: 10px;
+						margin-bottom: 30px;
 					}
 					.sns-icons {
 						margin-top: 20px;
 						i {
+							font-size: 18px;
 							margin-right: 10px;
 						}
 					}

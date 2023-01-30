@@ -18,6 +18,13 @@
 					display: block;
 					color: #333;
 					margin-bottom: 10px;
+					font-style: italic;
+					transition: 0.5s;
+					&:hover {
+						transform: translateX(10px);
+						text-decoration: underline;
+						text-underline-position: under;
+					}
 				}
 				#search {
 					width: 180px;
