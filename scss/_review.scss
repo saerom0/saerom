@@ -28,16 +28,22 @@
 							padding: 10px;
 							font: bold 25px/1 'arial';
 						}
-						.branch-opt {
-							position: relative;
-							display: block;
-							padding-top: 40px;
-						}
+
 						h2 {
-							font: 18px/1.5 'arial';
+							padding-top: 40px;
+							font: 20px/1.5 'arial';
 						}
 						.contents {
-							font: 14px/1.5 'arial';
+							font: 14px/2 'arial';
+						}
+						.date {
+							position: absolute;
+							bottom: 10px;
+							right: 10px;
+						}
+						.writer {
+							position: absolute;
+							bottom: 10px;
 						}
 						&:nth-of-type(1) {
 							background: #fff;

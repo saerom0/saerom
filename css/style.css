@@ -934,16 +934,21 @@ table {
   padding: 10px;
   font: bold 25px/1 "arial";
 }
-.review .container section article .review-write .review-title .branch-opt {
-  position: relative;
-  display: block;
-  padding-top: 40px;
-}
 .review .container section article .review-write .review-title h2 {
-  font: 18px/1.5 "arial";
+  padding-top: 40px;
+  font: 20px/1.5 "arial";
 }
 .review .container section article .review-write .review-title .contents {
-  font: 14px/1.5 "arial";
+  font: 14px/2 "arial";
+}
+.review .container section article .review-write .review-title .date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.review .container section article .review-write .review-title .writer {
+  position: absolute;
+  bottom: 10px;
 }
 .review .container section article .review-write .review-title:nth-of-type(1) {
   background: #fff;
