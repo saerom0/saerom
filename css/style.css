@@ -972,7 +972,7 @@ table {
   color: #fff;
 }
 .review .container section article .review-write .review-title:nth-of-type(7) {
-  background: #acac9c;
+  background: #eae4da;
 }
 .review .container section article .review-write .review-title:nth-of-type(8) {
   background: #fff;
@@ -1037,14 +1037,20 @@ table {
   }
 }
 @media screen and (max-width: 850px) {
-  .review .container table {
-    width: 95%;
+  .review .container section article .review-write .review-title {
+    width: 50%;
+  }
+  .review .container section article .review-write .review-title:nth-of-type(9) {
+    display: none;
   }
   .review .container .pagination p a:nth-of-type(6), .review .container .pagination p a:nth-of-type(7), .review .container .pagination p a:nth-of-type(8), .review .container .pagination p a:nth-of-type(9), .review .container .pagination p a:nth-of-type(10) {
     display: none;
   }
 }
 @media screen and (max-width: 500px) {
+  .review .container section article .review-write .review-title {
+    width: 100%;
+  }
   .review .container .pagination p a:nth-of-type(4), .review .container .pagination p a:nth-of-type(5) {
     display: none;
   }
