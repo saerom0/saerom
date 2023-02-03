@@ -1,4 +1,4 @@
-.office {
+.about {
 	.container {
 		.wrap-1 {
 			position: relative;
@@ -283,7 +283,7 @@
 }
 
 @media screen and (max-width: $tablet-plus) {
-	.office {
+	.about {
 		.container {
 			width: 100%;
 			.wrap-1 {
@@ -325,7 +325,7 @@
 }
 
 @media screen and (max-width: $tablet-origin) {
-	.office {
+	.about {
 		.container {
 			.wrap-1 {
 				padding-bottom: 150px;
@@ -378,7 +378,7 @@
 }
 
 @media screen and (max-width: $mobile) {
-	.office .container {
+	.about .container {
 		.wrap-1 {
 			h2 {
 				margin: 0;

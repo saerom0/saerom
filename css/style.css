@@ -942,11 +942,13 @@ table {
   font: 14px/2 "arial";
 }
 .review .container section article .review-write .review-title .date {
+  font: 13px/1 "arial";
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
 .review .container section article .review-write .review-title .writer {
+  font: 13px/1 "arial";
   position: absolute;
   bottom: 10px;
 }
@@ -1389,7 +1391,6 @@ table {
   width: 100%;
   padding: 10px;
   box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
   background: #fff;
 }
 .gallery .container #gallery #gallery_box #list li div:hover a > img {
