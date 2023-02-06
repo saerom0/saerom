@@ -12,6 +12,8 @@ btn_call.onclick = (e) => {
 const visual = document.querySelector('#visual');
 const panels = visual.querySelectorAll('.panel li');
 const vs_btns = visual.querySelectorAll('.vs-btns li');
+
+console.log(panels);
 const len = panels.length - 1;
 const interval = 4000;
 let vs_num = 0;
@@ -70,34 +72,3 @@ function activate(index) {
 	for (let btn of bn_btn) btn.classList.remove('on');
 	bn_btn[index].classList.add('on');
 }
-
-// //promo영역
-// const promo = document.querySelector('.promo-text');
-// const promo_text = promo.innerText;
-// let tags1 = '';
-// let n = 1;
-// for (const el of promo_text) {
-// 	tags1 += `<span style='transition-delay:${0.3 * n}s'>${el}</span>`;
-// 	// console.log(tags1);
-// 	n += 1;
-// }
-// promo.innerHTML = tags1;
-
-// //about
-// const tab_btn = document.querySelectorAll('#service_type li');
-// const tab_contents = document.querySelectorAll('#service_type article');
-
-// tab_btn.forEach((el, index) => {
-// 	el.addEventListener('click', (e) => {
-// 		let isOn = e.currentTarget.classList.contains('on');
-// 		if (isOn) return;
-
-// 		act(tab_btn, index);
-// 		act(tab_contents, index);
-// 	});
-// });
-
-// function act(arr, index) {
-// 	for (let el of arr) el.classList.remove('on');
-// 	arr[index].classList.add('on');
-// }

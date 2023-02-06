@@ -902,31 +902,166 @@ table {
     margin-left: 0;
   }
 }
-.review .container section {
+.review .container .contents {
+  position: relative;
+  margin-bottom: 80px;
+}
+.review .container .contents::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.review .container .contents .sub-title {
+  color: #333;
+  margin: 30px 0;
+  font: 25px/1.3 "arial";
+}
+.review .container .contents .fnq {
+  position: relative;
+  float: left;
+  width: 32%;
+  margin: 60px 0;
+}
+.review .container .contents .fnq .review-bg {
+  height: 100%;
+  margin-bottom: 30px;
+}
+.review .container .contents .fnq .review-bg img {
   width: 100%;
 }
-.review .container section article {
+.review .container .contents .fnq p {
+  font: 13px/1 "Jost", sans-serif;
+  text-indent: 20px;
+}
+.review .container .contents .tab-wrap {
+  position: relative;
+  float: left;
+  width: 65%;
+  margin-left: 3%;
+}
+.review .container .contents .tab-wrap .tab {
+  position: relative;
+  background: #fff;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.review .container .contents .tab-wrap .tab:last-child {
+  border-bottom: none;
+}
+.review .container .contents .tab-wrap .tab:hover label::after {
+  color: #333;
+}
+.review .container .contents .tab-wrap .tab input[type=checkbox] {
+  appearance: none;
+}
+.review .container .contents .tab-wrap .tab input[type=checkbox]:checked + label::after {
+  transform: rotate(135deg);
+  color: #eee;
+}
+.review .container .contents .tab-wrap .tab input[type=checkbox]:checked ~ .information {
+  max-height: 100vh;
+}
+.review .container .contents .tab-wrap .tab input[type=checkbox]:checked ~ .information p {
+  color: #fff;
+}
+.review .container .contents .tab-wrap .tab input[type=checkbox]:checked ~ label h3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(255, 255, 255, 0.2);
+  justify-content: flex-end;
+  font-size: 100px;
+  padding: 20px;
+  transition: 0.2s;
+}
+.review .container .contents .tab-wrap .tab input[type=checkbox]:checked ~ label h4 {
+  background: #fff;
+  padding: 2px 10px;
+  color: #333;
+  border-radius: 2px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.review .container .contents .tab-wrap .tab label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.review .container .contents .tab-wrap .tab label::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 32px;
+  transition: 0.2s;
+  color: rgba(0, 0, 0, 0.1);
+}
+.review .container .contents .tab-wrap .tab label h3 {
+  width: 40px;
+  height: 40px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.review .container .contents .tab-wrap .tab label h4 {
+  position: relative;
+  color: #333;
+  z-index: 10;
+  font-weight: normal;
+}
+.review .container .contents .tab-wrap .tab .information {
+  max-height: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.review .container .contents .tab-wrap .tab .information p {
+  position: relative;
+  padding: 10px 0;
+  font: 15px/2 "arial";
+  color: #fff;
+  z-index: 10;
+}
+.review .container .review-board {
+  width: 100%;
+}
+.review .container .review-board .sub-title {
+  color: #333;
+  margin: 30px 0;
+  font: 25px/1.3 "arial";
+}
+.review .container .review-board article {
   position: relative;
 }
-.review .container section article .review-write {
+.review .container .review-board article .review-write {
   position: relative;
   width: 100%;
   height: 100%;
   margin-bottom: 50px;
 }
-.review .container section article .review-write::after {
+.review .container .review-board article .review-write::after {
   display: block;
   content: "";
   clear: both;
 }
-.review .container section article .review-write .review-title {
+.review .container .review-board article .review-write .review-title {
   position: relative;
   float: left;
   width: 33.3333333333%;
-  height: 270px;
+  height: 250px;
   padding: 20px 10px;
 }
-.review .container section article .review-write .review-title .num {
+.review .container .review-board article .review-write .review-title:hover .date,
+.review .container .review-board article .review-write .review-title:hover .writer {
+  display: block;
+  opacity: 1;
+}
+.review .container .review-board article .review-write .review-title .num {
   position: absolute;
   top: 10px;
   left: 0;
@@ -934,67 +1069,72 @@ table {
   padding: 10px;
   font: bold 25px/1 "arial";
 }
-.review .container section article .review-write .review-title h2 {
+.review .container .review-board article .review-write .review-title h2 {
   padding-top: 40px;
   font: 20px/1.5 "arial";
+  margin-bottom: 10px;
 }
-.review .container section article .review-write .review-title .contents {
+.review .container .review-board article .review-write .review-title .content {
   font: 14px/2 "arial";
 }
-.review .container section article .review-write .review-title .date {
+.review .container .review-board article .review-write .review-title .date {
+  display: none;
   font: 13px/1 "arial";
   position: absolute;
   bottom: 10px;
   right: 10px;
+  transition: 0.5s;
 }
-.review .container section article .review-write .review-title .writer {
+.review .container .review-board article .review-write .review-title .writer {
+  display: none;
   font: 13px/1 "arial";
   position: absolute;
   bottom: 10px;
+  transition: 0.5s;
 }
-.review .container section article .review-write .review-title:nth-of-type(1) {
+.review .container .review-board article .review-write .review-title:nth-of-type(1) {
+  background: #eae4da;
+}
+.review .container .review-board article .review-write .review-title:nth-of-type(2) {
+  background: #f0efed;
+}
+.review .container .review-board article .review-write .review-title:nth-of-type(3) {
   background: #fff;
   color: #585858;
 }
-.review .container section article .review-write .review-title:nth-of-type(2) {
-  background: #f0efed;
-}
-.review .container section article .review-write .review-title:nth-of-type(3) {
-  background: #eae4da;
-}
-.review .container section article .review-write .review-title:nth-of-type(4) {
+.review .container .review-board article .review-write .review-title:nth-of-type(4) {
   background: #c4c4c4;
 }
-.review .container section article .review-write .review-title:nth-of-type(5) {
+.review .container .review-board article .review-write .review-title:nth-of-type(5) {
   background: #585858;
   color: #fff;
 }
-.review .container section article .review-write .review-title:nth-of-type(6) {
+.review .container .review-board article .review-write .review-title:nth-of-type(6) {
   background: #000;
   color: #fff;
 }
-.review .container section article .review-write .review-title:nth-of-type(7) {
-  background: #eae4da;
-}
-.review .container section article .review-write .review-title:nth-of-type(8) {
+.review .container .review-board article .review-write .review-title:nth-of-type(7) {
   background: #fff;
   color: #585858;
 }
-.review .container section article .review-write .review-title:nth-of-type(9) {
-  background: #e3e0dd;
+.review .container .review-board article .review-write .review-title:nth-of-type(8) {
+  background: #f0efed;
 }
-.review .container section .pagination {
+.review .container .review-board article .review-write .review-title:nth-of-type(9) {
+  background: #eae4da;
+}
+.review .container .review-board .pagination {
   width: 70%;
   text-align: center;
   margin: 0 auto;
 }
-.review .container section .pagination::after {
+.review .container .review-board .pagination::after {
   content: "";
   display: block;
   clear: both;
 }
-.review .container section .pagination .prev,
-.review .container section .pagination .next {
+.review .container .review-board .pagination .prev,
+.review .container .review-board .pagination .next {
   display: block;
   width: 30px;
   height: 30px;
@@ -1003,28 +1143,31 @@ table {
   font-size: 20px;
   text-align: center;
 }
-.review .container section .pagination .prev {
+.review .container .review-board .pagination .prev {
   float: left;
 }
-.review .container section .pagination .next {
+.review .container .review-board .pagination .next {
   float: right;
 }
-.review .container section .pagination .pages {
+.review .container .review-board .pagination .pages {
   display: inline-block;
   text-align: center;
   font-size: 0;
 }
-.review .container section .pagination .pages a {
+.review .container .review-board .pagination .pages a {
   display: inline-block;
   width: 30px;
   height: 30px;
-  border: 1px solid #888;
   font: 11px/30px "arial";
   color: #666;
   margin: 0 5px;
   transition: 0.5s;
 }
-.review .container section .pagination .pages a:hover {
+.review .container .review-board .pagination .pages a:first-child {
+  background: #666;
+  color: #fff;
+}
+.review .container .review-board .pagination .pages a:hover {
   background: #666;
   color: #fff;
 }
@@ -1037,23 +1180,70 @@ table {
     width: 100%;
     padding: 60px 40px;
   }
+  .review .container .contents .tab label h4 {
+    width: 80%;
+  }
+  .review .container .review-board article .review-write .review-title h2 {
+    padding-top: 30px;
+  }
+  .review .container .review-board article .review-write .review-title .content {
+    font: 14px/1.5 "arial";
+  }
 }
 @media screen and (max-width: 850px) {
-  .review .container section article .review-write .review-title {
+  .review .container .contents .fnq {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+  }
+  .review .container .contents .fnq .review-bg {
+    position: relative;
+    float: left;
     width: 50%;
   }
-  .review .container section article .review-write .review-title:nth-of-type(9) {
+  .review .container .contents .fnq p {
+    position: relative;
+    float: left;
+    width: 47%;
+    height: 100%;
+    margin-left: 3%;
+    padding: auto 10px;
+  }
+  .review .container .contents .tab-wrap {
+    width: 100%;
+  }
+  .review .container .review-board article .review-write .review-title {
+    width: 50%;
+    height: 300px;
+  }
+  .review .container .review-board article .review-write .review-title:last-child {
     display: none;
   }
-  .review .container .pagination p a:nth-of-type(6), .review .container .pagination p a:nth-of-type(7), .review .container .pagination p a:nth-of-type(8), .review .container .pagination p a:nth-of-type(9), .review .container .pagination p a:nth-of-type(10) {
+  .review .container .review-board .pagination p a:nth-of-type(6), .review .container .review-board .pagination p a:nth-of-type(7), .review .container .review-board .pagination p a:nth-of-type(8), .review .container .review-board .pagination p a:nth-of-type(9), .review .container .review-board .pagination p a:nth-of-type(10) {
     display: none;
   }
 }
 @media screen and (max-width: 500px) {
-  .review .container section article .review-write .review-title {
+  .review .container .contents .fnq .review-bg {
     width: 100%;
   }
-  .review .container .pagination p a:nth-of-type(4), .review .container .pagination p a:nth-of-type(5) {
+  .review .container .contents .fnq p {
+    display: none;
+  }
+  .review .container .contents .tab-wrap {
+    margin-left: 0;
+  }
+  .review .container .review-board article .review-write .review-title {
+    width: 100%;
+    height: 200px;
+  }
+  .review .container .review-board article .review-write .review-title .content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .review .container .review-board .pagination p a:nth-of-type(4), .review .container .review-board .pagination p a:nth-of-type(5) {
     display: none;
   }
 }
@@ -1491,41 +1681,41 @@ table {
     width: 100%;
   }
 }
-.office .container .wrap-1 {
+.about .container .wrap-1 {
   position: relative;
   width: 100%;
 }
-.office .container .wrap-1::after {
+.about .container .wrap-1::after {
   content: "";
   display: block;
   clear: both;
 }
-.office .container .wrap-1 h2 {
+.about .container .wrap-1 h2 {
   float: left;
   width: 60%;
   font: 60px/70px "arial";
   margin-right: 5%;
   padding: 0 50px;
 }
-.office .container .wrap-1 .intro {
+.about .container .wrap-1 .intro {
   float: right;
   width: 35%;
   padding: 0 50px;
 }
-.office .container .wrap-1 .intro h3 {
+.about .container .wrap-1 .intro h3 {
   margin-bottom: 20px;
 }
-.office .container .wrap-1 .intro p {
+.about .container .wrap-1 .intro p {
   margin-bottom: 50px;
 }
-.office .container .wrap-1 .move {
+.about .container .wrap-1 .move {
   position: absolute;
   bottom: 10%;
   left: 100px;
   width: 40%;
   height: 150px;
 }
-.office .container .wrap-1 .move .circle {
+.about .container .wrap-1 .move .circle {
   position: relative;
   top: 0;
   left: 70%;
@@ -1535,7 +1725,7 @@ table {
   border-radius: 50%;
   animation: move 10s linear infinite;
 }
-.office .container .wrap-1 .move .circle a {
+.about .container .wrap-1 .move .circle a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1544,25 +1734,25 @@ table {
   color: #fff;
   transform: rotate(-30deg);
 }
-.office .container .wrap-2 {
+.about .container .wrap-2 {
   position: relative;
   width: 100%;
   padding: 0 50px;
   margin: 80px 0;
 }
-.office .container .wrap-2::after {
+.about .container .wrap-2::after {
   content: "";
   display: block;
   clear: both;
 }
-.office .container .wrap-2 article {
+.about .container .wrap-2 article {
   width: 100%;
   height: 600px;
 }
-.office .container .wrap-2 article:hover img {
+.about .container .wrap-2 article:hover img {
   filter: grayscale(0);
 }
-.office .container .wrap-2 article h2 {
+.about .container .wrap-2 article h2 {
   position: absolute;
   width: 70%;
   top: 50%;
@@ -1573,134 +1763,97 @@ table {
   color: #fff;
   z-index: 2;
 }
-.office .container .wrap-2 article img {
+.about .container .wrap-2 article img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: grayscale(1);
   transition: 0.5s;
 }
-.office .container .wrap-3 {
+.about .container .wrap-3 {
   position: relative;
   margin-bottom: 100px;
 }
-.office .container .wrap-3 .contents {
+.about .container .wrap-3 .contents {
   margin: 0 50px;
   display: flex;
   flex-direction: column;
   margin-bottom: 80px;
   font-family: "arial";
 }
-.office .container .wrap-3 .contents .sub-title {
+.about .container .wrap-3 .contents .sub-title {
   color: #333;
   margin: 30px 0;
   font: 40px/1.3 "arial";
 }
-.office .container .wrap-3 .contents .tab {
+.about .container .wrap-3 .contents #service_type {
   position: relative;
   width: 100%;
-  background: #fff;
-  padding: 0 20px 20px;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+  margin: 0 auto;
 }
-.office .container .wrap-3 .contents .tab:last-child {
-  border-bottom: none;
-}
-.office .container .wrap-3 .contents .tab:hover label::after {
-  color: #333;
-}
-.office .container .wrap-3 .contents .tab input[type=checkbox] {
-  appearance: none;
-}
-.office .container .wrap-3 .contents .tab input[type=checkbox]:checked + label::after {
-  transform: rotate(135deg);
-  color: #eee;
-}
-.office .container .wrap-3 .contents .tab input[type=checkbox]:checked ~ .information {
-  max-height: 100vh;
-}
-.office .container .wrap-3 .contents .tab input[type=checkbox]:checked ~ .information p {
-  color: #fff;
-}
-.office .container .wrap-3 .contents .tab input[type=checkbox]:checked ~ label h3 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: rgba(255, 255, 255, 0.2);
-  justify-content: flex-end;
-  font-size: 100px;
-  padding: 20px;
-  transition: 0.2s;
-}
-.office .container .wrap-3 .contents .tab input[type=checkbox]:checked ~ label h4 {
-  background: #fff;
-  padding: 2px 10px;
-  color: #333;
-  border-radius: 2px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-.office .container .wrap-3 .contents .tab label {
+.about .container .wrap-3 .contents #service_type nav {
   display: flex;
-  align-items: center;
-  cursor: pointer;
+  margin-bottom: 50px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
-.office .container .wrap-3 .contents .tab label::after {
-  content: "+";
-  position: absolute;
-  right: 20px;
-  font-size: 32px;
-  transition: 0.2s;
-  color: rgba(0, 0, 0, 0.1);
+.about .container .wrap-3 .contents #service_type nav ul {
+  width: 45%;
 }
-.office .container .wrap-3 .contents .tab label h3 {
-  width: 40px;
-  height: 40px;
-  background: #333;
+.about .container .wrap-3 .contents #service_type nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  font-size: 20px;
+  height: 85px;
+  background: #eee;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.about .container .wrap-3 .contents #service_type nav ul li h3 {
+  font: 20px/1 "arial";
+  color: #000;
+  text-align: center;
+}
+.about .container .wrap-3 .contents #service_type nav ul li h3:hover {
+  font: 21px/1 "arial";
+}
+.about .container .wrap-3 .contents #service_type nav ul li.on {
+  background: #eae4da;
+}
+.about .container .wrap-3 .contents #service_type nav article {
+  padding: 45px;
+  display: none;
+}
+.about .container .wrap-3 .contents #service_type nav article.on {
+  display: block;
+}
+.about .container .wrap-3 .contents #service_type nav article h3 {
+  font: 30px/1 "arial";
+  margin-bottom: 20px;
+}
+.about .container .wrap-3 .contents #service_type nav article p {
+  font: 20px/1 "Jost", sans-serif;
+  margin-bottom: 20px;
+}
+.about .container .wrap-3 .contents #service_type nav article p i {
   margin-right: 10px;
 }
-.office .container .wrap-3 .contents .tab label h4 {
-  position: relative;
-  color: #333;
-  z-index: 10;
-  font-weight: normal;
-}
-.office .container .wrap-3 .contents .tab .information {
-  max-height: 0;
-  transition: 0.5s;
-  overflow: hidden;
-}
-.office .container .wrap-3 .contents .tab .information p {
-  position: relative;
-  padding: 10px 0;
-  font: 15px/2 "arial";
-  color: #fff;
-  z-index: 10;
-}
-.office .container .wrap-4 {
+.about .container .wrap-4 {
   position: relative;
   padding: 0 50px;
 }
-.office .container .wrap-4::after {
+.about .container .wrap-4::after {
   content: "";
   display: block;
   clear: both;
 }
-.office .container .wrap-4 h2 {
+.about .container .wrap-4 h2 {
   width: 75%;
   color: #333;
   font: 40px/1.3 "arial";
   margin-bottom: 30px;
 }
-.office .container .wrap-4 article {
+.about .container .wrap-4 article {
   position: relative;
   width: 33.3333333333%;
   height: 400px;
@@ -1710,31 +1863,31 @@ table {
   filter: grayscale(1);
   transition: 0.5s;
 }
-.office .container .wrap-4 article:hover {
+.about .container .wrap-4 article:hover {
   filter: grayscale(0);
 }
-.office .container .wrap-4 article:hover .member-name {
+.about .container .wrap-4 article:hover .member-name {
   display: block;
 }
-.office .container .wrap-4 article:nth-of-type(3n) {
+.about .container .wrap-4 article:nth-of-type(3n) {
   padding-right: none;
 }
-.office .container .wrap-4 article h3 {
+.about .container .wrap-4 article h3 {
   font: 15px/1.3 "arial";
   word-break: keep-all;
 }
-.office .container .wrap-4 article h3:nth-of-type(3) {
+.about .container .wrap-4 article h3:nth-of-type(3) {
   margin-bottom: 50px;
 }
-.office .container .wrap-4 article strong {
+.about .container .wrap-4 article strong {
   text-decoration: underline;
 }
-.office .container .wrap-4 article img {
+.about .container .wrap-4 article img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.office .container .wrap-4 article .member-name {
+.about .container .wrap-4 article .member-name {
   display: none;
   position: absolute;
   width: 100%;
@@ -1746,11 +1899,12 @@ table {
   background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
-.office .container .wrap-4 article .member-name i {
+.about .container .wrap-4 article .member-name i {
   margin-left: 10px;
 }
-.office .container .wrap-4 article .member-position {
+.about .container .wrap-4 article .member-position {
   font: 15px/1 "Gowun Dodum", sans-serif;
+  text-align: center;
   margin-left: 10px;
 }
 
@@ -1769,97 +1923,124 @@ table {
   }
 }
 @media screen and (max-width: 1200px) {
-  .office .container {
+  .about .container {
     width: 100%;
   }
-  .office .container .wrap-1 h2 {
+  .about .container .wrap-1 h2 {
     width: 57%;
     font: 40px/50px "arial";
     margin: 0 3%;
     padding: 0 30px;
   }
-  .office .container .wrap-1 .intro {
+  .about .container .wrap-1 .intro {
     width: 37%;
   }
-  .office .container .wrap-1 .intro h3 {
+  .about .container .wrap-1 .intro h3 {
     margin-bottom: 10px;
   }
-  .office .container .wrap-1 .intro p {
+  .about .container .wrap-1 .intro p {
     margin-bottom: 30px;
   }
-  .office .container .wrap-2 article {
+  .about .container .wrap-2 article {
     height: 450px;
   }
-  .office .container .wrap-2 article h2 {
+  .about .container .wrap-2 article h2 {
     font: 50px/1.3 "arial";
   }
-  .office .container .wrap-4 h2 {
+  .about .container .wrap-3 .contents #service_type nav ul {
+    width: 35%;
+  }
+  .about .container .wrap-3 .contents #service_type nav ul li h3 {
+    font: 15px/1.2 "arial";
+  }
+  .about .container .wrap-3 .contents #service_type nav ul li h3:hover {
+    font: 16px/1.2 "arial";
+  }
+  .about .container .wrap-3 .contents #service_type nav article {
+    padding: 40px;
+  }
+  .about .container .wrap-3 .contents #service_type nav article p {
+    font: 15px/1 "Jost", sans-serif;
+  }
+  .about .container .wrap-4 h2 {
     font: 30px/1.3 "arial";
   }
-  .office .container .wrap-4 article {
+  .about .container .wrap-4 article {
     height: 300px;
     margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 850px) {
-  .office .container .wrap-1 {
+  .about .container .wrap-1 {
     padding-bottom: 150px;
   }
-  .office .container .wrap-1 h2 {
+  .about .container .wrap-1 h2 {
     width: 98%;
     font: 37px/1.2 "arial";
     padding: 0;
     text-align: center;
     margin: 0;
   }
-  .office .container .wrap-1 .intro {
+  .about .container .wrap-1 .intro {
     width: 100%;
     margin-top: 30px;
   }
-  .office .container .wrap-1 .move {
+  .about .container .wrap-1 .move {
     width: 80%;
     left: 15%;
     bottom: 5%;
     height: 100px;
   }
-  .office .container .wrap-1 .move .circle {
+  .about .container .wrap-1 .move .circle {
     width: 100px;
   }
-  .office .container .wrap-2 {
+  .about .container .wrap-2 {
     margin: 50px 0 0 0;
   }
-  .office .container .wrap-2 h2 {
+  .about .container .wrap-2 h2 {
     font: 40px/1.3 "arial";
   }
-  .office .container .wrap-3 .contents .sub-title {
+  .about .container .wrap-3 .contents .sub-title {
     font: 30px/1.3 "arial";
   }
-  .office .container .wrap-3 .contents .tab label h4 {
-    width: 70%;
-  }
-  .office .container .wrap-4 h2 {
+  .about .container .wrap-4 h2 {
     width: 100%;
     font: bold 27px/1.3 "arial";
   }
-  .office .container .wrap-4 article {
+  .about .container .wrap-4 article {
     width: 50%;
   }
 }
 @media screen and (max-width: 500px) {
-  .office .container .wrap-1 h2 {
+  .about .container .wrap-1 h2 {
     margin: 0;
   }
-  .office .container .wrap-2 {
+  .about .container .wrap-2 {
     padding: 0 5px;
   }
-  .office .container .wrap-2 article h2 {
+  .about .container .wrap-2 article h2 {
     font: 20px/1.5 "arial";
   }
-  .office .container .wrap-4 {
+  .about .container .wrap-3 .contents #service_type nav ul li h3 {
+    font: 13px/1.2 "arial";
+  }
+  .about .container .wrap-3 .contents #service_type nav ul li h3:hover {
+    font: 14px/1.2 "arial";
+  }
+  .about .container .wrap-3 .contents #service_type nav article {
+    padding: 20px;
+  }
+  .about .container .wrap-3 .contents #service_type nav article h3 {
+    font: 20px/1 "arial";
+  }
+  .about .container .wrap-3 .contents #service_type nav article p {
+    font: 13px/1 "Jost", sans-serif;
+  }
+  .about .container .wrap-4 {
     padding: 0 20px;
     text-align: center;
   }
-  .office .container .wrap-4 article {
+  .about .container .wrap-4 article {
     width: 100%;
     padding: 0;
   }
