@@ -9,9 +9,9 @@ function selectAll(selectAll) {
 
 //form validation
 const form = document.querySelector('#member');
-const btnSubmit = form.querySelector('input[type=submit]');
+const btn_submit = form.querySelector('input[type=submit]');
 
-btnSubmit.addEventListener('click', (e) => {
+btn_submit.addEventListener('click', (e) => {
 	if (!isTxt('userid', 6)) e.preventDefault();
 	if (!isEmail('email')) e.preventDefault();
 

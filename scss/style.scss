@@ -1532,9 +1532,10 @@ $kr-font: 'Gowun Dodum', sans-serif;
 
 			.wrap3 {
 				width: 30px;
-				div {
+				.sns-icons {
 					display: flex;
 					flex-direction: column;
+					margin-bottom: 0;
 					i {
 						font-size: 20px;
 						margin-top: 20px;
