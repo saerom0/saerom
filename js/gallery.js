@@ -179,7 +179,6 @@ function delayLoading() {
 	}
 }
 
-//리스트를 여백없이 차곡차곡 쌓일 수 있도록 나열해주는 플러그인 사용
 function isoLayout() {
 	loading.classList.add('off');
 	frame.classList.add('on');

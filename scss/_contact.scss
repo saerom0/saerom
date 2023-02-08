@@ -93,6 +93,7 @@
 		}
 
 		.location {
+			position: relative;
 			float: left;
 			width: 100%;
 			h2 {
@@ -114,27 +115,21 @@
 				}
 			}
 			.traffic {
+				display: flex;
 				float: left;
-				li {
-					float: left;
-					margin-right: 10px;
-					margin-bottom: 60px;
-					a {
-						display: block;
-						width: 120px;
-						height: 40px;
-						background: #fff;
-						font: bold 14px/40px 'Poppins';
-						color: #555;
-						text-align: center;
-						border: 1px solid #555;
-					}
-					.on a {
-						color: #fff;
-						background: #555;
-					}
+				width: 120px;
+				height: 40px;
+				justify-content: center;
+				align-items: center;
+				border: 1px solid #555;
+				background: #fff;
+				color: #555;
+				&.on {
+					color: #fff;
+					background: #555;
 				}
 			}
+
 			.branch {
 				float: right;
 				li {
@@ -150,7 +145,7 @@
 						text-align: center;
 						border: 1px solid #555;
 					}
-					.on a {
+					&.on a {
 						color: #fff;
 						background: #555;
 					}
@@ -179,13 +174,11 @@
 			width: 610px;
 			.location {
 				.traffic {
-					li a {
-						width: 100px;
-					}
+					width: 90px;
 				}
 				.branch {
 					li a {
-						width: 93px;
+						width: 90px;
 					}
 				}
 			}
@@ -216,18 +209,22 @@
 					height: 300px;
 				}
 				.traffic {
-					width: 100%;
-					li {
-						margin-bottom: 20px;
-						a {
-							width: 100px;
-						}
-					}
+					width: 50px;
+					position: absolute;
+					top: 10px;
+					right: 0;
+					z-index: 2;
 				}
 				.branch {
-					width: 100%;
-					li:first-child {
-						margin-left: 0;
+					float: left;
+					li {
+						&:first-child {
+							margin-left: 0;
+						}
+						a {
+							font: 12px/40px 'Poppins';
+							width: 70px;
+						}
 					}
 				}
 			}

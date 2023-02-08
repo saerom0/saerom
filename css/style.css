@@ -791,6 +791,7 @@ table {
   margin-right: 10px;
 }
 .contact .container .location {
+  position: relative;
   float: left;
   width: 100%;
 }
@@ -813,24 +814,17 @@ table {
   opacity: 1;
 }
 .contact .container .location .traffic {
+  display: flex;
   float: left;
-}
-.contact .container .location .traffic li {
-  float: left;
-  margin-right: 10px;
-  margin-bottom: 60px;
-}
-.contact .container .location .traffic li a {
-  display: block;
   width: 120px;
   height: 40px;
-  background: #fff;
-  font: bold 14px/40px "Poppins";
-  color: #555;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #555;
+  background: #fff;
+  color: #555;
 }
-.contact .container .location .traffic li .on a {
+.contact .container .location .traffic.on {
   color: #fff;
   background: #555;
 }
@@ -851,7 +845,7 @@ table {
   text-align: center;
   border: 1px solid #555;
 }
-.contact .container .location .branch li .on a {
+.contact .container .location .branch li.on a {
   color: #fff;
   background: #555;
 }
@@ -872,11 +866,11 @@ table {
   .contact .container {
     width: 610px;
   }
-  .contact .container .location .traffic li a {
-    width: 100px;
+  .contact .container .location .traffic {
+    width: 90px;
   }
   .contact .container .location .branch li a {
-    width: 93px;
+    width: 90px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -899,19 +893,21 @@ table {
     height: 300px;
   }
   .contact .container .location .traffic {
-    width: 100%;
-  }
-  .contact .container .location .traffic li {
-    margin-bottom: 20px;
-  }
-  .contact .container .location .traffic li a {
-    width: 100px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 2;
   }
   .contact .container .location .branch {
-    width: 100%;
+    float: left;
   }
   .contact .container .location .branch li:first-child {
     margin-left: 0;
+  }
+  .contact .container .location .branch li a {
+    font: 12px/40px "Poppins";
+    width: 70px;
   }
 }
 .review .container .contents {

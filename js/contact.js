@@ -1,8 +1,6 @@
 var mapContainer = document.getElementById('map');
 
-const t_on = document.querySelectorAll('.traffic li')[0];
-
-const t_off = document.querySelectorAll('.traffic li')[1];
+const t_on = document.querySelector('.traffic');
 
 const branch_btns = document.querySelectorAll('.branch li');
 
@@ -75,22 +73,13 @@ window.onresize = () => {
 
 t_on.addEventListener('click', (e) => {
 	e.preventDefault();
-
-	if (t_on.classList.contains('on')) return;
-
-	map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-
-	t_on.classList.add('on');
-	t_off.classList.remove('on');
-});
-
-t_off.addEventListener('click', (e) => {
-	e.preventDefault();
-	if (t_off.classList.contains('on')) return;
-	map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-
-	t_off.classList.add('on');
-	t_on.classList.remove('on');
+	if (!t_on.classList.contains('on')) {
+		t_on.classList.toggle('on');
+		map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+	} else {
+		t_on.classList.toggle('on');
+		map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
+	}
 });
 
 var mapTypeControl = new kakao.maps.MapTypeControl();
