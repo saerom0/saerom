@@ -526,6 +526,15 @@ $kr-font: 'Gowun Dodum', sans-serif;
 		}
 	}
 
+	.content {
+		.container {
+			position: relative;
+			h1 {
+				font: 30px/1 $kr-font;
+			}
+		}
+	}
+
 	//footer
 	#footer_sub {
 		.container {

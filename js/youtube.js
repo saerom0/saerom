@@ -56,7 +56,7 @@ vidList.addEventListener('click', (e) => {
 	pop.classList.add('pop');
 	pop.innerHTML = `
         <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" width="100%" height="100%" allowfullscreen></iframe>
-        <span class="btnClose">close</span>
+        <span class="btn-close">close</span>
         `;
 	vidList.append(pop);
 });

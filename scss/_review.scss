@@ -281,7 +281,7 @@
 		width: 100%;
 		.container {
 			width: 100%;
-			padding: 60px 40px;
+			padding: 40px;
 			.contents {
 				.tab label h4 {
 					width: 80%;
@@ -339,6 +339,7 @@
 					}
 				}
 				.pagination {
+					width: 80%;
 					p {
 						a {
 							&:nth-of-type(6),
@@ -359,7 +360,11 @@
 @media screen and (max-width: $mobile) {
 	.review {
 		.container {
+			padding: 20px;
 			.contents {
+				.sub-title {
+					margin: 30px 10px 10px;
+				}
 				.fnq {
 					.review-bg {
 						width: 100%;
@@ -370,6 +375,16 @@
 				}
 				.tab-wrap {
 					margin-left: 0;
+					.tab label {
+						h3 {
+							width: 30px;
+							height: 30px;
+						}
+						h4 {
+							font-size: 13px;
+							width: 75%;
+						}
+					}
 				}
 			}
 			.review-board {
