@@ -293,7 +293,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 		height: 100%;
 		position: relative;
 		overflow: hidden;
-
 		.container {
 			width: 1180px;
 			height: 100%;
@@ -358,7 +357,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				opacity: 0.3;
 				cursor: pointer;
 				transition: 0.5s;
-
 				&.on {
 					background: #fff;
 					opacity: 1;
@@ -688,16 +686,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 							transition: 0.5s;
 							margin-bottom: 20px;
 						}
-						.search {
-							display: none;
-							transition: 0.5s;
-							background-color: #fff;
-							width: 100%;
-							height: 100%;
-							opacity: 0.3;
-							position: absolute;
-							bottom: 0;
-						}
 						.review {
 							display: none;
 							position: absolute;
@@ -738,9 +726,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 					&:hover {
 						img {
 							transform: scale(1.1);
-						}
-						.search {
-							display: block;
 						}
 						.review {
 							display: block;
@@ -1391,16 +1376,35 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	//visual
 	#visual {
 		.visual {
-			height: 80vh;
+			height: 90vh;
 			.container {
 				.cp-name {
 					display: none;
 				}
 			}
-			.vs-btns {
-				top: 76vh;
+			.panel {
+				background: rgb(255, 255, 255);
 				li {
-					width: 50px;
+					width: 100%;
+					height: 90%;
+					overflow: hidden;
+					&.on img {
+						opacity: 1;
+						transform: scale(1.05);
+					}
+				}
+			}
+			.vs-btns {
+				top: 85vh;
+				gap: 10px;
+				li {
+					width: 12px;
+					height: 12px;
+					border-radius: 50%;
+					background: #fff;
+					&.on {
+						background: #000;
+					}
 				}
 			}
 		}
