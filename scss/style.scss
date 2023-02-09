@@ -1386,8 +1386,11 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				background: rgb(255, 255, 255);
 				li {
 					width: 100%;
-					height: 90%;
+					height: 85%;
 					overflow: hidden;
+					img {
+						object-fit: cover;
+					}
 					&.on img {
 						opacity: 1;
 						transform: scale(1.05);
@@ -1395,13 +1398,13 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				}
 			}
 			.vs-btns {
-				top: 85vh;
+				top: 82vh;
 				gap: 10px;
 				li {
-					width: 12px;
-					height: 12px;
+					width: 15px;
+					height: 15px;
 					border-radius: 50%;
-					background: #fff;
+					background: #777;
 					&.on {
 						background: #000;
 					}
