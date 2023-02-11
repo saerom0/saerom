@@ -410,9 +410,12 @@ table {
   #header_sub .container .web-menu .log li a {
     font: bold 15px/20px "Jost", sans-serif;
   }
+  .content {
+    width: 100%;
+  }
   .content .container {
     width: 100%;
-    padding: 60px 40px;
+    padding: 40px;
   }
   #footer_sub {
     padding: 60px 0;
@@ -556,7 +559,7 @@ table {
   height: 100px;
   resize: none;
   padding: 10px;
-  font: 13px/1.5 "Sunflower", sans-serif;
+  font: 13px/1.5 "Sunflower";
   color: #888;
   background: #eee;
 }
@@ -649,7 +652,7 @@ table {
 }
 .sign-up .container form fieldset table td #male,
 .sign-up .container form fieldset table td #female {
-  font: 14px/1 "Sunflower", sans-serif;
+  font: 14px/1 "Sunflower";
 }
 .sign-up .container form fieldset table td label {
   margin-right: 30px;
@@ -663,7 +666,7 @@ table {
   border: 1px solid #bbb;
   padding-left: 10px;
   margin-right: 5px;
-  font-family: "Sunflower", sans-serif;
+  font-family: "Sunflower";
 }
 .sign-up .container form fieldset table td select#gender {
   font-family: "Gowun Dodum", sans-serif;
@@ -698,7 +701,7 @@ table {
     font: 13px/1 "Gowun Dodum", sans-serif;
   }
   .sign-up .container form table th {
-    font: bold 13px/1 "Roboto", sans-serif;
+    font: bold 13px/1 "Roboto";
   }
   .sign-up .container form table th input[type=submit],
   .sign-up .container form table th input[type=reset] {
@@ -717,6 +720,7 @@ table {
   float: left;
   width: 100%;
   height: 100%;
+  padding: 0 50px 0;
 }
 .contact .container .enquire h2 {
   font: 25px/50px "Gowun Dodum", sans-serif;
@@ -797,6 +801,7 @@ table {
   position: relative;
   float: left;
   width: 100%;
+  padding: 0 50px 0;
 }
 .contact .container .location h2 {
   font: 25px/50px "Gowun Dodum", sans-serif;
@@ -853,21 +858,9 @@ table {
   background: #555;
 }
 
-@media screen and (max-width: 1200px) {
-  .contact {
-    width: 100%;
-  }
-  .contact .container {
-    width: 100%;
-    padding: 60px 40px;
-  }
-}
 @media screen and (max-width: 850px) {
   .contact .sub-bg {
     height: 220px;
-  }
-  .contact .container {
-    width: 610px;
   }
   .contact .container .location .traffic {
     width: 90px;
@@ -917,6 +910,7 @@ table {
 .review .container .contents {
   position: relative;
   margin-bottom: 80px;
+  padding: 0 50px 0;
 }
 .review .container .contents::after {
   content: "";
@@ -1041,6 +1035,7 @@ table {
 }
 .review .container .review-board {
   width: 100%;
+  padding: 0 50px 0;
 }
 .review .container .review-board .sub-title {
   color: #333;
@@ -1225,6 +1220,9 @@ table {
   .review .container .contents .tab-wrap {
     width: 100%;
   }
+  .review .container .review-board {
+    padding: 0;
+  }
   .review .container .review-board article .review-write .review-title {
     width: 50%;
     height: 300px;
@@ -1242,6 +1240,9 @@ table {
 @media screen and (max-width: 500px) {
   .review .container {
     padding: 20px;
+  }
+  .review .container .contents {
+    padding: 0;
   }
   .review .container .contents .sub-title {
     margin: 30px 10px 10px;
@@ -1784,7 +1785,6 @@ table {
 .about .container .wrap-2 {
   position: relative;
   width: 100%;
-  padding: 0 50px;
   margin: 80px 0;
 }
 .about .container .wrap-2::after {
@@ -1886,7 +1886,6 @@ table {
 }
 .about .container .wrap-4 {
   position: relative;
-  padding: 0 50px;
 }
 .about .container .wrap-4::after {
   content: "";
@@ -1901,10 +1900,10 @@ table {
 }
 .about .container .wrap-4 article {
   position: relative;
-  width: 33.3333333333%;
+  width: calc((100% - 60px) / 3);
   height: 400px;
   float: left;
-  padding-right: 30px;
+  margin-right: 30px;
   margin-bottom: 50px;
   filter: grayscale(1);
   transition: 0.5s;
@@ -1916,7 +1915,7 @@ table {
   display: block;
 }
 .about .container .wrap-4 article:nth-of-type(3n) {
-  padding-right: none;
+  margin-right: 0;
 }
 .about .container .wrap-4 article h3 {
   font: 15px/1.3 "arial";
@@ -2058,7 +2057,13 @@ table {
     font: bold 27px/1.3 "arial";
   }
   .about .container .wrap-4 article {
-    width: 50%;
+    width: calc((100% - 30px) / 2);
+  }
+  .about .container .wrap-4 article:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .about .container .wrap-4 article:nth-of-type(3n) {
+    margin-right: 30px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -2101,7 +2106,10 @@ table {
   }
   .about .container .wrap-4 article {
     width: 100%;
-    padding: 0;
+    margin-right: 0;
+  }
+  .about .container .wrap-4 article:nth-of-type(3n) {
+    margin-right: 0;
   }
 }
 #header {
@@ -3336,7 +3344,7 @@ table {
     transform: scale(1.05);
   }
   #visual .visual .vs-btns {
-    top: 88vh;
+    top: 87vh;
     gap: 10px;
   }
   #visual .visual .vs-btns li {

@@ -28,7 +28,7 @@
 					height: 100px;
 					resize: none;
 					padding: 10px;
-					font: 13px/1.5 'Sunflower', sans-serif;
+					font: 13px/1.5 'Sunflower';
 					color: #888;
 					background: #eee;
 				}
@@ -121,7 +121,7 @@
 						}
 						#male,
 						#female {
-							font: 14px/1 'Sunflower', sans-serif;
+							font: 14px/1 'Sunflower';
 						}
 						label {
 							margin-right: 30px;
@@ -135,7 +135,7 @@
 							border: 1px solid #bbb;
 							padding-left: 10px;
 							margin-right: 5px;
-							font-family: 'Sunflower', sans-serif;
+							font-family: 'Sunflower';
 						}
 						select#gender {
 							font-family: $kr-font;
@@ -183,7 +183,7 @@
 				}
 				table {
 					th {
-						font: bold 13px/1 'Roboto', sans-serif;
+						font: bold 13px/1 'Roboto';
 						input[type='submit'],
 						input[type='reset'] {
 							width: 100px;

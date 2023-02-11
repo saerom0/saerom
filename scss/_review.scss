@@ -3,6 +3,7 @@
 		.contents {
 			position: relative;
 			margin-bottom: 80px;
+			padding: 0 50px 0;
 			&::after {
 				content: '';
 				display: block;
@@ -128,6 +129,7 @@
 		}
 		.review-board {
 			width: 100%;
+			padding: 0 50px 0;
 			.sub-title {
 				color: #333;
 				margin: 30px 0;
@@ -329,6 +331,7 @@
 				}
 			}
 			.review-board {
+				padding: 0;
 				article {
 					.review-write .review-title {
 						width: calc(100% / 2);
@@ -362,6 +365,7 @@
 		.container {
 			padding: 20px;
 			.contents {
+				padding: 0;
 				.sub-title {
 					margin: 30px 10px 10px;
 				}
