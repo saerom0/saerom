@@ -530,8 +530,11 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	.content {
 		.container {
 			position: relative;
+			margin: 50px 0 120px;
+			padding: 20px;
 			h1 {
 				font: 30px/1 $kr-font;
+				padding: 0 20px 30px;
 			}
 		}
 	}

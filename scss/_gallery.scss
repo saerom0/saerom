@@ -109,7 +109,7 @@
 						div {
 							width: 100%;
 							padding: 10px;
-							box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+							box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 							background: #fff;
 							&:hover {
 								a {
@@ -215,7 +215,6 @@
 @media screen and (max-width: $mobile) {
 	.gallery {
 		.container {
-			padding: 20px;
 			#gallery {
 				h2 a {
 					font: bold 42px/1 'arial';

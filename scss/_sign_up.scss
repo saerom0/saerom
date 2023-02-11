@@ -175,18 +175,24 @@
 	.sign-up {
 		.container {
 			form {
-				.all-agree {
-					font: bold 13px/1.5 $kr-font;
-				}
-				h2 {
-					font: 13px/1 $kr-font;
-				}
-				table {
-					th {
-						font: bold 13px/1 'Roboto';
-						input[type='submit'],
-						input[type='reset'] {
-							width: 100px;
+				width: 100%;
+				fieldset {
+					.all-agree label {
+						width: 95%;
+						font: bold 13px/1.5 $kr-font;
+					}
+					h2 {
+						font: 13px/1 $kr-font;
+					}
+					table {
+						th {
+							width: 23%;
+							padding: 5px;
+							font: 12px/1 'Roboto';
+							input[type='submit'],
+							input[type='reset'] {
+								width: 90px;
+							}
 						}
 					}
 				}
