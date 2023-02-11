@@ -3322,12 +3322,13 @@ table {
   }
   #visual .visual .panel li {
     width: 100%;
-    height: 85%;
+    height: 80%;
     overflow: hidden;
   }
   #visual .visual .panel li img {
     position: relative;
-    top: 90px;
+    height: 100%;
+    top: 40px;
     left: 0;
   }
   #visual .visual .panel li.on img {
@@ -3335,7 +3336,7 @@ table {
     transform: scale(1.05);
   }
   #visual .visual .vs-btns {
-    top: 87vh;
+    top: 88vh;
     gap: 10px;
   }
   #visual .visual .vs-btns li {
@@ -3357,7 +3358,7 @@ table {
     width: 100%;
   }
   #middle_menu .container .intro h2 {
-    margin: 70px auto 40px;
+    margin: 90px auto 40px;
     font: bold 40px/1 "Roboto";
   }
   #middle_menu .container .intro h3 {
