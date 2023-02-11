@@ -1,4 +1,23 @@
-//햄버거 버튼
+//about page
+const tab_btn = document.querySelectorAll('#service_type li');
+const tab_contents = document.querySelectorAll('#service_type article');
+
+tab_btn.forEach((el, index) => {
+	el.addEventListener('click', (e) => {
+		let isOn = e.currentTarget.classList.contains('on');
+		if (isOn) return;
+
+		act(tab_btn, index);
+		act(tab_contents, index);
+	});
+});
+
+function act(arr, index) {
+	for (let el of arr) el.classList.remove('on');
+	arr[index].classList.add('on');
+}
+
+//모바일버전 햄버거 버튼
 const btn_call = document.querySelector('.btn-call');
 const mob_menu = document.querySelector('.side-menu');
 
@@ -8,6 +27,7 @@ btn_call.onclick = (e) => {
 	mob_menu.classList.toggle('on');
 };
 
+//main page
 //visual영역
 const visual = document.querySelector('#visual');
 const panels = visual.querySelectorAll('.panel li');
@@ -49,8 +69,9 @@ function startRolling() {
 }
 
 // #banner 영역
-const bn_btn = banner.querySelectorAll('#banner li');
-const bn_div = banner.querySelector('#banner section');
+const banner = document.querySelector('#banner');
+const bn_btn = banner.querySelectorAll('li');
+const bn_div = banner.querySelector('section');
 
 bn_btn.forEach((el, idx) => {
 	el.addEventListener('click', (e) => {

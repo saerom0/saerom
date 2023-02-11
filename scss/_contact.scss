@@ -33,9 +33,6 @@
 					font-family: $main-font;
 					font-size: 15px;
 					background: $bg-color;
-					&:nth-of-type(1) {
-						margin-top: 20px;
-					}
 					&:nth-of-type(4) {
 						height: 100px;
 					}
@@ -76,7 +73,7 @@
 						font: 16px/1 $main-font;
 						margin-top: 10px;
 					}
-					p {
+					.contact-contents {
 						font: 16px/1 $main-font;
 						margin-top: 10px;
 						margin-bottom: 30px;

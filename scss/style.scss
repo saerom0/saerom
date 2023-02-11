@@ -289,9 +289,9 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	width: 100%;
 	height: 100vh;
 	.visual {
+		position: relative;
 		width: 100%;
 		height: 100%;
-		position: relative;
 		overflow: hidden;
 		.container {
 			width: 1180px;
@@ -1026,17 +1026,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 		}
 	}
 	//visual 영역
-	#visual .visual {
-		.swiper .swiper-pagination {
-			top: 70vh;
-			span {
-				width: 75px;
-			}
-		}
-		.container {
-			width: 100%;
-		}
-	}
 
 	//middle_menu영역
 	#middle_menu {
@@ -1376,7 +1365,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 	//visual
 	#visual {
 		.visual {
-			height: 90vh;
 			.container {
 				.cp-name {
 					display: none;
@@ -1389,7 +1377,9 @@ $kr-font: 'Gowun Dodum', sans-serif;
 					height: 85%;
 					overflow: hidden;
 					img {
-						object-fit: cover;
+						position: relative;
+						top: 90px;
+						left: 0;
 					}
 					&.on img {
 						opacity: 1;
@@ -1398,7 +1388,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				}
 			}
 			.vs-btns {
-				top: 82vh;
+				top: 87vh;
 				gap: 10px;
 				li {
 					width: 15px;
@@ -1423,7 +1413,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 			.intro {
 				width: 100%;
 				h2 {
-					margin: 30px auto;
+					margin: 70px auto 40px;
 					font: bold 40px/1 'Roboto';
 				}
 				h3 {

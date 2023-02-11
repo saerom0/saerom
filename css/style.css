@@ -280,7 +280,7 @@ table {
   position: relative;
   width: 1180px;
   min-height: 400px;
-  margin: 50px auto 150px;
+  margin: 80px auto 150px;
 }
 .content .container h1 {
   padding: 0 50px 30px;
@@ -412,7 +412,7 @@ table {
   }
   .content .container {
     width: 100%;
-    margin: 30px auto 50px;
+    padding: 60px 40px;
   }
   #footer_sub {
     padding: 60px 0;
@@ -743,9 +743,6 @@ table {
   font-size: 15px;
   background: #e3e3e3;
 }
-.contact .container .enquire form input[type=text]:nth-of-type(1) {
-  margin-top: 20px;
-}
 .contact .container .enquire form input[type=text]:nth-of-type(4) {
   height: 100px;
 }
@@ -784,7 +781,7 @@ table {
   font: 16px/1 "Jost", sans-serif;
   margin-top: 10px;
 }
-.contact .container .enquire .info div p {
+.contact .container .enquire .info div .contact-contents {
   font: 16px/1 "Jost", sans-serif;
   margin-top: 10px;
   margin-bottom: 30px;
@@ -2365,9 +2362,9 @@ table {
   height: 100vh;
 }
 #visual .visual {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   overflow: hidden;
 }
 #visual .visual .container {
@@ -3079,15 +3076,6 @@ table {
   #header .container .web-menu .log li a {
     font: bold 13px/1 "Jost", sans-serif;
   }
-  #visual .visual .swiper .swiper-pagination {
-    top: 70vh;
-  }
-  #visual .visual .swiper .swiper-pagination span {
-    width: 75px;
-  }
-  #visual .visual .container {
-    width: 100%;
-  }
   #middle_menu.on .container {
     width: 100%;
   }
@@ -3326,9 +3314,6 @@ table {
   #header .container .mob-menu {
     display: block;
   }
-  #visual .visual {
-    height: 90vh;
-  }
   #visual .visual .container .cp-name {
     display: none;
   }
@@ -3341,14 +3326,16 @@ table {
     overflow: hidden;
   }
   #visual .visual .panel li img {
-    object-fit: cover;
+    position: relative;
+    top: 90px;
+    left: 0;
   }
   #visual .visual .panel li.on img {
     opacity: 1;
     transform: scale(1.05);
   }
   #visual .visual .vs-btns {
-    top: 82vh;
+    top: 87vh;
     gap: 10px;
   }
   #visual .visual .vs-btns li {
@@ -3370,7 +3357,7 @@ table {
     width: 100%;
   }
   #middle_menu .container .intro h2 {
-    margin: 30px auto;
+    margin: 70px auto 40px;
     font: bold 40px/1 "Roboto";
   }
   #middle_menu .container .intro h3 {
