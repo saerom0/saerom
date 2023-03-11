@@ -83,7 +83,7 @@ table {
   margin-right: 5px;
 }
 #header_sub .container .web-menu nav #gnb {
-  width: 50vw;
+  width: 46vw;
   float: left;
 }
 #header_sub .container .web-menu nav #gnb li {
@@ -1686,6 +1686,15 @@ table {
     width: 100%;
     padding: 40px;
   }
+  .gallery .container #gallery #search_box {
+    width: 200px;
+  }
+  .gallery .container #gallery #search_box #search {
+    width: 120px;
+  }
+  .gallery .container #gallery #search_box .btn-search {
+    margin-left: 0px;
+  }
 }
 @media screen and (max-width: 850px) {
   .gallery .container #gallery h2 a {
@@ -1693,8 +1702,12 @@ table {
   }
   .gallery .container #gallery #search_box {
     position: relative;
+    width: 260px;
     left: 50px;
     margin-bottom: 20px;
+  }
+  .gallery .container #gallery #search_box #search {
+    width: 180px;
   }
   .gallery .container #gallery #gallery_box #list li {
     width: 50%;
@@ -2175,7 +2188,7 @@ table {
   margin-right: 5px;
 }
 #header .container .web-menu nav #gnb {
-  width: 50vw;
+  width: 46vw;
   height: 20px;
   float: left;
 }
@@ -3241,7 +3254,6 @@ table {
   #header .container .web-menu {
     position: relative;
     width: 100%;
-    height: 100%;
     margin-left: 0;
   }
   #header .container .web-menu .web-h1 {
@@ -3267,7 +3279,6 @@ table {
   }
   #visual .visual .container .cp-name {
     width: 170px;
-    top: 25vh;
   }
   #middle_menu .container .sub-gnb > li:hover .sub-menu ul {
     width: 200px;

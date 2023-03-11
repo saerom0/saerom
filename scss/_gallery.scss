@@ -183,6 +183,17 @@
 		.container {
 			width: 100%;
 			padding: 40px;
+			#gallery {
+				#search_box {
+					width: 200px;
+					#search {
+						width: 120px;
+					}
+					.btn-search {
+						margin-left: 0px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -196,8 +207,12 @@
 				}
 				#search_box {
 					position: relative;
+					width: 260px;
 					left: 50px;
 					margin-bottom: 20px;
+					#search {
+						width: 180px;
+					}
 				}
 
 				#gallery_box {
