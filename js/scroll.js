@@ -2,7 +2,7 @@ const pages = document.querySelectorAll('.page');
 const lis = document.querySelectorAll('.quick li');
 let posArr = [];
 let base = -window.innerHeight / 2;
-const ontop = document.querySelector('.on-top');
+const onTop = document.querySelector('.on-top');
 
 getPos();
 window.addEventListener('resize', getPos);
@@ -10,7 +10,7 @@ window.addEventListener('resize', getPos);
 window.addEventListener('scroll', () => {
 	let scroll = window.scrollY || window.pageYOffset;
 
-	ontop.addEventListener('click', (e) => {
+	onTop.addEventListener('click', (e) => {
 		e.preventDefault();
 		new Anime(window, {
 			prop: 'scroll',
@@ -20,6 +20,11 @@ window.addEventListener('scroll', () => {
 	});
 
 	//header - middle - intro - banner - offer - promo - track
+	if(scroll >= 200){
+		onTop.style.display = "flex";
+	} else{
+		onTop.style.display = "none";
+	}
 	if (scroll >= posArr[0] + 60) {
 		pages[2].classList.add('on');
 	} else {
@@ -46,7 +51,6 @@ window.addEventListener('scroll', () => {
 		counter('.record-3', 100, 1500);
 		counter('.record-4', 9700, 1500);
 	}
-
 	// console.log(posArr);
 });
 

@@ -307,6 +307,9 @@ $kr-font: 'Gowun Dodum', sans-serif;
 					a {
 						font: bold 16px/1 $main-font;
 						color: #999;
+						&:hover{
+							color: #666;
+						}
 					}
 				}
 			}

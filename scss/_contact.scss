@@ -116,16 +116,24 @@
 			.traffic {
 				display: flex;
 				float: left;
-				width: 120px;
+				width: 90px;
 				height: 40px;
 				justify-content: center;
 				align-items: center;
 				border: 1px solid #555;
+				border-radius: 25px;
 				background: #fff;
 				color: #555;
 				&.on {
 					color: #fff;
 					background: #555;
+					//on클래스가 있으면 버튼 배경색 바뀌지 않음
+					&:hover{
+						background: #555;
+					}
+				}
+				&:hover{
+					background:#eee;
 				}
 			}
 
@@ -143,10 +151,20 @@
 						color: #555;
 						text-align: center;
 						border: 1px solid #555;
+						border-radius: 25px;
 					}
-					&.on a {
-						color: #fff;
-						background: #555;
+					&.on {
+						a {
+							color: #fff;
+							background: #555;
+						}
+						//on클래스가 있으면 버튼 배경색 바뀌지 않음
+						&:hover a{
+							background-color: #555;
+						}
+					}
+					&:hover a {
+						background: #eee;
 					}
 				}
 			}
@@ -163,9 +181,6 @@
 		}
 		.container {
 			.location {
-				.traffic {
-					width: 90px;
-				}
 				.branch {
 					li a {
 						width: 90px;
@@ -215,7 +230,7 @@
 						}
 						a {
 							font: 12px/40px $kr-font;
-							width: 70px;
+							width: 75px;
 						}
 					}
 				}
