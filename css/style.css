@@ -616,6 +616,7 @@ table {
 .sign-up .container form fieldset table th input[type=reset] {
   width: 150px;
   height: 40px;
+  border-radius: 25px;
   font: bold 14px/1 "Jost", sans-serif;
   margin: 0 10px;
   cursor: pointer;
@@ -746,6 +747,7 @@ table {
   display: flex;
   flex-direction: column;
   border: 1px solid #ddd;
+  border-radius: 15px;
   float: left;
   margin-bottom: 100px;
   margin-right: 5%;
@@ -755,12 +757,17 @@ table {
   margin: 10px 20px;
   padding-left: 20px;
   border: none;
+  border-radius: 25px;
   font-family: "Jost", sans-serif;
   font-size: 15px;
   background: #e3e3e3;
 }
+.contact .container .enquire form input[type=text]:nth-of-type(1) {
+  margin: 20px 20px 10px;
+}
 .contact .container .enquire form input[type=text]:nth-of-type(4) {
   height: 100px;
+  border-radius: 35px;
 }
 .contact .container .enquire form input[type=submit] {
   width: 150px;
@@ -772,6 +779,7 @@ table {
   align-items: center;
   position: absolute;
   border: none;
+  border-radius: 25px;
   right: 20px;
   bottom: 20px;
   transition: 0.5s;
@@ -2697,15 +2705,19 @@ table {
 #banner .container section div a {
   display: block;
   border: 1px solid #fff;
+  border-radius: 25px;
   font: bold 14px/1.2 "Roboto";
   color: #000;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   background: #fff;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 10%;
-  padding: 15px 25px;
+  padding: 15px 30px;
+}
+#banner .container section div a:hover {
+  background-color: #eee;
 }
 #banner .container .bn-btn {
   position: absolute;
@@ -2802,6 +2814,7 @@ table {
   width: 130px;
   height: 38px;
   border: 1px solid #fff;
+  border-radius: 25px;
   font: 11px/38px "Roboto";
   color: #fff;
   letter-spacing: 1px;
@@ -2885,6 +2898,7 @@ table {
   width: 180px;
   height: 50px;
   border: 1px solid #fff;
+  border-radius: 25px;
   font: bold 14px/50px "Roboto";
   color: #000;
   background: #fff;
@@ -2892,6 +2906,9 @@ table {
   letter-spacing: 1px;
   cursor: pointer;
   bottom: 50px;
+}
+#promo .container .wrap a:hover {
+  background: #eee;
 }
 #promo .container .wrap2 {
   display: flex;

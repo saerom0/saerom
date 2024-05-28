@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL SUITE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="js/validation.js"></script>
+
+    <script src="https://kit.fontawesome.com/c0a08800fd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header id="header_sub" class="page">
+        <div class="container">
+
+            <!-- 스크롤값 최상단 버튼-->
+            <a href="#" class="on-top"><i class="fas fa-arrow-up"></i></a>
+
+            <!-- 헤더메뉴 웹버전 -->
+            <div class="web-menu">
+                <h1 class="web-h1">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i>Home
+                    </a>
+                </h1>
+
+                <h1 class="mob-h1">
+                    <a href="index.html"></a>
+                </h1>
+
+                <nav>
+                    <ul id="gnb">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="youtube.html">Youtube</a></li>
+                        <li><a href="review.html">Review</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </nav>
+
+                <ul class="log">
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="sign_up.html">Sign up</a></li>
+                </ul>
+
+                <ul class="tablet-log">
+                    <li><a href="sign_in.html"><i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="sign_up.html"><i class="fas fa-user-plus"></i></a></li>
+                </ul>
+
+            </div>
+
+            <!-- 모바일버전 햄버거버튼 -->
+            <a href="#" class="btn-call">
+                <span>메뉴호출</span>
+            </a>
+
+            <!-- 헤더메뉴 모바일버전 -->
+            <div class="mob-menu">
+                <div class="mob-logo">
+                    <a href="index.html"></a>
+                </div>
+                <nav class="side-menu">
+                    <a class="mob-h1" href="index.html"><img src="img/logo_black.png" alt="회사로고"></a>
+
+                    <ul class="mob-log">
+                        <li><a href="sign_in.html">Log in</a></li>
+                        <li><a href="sign_up.html">Sign up</a></li>
+                        <li><a href="#">My Account</a></li>
+                    </ul>
+
+                    <ul id="mob_gnb">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="youtube.html">Youtube</a></li>
+                        <li><a href="review.html">Review</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="content sign-in">
+        <div class="container">
+            <h1>Sign in</h1>
+            <form action="index.html" method="get" id="member">
+
+                <fieldset>
+                    <legend class="hidden">로그인 페이지</legend>
+                    <h2>로그인 페이지</h2>
+                    <table>
+                        <caption class="hidden">로그인 페이지</caption>
+                        <!-- id 입력-->
+                        <tr>
+                            <th scope="row"><label for="id">USER ID</label></th>
+                            <td>
+                                <input type="text" id="id" name="userid">
+                            </td>
+                        </tr>
+
+                        <!-- pwd 입력-->
+                        <tr>
+                            <th scope="row"><label for="pwd1">PASSWORD</label></th>
+                            <td>
+                                <input type="password" name="pwd1" id="pwd1">
+                            </td>
+                        </tr>
+
+                        <!-- 로그인 버튼 -->
+                        <tr>
+                            <th colspan="2">
+                                <input type="LOGIN" value="SUBMIT">
+                            </th>
+                        </tr>
+                    </table>
+                </fieldset>
+
+            </form>
+        </div>
+
+    </section>
+
+    <!-- footer -->
+    <footer id="footer_sub">
+        <div class="container">
+
+            <section class="wrap1">
+                <a href="#">QUICK LINKS</a>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="youtube.html">Youtube</a></li>
+                    <li><a href="review.html">Review</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </section>
+
+            <section class="web-wrap2">
+                <h1 class="hidden">REAL SUITE</h1>
+                <img src="img/company_logo.png" alt="회사로고">
+                <p>Copyright © 2023 REAL SUITE ALL Right reserved.</p>
+            </section>
+            <section class="mob-wrap2">
+                <h1>REAL SUITE</h1>
+                <p>Copyright © 2023 REAL SUITE ALL Right reserved.</p>
+            </section>
+
+            <section class="wrap3">
+                <div class="sns-icons">
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <address>
+                    Lorem ipsum dolor sit amet B/D consectetur adipisicing elit. Sint.
+                    <br />
+                    Tel : +82-2-2100-2114
+                </address>
+
+            </section>
+        </div>
+    </footer>
+
+</body>
+
+</html>

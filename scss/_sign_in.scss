@@ -1,9 +1,8 @@
-.sign-up {
+.sign-in {
 	.container {
 		form {
 			width: 85%;
 			margin: 0 auto;
-
 			fieldset {
 				display: flex;
 				flex-direction: column;
@@ -18,7 +17,6 @@
 						height: 20px;
 					}
 				}
-
 				h2 {
 					font: 15px/1 $kr-font;
 					letter-spacing: 1px;
@@ -48,7 +46,6 @@
 						height: 15px;
 					}
 				}
-
 				table {
 					border-top: 2px solid #999;
 					border-bottom: 2px solid #999;

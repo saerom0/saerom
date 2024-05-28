@@ -600,15 +600,19 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				a {
 					display: block;
 					border: 1px solid #fff;
+					border-radius: 25px;
 					font: bold 14px/1.2 'Roboto';
 					color: #000;
-					letter-spacing: 5px;
+					letter-spacing: 3px;
 					background: #fff;
 					position: absolute;
 					left: 50%;
 					transform: translateX(-50%);
 					bottom: 10%;
-					padding: 15px 25px;
+					padding: 15px 30px;
+					&:hover {
+						background-color: #eee;
+					}
 				}
 			}
 		}
@@ -709,6 +713,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 						width: 130px;
 						height: 38px;
 						border: 1px solid #fff;
+						border-radius: 25px;
 						font: 11px/38px 'Roboto';
 						color: #fff;
 						letter-spacing: 1px;
@@ -799,6 +804,7 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				width: 180px;
 				height: 50px;
 				border: 1px solid #fff;
+				border-radius: 25px;
 				font: bold 14px/50px 'Roboto';
 				color: #000;
 				background: #fff;
@@ -806,6 +812,9 @@ $kr-font: 'Gowun Dodum', sans-serif;
 				letter-spacing: 1px;
 				cursor: pointer;
 				bottom: 50px;
+				&:hover{
+					background: #eee;
+				}
 			}
 		}
 		.wrap2 {
@@ -817,7 +826,6 @@ $kr-font: 'Gowun Dodum', sans-serif;
 			font: 14px/35px $main-font;
 			letter-spacing: 1px;
 			opacity: 0.9;
-
 			p {
 				line-height: 2.3;
 				opacity: 0;
